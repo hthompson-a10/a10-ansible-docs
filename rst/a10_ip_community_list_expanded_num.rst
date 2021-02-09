@@ -1,0 +1,109 @@
+.. _a10_ip_community_list_expanded_num_module:
+
+
+a10_ip_community_list_expanded_num -- Configures A10 ip.community.list.expanded-num
+===================================================================================
+
+.. contents::
+   :local:
+   :depth: 1
+
+
+Synopsis
+--------
+
+Configure Expanded number Community-list
+
+
+
+
+
+
+Parameters
+----------
+
+  ext_list_num (True, any, None)
+    Community list number (expanded)
+
+
+  ansible_port (True, any, None)
+    Port for AXAPI authentication
+
+
+  uuid (False, any, None)
+    uuid of the object
+
+
+  ansible_username (True, any, None)
+    Username for AXAPI authentication
+
+
+  ansible_password (True, any, None)
+    Password for AXAPI authentication
+
+
+  rules_list (False, any, None)
+    Field rules_list
+
+
+    ext_list_value (optional, any, None)
+      An ordered list as a regular-expression
+
+
+    ext_list_action (optional, any, None)
+      'deny'= Specify community to reject; 'permit'= Specify community to accept;
+
+
+
+  state (True, any, None)
+    State of the object to be created.
+
+
+  a10_device_context_id (False, any, None)
+    Device ID for aVCS configuration
+
+
+  a10_partition (False, any, None)
+    Destination/target partition for object/command
+
+
+  ansible_host (True, any, None)
+    Host for AXAPI authentication
+
+
+
+
+
+
+
+
+
+Examples
+--------
+
+.. code-block:: yaml+jinja
+
+    
+
+
+
+
+
+Status
+------
+
+
+
+
+- This module is not guaranteed to have a backwards compatible interface. *[preview]*
+
+
+- This module is maintained by community.
+
+
+
+Authors
+~~~~~~~
+
+- A10 Networks 2018
+

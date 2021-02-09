@@ -1,0 +1,122 @@
+.. _a10_visibility_monitored_entity_detail_module:
+
+
+a10_visibility_monitored_entity_detail -- Configures A10 visibility.monitored.entity.detail
+===========================================================================================
+
+.. contents::
+   :local:
+   :depth: 1
+
+
+Synopsis
+--------
+
+Display Monitoring entity detail
+
+
+
+
+
+
+Parameters
+----------
+
+  oper (False, any, None)
+    Field oper
+
+
+    all_keys (optional, any, None)
+      Field all_keys
+
+
+    debug (optional, any, None)
+      Field debug
+
+
+    mon_entity_list (optional, any, None)
+      Field mon_entity_list
+
+
+    primary_keys (optional, any, None)
+      Field primary_keys
+
+
+
+  ansible_port (True, any, None)
+    Port for AXAPI authentication
+
+
+  uuid (False, any, None)
+    uuid of the object
+
+
+  ansible_username (True, any, None)
+    Username for AXAPI authentication
+
+
+  ansible_password (True, any, None)
+    Password for AXAPI authentication
+
+
+  a10_device_context_id (False, any, None)
+    Device ID for aVCS configuration
+
+
+  state (True, any, None)
+    State of the object to be created.
+
+
+  debug (False, any, None)
+    Field debug
+
+
+    uuid (optional, any, None)
+      uuid of the object
+
+
+
+  a10_partition (False, any, None)
+    Destination/target partition for object/command
+
+
+  ansible_host (True, any, None)
+    Host for AXAPI authentication
+
+
+
+
+
+
+
+
+
+Examples
+--------
+
+.. code-block:: yaml+jinja
+
+    
+
+
+
+
+
+Status
+------
+
+
+
+
+- This module is not guaranteed to have a backwards compatible interface. *[preview]*
+
+
+- This module is maintained by community.
+
+
+
+Authors
+~~~~~~~
+
+- A10 Networks 2018
+

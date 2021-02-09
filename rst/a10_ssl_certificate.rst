@@ -1,0 +1,104 @@
+.. _a10_ssl_certificate_module:
+
+
+a10_ssl_certificate -- Configures A10 ssl.certificate
+=====================================================
+
+.. contents::
+   :local:
+   :depth: 1
+
+
+Synopsis
+--------
+
+ssl certificate file information and management commands
+
+
+
+
+
+
+Parameters
+----------
+
+  public_key (False, any, None)
+    Field public_key
+
+
+  ansible_port (True, any, None)
+    Port for AXAPI authentication
+
+
+  name (True, any, None)
+    ssl certificate local file name
+
+
+  ansible_username (True, any, None)
+    Username for AXAPI authentication
+
+
+  ansible_password (True, any, None)
+    Password for AXAPI authentication
+
+
+  pfx_password (False, any, None)
+    The password for certificate file (pfx type only)
+
+
+  certificate_type (False, any, None)
+    'pem'= pem; 'der'= der; 'pfx'= pfx; 'p7b'= p7b;
+
+
+  state (True, any, None)
+    State of the object to be created.
+
+
+  a10_device_context_id (False, any, None)
+    Device ID for aVCS configuration
+
+
+  a10_partition (False, any, None)
+    Destination/target partition for object/command
+
+
+  ansible_host (True, any, None)
+    Host for AXAPI authentication
+
+
+
+
+
+
+
+
+
+Examples
+--------
+
+.. code-block:: yaml+jinja
+
+    
+
+
+
+
+
+Status
+------
+
+
+
+
+- This module is not guaranteed to have a backwards compatible interface. *[preview]*
+
+
+- This module is maintained by community.
+
+
+
+Authors
+~~~~~~~
+
+- A10 Networks 2018
+
