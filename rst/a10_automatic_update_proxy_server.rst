@@ -22,70 +22,75 @@ Connect through proxy server
 Parameters
 ----------
 
-  auth_type (False, any, None)
-    'ntlm'= NTLM authentication(default); 'basic'= Basic authentication;
-
-
-  username (False, any, None)
-    Username for proxy authentication
-
-
-  domain (False, any, None)
-    Realm for NTLM authentication
-
-
-  https_port (False, any, None)
-    Proxy server HTTPs port
-
-
-  secret_string (False, any, None)
-    password value
-
-
-  encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  password (False, any, None)
-    Password for proxy authentication
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  proxy_host (False, any, None)
-    Proxy server hostname or IP address
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                           |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++=======================+===============================+===================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                  |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                   |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| proxy_host            |                               | Proxy server hostname or IP address                                                               |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| https_port            |                               | Proxy server HTTPs port                                                                           |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| auth_type             |                               | 'ntlm'= NTLM authentication(default); 'basic'= Basic authentication;                              |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| domain                |                               | Realm for NTLM authentication                                                                     |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| username              |                               | Username for proxy authentication                                                                 |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| password              |                               | Password for proxy authentication                                                                 |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| secret_string         |                               | password value                                                                                    |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| encrypted             |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string) |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 

@@ -22,93 +22,95 @@ Specify a real server for the GSLB site
 Parameters
 ----------
 
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'hits'= Number of times the IP was selected;
-
-
-
-  oper (False, any, None)
-    Field oper
-
-
-    ip_server_name (optional, any, None)
-      Specify the real server name
-
-
-    state (optional, any, None)
-      Field state
-
-
-    ip_address (optional, any, None)
-      Field ip_address
-
-
-    ip_server_port (optional, any, None)
-      Field ip_server_port
-
-
-    ip_server (optional, any, None)
-      Field ip_server
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    ip_server_name (optional, any, None)
-      Specify the real server name
-
-
-    hits (optional, any, None)
-      Number of times the IP was selected
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ip_server_name (True, any, None)
-    Specify the real server name
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  site_name (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                  |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++=======================+===============================+==========================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                       |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                            |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                        |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                        |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                            |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                         |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command          |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| site_name             |                               | Key to identify parent object                            |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ip_server_name        |                               | Specify the real server name                             |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                       |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                    |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'hits'= Number of times the IP was selected; |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+| oper                  |                               | Field oper                                               |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | ip_server         |                               | Field ip_server                                          |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | ip_address        |                               | Field ip_address                                         |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | state             |                               | Field state                                              |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | ip_server_port    |                               | Field ip_server_port                                     |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | ip_server_name    |                               | Specify the real server name                             |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+| stats                 |                               | Field stats                                              |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | hits              |                               | Number of times the IP was selected                      |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
+|   | ip_server_name    |                               | Specify the real server name                             |
+|   |                   |                               |                                                          |
+|   |                   |                               |                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------+
 
 
 

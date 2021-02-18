@@ -22,79 +22,83 @@ Rate Limit Information
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    limit_entry_list (optional, any, None)
-      Field limit_entry_list
-
-
-    prefix_len6 (optional, any, None)
-      Field prefix_len6
-
-
-    prefix_len4 (optional, any, None)
-      Field prefix_len4
-
-
-    pps (optional, any, None)
-      Field pps
-
-
-    prefix6 (optional, any, None)
-      Field prefix6
-
-
-    throughput (optional, any, None)
-      Field throughput
-
-
-    prefix4 (optional, any, None)
-      Field prefix4
-
-
-    limit_entry_count (optional, any, None)
-      Field limit_entry_count
-
-
-    user_quota (optional, any, None)
-      Field user_quota
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| oper                  |                               | Field oper                                      |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | limit_entry_list  |                               | Field limit_entry_list                          |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | prefix6           |                               | Field prefix6                                   |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | prefix4           |                               | Field prefix4                                   |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | prefix_len6       |                               | Field prefix_len6                               |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | prefix_len4       |                               | Field prefix_len4                               |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | pps               |                               | Field pps                                       |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | throughput        |                               | Field throughput                                |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | user_quota        |                               | Field user_quota                                |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | limit_entry_count |                               | Field limit_entry_count                         |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
 
 
 

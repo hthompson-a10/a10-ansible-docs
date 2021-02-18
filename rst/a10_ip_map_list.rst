@@ -22,67 +22,71 @@ Configure IP Map List name
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  mapping_list (False, any, None)
-    Field mapping_list
-
-
-    count (optional, any, None)
-      Number of addresses to be translated in this range
-
-
-    local_start_ip (optional, any, None)
-      Local Start IPv4 Address of this list
-
-
-    global_start_ip (optional, any, None)
-      Global Start IPv4 Address of this list
-
-
-
-  name (True, any, None)
-    Specify name of the IP Map List
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  file (False, any, None)
-    Create/Edit a IP Map List stored as a file
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+----------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                            |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++=======================+===============================+====================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                 |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                      |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                  |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                  |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                      |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                   |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command    |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| name                  |                               | Specify name of the IP Map List                    |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| file                  |                               | Create/Edit a IP Map List stored as a file         |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| mapping_list          |                               | Field mapping_list                                 |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | local_start_ip    |                               | Local Start IPv4 Address of this list              |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | global_start_ip   |                               | Global Start IPv4 Address of this list             |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | count             |                               | Number of addresses to be translated in this range |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+| uuid                  |                               | uuid of the object                                 |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| user_tag              |                               | Customized tag                                     |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
 
 
 

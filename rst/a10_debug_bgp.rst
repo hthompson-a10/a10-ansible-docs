@@ -22,86 +22,91 @@ Debug Border Gateway Protocol (BGP)
 Parameters
 ----------
 
-  all (False, any, None)
-    all debugging
-
-
-  nin (False, any, None)
-    Inbound updates
-
-
-  nsm (False, any, None)
-    NSM message
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  nht (False, any, None)
-    NHT message
-
-
-  updates (False, any, None)
-    BGP updates
-
-
-  filters (False, any, None)
-    BGP filters
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  out (False, any, None)
-    Outbound updates
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  dampening (False, any, None)
-    BGP Dampening
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  bfd (False, any, None)
-    Bidirectional Forwarding Detection (BFD)
-
-
-  fsm (False, any, None)
-    BGP Finite State Machine
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  keepalives (False, any, None)
-    BGP keepalives
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  events (False, any, None)
-    BGP events
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| all                   |                               | all debugging                                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| bfd                   |                               | Bidirectional Forwarding Detection (BFD)        |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| dampening             |                               | BGP Dampening                                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| events                |                               | BGP events                                      |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| filters               |                               | BGP filters                                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| fsm                   |                               | BGP Finite State Machine                        |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| keepalives            |                               | BGP keepalives                                  |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| nht                   |                               | NHT message                                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| nsm                   |                               | NSM message                                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| updates               |                               | BGP updates                                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| nin                   |                               | Inbound updates                                 |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| out                   |                               | Outbound updates                                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
 
 
 

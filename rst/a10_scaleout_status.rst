@@ -22,79 +22,83 @@ Field status
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    l2redirect_vlan (optional, any, None)
-      Field l2redirect_vlan
-
-
-    device_list (optional, any, None)
-      Field device_list
-
-
-    l2redirect_eth (optional, any, None)
-      Field l2redirect_eth
-
-
-    l2redirect_valid (optional, any, None)
-      Field l2redirect_valid
-
-
-    l2redirect_operational (optional, any, None)
-      Field l2redirect_operational
-
-
-    role (optional, any, None)
-      Field role
-
-
-    l2redirect (optional, any, None)
-      Field l2redirect
-
-
-    l2redirect_trunk (optional, any, None)
-      Field l2redirect_trunk
-
-
-    db_role (optional, any, None)
-      Field db_role
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                         |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++============================+===============================+=================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                       |                               | uuid of the object                              |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| oper                       |                               | Field oper                                      |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | db_role                |                               | Field db_role                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | role                   |                               | Field role                                      |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | device_list            |                               | Field device_list                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l2redirect             |                               | Field l2redirect                                |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l2redirect_valid       |                               | Field l2redirect_valid                          |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l2redirect_operational |                               | Field l2redirect_operational                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l2redirect_eth         |                               | Field l2redirect_eth                            |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l2redirect_trunk       |                               | Field l2redirect_trunk                          |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l2redirect_vlan        |                               | Field l2redirect_vlan                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
 
 
 

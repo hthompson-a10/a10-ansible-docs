@@ -22,155 +22,159 @@ Default
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    ike_remote_address (optional, any, None)
-      Field ike_remote_address
-
-
-    IPsec_protocol (optional, any, None)
-      Field IPsec_protocol
-
-
-    ike_local_address (optional, any, None)
-      Field ike_local_address
-
-
-    IPsec_hash (optional, any, None)
-      Field IPsec_hash
-
-
-    ike_dh_group (optional, any, None)
-      Field ike_dh_group
-
-
-    ike_encryption (optional, any, None)
-      Field ike_encryption
-
-
-    IPsec_local_port (optional, any, None)
-      Field IPsec_local_port
-
-
-    IPsec_priority (optional, any, None)
-      Field IPsec_priority
-
-
-    ike_priority (optional, any, None)
-      Field ike_priority
-
-
-    ike_mode (optional, any, None)
-      Field ike_mode
-
-
-    IPsec_remote_subnet (optional, any, None)
-      Field IPsec_remote_subnet
-
-
-    IPsec_mode (optional, any, None)
-      Field IPsec_mode
-
-
-    ike_version (optional, any, None)
-      Field ike_version
-
-
-    IPsec_lifetime (optional, any, None)
-      Field IPsec_lifetime
-
-
-    IPsec_lifebytes (optional, any, None)
-      Field IPsec_lifebytes
-
-
-    ike_hash (optional, any, None)
-      Field ike_hash
-
-
-    IPsec_encryption (optional, any, None)
-      Field IPsec_encryption
-
-
-    IPsec_remote_port (optional, any, None)
-      Field IPsec_remote_port
-
-
-    ike_dpd_interval (optional, any, None)
-      Field ike_dpd_interval
-
-
-    IPsec_local_subnet (optional, any, None)
-      Field IPsec_local_subnet
-
-
-    IPsec_remote_protocol (optional, any, None)
-      Field IPsec_remote_protocol
-
-
-    IPsec_anti_replay_window (optional, any, None)
-      Field IPsec_anti_replay_window
-
-
-    IPsec_local_protocol (optional, any, None)
-      Field IPsec_local_protocol
-
-
-    IPsec_dh_group (optional, any, None)
-      Field IPsec_dh_group
-
-
-    ike_auth_method (optional, any, None)
-      Field ike_auth_method
-
-
-    IPsec_traffic_selector (optional, any, None)
-      Field IPsec_traffic_selector
-
-
-    ike_lifetime (optional, any, None)
-      Field ike_lifetime
-
-
-    ike_nat_traversal (optional, any, None)
-      Field ike_nat_traversal
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                   | Choices/Defaults              | Comment                                         |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++==============================+===============================+=================================================+
+| state                        | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                 |                               | Host for AXAPI authentication                   |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username             |                               | Username for AXAPI authentication               |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password             |                               | Password for AXAPI authentication               |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                 |                               | Port for AXAPI authentication                   |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id        | ['1-8']                       | Device ID for aVCS configuration                |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                |                               | Destination/target partition for object/command |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| uuid                         |                               | uuid of the object                              |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| oper                         |                               | Field oper                                      |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_version              |                               | Field ike_version                               |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_mode                 |                               | Field ike_mode                                  |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_dh_group             |                               | Field ike_dh_group                              |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_auth_method          |                               | Field ike_auth_method                           |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_encryption           |                               | Field ike_encryption                            |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_hash                 |                               | Field ike_hash                                  |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_priority             |                               | Field ike_priority                              |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_lifetime             |                               | Field ike_lifetime                              |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_nat_traversal        |                               | Field ike_nat_traversal                         |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_local_address        |                               | Field ike_local_address                         |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_remote_address       |                               | Field ike_remote_address                        |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | ike_dpd_interval         |                               | Field ike_dpd_interval                          |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_mode               |                               | Field IPsec_mode                                |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_protocol           |                               | Field IPsec_protocol                            |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_dh_group           |                               | Field IPsec_dh_group                            |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_encryption         |                               | Field IPsec_encryption                          |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_hash               |                               | Field IPsec_hash                                |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_priority           |                               | Field IPsec_priority                            |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_lifetime           |                               | Field IPsec_lifetime                            |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_lifebytes          |                               | Field IPsec_lifebytes                           |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_traffic_selector   |                               | Field IPsec_traffic_selector                    |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_local_subnet       |                               | Field IPsec_local_subnet                        |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_local_port         |                               | Field IPsec_local_port                          |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_local_protocol     |                               | Field IPsec_local_protocol                      |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_remote_subnet      |                               | Field IPsec_remote_subnet                       |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_remote_port        |                               | Field IPsec_remote_port                         |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_remote_protocol    |                               | Field IPsec_remote_protocol                     |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | IPsec_anti_replay_window |                               | Field IPsec_anti_replay_window                  |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
 
 
 

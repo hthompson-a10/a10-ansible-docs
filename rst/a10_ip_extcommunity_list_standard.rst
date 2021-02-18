@@ -22,55 +22,59 @@ Configure Standard Community-list
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  rules_list (False, any, None)
-    Field rules_list
-
-
-    standard_value (optional, any, None)
-      rt Route Target extended community in aa=nn or IPaddr=nn format OR soo Site-of- Origin extended community in aa=nn or IPaddr=nn
-
-
-    standard_action (optional, any, None)
-      'deny'= Specify community to reject; 'permit'= Specify community to accept;
-
-
-
-  standard (True, any, None)
-    Add a standard extcommunity-list entry (Extended Community list name)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                                         |
+|                       |                               |                                                                                                                                 |
+|                       |                               |                                                                                                                                 |
++=======================+===============================+=================================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                              |
+|                       |                               |                                                                                                                                 |
+| /required             |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                                   |
+|                       |                               |                                                                                                                                 |
+| /required             |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                               |
+|                       |                               |                                                                                                                                 |
+| /required             |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                               |
+|                       |                               |                                                                                                                                 |
+| /required             |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                                   |
+|                       |                               |                                                                                                                                 |
+| /required             |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                                |
+|                       |                               |                                                                                                                                 |
+|                       |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                                 |
+|                       |                               |                                                                                                                                 |
+|                       |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| standard              |                               | Add a standard extcommunity-list entry (Extended Community list name)                                                           |
+|                       |                               |                                                                                                                                 |
+| /required             |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| rules_list            |                               | Field rules_list                                                                                                                |
+|                       |                               |                                                                                                                                 |
+|                       |                               |                                                                                                                                 |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+|   | standard_action   |                               | 'deny'= Specify community to reject; 'permit'= Specify community to accept;                                                     |
+|   |                   |                               |                                                                                                                                 |
+|   |                   |                               |                                                                                                                                 |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+|   | standard_value    |                               | rt Route Target extended community in aa=nn or IPaddr=nn format OR soo Site-of- Origin extended community in aa=nn or IPaddr=nn |
+|   |                   |                               |                                                                                                                                 |
+|   |                   |                               |                                                                                                                                 |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                              |
+|                       |                               |                                                                                                                                 |
+|                       |                               |                                                                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------+
 
 
 

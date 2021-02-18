@@ -22,54 +22,59 @@ Admin user lockout configuration
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  enable (False, any, None)
-    Enable admin user lockout
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  reset_time (False, any, None)
-    After how long to reset the lockout counter, in minutes, by default 10 (Time in minutes after which to reset the lockout counter)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  threshold (False, any, None)
-    Admin user lockout threshold, by default 5
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  duration (False, any, None)
-    Admin user lockout duration, in minutes, by default 10 (Admin user lockout duration in minutes, 0 means forever)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                                           |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++=======================+===============================+===================================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                                |
+|                       |                               |                                                                                                                                   |
+| /required             |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                                     |
+|                       |                               |                                                                                                                                   |
+| /required             |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                                 |
+|                       |                               |                                                                                                                                   |
+| /required             |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                                 |
+|                       |                               |                                                                                                                                   |
+| /required             |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                                     |
+|                       |                               |                                                                                                                                   |
+| /required             |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                                  |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                                   |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| duration              |                               | Admin user lockout duration, in minutes, by default 10 (Admin user lockout duration in minutes, 0 means forever)                  |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| enable                |                               | Enable admin user lockout                                                                                                         |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| reset_time            |                               | After how long to reset the lockout counter, in minutes, by default 10 (Time in minutes after which to reset the lockout counter) |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| threshold             |                               | Admin user lockout threshold, by default 5                                                                                        |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                                |
+|                       |                               |                                                                                                                                   |
+|                       |                               |                                                                                                                                   |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 
 

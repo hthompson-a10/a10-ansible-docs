@@ -22,58 +22,63 @@ Configure a key
 Parameters
 ----------
 
-  key_number (True, any, None)
-    Key identifier number
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  key_string (False, any, None)
-    Set key string (The key)
-
-
-  key_chain_flag (optional, any, None)
-    Key to identify parent object
-
-
-  key_chain_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| key_chain_name        |                               | Key to identify parent object                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| key_chain_flag        |                               | Key to identify parent object                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| key_number            |                               | Key identifier number                           |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| key_string            |                               | Set key string (The key)                        |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| user_tag              |                               | Customized tag                                  |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
 
 
 

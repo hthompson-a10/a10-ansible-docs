@@ -22,93 +22,95 @@ Specify a VIP for the SLB device
 Parameters
 ----------
 
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'dev_vip_hits'= Number of times the service-ip was selected;
-
-
-
-  oper (False, any, None)
-    Field oper
-
-
-    dev_vip_addr (optional, any, None)
-      Field dev_vip_addr
-
-
-    dev_vip_port_list (optional, any, None)
-      Field dev_vip_port_list
-
-
-    dev_vip_state (optional, any, None)
-      Field dev_vip_state
-
-
-    ipv6 (optional, any, None)
-      Specify IP address (IPv6 address)
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  site_name (optional, any, None)
-    Key to identify parent object
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  slb_dev_device_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ipv6 (True, any, None)
-    Specify IP address (IPv6 address)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    dev_vip_hits (optional, any, None)
-      Number of times the service-ip was selected
-
-
-    ipv6 (optional, any, None)
-      Specify IP address (IPv6 address)
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                  |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++=======================+===============================+==========================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                       |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                            |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                            |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                         |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                          |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| slb_dev_device_name   |                               | Key to identify parent object                                            |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| site_name             |                               | Key to identify parent object                                            |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ipv6                  |                               | Specify IP address (IPv6 address)                                        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                       |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                                    |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'dev_vip_hits'= Number of times the service-ip was selected; |
+|   |                   |                               |                                                                          |
+|   |                   |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+| oper                  |                               | Field oper                                                               |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+|   | dev_vip_addr      |                               | Field dev_vip_addr                                                       |
+|   |                   |                               |                                                                          |
+|   |                   |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+|   | dev_vip_state     |                               | Field dev_vip_state                                                      |
+|   |                   |                               |                                                                          |
+|   |                   |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+|   | dev_vip_port_list |                               | Field dev_vip_port_list                                                  |
+|   |                   |                               |                                                                          |
+|   |                   |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+|   | ipv6              |                               | Specify IP address (IPv6 address)                                        |
+|   |                   |                               |                                                                          |
+|   |                   |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+| stats                 |                               | Field stats                                                              |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+|   | dev_vip_hits      |                               | Number of times the service-ip was selected                              |
+|   |                   |                               |                                                                          |
+|   |                   |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
+|   | ipv6              |                               | Specify IP address (IPv6 address)                                        |
+|   |                   |                               |                                                                          |
+|   |                   |                               |                                                                          |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------+
 
 
 

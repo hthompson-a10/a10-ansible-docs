@@ -22,210 +22,211 @@ Harmony controller profile
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    deregistration_status (optional, any, None)
-      Field deregistration_status
-
-
-    broker_info (optional, any, None)
-      Field broker_info
-
-
-    overall_status (optional, any, None)
-      Field overall_status
-
-
-    deregistration_status_code (optional, any, None)
-      Field deregistration_status_code
-
-
-    Number_of_tenant_unmapped_partitions (optional, any, None)
-      Field Number_of_tenant_unmapped_partitions
-
-
-    tunnel_error_message (optional, any, None)
-      Field tunnel_error_message
-
-
-    heartbeat_status (optional, any, None)
-      Field heartbeat_status
-
-
-    tunnel_status (optional, any, None)
-      Field tunnel_status
-
-
-    registration_status (optional, any, None)
-      Field registration_status
-
-
-    service_registry (optional, any, None)
-      Field service_registry
-
-
-    heartbeat_error_message (optional, any, None)
-      Field heartbeat_error_message
-
-
-    registration_error_message (optional, any, None)
-      Field registration_error_message
-
-
-    deregistration_error_message (optional, any, None)
-      Field deregistration_error_message
-
-
-    registration_status_code (optional, any, None)
-      Field registration_status_code
-
-
-    schema_registry_status (optional, any, None)
-      Field schema_registry_status
-
-
-    kafka_broker_state (optional, any, None)
-      Field kafka_broker_state
-
-
-    Number_of_tenant_mapped_partitions (optional, any, None)
-      Field Number_of_tenant_mapped_partitions
-
-
-    service_registry_error_message (optional, any, None)
-      Field service_registry_error_message
-
-
-
-  auto_restart_action (False, any, None)
-    'enable'= enable auto analytics bus restart, default behavior is enable; 'disable'= disable auto analytics bus restart;
-
-
-  interval (False, any, None)
-    auto analytics bus restart time interval in mins, default is 3 mins
-
-
-  re_sync (False, any, None)
-    Field re_sync
-
-
-    schema_registry (optional, any, None)
-      re-sync the schema registry
-
-
-    analytics_bus (optional, any, None)
-      re-sync analtyics bus connections
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  password_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-  host (False, any, None)
-    Set harmony controller host adddress
-
-
-  cluster_id (False, any, None)
-    cluster id for the device
-
-
-  use_mgmt_port (False, any, None)
-    Use management port for connections
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  port (False, any, None)
-    Set port for remote Harmony Controller, default is 8443
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  tunnel (False, any, None)
-    Field tunnel
-
-
-    action (optional, any, None)
-      'enable'= Tunnel Enable; 'disable'= Tunnel Disable;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  region (False, any, None)
-    region of the thunder-device
-
-
-  availability_zone (False, any, None)
-    availablity zone of the thunder-device
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  cluster_name (False, any, None)
-    cluster name for the device
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  provider (False, any, None)
-    provider for the harmony-controller
-
-
-  action (False, any, None)
-    'register'= Register the device to the controller; 'deregister'= Deregister the device from controller;
-
-
-  user_name (False, any, None)
-    user-name for the tenant
-
-
-  thunder_mgmt_ip (False, any, None)
-    Field thunder_mgmt_ip
-
-
-    ip_address (optional, any, None)
-      IP address (IPv4 address)
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  secret_value (False, any, None)
-    Specify the password for the user
-
-
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| Parameters                               | Choices/Defaults              | Comment                                                                                                                 |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++==========================================+===============================+=========================================================================================================================+
+| state                                    | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                      |
+|                                          |                               |                                                                                                                         |
+| /required                                |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| ansible_host                             |                               | Host for AXAPI authentication                                                                                           |
+|                                          |                               |                                                                                                                         |
+| /required                                |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| ansible_username                         |                               | Username for AXAPI authentication                                                                                       |
+|                                          |                               |                                                                                                                         |
+| /required                                |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| ansible_password                         |                               | Password for AXAPI authentication                                                                                       |
+|                                          |                               |                                                                                                                         |
+| /required                                |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| ansible_port                             |                               | Port for AXAPI authentication                                                                                           |
+|                                          |                               |                                                                                                                         |
+| /required                                |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id                    | ['1-8']                       | Device ID for aVCS configuration                                                                                        |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| a10_partition                            |                               | Destination/target partition for object/command                                                                         |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| host                                     |                               | Set harmony controller host adddress                                                                                    |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| use_mgmt_port                            |                               | Use management port for connections                                                                                     |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| port                                     |                               | Set port for remote Harmony Controller, default is 8443                                                                 |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| provider                                 |                               | provider for the harmony-controller                                                                                     |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| user_name                                |                               | user-name for the tenant                                                                                                |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| cluster_name                             |                               | cluster name for the device                                                                                             |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| cluster_id                               |                               | cluster id for the device                                                                                               |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| secret_value                             |                               | Specify the password for the user                                                                                       |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| password_encrypted                       |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)                       |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| region                                   |                               | region of the thunder-device                                                                                            |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| auto_restart_action                      |                               | 'enable'= enable auto analytics bus restart, default behavior is enable; 'disable'= disable auto analytics bus restart; |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| interval                                 |                               | auto analytics bus restart time interval in mins, default is 3 mins                                                     |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| availability_zone                        |                               | availablity zone of the thunder-device                                                                                  |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| action                                   |                               | 'register'= Register the device to the controller; 'deregister'= Deregister the device from controller;                 |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| uuid                                     |                               | uuid of the object                                                                                                      |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++------------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| re_sync                                  |                               | Field re_sync                                                                                                           |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | schema_registry                      |                               | re-sync the schema registry                                                                                             |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | analytics_bus                        |                               | re-sync analtyics bus connections                                                                                       |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| thunder_mgmt_ip                          |                               | Field thunder_mgmt_ip                                                                                                   |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | ip_address                           |                               | IP address (IPv4 address)                                                                                               |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | uuid                                 |                               | uuid of the object                                                                                                      |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| tunnel                                   |                               | Field tunnel                                                                                                            |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | action                               |                               | 'enable'= Tunnel Enable; 'disable'= Tunnel Disable;                                                                     |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | uuid                                 |                               | uuid of the object                                                                                                      |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+| oper                                     |                               | Field oper                                                                                                              |
+|                                          |                               |                                                                                                                         |
+|                                          |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | overall_status                       |                               | Field overall_status                                                                                                    |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | heartbeat_status                     |                               | Field heartbeat_status                                                                                                  |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | heartbeat_error_message              |                               | Field heartbeat_error_message                                                                                           |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | service_registry                     |                               | Field service_registry                                                                                                  |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | service_registry_error_message       |                               | Field service_registry_error_message                                                                                    |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | registration_status                  |                               | Field registration_status                                                                                               |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | registration_status_code             |                               | Field registration_status_code                                                                                          |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | registration_error_message           |                               | Field registration_error_message                                                                                        |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | deregistration_status                |                               | Field deregistration_status                                                                                             |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | deregistration_status_code           |                               | Field deregistration_status_code                                                                                        |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | deregistration_error_message         |                               | Field deregistration_error_message                                                                                      |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | schema_registry_status               |                               | Field schema_registry_status                                                                                            |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | broker_info                          |                               | Field broker_info                                                                                                       |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | kafka_broker_state                   |                               | Field kafka_broker_state                                                                                                |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | Number_of_tenant_mapped_partitions   |                               | Field Number_of_tenant_mapped_partitions                                                                                |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | Number_of_tenant_unmapped_partitions |                               | Field Number_of_tenant_unmapped_partitions                                                                              |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | tunnel_status                        |                               | Field tunnel_status                                                                                                     |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+|   | tunnel_error_message                 |                               | Field tunnel_error_message                                                                                              |
+|   |                                      |                               |                                                                                                                         |
+|   |                                      |                               |                                                                                                                         |
++---+--------------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 
 
 

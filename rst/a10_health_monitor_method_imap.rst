@@ -22,82 +22,87 @@ IMAP type
 Parameters
 ----------
 
-  imap_port (False, any, None)
-    Specify the IMAP port, default is 143 (Port Number (default 143))
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  imap_password_string (False, any, None)
-    Configure password, '' means empty password
-
-
-  imap_cram_md5 (False, any, None)
-    Challenge-response authentication mechanism
-
-
-  pwd_auth (False, any, None)
-    Specify the Authentication method
-
-
-  imap_password (False, any, None)
-    Specify the user password
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  imap (False, any, None)
-    IMAP type
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  monitor_name (optional, any, None)
-    Key to identify parent object
-
-
-  imap_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  imap_login (False, any, None)
-    Simple login
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  imap_username (False, any, None)
-    Specify the username
-
-
-  imap_plain (False, any, None)
-    Plain text
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                             |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++=======================+===============================+=====================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                  |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                    |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                     |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| monitor_name          |                               | Key to identify parent object                                                                       |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap                  |                               | IMAP type                                                                                           |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_port             |                               | Specify the IMAP port, default is 143 (Port Number (default 143))                                   |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_username         |                               | Specify the username                                                                                |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_password         |                               | Specify the user password                                                                           |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_password_string  |                               | Configure password, '' means empty password                                                         |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_encrypted        |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| pwd_auth              |                               | Specify the Authentication method                                                                   |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_plain            |                               | Plain text                                                                                          |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_cram_md5         |                               | Challenge-response authentication mechanism                                                         |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| imap_login            |                               | Simple login                                                                                        |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                  |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 
 

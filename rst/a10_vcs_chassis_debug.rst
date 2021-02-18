@@ -22,94 +22,99 @@ VCS debug
 Parameters
 ----------
 
-  vblade_msg (False, any, None)
-    vBlade Message component
-
-
-  info (False, any, None)
-    Information component
-
-
-  vblade (False, any, None)
-    vBlade component
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  encoder (False, any, None)
-    Encoder component
-
-
-  util (False, any, None)
-    Utility component
-
-
-  ssl (False, any, None)
-    SSL component
-
-
-  election (False, any, None)
-    Election component
-
-
-  vmaster (False, any, None)
-    vMaster component
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  daemon_msg (False, any, None)
-    Daemon message component
-
-
-  daemon (False, any, None)
-    Daemon component
-
-
-  lib (False, any, None)
-    Lib component
-
-
-  election_pdu (False, any, None)
-    Election pdu component
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  handler (False, any, None)
-    Handler component
-
-
-  net (False, any, None)
-    Net component
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vmaster_msg (False, any, None)
-    vMaster Message component
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| daemon                |                               | Daemon component                                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| election              |                               | Election component                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| info                  |                               | Information component                           |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| daemon_msg            |                               | Daemon message component                        |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| election_pdu          |                               | Election pdu component                          |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| lib                   |                               | Lib component                                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| util                  |                               | Utility component                               |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ssl                   |                               | SSL component                                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| net                   |                               | Net component                                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| vmaster_msg           |                               | vMaster Message component                       |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| vblade_msg            |                               | vBlade Message component                        |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| encoder               |                               | Encoder component                               |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| handler               |                               | Handler component                               |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| vmaster               |                               | vMaster component                               |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| vblade                |                               | vBlade component                                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
 
 
 

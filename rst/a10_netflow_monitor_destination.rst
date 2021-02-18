@@ -22,72 +22,75 @@ Configure destination where netflow records will be sent
 Parameters
 ----------
 
-  service_group (False, any, None)
-    Service-group for load balancing between multiple collector servers
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ip_cfg (False, any, None)
-    Field ip_cfg
-
-
-    ip (optional, any, None)
-      IP address of netflow collector
-
-
-    port4 (optional, any, None)
-      Port number, default is 9996
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  monitor_name (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ipv6_cfg (False, any, None)
-    Field ipv6_cfg
-
-
-    port6 (optional, any, None)
-      Port number, default is 9996
-
-
-    ipv6 (optional, any, None)
-      IPv6 address of netflow collector
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                             |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++=======================+===============================+=====================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                  |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                       |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                   |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                   |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                       |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                    |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                     |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| monitor_name          |                               | Key to identify parent object                                       |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| service_group         |                               | Service-group for load balancing between multiple collector servers |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ip_cfg                |                               | Field ip_cfg                                                        |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+|   | ip                |                               | IP address of netflow collector                                     |
+|   |                   |                               |                                                                     |
+|   |                   |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+|   | port4             |                               | Port number, default is 9996                                        |
+|   |                   |                               |                                                                     |
+|   |                   |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+| ipv6_cfg              |                               | Field ipv6_cfg                                                      |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+|   | ipv6              |                               | IPv6 address of netflow collector                                   |
+|   |                   |                               |                                                                     |
+|   |                   |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+|   | port6             |                               | Port number, default is 9996                                        |
+|   |                   |                               |                                                                     |
+|   |                   |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                  |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
 
 
 

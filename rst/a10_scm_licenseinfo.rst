@@ -22,75 +22,79 @@ license opers
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    module_list (optional, any, None)
-      Field module_list
-
-
-    product (optional, any, None)
-      Field product
-
-
-    uuid (optional, any, None)
-      Field uuid
-
-
-    billing_serial (optional, any, None)
-      Field billing_serial
-
-
-    usb_uuid (optional, any, None)
-      Field usb_uuid
-
-
-    glm_ping_interval (optional, any, None)
-      Field glm_ping_interval
-
-
-    platform (optional, any, None)
-      Field platform
-
-
-    token (optional, any, None)
-      Field token
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| oper                  |                               | Field oper                                      |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | Field uuid                                      |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | usb_uuid          |                               | Field usb_uuid                                  |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | billing_serial    |                               | Field billing_serial                            |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | token             |                               | Field token                                     |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | product           |                               | Field product                                   |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | platform          |                               | Field platform                                  |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | glm_ping_interval |                               | Field glm_ping_interval                         |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | module_list       |                               | Field module_list                               |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
 
 
 

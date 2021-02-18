@@ -22,84 +22,87 @@ WS-Federation Authentication Relay
 Parameters
 ----------
 
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'request'= Request; 'success'= Success; 'failure'= Failure;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    failure (optional, any, None)
-      Failure
-
-
-    request (optional, any, None)
-      Request
-
-
-    name (optional, any, None)
-      Specify WS-Federation authentication relay name
-
-
-    success (optional, any, None)
-      Success
-
-
-
-  name (True, any, None)
-    Specify WS-Federation authentication relay name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  authentication_uri (False, any, None)
-    Specify WS-Federation relay URI, default is /_trust/
-
-
-  application_server (False, any, None)
-    'sharepoint'= Microsoft SharePoint; 'exchange-owa'= Microsoft Exchange OWA;
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                     |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++=======================+===============================+=============================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                          |
+|                       |                               |                                                                             |
+| /required             |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                               |
+|                       |                               |                                                                             |
+| /required             |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                           |
+|                       |                               |                                                                             |
+| /required             |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                           |
+|                       |                               |                                                                             |
+| /required             |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                               |
+|                       |                               |                                                                             |
+| /required             |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                            |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                             |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| name                  |                               | Specify WS-Federation authentication relay name                             |
+|                       |                               |                                                                             |
+| /required             |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| application_server    |                               | 'sharepoint'= Microsoft SharePoint; 'exchange-owa'= Microsoft Exchange OWA; |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| authentication_uri    |                               | Specify WS-Federation relay URI, default is /_trust/                        |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                          |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| user_tag              |                               | Customized tag                                                              |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                                       |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++---+-------------------+-------------------------------+-----------------------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'request'= Request; 'success'= Success; 'failure'= Failure;     |
+|   |                   |                               |                                                                             |
+|   |                   |                               |                                                                             |
++---+-------------------+-------------------------------+-----------------------------------------------------------------------------+
+| stats                 |                               | Field stats                                                                 |
+|                       |                               |                                                                             |
+|                       |                               |                                                                             |
++---+-------------------+-------------------------------+-----------------------------------------------------------------------------+
+|   | request           |                               | Request                                                                     |
+|   |                   |                               |                                                                             |
+|   |                   |                               |                                                                             |
++---+-------------------+-------------------------------+-----------------------------------------------------------------------------+
+|   | success           |                               | Success                                                                     |
+|   |                   |                               |                                                                             |
+|   |                   |                               |                                                                             |
++---+-------------------+-------------------------------+-----------------------------------------------------------------------------+
+|   | failure           |                               | Failure                                                                     |
+|   |                   |                               |                                                                             |
+|   |                   |                               |                                                                             |
++---+-------------------+-------------------------------+-----------------------------------------------------------------------------+
+|   | name              |                               | Specify WS-Federation authentication relay name                             |
+|   |                   |                               |                                                                             |
+|   |                   |                               |                                                                             |
++---+-------------------+-------------------------------+-----------------------------------------------------------------------------+
 
 
 

@@ -22,72 +22,75 @@ RBA configuration for the access privilege of a user within one partition
 Parameters
 ----------
 
-  rule_list (False, any, None)
-    Field rule_list
-
-
-    operation (optional, any, None)
-      'no-access'= no-access; 'read'= read; 'oper'= oper; 'write'= write;
-
-
-    object (optional, any, None)
-      Lineage of object class for permitted operation
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  user_name (optional, any, None)
-    Key to identify parent object
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  role_list (False, any, None)
-    Field role_list
-
-
-    role (optional, any, None)
-      Role in a given partition
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  partition_name (True, any, None)
-    partition name
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                             |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++=======================+===============================+=====================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                  |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                       |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                   |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                   |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                       |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                    |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                     |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| user_name             |                               | Key to identify parent object                                       |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| partition_name        |                               | partition name                                                      |
+|                       |                               |                                                                     |
+| /required             |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| role_list             |                               | Field role_list                                                     |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+|   | role              |                               | Role in a given partition                                           |
+|   |                   |                               |                                                                     |
+|   |                   |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+| rule_list             |                               | Field rule_list                                                     |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+|   | object            |                               | Lineage of object class for permitted operation                     |
+|   |                   |                               |                                                                     |
+|   |                   |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+|   | operation         |                               | 'no-access'= no-access; 'read'= read; 'oper'= oper; 'write'= write; |
+|   |                   |                               |                                                                     |
+|   |                   |                               |                                                                     |
++---+-------------------+-------------------------------+---------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                  |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
+| user_tag              |                               | Customized tag                                                      |
+|                       |                               |                                                                     |
+|                       |                               |                                                                     |
++-----------------------+-------------------------------+---------------------------------------------------------------------+
 
 
 

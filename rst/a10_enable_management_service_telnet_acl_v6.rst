@@ -22,93 +22,95 @@ IPv6 ACL for Telnet service
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  management (False, any, None)
-    Management Interface
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  acl_name (True, any, None)
-    ACL name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  all_data_intf (False, any, None)
-    All Data Interfaces
-
-
-  ve_cfg (False, any, None)
-    Field ve_cfg
-
-
-    ve_start (optional, any, None)
-      VE port (VE Interface number)
-
-
-    ve_end (optional, any, None)
-      VE port
-
-
-
-  eth_cfg (False, any, None)
-    Field eth_cfg
-
-
-    ethernet_start (optional, any, None)
-      Ethernet port (Ethernet Interface number)
-
-
-    ethernet_end (optional, any, None)
-      Ethernet port
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  tunnel_cfg (False, any, None)
-    Field tunnel_cfg
-
-
-    tunnel_start (optional, any, None)
-      tunnel port (tunnel Interface number)
-
-
-    tunnel_end (optional, any, None)
-      tunnel port
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| acl_name              |                               | ACL name                                        |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| eth_cfg               |                               | Field eth_cfg                                   |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ethernet_start    |                               | Ethernet port (Ethernet Interface number)       |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ethernet_end      |                               | Ethernet port                                   |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| ve_cfg                |                               | Field ve_cfg                                    |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ve_start          |                               | VE port (VE Interface number)                   |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ve_end            |                               | VE port                                         |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| tunnel_cfg            |                               | Field tunnel_cfg                                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | tunnel_start      |                               | tunnel port (tunnel Interface number)           |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | tunnel_end        |                               | tunnel port                                     |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| management            |                               | Management Interface                            |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| all_data_intf         |                               | All Data Interfaces                             |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| user_tag              |                               | Customized tag                                  |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
 
 
 

@@ -22,105 +22,107 @@ Configure secondary monitoring key
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  secondary_monitoring_key (True, any, None)
-    'service'= Monitor traffic to any service;
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  replay_debug_file (False, any, None)
-    Field replay_debug_file
-
-
-    debug_protocol (optional, any, None)
-      'TCP'= TCP; 'UDP'= UDP; 'ICMP'= ICMP;
-
-
-    debug_port (optional, any, None)
-      Specify port
-
-
-    debug_ip_addr (optional, any, None)
-      Specify source/dest ip addr
-
-
-
-  delete_debug_file (False, any, None)
-    Field delete_debug_file
-
-
-    debug_protocol (optional, any, None)
-      'TCP'= TCP; 'UDP'= UDP; 'ICMP'= ICMP;
-
-
-    debug_port (optional, any, None)
-      Specify port
-
-
-    debug_ip_addr (optional, any, None)
-      Specify source/dest ip addr
-
-
-
-  mon_entity_topk (False, any, None)
-    Enable topk for secondary entities
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  source_entity_topk (False, any, None)
-    Enable topk for sources to secondary-entities
-
-
-  debug_list (False, any, None)
-    Field debug_list
-
-
-    debug_protocol (optional, any, None)
-      'TCP'= TCP; 'UDP'= UDP; 'ICMP'= ICMP;
-
-
-    debug_port (optional, any, None)
-      Specify port
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    debug_ip_addr (optional, any, None)
-      Specify source/dest ip addr
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++--------------------------+-------------------------------+-------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                         |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++==========================+===============================+=================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| secondary_monitoring_key |                               | 'service'= Monitor traffic to any service;      |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| mon_entity_topk          |                               | Enable topk for secondary entities              |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| source_entity_topk       |                               | Enable topk for sources to secondary-entities   |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| uuid                     |                               | uuid of the object                              |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| debug_list               |                               | Field debug_list                                |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_ip_addr        |                               | Specify source/dest ip addr                     |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_port           |                               | Specify port                                    |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_protocol       |                               | 'TCP'= TCP; 'UDP'= UDP; 'ICMP'= ICMP;           |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                              |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| delete_debug_file        |                               | Field delete_debug_file                         |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_ip_addr        |                               | Specify source/dest ip addr                     |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_port           |                               | Specify port                                    |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_protocol       |                               | 'TCP'= TCP; 'UDP'= UDP; 'ICMP'= ICMP;           |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| replay_debug_file        |                               | Field replay_debug_file                         |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_ip_addr        |                               | Specify source/dest ip addr                     |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_port           |                               | Specify port                                    |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | debug_protocol       |                               | 'TCP'= TCP; 'UDP'= UDP; 'ICMP'= ICMP;           |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
 
 
 

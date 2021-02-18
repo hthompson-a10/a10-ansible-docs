@@ -22,99 +22,103 @@ One to One Mapping
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    pool_name (optional, any, None)
-      Field pool_name
-
-
-    shared_partition (optional, any, None)
-      Field shared_partition
-
-
-    nat_addr_start (optional, any, None)
-      Field nat_addr_start
-
-
-    shared_pool_name (optional, any, None)
-      Field shared_pool_name
-
-
-    inside_addr_start (optional, any, None)
-      Field inside_addr_start
-
-
-    session_mapping_list (optional, any, None)
-      Field session_mapping_list
-
-
-    inside_addr_end (optional, any, None)
-      Field inside_addr_end
-
-
-    inside_address_ipv6 (optional, any, None)
-      Field inside_address_ipv6
-
-
-    inside_address_ipv4 (optional, any, None)
-      Field inside_address_ipv4
-
-
-    nat_addr_val (optional, any, None)
-      Field nat_addr_val
-
-
-    total (optional, any, None)
-      Field total
-
-
-    all_partitions (optional, any, None)
-      Field all_partitions
-
-
-    partition_name (optional, any, None)
-      Field partition_name
-
-
-    nat_addr_end (optional, any, None)
-      Field nat_addr_end
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++--------------------------+-------------------------------+-------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                         |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++==========================+===============================+=================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| uuid                     |                               | uuid of the object                              |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| oper                     |                               | Field oper                                      |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | session_mapping_list |                               | Field session_mapping_list                      |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | total                |                               | Field total                                     |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | inside_address_ipv4  |                               | Field inside_address_ipv4                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | inside_address_ipv6  |                               | Field inside_address_ipv6                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | all_partitions       |                               | Field all_partitions                            |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | shared_partition     |                               | Field shared_partition                          |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | partition_name       |                               | Field partition_name                            |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | inside_addr_start    |                               | Field inside_addr_start                         |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | inside_addr_end      |                               | Field inside_addr_end                           |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | nat_addr_val         |                               | Field nat_addr_val                              |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | nat_addr_start       |                               | Field nat_addr_start                            |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | nat_addr_end         |                               | Field nat_addr_end                              |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | pool_name            |                               | Field pool_name                                 |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | shared_pool_name     |                               | Field shared_pool_name                          |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
 
 
 

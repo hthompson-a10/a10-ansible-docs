@@ -22,159 +22,159 @@ Global setting for Open Shortest Path First for IPv4 (OSPF)
 Parameters
 ----------
 
-  cost (False, any, None)
-    Interface cost
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  lif_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  message_digest_cfg (False, any, None)
-    Field message_digest_cfg
-
-
-    message_digest_key (optional, any, None)
-      Message digest authentication password (key) (Key id)
-
-
-    md5 (optional, any, None)
-      Field md5
-
-
-
-  dead_interval (False, any, None)
-    Interval after which a neighbor is declared dead (Seconds)
-
-
-  hello_interval (False, any, None)
-    Time between HELLO packets (Seconds)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  mtu (False, any, None)
-    OSPF interface MTU (MTU size)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  transmit_delay (False, any, None)
-    Link state transmit delay (Seconds)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  database_filter_cfg (False, any, None)
-    Field database_filter_cfg
-
-
-    database_filter (optional, any, None)
-      'all'= Filter all LSA;
-
-
-    out (optional, any, None)
-      Outgoing LSA
-
-
-
-  retransmit_interval (False, any, None)
-    Time between retransmitting lost link state advertisements (Seconds)
-
-
-  network (False, any, None)
-    Field network
-
-
-    broadcast (optional, any, None)
-      Specify OSPF broadcast multi-access network
-
-
-    non_broadcast (optional, any, None)
-      Specify OSPF NBMA network
-
-
-    p2mp_nbma (optional, any, None)
-      Specify non-broadcast point-to-multipoint network
-
-
-    point_to_multipoint (optional, any, None)
-      Specify OSPF point-to-multipoint network
-
-
-    point_to_point (optional, any, None)
-      Specify OSPF point-to-point network
-
-
-
-  mtu_ignore (False, any, None)
-    Ignores the MTU in DBD packets
-
-
-  priority (False, any, None)
-    Router priority
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  disable (False, any, None)
-    'all'= All functionality;
-
-
-  authentication_cfg (False, any, None)
-    Field authentication_cfg
-
-
-    authentication (optional, any, None)
-      Enable authentication
-
-
-    value (optional, any, None)
-      'message-digest'= Use message-digest authentication; 'null'= Use no authentication;
-
-
-
-  bfd_cfg (False, any, None)
-    Field bfd_cfg
-
-
-    disable (optional, any, None)
-      Disable BFD
-
-
-    bfd (optional, any, None)
-      Bidirectional Forwarding Detection (BFD)
-
-
-
-  authentication_key (False, any, None)
-    Authentication password (key) (The OSPF password (key))
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                                                             |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++=========================+===============================+=====================================================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.                                                  |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                                                       |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication                                                   |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication                                                   |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                                                       |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                                                    |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command                                     |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| lif_ifnum               |                               | Key to identify parent object                                                       |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| authentication_cfg      |                               | Field authentication_cfg                                                            |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | authentication      |                               | Enable authentication                                                               |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | value               |                               | 'message-digest'= Use message-digest authentication; 'null'= Use no authentication; |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| authentication_key      |                               | Authentication password (key) (The OSPF password (key))                             |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| bfd_cfg                 |                               | Field bfd_cfg                                                                       |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | bfd                 |                               | Bidirectional Forwarding Detection (BFD)                                            |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | disable             |                               | Disable BFD                                                                         |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| cost                    |                               | Interface cost                                                                      |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| database_filter_cfg     |                               | Field database_filter_cfg                                                           |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | database_filter     |                               | 'all'= Filter all LSA;                                                              |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | out                 |                               | Outgoing LSA                                                                        |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| dead_interval           |                               | Interval after which a neighbor is declared dead (Seconds)                          |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| disable                 |                               | 'all'= All functionality;                                                           |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| hello_interval          |                               | Time between HELLO packets (Seconds)                                                |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| message_digest_cfg      |                               | Field message_digest_cfg                                                            |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | message_digest_key  |                               | Message digest authentication password (key) (Key id)                               |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | md5                 |                               | Field md5                                                                           |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| mtu                     |                               | OSPF interface MTU (MTU size)                                                       |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| mtu_ignore              |                               | Ignores the MTU in DBD packets                                                      |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| network                 |                               | Field network                                                                       |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | broadcast           |                               | Specify OSPF broadcast multi-access network                                         |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | non_broadcast       |                               | Specify OSPF NBMA network                                                           |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | point_to_point      |                               | Specify OSPF point-to-point network                                                 |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | point_to_multipoint |                               | Specify OSPF point-to-multipoint network                                            |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | p2mp_nbma           |                               | Specify non-broadcast point-to-multipoint network                                   |
+|   |                     |                               |                                                                                     |
+|   |                     |                               |                                                                                     |
++---+---------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| priority                |                               | Router priority                                                                     |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| retransmit_interval     |                               | Time between retransmitting lost link state advertisements (Seconds)                |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| transmit_delay          |                               | Link state transmit delay (Seconds)                                                 |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| uuid                    |                               | uuid of the object                                                                  |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
 
 
 

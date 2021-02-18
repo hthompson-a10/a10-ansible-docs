@@ -22,66 +22,71 @@ authentication key
 Parameters
 ----------
 
-  alg_type (False, any, None)
-    'M'= encryption using MD5; 'SHA'= encryption using SHA; 'SHA1'= encryption using SHA1;
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  hex_key (False, any, None)
-    Field hex_key
-
-
-  encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  key_type (False, any, None)
-    'ascii'= key string in ASCII form; 'hex'= key string in hex form;
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  asc_key (False, any, None)
-    Field asc_key
-
-
-  key (True, any, None)
-    authentication key
-
-
-  hex_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                             |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++=======================+===============================+=====================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                  |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                    |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                     |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| key                   |                               | authentication key                                                                                  |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| alg_type              |                               | 'M'= encryption using MD5; 'SHA'= encryption using SHA; 'SHA1'= encryption using SHA1;              |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| key_type              |                               | 'ascii'= key string in ASCII form; 'hex'= key string in hex form;                                   |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| asc_key               |                               | Field asc_key                                                                                       |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| encrypted             |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| hex_key               |                               | Field hex_key                                                                                       |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| hex_encrypted         |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                  |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 
 

@@ -22,138 +22,139 @@ Global IPv6 configuration subcommands
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ospf (False, any, None)
-    Field ospf
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    bfd (optional, any, None)
-      Bidirectional Forwarding Detection (BFD)
-
-
-    hello_interval_cfg (optional, any, None)
-      Field hello_interval_cfg
-
-
-    cost_cfg (optional, any, None)
-      Field cost_cfg
-
-
-    dead_interval_cfg (optional, any, None)
-      Field dead_interval_cfg
-
-
-    transmit_delay_cfg (optional, any, None)
-      Field transmit_delay_cfg
-
-
-    disable (optional, any, None)
-      Disable BFD
-
-
-    mtu_ignore_cfg (optional, any, None)
-      Field mtu_ignore_cfg
-
-
-    priority_cfg (optional, any, None)
-      Field priority_cfg
-
-
-    retransmit_interval_cfg (optional, any, None)
-      Field retransmit_interval_cfg
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  rip (False, any, None)
-    Field rip
-
-
-    split_horizon_cfg (optional, any, None)
-      Field split_horizon_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ipv6_enable (False, any, None)
-    Enable IPv6 processing
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  router (False, any, None)
-    Field router
-
-
-    ripng (optional, any, None)
-      Field ripng
-
-
-    ospf (optional, any, None)
-      Field ospf
-
-
-    isis (optional, any, None)
-      Field isis
-
-
-
-  loopback_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  address_list (False, any, None)
-    Field address_list
-
-
-    ipv6_addr (optional, any, None)
-      Set the IPv6 address of an interface
-
-
-    anycast (optional, any, None)
-      Configure an IPv6 anycast address
-
-
-    link_local (optional, any, None)
-      Configure an IPv6 link local address
-
-
-
++-----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                         |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++=============================+===============================+=================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| loopback_ifnum              |                               | Key to identify parent object                   |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| address_list                |                               | Field address_list                              |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | ipv6_addr               |                               | Set the IPv6 address of an interface            |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | anycast                 |                               | Configure an IPv6 anycast address               |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | link_local              |                               | Configure an IPv6 link local address            |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+| ipv6_enable                 |                               | Enable IPv6 processing                          |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                        |                               | uuid of the object                              |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| router                      |                               | Field router                                    |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | ripng                   |                               | Field ripng                                     |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | ospf                    |                               | Field ospf                                      |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | isis                    |                               | Field isis                                      |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+| rip                         |                               | Field rip                                       |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | split_horizon_cfg       |                               | Field split_horizon_cfg                         |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                    |                               | uuid of the object                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+| ospf                        |                               | Field ospf                                      |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | bfd                     |                               | Bidirectional Forwarding Detection (BFD)        |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | disable                 |                               | Disable BFD                                     |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | cost_cfg                |                               | Field cost_cfg                                  |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | dead_interval_cfg       |                               | Field dead_interval_cfg                         |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | hello_interval_cfg      |                               | Field hello_interval_cfg                        |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | mtu_ignore_cfg          |                               | Field mtu_ignore_cfg                            |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | priority_cfg            |                               | Field priority_cfg                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | retransmit_interval_cfg |                               | Field retransmit_interval_cfg                   |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | transmit_delay_cfg      |                               | Field transmit_delay_cfg                        |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                    |                               | uuid of the object                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
 
 
 

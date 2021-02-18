@@ -22,75 +22,79 @@ LSN Enhanced User Data
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    user_count (optional, any, None)
-      Field user_count
-
-
-    shared_partition (optional, any, None)
-      Field shared_partition
-
-
-    nat_pool_name (optional, any, None)
-      Field nat_pool_name
-
-
-    inside_addr (optional, any, None)
-      Field inside_addr
-
-
-    all_partitions (optional, any, None)
-      Field all_partitions
-
-
-    user_list (optional, any, None)
-      Field user_list
-
-
-    partition_name (optional, any, None)
-      Field partition_name
-
-
-    pool_shared (optional, any, None)
-      Field pool_shared
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| oper                  |                               | Field oper                                      |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | user_list         |                               | Field user_list                                 |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | user_count        |                               | Field user_count                                |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | all_partitions    |                               | Field all_partitions                            |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | shared_partition  |                               | Field shared_partition                          |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | partition_name    |                               | Field partition_name                            |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | inside_addr       |                               | Field inside_addr                               |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | nat_pool_name     |                               | Field nat_pool_name                             |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | pool_shared       |                               | Field pool_shared                               |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
 
 
 

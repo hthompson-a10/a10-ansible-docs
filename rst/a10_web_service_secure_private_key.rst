@@ -22,46 +22,51 @@ Web-service secure private-key operation
 Parameters
 ----------
 
-  load (False, any, None)
-    Load WEB private-key
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  file_url (False, any, None)
-    File URL
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  use_mgmt_port (False, any, None)
-    Use management port as source port
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+---------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults    | Comment                                         |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++=======================+=====================+=================================================+
+| state                 | ['noop', 'present'] | State of the object to be created.              |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_host          |                     | Host for AXAPI authentication                   |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_username      |                     | Username for AXAPI authentication               |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_password      |                     | Password for AXAPI authentication               |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_port          |                     | Port for AXAPI authentication                   |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']             | Device ID for aVCS configuration                |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| a10_partition         |                     | Destination/target partition for object/command |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| load                  |                     | Load WEB private-key                            |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| use_mgmt_port         |                     | Use management port as source port              |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| file_url              |                     | File URL                                        |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
 
 
 

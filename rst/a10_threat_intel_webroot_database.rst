@@ -22,127 +22,131 @@ webroot database information
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    status (optional, any, None)
-      Field status
-
-
-    last_update_time (optional, any, None)
-      Field last_update_time
-
-
-    botnets (optional, any, None)
-      Field botnets
-
-
-    version (optional, any, None)
-      Field version
-
-
-    proxy (optional, any, None)
-      Field proxy
-
-
-    last_successful_connection (optional, any, None)
-      Field last_successful_connection
-
-
-    spam_sources (optional, any, None)
-      Field spam_sources
-
-
-    reputation (optional, any, None)
-      Field reputation
-
-
-    size (optional, any, None)
-      Field size
-
-
-    connection_status (optional, any, None)
-      Field connection_status
-
-
-    name (optional, any, None)
-      Field name
-
-
-    next_update_time (optional, any, None)
-      Field next_update_time
-
-
-    phishing (optional, any, None)
-      Field phishing
-
-
-    total_entries (optional, any, None)
-      Field total_entries
-
-
-    web_attacks (optional, any, None)
-      Field web_attacks
-
-
-    failure_reason (optional, any, None)
-      Field failure_reason
-
-
-    mobile_threats (optional, any, None)
-      Field mobile_threats
-
-
-    dos_attacks (optional, any, None)
-      Field dos_attacks
-
-
-    tor_proxy (optional, any, None)
-      Field tor_proxy
-
-
-    scanners (optional, any, None)
-      Field scanners
-
-
-    windows_exploits (optional, any, None)
-      Field windows_exploits
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++--------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                     | Choices/Defaults              | Comment                                         |
+|                                |                               |                                                 |
+|                                |                               |                                                 |
++================================+===============================+=================================================+
+| state                          | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                                |                               |                                                 |
+| /required                      |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                   |                               | Host for AXAPI authentication                   |
+|                                |                               |                                                 |
+| /required                      |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username               |                               | Username for AXAPI authentication               |
+|                                |                               |                                                 |
+| /required                      |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password               |                               | Password for AXAPI authentication               |
+|                                |                               |                                                 |
+| /required                      |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                   |                               | Port for AXAPI authentication                   |
+|                                |                               |                                                 |
+| /required                      |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id          | ['1-8']                       | Device ID for aVCS configuration                |
+|                                |                               |                                                 |
+|                                |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                  |                               | Destination/target partition for object/command |
+|                                |                               |                                                 |
+|                                |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| uuid                           |                               | uuid of the object                              |
+|                                |                               |                                                 |
+|                                |                               |                                                 |
++--------------------------------+-------------------------------+-------------------------------------------------+
+| oper                           |                               | Field oper                                      |
+|                                |                               |                                                 |
+|                                |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | name                       |                               | Field name                                      |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | status                     |                               | Field status                                    |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | size                       |                               | Field size                                      |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | version                    |                               | Field version                                   |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | last_update_time           |                               | Field last_update_time                          |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | next_update_time           |                               | Field next_update_time                          |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | connection_status          |                               | Field connection_status                         |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | failure_reason             |                               | Field failure_reason                            |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | last_successful_connection |                               | Field last_successful_connection                |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | spam_sources               |                               | Field spam_sources                              |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | windows_exploits           |                               | Field windows_exploits                          |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | web_attacks                |                               | Field web_attacks                               |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | botnets                    |                               | Field botnets                                   |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | scanners                   |                               | Field scanners                                  |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | dos_attacks                |                               | Field dos_attacks                               |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | reputation                 |                               | Field reputation                                |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | phishing                   |                               | Field phishing                                  |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | proxy                      |                               | Field proxy                                     |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | mobile_threats             |                               | Field mobile_threats                            |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | tor_proxy                  |                               | Field tor_proxy                                 |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
+|   | total_entries              |                               | Field total_entries                             |
+|   |                            |                               |                                                 |
+|   |                            |                               |                                                 |
++---+----------------------------+-------------------------------+-------------------------------------------------+
 
 
 

@@ -22,259 +22,259 @@ Change password notification page configuration
 Parameters
 ----------
 
-  change_url (False, any, None)
-    Specify change password action URL in default change password notification page (Default= /notify_change.fo)
-
-
-  background (False, any, None)
-    Field background
-
-
-    bgcolor_name (optional, any, None)
-      'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow;
-
-
-    bgfile (optional, any, None)
-      Specify background image filename
-
-
-    bgstyle (optional, any, None)
-      'tile'= Tile; 'stretch'= Stretch; 'fit'= Fit;
-
-
-    bgcolor_value (optional, any, None)
-      Specify 6-digit HEX color value
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  portal_name (optional, any, None)
-    Key to identify parent object
-
-
-  continue_url (False, any, None)
-    Specify continue action URL in default change password notification page (Default= /continue.fo)
-
-
-  old_pwd_cfg (False, any, None)
-    Field old_pwd_cfg
-
-
-    old_face (optional, any, None)
-      'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;
-
-
-    old_text (optional, any, None)
-      Specify old password text (Default= Old Password)
-
-
-    old_font (optional, any, None)
-      Sepcify font (Default= Arial)
-
-
-    old_color_value (optional, any, None)
-      Specify 6-digit HEX color value
-
-
-    old_size (optional, any, None)
-      Specify font size (Default= 3)
-
-
-    old_color (optional, any, None)
-      Specify font color (Default= black)
-
-
-    old_color_name (optional, any, None)
-      'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow;
-
-
-    old_font_custom (optional, any, None)
-      Specify custom font
-
-
-    old_password (optional, any, None)
-      Configure old password text in default change password notification page
-
-
-
-  continue_text (False, any, None)
-    Specify continue button text in default change password notification page (Default= Continue)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  cfm_pwd_cfg (False, any, None)
-    Field cfm_pwd_cfg
-
-
-    confirm_password (optional, any, None)
-      Configure confirm password text in default change password notification page
-
-
-    cfm_font (optional, any, None)
-      Sepcify font (Default= Arial)
-
-
-    cfm_font_custom (optional, any, None)
-      Specify custom font
-
-
-    cfm_color_value (optional, any, None)
-      Specify 6-digit HEX color value
-
-
-    cfm_size (optional, any, None)
-      Specify font size (Default= 3)
-
-
-    cfm_color_name (optional, any, None)
-      'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow;
-
-
-    cfm_color (optional, any, None)
-      Specify font color (Default= black)
-
-
-    cfm_face (optional, any, None)
-      'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;
-
-
-    cfm_text (optional, any, None)
-      Specify confirm password text (Default= Confirm New Password)
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  username_var (False, any, None)
-    Specify username variable name in default change password notification page (Default= cp_usr)
-
-
-  old_password_var (False, any, None)
-    Specify old password variable name in default change password notification page (Default= cp_old_pwd)
-
-
-  new_pwd_cfg (False, any, None)
-    Field new_pwd_cfg
-
-
-    new_color_name (optional, any, None)
-      'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow;
-
-
-    new_text (optional, any, None)
-      Specify new password text (Default= New Password)
-
-
-    new_face (optional, any, None)
-      'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;
-
-
-    new_font (optional, any, None)
-      Sepcify font (Default= Arial)
-
-
-    new_password (optional, any, None)
-      Configure new password text in default change password notification page
-
-
-    new_font_custom (optional, any, None)
-      Specify custom font
-
-
-    new_size (optional, any, None)
-      Specify font size (Default= 3)
-
-
-    new_color (optional, any, None)
-      Specify font color (Default= black)
-
-
-    new_color_value (optional, any, None)
-      Specify 6-digit HEX color value
-
-
-
-  username_cfg (False, any, None)
-    Field username_cfg
-
-
-    username (optional, any, None)
-      Configure username text in default change password notification page
-
-
-    user_font (optional, any, None)
-      Sepcify font (Default= Arial)
-
-
-    user_color (optional, any, None)
-      Specify font color (Default= black)
-
-
-    user_text (optional, any, None)
-      Specify username text (Default= Username)
-
-
-    user_color_name (optional, any, None)
-      'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow;
-
-
-    user_face (optional, any, None)
-      'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;
-
-
-    user_size (optional, any, None)
-      Specify font size (Default= 3)
-
-
-    user_color_value (optional, any, None)
-      Specify 6-digit HEX color value
-
-
-    user_font_custom (optional, any, None)
-      Specify custom font
-
-
-
-  change_text (False, any, None)
-    Specify change button text in default change password notification page (Default= Change)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  new_password_var (False, any, None)
-    Specify new password variable name in default change password notification page (Default= cp_new_pwd)
-
-
-  confirm_password_var (False, any, None)
-    Specify confirm password variable name in default change password notification page (Default= cp_cfm_pwd)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                                                                                                                                                                                       |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++=======================+===============================+===============================================================================================================================================================================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                                                                                                                                                                            |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+| /required             |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                                                                                                                                                                                 |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+| /required             |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                                                                                                                                                                             |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+| /required             |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                                                                                                                                                                             |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+| /required             |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                                                                                                                                                                                 |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+| /required             |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                                                                                                                                                                              |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| portal_name           |                               | Key to identify parent object                                                                                                                                                                                                                                                 |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| background            |                               | Field background                                                                                                                                                                                                                                                              |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | bgfile            |                               | Specify background image filename                                                                                                                                                                                                                                             |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | bgstyle           |                               | 'tile'= Tile; 'stretch'= Stretch; 'fit'= Fit;                                                                                                                                                                                                                                 |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | bgcolor_name      |                               | 'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow; |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | bgcolor_value     |                               | Specify 6-digit HEX color value                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| continue_url          |                               | Specify continue action URL in default change password notification page (Default= /continue.fo)                                                                                                                                                                              |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| change_url            |                               | Specify change password action URL in default change password notification page (Default= /notify_change.fo)                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| username_cfg          |                               | Field username_cfg                                                                                                                                                                                                                                                            |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | username          |                               | Configure username text in default change password notification page                                                                                                                                                                                                          |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_text         |                               | Specify username text (Default= Username)                                                                                                                                                                                                                                     |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_font         |                               | Sepcify font (Default= Arial)                                                                                                                                                                                                                                                 |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_face         |                               | 'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;                                                                                                                                                       |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_font_custom  |                               | Specify custom font                                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_size         |                               | Specify font size (Default= 3)                                                                                                                                                                                                                                                |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_color        |                               | Specify font color (Default= black)                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_color_name   |                               | 'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow; |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | user_color_value  |                               | Specify 6-digit HEX color value                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| username_var          |                               | Specify username variable name in default change password notification page (Default= cp_usr)                                                                                                                                                                                 |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| old_pwd_cfg           |                               | Field old_pwd_cfg                                                                                                                                                                                                                                                             |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_password      |                               | Configure old password text in default change password notification page                                                                                                                                                                                                      |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_text          |                               | Specify old password text (Default= Old Password)                                                                                                                                                                                                                             |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_font          |                               | Sepcify font (Default= Arial)                                                                                                                                                                                                                                                 |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_face          |                               | 'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;                                                                                                                                                       |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_font_custom   |                               | Specify custom font                                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_size          |                               | Specify font size (Default= 3)                                                                                                                                                                                                                                                |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_color         |                               | Specify font color (Default= black)                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_color_name    |                               | 'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow; |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | old_color_value   |                               | Specify 6-digit HEX color value                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| old_password_var      |                               | Specify old password variable name in default change password notification page (Default= cp_old_pwd)                                                                                                                                                                         |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| new_pwd_cfg           |                               | Field new_pwd_cfg                                                                                                                                                                                                                                                             |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_password      |                               | Configure new password text in default change password notification page                                                                                                                                                                                                      |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_text          |                               | Specify new password text (Default= New Password)                                                                                                                                                                                                                             |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_font          |                               | Sepcify font (Default= Arial)                                                                                                                                                                                                                                                 |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_face          |                               | 'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;                                                                                                                                                       |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_font_custom   |                               | Specify custom font                                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_size          |                               | Specify font size (Default= 3)                                                                                                                                                                                                                                                |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_color         |                               | Specify font color (Default= black)                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_color_name    |                               | 'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow; |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | new_color_value   |                               | Specify 6-digit HEX color value                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| new_password_var      |                               | Specify new password variable name in default change password notification page (Default= cp_new_pwd)                                                                                                                                                                         |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cfm_pwd_cfg           |                               | Field cfm_pwd_cfg                                                                                                                                                                                                                                                             |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | confirm_password  |                               | Configure confirm password text in default change password notification page                                                                                                                                                                                                  |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_text          |                               | Specify confirm password text (Default= Confirm New Password)                                                                                                                                                                                                                 |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_font          |                               | Sepcify font (Default= Arial)                                                                                                                                                                                                                                                 |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_face          |                               | 'Arial'= Arial; 'Courier_New'= Courier New; 'Georgia'= Georgia; 'Times_New_Roman'= Times New Roman; 'Verdana'= Verdana;                                                                                                                                                       |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_font_custom   |                               | Specify custom font                                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_size          |                               | Specify font size (Default= 3)                                                                                                                                                                                                                                                |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_color         |                               | Specify font color (Default= black)                                                                                                                                                                                                                                           |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_color_name    |                               | 'aqua'= aqua; 'black'= black; 'blue'= blue; 'fuchsia'= fuchsia; 'gray'= gray; 'green'= green; 'lime'= lime; 'maroon'= maroon; 'navy'= navy; 'olive'= olive; 'orange'= orange; 'purple'= purple; 'red'= red; 'silver'= silver; 'teal'= teal; 'white'= white; 'yellow'= yellow; |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cfm_color_value   |                               | Specify 6-digit HEX color value                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
+|   |                   |                               |                                                                                                                                                                                                                                                                               |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| confirm_password_var  |                               | Specify confirm password variable name in default change password notification page (Default= cp_cfm_pwd)                                                                                                                                                                     |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| change_text           |                               | Specify change button text in default change password notification page (Default= Change)                                                                                                                                                                                     |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| continue_text         |                               | Specify continue button text in default change password notification page (Default= Continue)                                                                                                                                                                                 |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                                                                                                                                                                            |
+|                       |                               |                                                                                                                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                                                                                               |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 

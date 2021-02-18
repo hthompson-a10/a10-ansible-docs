@@ -22,80 +22,83 @@ Create resource accounting template
 Parameters
 ----------
 
-  template_list (False, any, None)
-    Field template_list
-
-
-    system_resources (optional, any, None)
-      Field system_resources
-
-
-    name (optional, any, None)
-      Enter template name
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    app_resources (optional, any, None)
-      Field app_resources
-
-
-    network_resources (optional, any, None)
-      Field network_resources
-
-
-
-  oper (False, any, None)
-    Field oper
-
-
-    scope (optional, any, None)
-      Field scope
-
-
-    partition_resource (optional, any, None)
-      Field partition_resource
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------+-------------------------------+-------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                         |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++========================+===============================+=================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| uuid                   |                               | uuid of the object                              |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| template_list          |                               | Field template_list                             |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | name               |                               | Enter template name                             |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | uuid               |                               | uuid of the object                              |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | user_tag           |                               | Customized tag                                  |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | app_resources      |                               | Field app_resources                             |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | network_resources  |                               | Field network_resources                         |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | system_resources   |                               | Field system_resources                          |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+| oper                   |                               | Field oper                                      |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | scope              |                               | Field scope                                     |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | partition_resource |                               | Field partition_resource                        |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
 
 
 

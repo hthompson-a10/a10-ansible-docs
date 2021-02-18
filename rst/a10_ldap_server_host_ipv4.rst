@@ -22,113 +22,115 @@ Specify the hostname of ldap server
 Parameters
 ----------
 
-  domain (False, any, None)
-    Configure AD domain name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  dn_value (False, any, None)
-    LDAP distinguished name (dn)
-
-
-  base (False, any, None)
-    Configure the group DN which user belongs to
-
-
-  ipv4_addr (True, any, None)
-    IPV4 address of ldap server
-
-
-  domain_cfg (False, any, None)
-    Field domain_cfg
-
-
-    ssl (optional, any, None)
-      Use SSL
-
-
-    port (optional, any, None)
-      Specify the LDAP server's port (default 389 without ssl or 636 with ssl)
-
-
-    timeout (optional, any, None)
-      Specify the LDAP server's timeout (default 3)
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  port_cfg (False, any, None)
-    Field port_cfg
-
-
-    ssl (optional, any, None)
-      Use SSL
-
-
-    port (optional, any, None)
-      Specify the LDAP server's port (default 389 without ssl or 636 with ssl)
-
-
-    timeout (optional, any, None)
-      Specify the LDAP server's timeout (default 3)
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  group (False, any, None)
-    Configure the group DN which user belongs to
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  cn_value (False, any, None)
-    LDAP common name identifier (i.e.= cn, uid)
-
-
-  ipv4_addr_cfg (False, any, None)
-    Field ipv4_addr_cfg
-
-
-    ssl (optional, any, None)
-      Use SSL
-
-
-    port (optional, any, None)
-      Specify the LDAP server's port (default 3268 without ssl or 3269 with ssl)
-
-
-    timeout (optional, any, None)
-      Specify the LDAP server's timeout (default 3)
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                    |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++=======================+===============================+============================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                         |
+|                       |                               |                                                                            |
+| /required             |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                              |
+|                       |                               |                                                                            |
+| /required             |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                          |
+|                       |                               |                                                                            |
+| /required             |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                          |
+|                       |                               |                                                                            |
+| /required             |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                              |
+|                       |                               |                                                                            |
+| /required             |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                           |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                            |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| ipv4_addr             |                               | IPV4 address of ldap server                                                |
+|                       |                               |                                                                            |
+| /required             |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| domain                |                               | Configure AD domain name                                                   |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| ipv4_addr_cfg         |                               | Field ipv4_addr_cfg                                                        |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | port              |                               | Specify the LDAP server's port (default 3268 without ssl or 3269 with ssl) |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | ssl               |                               | Use SSL                                                                    |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | timeout           |                               | Specify the LDAP server's timeout (default 3)                              |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+| cn_value              |                               | LDAP common name identifier (i.e.= cn, uid)                                |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| group                 |                               | Configure the group DN which user belongs to                               |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| base                  |                               | Configure the group DN which user belongs to                               |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| dn_value              |                               | LDAP distinguished name (dn)                                               |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
+| domain_cfg            |                               | Field domain_cfg                                                           |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | port              |                               | Specify the LDAP server's port (default 389 without ssl or 636 with ssl)   |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | ssl               |                               | Use SSL                                                                    |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | timeout           |                               | Specify the LDAP server's timeout (default 3)                              |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+| port_cfg              |                               | Field port_cfg                                                             |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | port              |                               | Specify the LDAP server's port (default 389 without ssl or 636 with ssl)   |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | ssl               |                               | Use SSL                                                                    |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | timeout           |                               | Specify the LDAP server's timeout (default 3)                              |
+|   |                   |                               |                                                                            |
+|   |                   |                               |                                                                            |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                         |
+|                       |                               |                                                                            |
+|                       |                               |                                                                            |
++-----------------------+-------------------------------+----------------------------------------------------------------------------+
 
 
 

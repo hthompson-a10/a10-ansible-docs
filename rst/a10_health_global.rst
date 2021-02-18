@@ -22,74 +22,79 @@ Define the Health Monitor global default
 Parameters
 ----------
 
-  interval (False, any, None)
-    Specify the Healthcheck Interval (Interval Value, in seconds (default 5))
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  up_retry (False, any, None)
-    Specify the Healthcheck Retries before declaring target up (Up-retry count (default 1))
-
-
-  external_rate (False, any, None)
-    Define the External Health Check Rate (Number of External Script Programs (default 2))
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  check_rate (False, any, None)
-    Health Check Rate per 500ms (default 1000)
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  retry (False, any, None)
-    Specify the Healthcheck Retries (Retry Count (default 3))
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  disable_auto_adjust (False, any, None)
-    Disable the Health Check Rate Auto Adjustment
-
-
-  multi_process (False, any, None)
-    Start Health Monitoring in Multi-Process Mode (Specify the number of multiple processes (default 1))
-
-
-  per (False, any, None)
-    Specify the Unit Time for the rate (Specify the Unit Time, multiple of 100ms)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  timeout (False, any, None)
-    Specify the Healthcheck Timeout (Timeout Value, in seconds (default 5), Timeout should be less than or equal to interval)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                                   |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++=======================+===============================+===========================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                        |
+|                       |                               |                                                                                                                           |
+| /required             |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                             |
+|                       |                               |                                                                                                                           |
+| /required             |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                         |
+|                       |                               |                                                                                                                           |
+| /required             |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                         |
+|                       |                               |                                                                                                                           |
+| /required             |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                             |
+|                       |                               |                                                                                                                           |
+| /required             |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                          |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                           |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| multi_process         |                               | Start Health Monitoring in Multi-Process Mode (Specify the number of multiple processes (default 1))                      |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| disable_auto_adjust   |                               | Disable the Health Check Rate Auto Adjustment                                                                             |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| check_rate            |                               | Health Check Rate per 500ms (default 1000)                                                                                |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| external_rate         |                               | Define the External Health Check Rate (Number of External Script Programs (default 2))                                    |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| per                   |                               | Specify the Unit Time for the rate (Specify the Unit Time, multiple of 100ms)                                             |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| retry                 |                               | Specify the Healthcheck Retries (Retry Count (default 3))                                                                 |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| up_retry              |                               | Specify the Healthcheck Retries before declaring target up (Up-retry count (default 1))                                   |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| interval              |                               | Specify the Healthcheck Interval (Interval Value, in seconds (default 5))                                                 |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| timeout               |                               | Specify the Healthcheck Timeout (Timeout Value, in seconds (default 5), Timeout should be less than or equal to interval) |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                        |
+|                       |                               |                                                                                                                           |
+|                       |                               |                                                                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------+
 
 
 

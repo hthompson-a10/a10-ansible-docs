@@ -22,66 +22,71 @@ Enable LSN group traps
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  max_port_threshold (False, any, None)
-    Maximum threshold
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  per_ip_port_usage_threshold (False, any, None)
-    Enable LSN trap when IP total port usage reaches the threshold (default 64512)
-
-
-  total_port_usage_threshold (False, any, None)
-    Enable LSN trap when NAT total port usage reaches the threshold (default 655350000)
-
-
-  fixed_nat_port_mapping_file_change (False, any, None)
-    Enable LSN trap when fixed nat port mapping file change
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  all (False, any, None)
-    Enable all LSN group traps
-
-
-  max_ipport_threshold (False, any, None)
-    Maximum threshold
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  traffic_exceeded (False, any, None)
-    Enable LSN trap when NAT pool reaches the threshold
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| Parameters                         | Choices/Defaults              | Comment                                                                             |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++====================================+===============================+=====================================================================================+
+| state                              | ['noop', 'present', 'absent'] | State of the object to be created.                                                  |
+|                                    |                               |                                                                                     |
+| /required                          |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_host                       |                               | Host for AXAPI authentication                                                       |
+|                                    |                               |                                                                                     |
+| /required                          |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_username                   |                               | Username for AXAPI authentication                                                   |
+|                                    |                               |                                                                                     |
+| /required                          |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_password                   |                               | Password for AXAPI authentication                                                   |
+|                                    |                               |                                                                                     |
+| /required                          |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_port                       |                               | Port for AXAPI authentication                                                       |
+|                                    |                               |                                                                                     |
+| /required                          |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_device_context_id              | ['1-8']                       | Device ID for aVCS configuration                                                    |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_partition                      |                               | Destination/target partition for object/command                                     |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| all                                |                               | Enable all LSN group traps                                                          |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| total_port_usage_threshold         |                               | Enable LSN trap when NAT total port usage reaches the threshold (default 655350000) |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| per_ip_port_usage_threshold        |                               | Enable LSN trap when IP total port usage reaches the threshold (default 64512)      |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| max_port_threshold                 |                               | Maximum threshold                                                                   |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| max_ipport_threshold               |                               | Maximum threshold                                                                   |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| fixed_nat_port_mapping_file_change |                               | Enable LSN trap when fixed nat port mapping file change                             |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| traffic_exceeded                   |                               | Enable LSN trap when NAT pool reaches the threshold                                 |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| uuid                               |                               | uuid of the object                                                                  |
+|                                    |                               |                                                                                     |
+|                                    |                               |                                                                                     |
++------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
 
 
 

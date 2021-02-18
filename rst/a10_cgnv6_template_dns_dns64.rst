@@ -22,114 +22,119 @@ Enable DNS64
 Parameters
 ----------
 
-  trans_ptr (False, any, None)
-    Translate DNS PTR Records
-
-
-  enable (False, any, None)
-    Enable DNS64 (Need to config this option before config any other dns64 options)
-
-
-  answer_only_disable (False, any, None)
-    Disable Only translate the Answer Section
-
-
-  deep_check_rr_disable (False, any, None)
-    Disable Check DNS Response Records
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ignore_rcode3_disable (False, any, None)
-    Disable Ignore DNS error Response with rcode 3
-
-
-  change_query (False, any, None)
-    Always change incoming AAAA DNS Query to A
-
-
-  timeout (False, any, None)
-    Timeout to send additional Queries, unit= second, default is 1
-
-
-  ttl (False, any, None)
-    Specify Max TTL in DNS Response, unit= second
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  retry (False, any, None)
-    Retry count, default is 3 (Retry Number)
-
-
-  single_response_disable (False, any, None)
-    Disable Single Response which is used to avoid ambiguity
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  max_qr_length (False, any, None)
-    Max Question Record Length, default is 128
-
-
-  trans_ptr_query (False, any, None)
-    Translate DNS PTR Query
-
-
-  dns_name (optional, any, None)
-    Key to identify parent object
-
-
-  cache (False, any, None)
-    Use a cached A-query response to provide AAAA query responses for the same hostname
-
-
-  compress_disable (False, any, None)
-    Disable Always try DNS Compression
-
-
-  auth_data (False, any, None)
-    Set AA flag in DNS Response
-
-
-  parallel_query (False, any, None)
-    Forward AAAA Query & generate A Query in parallel
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  passive_query_disable (False, any, None)
-    Disable Generate A query upon empty or error Response
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  drop_cname_disable (False, any, None)
-    Disable Drop DNS CNAME Response
-
-
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                                                             |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++=========================+===============================+=====================================================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.                                                  |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                                                       |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication                                                   |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication                                                   |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                                                       |
+|                         |                               |                                                                                     |
+| /required               |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                                                    |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command                                     |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| dns_name                |                               | Key to identify parent object                                                       |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| enable                  |                               | Enable DNS64 (Need to config this option before config any other dns64 options)     |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| answer_only_disable     |                               | Disable Only translate the Answer Section                                           |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| auth_data               |                               | Set AA flag in DNS Response                                                         |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| cache                   |                               | Use a cached A-query response to provide AAAA query responses for the same hostname |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| change_query            |                               | Always change incoming AAAA DNS Query to A                                          |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| compress_disable        |                               | Disable Always try DNS Compression                                                  |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| deep_check_rr_disable   |                               | Disable Check DNS Response Records                                                  |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| drop_cname_disable      |                               | Disable Drop DNS CNAME Response                                                     |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ignore_rcode3_disable   |                               | Disable Ignore DNS error Response with rcode 3                                      |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| max_qr_length           |                               | Max Question Record Length, default is 128                                          |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| parallel_query          |                               | Forward AAAA Query & generate A Query in parallel                                   |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| passive_query_disable   |                               | Disable Generate A query upon empty or error Response                               |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| retry                   |                               | Retry count, default is 3 (Retry Number)                                            |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| single_response_disable |                               | Disable Single Response which is used to avoid ambiguity                            |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| timeout                 |                               | Timeout to send additional Queries, unit= second, default is 1                      |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| trans_ptr               |                               | Translate DNS PTR Records                                                           |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| trans_ptr_query         |                               | Translate DNS PTR Query                                                             |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ttl                     |                               | Specify Max TTL in DNS Response, unit= second                                       |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| uuid                    |                               | uuid of the object                                                                  |
+|                         |                               |                                                                                     |
+|                         |                               |                                                                                     |
++-------------------------+-------------------------------+-------------------------------------------------------------------------------------+
 
 
 

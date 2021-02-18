@@ -22,67 +22,71 @@ Show hashed certificates
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    vserver (optional, any, None)
-      virtual server name
-
-
-    server_ip (optional, any, None)
-      IPv4 or IPv6 address of the server
-
-
-    hashed_certificate (optional, any, None)
-      Field hashed_certificate
-
-
-    server_name (optional, any, None)
-      Name of the server
-
-
-    port (optional, any, None)
-      Virtual Port
-
-
-    server_port (optional, any, None)
-      Port of the server
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------+-------------------------------+-------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                         |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++========================+===============================+=================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| uuid                   |                               | uuid of the object                              |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| oper                   |                               | Field oper                                      |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | vserver            |                               | virtual server name                             |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | port               |                               | Virtual Port                                    |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | server_ip          |                               | IPv4 or IPv6 address of the server              |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | server_port        |                               | Port of the server                              |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | server_name        |                               | Name of the server                              |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | hashed_certificate |                               | Field hashed_certificate                        |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
 
 
 

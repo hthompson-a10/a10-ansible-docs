@@ -22,70 +22,75 @@ SMPP template
 Parameters
 ----------
 
-  server_selection_per_request (False, any, None)
-    Force server selection on every SMPP request when enable conn-reuse
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  server_enquire_link (False, any, None)
-    Send server ENQUIRE_LINK packet for every persist connection when enable conn- reuse
-
-
-  user (False, any, None)
-    Configure the user to bind (The name used to bind)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  password (False, any, None)
-    Configure the password used to bind
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    SMPP Template Name
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  server_enquire_link_val (False, any, None)
-    Set interval of keep-alive packet for each persistent connection (second, default is 30)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  client_enquire_link (False, any, None)
-    Respond client ENQUIRE_LINK packet directly instead of forwarding to server
-
-
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| Parameters                   | Choices/Defaults              | Comment                                                                                  |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++==============================+===============================+==========================================================================================+
+| state                        | ['noop', 'present', 'absent'] | State of the object to be created.                                                       |
+|                              |                               |                                                                                          |
+| /required                    |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| ansible_host                 |                               | Host for AXAPI authentication                                                            |
+|                              |                               |                                                                                          |
+| /required                    |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| ansible_username             |                               | Username for AXAPI authentication                                                        |
+|                              |                               |                                                                                          |
+| /required                    |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| ansible_password             |                               | Password for AXAPI authentication                                                        |
+|                              |                               |                                                                                          |
+| /required                    |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| ansible_port                 |                               | Port for AXAPI authentication                                                            |
+|                              |                               |                                                                                          |
+| /required                    |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| a10_device_context_id        | ['1-8']                       | Device ID for aVCS configuration                                                         |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| a10_partition                |                               | Destination/target partition for object/command                                          |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| name                         |                               | SMPP Template Name                                                                       |
+|                              |                               |                                                                                          |
+| /required                    |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| client_enquire_link          |                               | Respond client ENQUIRE_LINK packet directly instead of forwarding to server              |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| server_enquire_link          |                               | Send server ENQUIRE_LINK packet for every persist connection when enable conn- reuse     |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| server_enquire_link_val      |                               | Set interval of keep-alive packet for each persistent connection (second, default is 30) |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| user                         |                               | Configure the user to bind (The name used to bind)                                       |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| password                     |                               | Configure the password used to bind                                                      |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| server_selection_per_request |                               | Force server selection on every SMPP request when enable conn-reuse                      |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| uuid                         |                               | uuid of the object                                                                       |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
+| user_tag                     |                               | Customized tag                                                                           |
+|                              |                               |                                                                                          |
+|                              |                               |                                                                                          |
++------------------------------+-------------------------------+------------------------------------------------------------------------------------------+
 
 
 

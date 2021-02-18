@@ -22,123 +22,127 @@ Manage File Inspection template configuration
 Parameters
 ----------
 
-  name (True, any, None)
-    file-inspection template name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  inspect (False, any, None)
-    Field inspect
-
-
-    download_icap (optional, any, None)
-      respmod icap template (respmod icap Config name)
-
-
-    inspect_downloads (optional, any, None)
-      Inspect file downloads
-
-
-
-  downloads_external_suspect_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
-  good_uploads_action (False, any, None)
-    'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File;
-
-
-  uploads_suspect_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
-  uploads_external_inspect (False, any, None)
-    reqmod template for external icap inspection
-
-
-  downloads_suspect_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  suspect_downloads_action (False, any, None)
-    'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File (default);
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uploads_bad_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
-  suspect_uploads_action (False, any, None)
-    'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File;
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  downloads_external_inspect (False, any, None)
-    respmod template for external icap inspection
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  good_downloads_action (False, any, None)
-    'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File (default);
-
-
-  bad_uploads_action (False, any, None)
-    'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File;
-
-
-  uploads_external_suspect_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
-  bad_downloads_action (False, any, None)
-    'reset'= Reset Connection; 'drop'= Drop File (default); 'allow'= Allow File;
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  downloads_good_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  downloads_bad_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
-  uploads_good_log (False, any, None)
-    'log'= Log event (default); 'no-log'= Do not Log event;
-
-
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| Parameters                     | Choices/Defaults              | Comment                                                                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++================================+===============================+==============================================================================+
+| state                          | ['noop', 'present', 'absent'] | State of the object to be created.                                           |
+|                                |                               |                                                                              |
+| /required                      |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_host                   |                               | Host for AXAPI authentication                                                |
+|                                |                               |                                                                              |
+| /required                      |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_username               |                               | Username for AXAPI authentication                                            |
+|                                |                               |                                                                              |
+| /required                      |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_password               |                               | Password for AXAPI authentication                                            |
+|                                |                               |                                                                              |
+| /required                      |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_port                   |                               | Port for AXAPI authentication                                                |
+|                                |                               |                                                                              |
+| /required                      |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| a10_device_context_id          | ['1-8']                       | Device ID for aVCS configuration                                             |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| a10_partition                  |                               | Destination/target partition for object/command                              |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| name                           |                               | file-inspection template name                                                |
+|                                |                               |                                                                              |
+| /required                      |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| inspect                        |                               | Field inspect                                                                |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++---+----------------------------+-------------------------------+------------------------------------------------------------------------------+
+|   | inspect_downloads          |                               | Inspect file downloads                                                       |
+|   |                            |                               |                                                                              |
+|   |                            |                               |                                                                              |
++---+----------------------------+-------------------------------+------------------------------------------------------------------------------+
+|   | download_icap              |                               | respmod icap template (respmod icap Config name)                             |
+|   |                            |                               |                                                                              |
+|   |                            |                               |                                                                              |
++---+----------------------------+-------------------------------+------------------------------------------------------------------------------+
+| bad_uploads_action             |                               | 'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File;           |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| uploads_bad_log                |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| good_uploads_action            |                               | 'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File;           |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| uploads_good_log               |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| suspect_uploads_action         |                               | 'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File;           |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| uploads_suspect_log            |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| uploads_external_inspect       |                               | reqmod template for external icap inspection                                 |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| uploads_external_suspect_log   |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| bad_downloads_action           |                               | 'reset'= Reset Connection; 'drop'= Drop File (default); 'allow'= Allow File; |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| downloads_bad_log              |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| good_downloads_action          |                               | 'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File (default); |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| downloads_good_log             |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| suspect_downloads_action       |                               | 'reset'= Reset Connection; 'drop'= Drop File; 'allow'= Allow File (default); |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| downloads_suspect_log          |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| downloads_external_inspect     |                               | respmod template for external icap inspection                                |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| downloads_external_suspect_log |                               | 'log'= Log event (default); 'no-log'= Do not Log event;                      |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| uuid                           |                               | uuid of the object                                                           |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
+| user_tag                       |                               | Customized tag                                                               |
+|                                |                               |                                                                              |
+|                                |                               |                                                                              |
++--------------------------------+-------------------------------+------------------------------------------------------------------------------+
 
 
 

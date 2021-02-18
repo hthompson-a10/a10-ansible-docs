@@ -22,70 +22,75 @@ JWT issuance configuration
 Parameters
 ----------
 
-  token_lifetime (False, any, None)
-    Specify JWT token lifetime (Specify lifetime (in seconds), default is 300.)
-
-
-  secret_string (False, any, None)
-    The JWT signature secret
-
-
-  encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    Specify JWT issuer template name
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  signature_secret (False, any, None)
-    Specify the JWT signature secret
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  action (False, any, None)
-    'redirect'= redirect JWT to specific URI; 'relay'= relay JWT to back-end;
-
-
-  issuer (False, any, None)
-    Specify JWT issuer claim value
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                           |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++=======================+===============================+===================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                  |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                   |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| name                  |                               | Specify JWT issuer template name                                                                  |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| issuer                |                               | Specify JWT issuer claim value                                                                    |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| action                |                               | 'redirect'= redirect JWT to specific URI; 'relay'= relay JWT to back-end;                         |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| token_lifetime        |                               | Specify JWT token lifetime (Specify lifetime (in seconds), default is 300.)                       |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| signature_secret      |                               | Specify the JWT signature secret                                                                  |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| secret_string         |                               | The JWT signature secret                                                                          |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| encrypted             |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string) |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| user_tag              |                               | Customized tag                                                                                    |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 

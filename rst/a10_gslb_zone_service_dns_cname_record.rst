@@ -22,88 +22,91 @@ Specify DNS CNAME Record
 Parameters
 ----------
 
-  weight (False, any, None)
-    Specify Weight, default is 1
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  service_name (optional, any, None)
-    Key to identify parent object
-
-
-  admin_preference (False, any, None)
-    Specify Administrative Preference, default is 100
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  zone_name (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'cname-hits'= Number of times the CNAME has been used;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    cname_hits (optional, any, None)
-      Number of times the CNAME has been used
-
-
-    alias_name (optional, any, None)
-      Specify the alias name
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  alias_name (True, any, None)
-    Specify the alias name
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  as_backup (False, any, None)
-    As backup when fail
-
-
-  service_port (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                            |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++=======================+===============================+====================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                 |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                      |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                  |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                  |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                      |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                   |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                    |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| service_name          |                               | Key to identify parent object                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| service_port          |                               | Key to identify parent object                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| zone_name             |                               | Key to identify parent object                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| alias_name            |                               | Specify the alias name                                             |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| admin_preference      |                               | Specify Administrative Preference, default is 100                  |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| weight                |                               | Specify Weight, default is 1                                       |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| as_backup             |                               | As backup when fail                                                |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                 |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                              |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'cname-hits'= Number of times the CNAME has been used; |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+| stats                 |                               | Field stats                                                        |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | cname_hits        |                               | Number of times the CNAME has been used                            |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | alias_name        |                               | Specify the alias name                                             |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
 
 
 

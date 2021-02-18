@@ -22,118 +22,119 @@ Interface lldp configuration
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  notification_cfg (False, any, None)
-    Field notification_cfg
-
-
-    notification (optional, any, None)
-      Interface lldp notification configuration
-
-
-    notif_enable (optional, any, None)
-      Interface lldp notification enable
-
-
-
-  tx_tlvs_cfg (False, any, None)
-    Field tx_tlvs_cfg
-
-
-    system_name (optional, any, None)
-      Interface lldp system name
-
-
-    tx_tlvs (optional, any, None)
-      Interface lldp tx TLVs configuration
-
-
-    port_description (optional, any, None)
-      Interface lldp port description
-
-
-    management_address (optional, any, None)
-      Interface lldp management address
-
-
-    system_description (optional, any, None)
-      Interface lldp system description
-
-
-    exclude (optional, any, None)
-      Configure which TLVs excluded. All basic TLVs will be included by default
-
-
-    system_capabilities (optional, any, None)
-      Interface lldp system capabilities
-
-
-
-  enable_cfg (False, any, None)
-    Field enable_cfg
-
-
-    rx (optional, any, None)
-      Enable lldp rx
-
-
-    rt_enable (optional, any, None)
-      Interface lldp enable/disable
-
-
-    tx (optional, any, None)
-      Enable lldp tx
-
-
-
-  tx_dot1_cfg (False, any, None)
-    Field tx_dot1_cfg
-
-
-    vlan (optional, any, None)
-      Interface vlan information
-
-
-    tx_dot1_tlvs (optional, any, None)
-      Interface lldp tx IEEE 802.1 Organizationally specific TLVs configuration
-
-
-    link_aggregation (optional, any, None)
-      Interface link aggregation information
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                                                   |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++=========================+===============================+===========================================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.                                        |
+|                         |                               |                                                                           |
+| /required               |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                                             |
+|                         |                               |                                                                           |
+| /required               |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication                                         |
+|                         |                               |                                                                           |
+| /required               |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication                                         |
+|                         |                               |                                                                           |
+| /required               |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                                             |
+|                         |                               |                                                                           |
+| /required               |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                                          |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command                           |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
+| enable_cfg              |                               | Field enable_cfg                                                          |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | rt_enable           |                               | Interface lldp enable/disable                                             |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | rx                  |                               | Enable lldp rx                                                            |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | tx                  |                               | Enable lldp tx                                                            |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+| notification_cfg        |                               | Field notification_cfg                                                    |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | notification        |                               | Interface lldp notification configuration                                 |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | notif_enable        |                               | Interface lldp notification enable                                        |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+| tx_dot1_cfg             |                               | Field tx_dot1_cfg                                                         |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | tx_dot1_tlvs        |                               | Interface lldp tx IEEE 802.1 Organizationally specific TLVs configuration |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | link_aggregation    |                               | Interface link aggregation information                                    |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | vlan                |                               | Interface vlan information                                                |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+| tx_tlvs_cfg             |                               | Field tx_tlvs_cfg                                                         |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | tx_tlvs             |                               | Interface lldp tx TLVs configuration                                      |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | exclude             |                               | Configure which TLVs excluded. All basic TLVs will be included by default |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | management_address  |                               | Interface lldp management address                                         |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | port_description    |                               | Interface lldp port description                                           |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | system_capabilities |                               | Interface lldp system capabilities                                        |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | system_description  |                               | Interface lldp system description                                         |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | system_name         |                               | Interface lldp system name                                                |
+|   |                     |                               |                                                                           |
+|   |                     |                               |                                                                           |
++---+---------------------+-------------------------------+---------------------------------------------------------------------------+
+| uuid                    |                               | uuid of the object                                                        |
+|                         |                               |                                                                           |
+|                         |                               |                                                                           |
++-------------------------+-------------------------------+---------------------------------------------------------------------------+
 
 
 

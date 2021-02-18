@@ -22,82 +22,87 @@ Add, Change or Disable IPMI users
 Parameters
 ----------
 
-  administrator (False, any, None)
-    Full control
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  newname (False, any, None)
-    New IPMI User Name
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  setpass (False, any, None)
-    Change Password (IPMI User Name)
-
-
-  user (False, any, None)
-    Only 'benign' commands are allowed
-
-
-  operator (False, any, None)
-    Most BMC commands are allowed
-
-
-  password (False, any, None)
-    Password
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  setname (False, any, None)
-    Change User Name (Current IPMI User Name)
-
-
-  add (False, any, None)
-    Add a new IPMI user (IPMI User Name)
-
-
-  callback (False, any, None)
-    Lowest privilege level
-
-
-  newpass (False, any, None)
-    New Password
-
-
-  disable (False, any, None)
-    Disable an existing IPMI user (IPMI User Name)
-
-
-  privilege (False, any, None)
-    Change an existing IPMI user privilege (IPMI User Name)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                 |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++=======================+===============================+=========================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                      |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                           |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                       |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                       |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                           |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                        |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command         |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| add                   |                               | Add a new IPMI user (IPMI User Name)                    |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| password              |                               | Password                                                |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| administrator         |                               | Full control                                            |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| callback              |                               | Lowest privilege level                                  |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| operator              |                               | Most BMC commands are allowed                           |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| user                  |                               | Only 'benign' commands are allowed                      |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| disable               |                               | Disable an existing IPMI user (IPMI User Name)          |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| privilege             |                               | Change an existing IPMI user privilege (IPMI User Name) |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| setname               |                               | Change User Name (Current IPMI User Name)               |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| newname               |                               | New IPMI User Name                                      |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| setpass               |                               | Change Password (IPMI User Name)                        |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| newpass               |                               | New Password                                            |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
 
 
 

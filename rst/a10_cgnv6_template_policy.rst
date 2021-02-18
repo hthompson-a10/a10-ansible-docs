@@ -22,75 +22,79 @@ Policy config
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    Policy template name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  class_list (False, any, None)
-    Field class_list
-
-
-    client_ip_l3_dest (optional, any, None)
-      Use destination IP as client IP address
-
-
-    lid_list (optional, any, None)
-      Field lid_list
-
-
-    client_ip_l7_header (optional, any, None)
-      Use extract client IP address from L7 header
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    header_name (optional, any, None)
-      Specify L7 header name
-
-
-    name (optional, any, None)
-      Class list name
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-------------------------+-------------------------------+-------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                         |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++=========================+===============================+=================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                   |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication               |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication               |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                   |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| name                    |                               | Policy template name                            |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| uuid                    |                               | uuid of the object                              |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| user_tag                |                               | Customized tag                                  |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| class_list              |                               | Field class_list                                |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | name                |                               | Class list name                                 |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | client_ip_l3_dest   |                               | Use destination IP as client IP address         |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | client_ip_l7_header |                               | Use extract client IP address from L7 header    |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | header_name         |                               | Specify L7 header name                          |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                |                               | uuid of the object                              |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | lid_list            |                               | Field lid_list                                  |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
 
 
 

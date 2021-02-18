@@ -22,50 +22,55 @@ Set STUN timeout for endpoint-independent filtering
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  port_end (True, any, None)
-    Port Range End
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  stun_timeout_val_port_range (False, any, None)
-    STUN timeout (default= 2 minutes)
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  port (True, any, None)
-    Single Destination Port or Port Range Start
-
-
++-----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                         |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++=============================+===============================+=================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| port                        |                               | Single Destination Port or Port Range Start     |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| port_end                    |                               | Port Range End                                  |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| stun_timeout_val_port_range |                               | STUN timeout (default= 2 minutes)               |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                        |                               | uuid of the object                              |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
 
 
 

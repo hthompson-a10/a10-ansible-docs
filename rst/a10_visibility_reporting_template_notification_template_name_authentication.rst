@@ -22,78 +22,83 @@ Configure authentication information
 Parameters
 ----------
 
-  auth_password_string (False, any, None)
-    Configure the authentication user password (Authentication password)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-  relative_logoff_uri (False, any, None)
-    Configure the authentication logoff uri
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  api_key_string (False, any, None)
-    Configure api-key as a mode of authentication
-
-
-  auth_password (False, any, None)
-    Configure the authentication user password (Authentication password)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  auth_username (False, any, None)
-    Configure the authentication user name
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  template_name_name (optional, any, None)
-    Key to identify parent object
-
-
-  relative_login_uri (False, any, None)
-    Configure the authentication login uri
-
-
-  api_key_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-  api_key (False, any, None)
-    Configure api-key as a mode of authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                           |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++=======================+===============================+===================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                  |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                   |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| template_name_name    |                               | Key to identify parent object                                                                     |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| relative_login_uri    |                               | Configure the authentication login uri                                                            |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| relative_logoff_uri   |                               | Configure the authentication logoff uri                                                           |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| auth_username         |                               | Configure the authentication user name                                                            |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| auth_password         |                               | Configure the authentication user password (Authentication password)                              |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| auth_password_string  |                               | Configure the authentication user password (Authentication password)                              |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| encrypted             |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string) |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| api_key               |                               | Configure api-key as a mode of authentication                                                     |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| api_key_string        |                               | Configure api-key as a mode of authentication                                                     |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| api_key_encrypted     |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string) |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 

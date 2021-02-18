@@ -22,50 +22,55 @@ Configure firewall helper-session (TAC use only)
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  idle_timeout (False, any, None)
-    helper-sessions idle-timeout time (Idle-timeout in minutes (default= 1 minute))
-
-
-  limit (False, any, None)
-    Limit number of helper-sessions (Limit helper-sessions number)
-
-
-  mode (False, any, None)
-    'disable'= Disable helper-sessions;
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                         |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++=======================+===============================+=================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                              |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                   |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                               |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                               |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                   |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                 |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| mode                  |                               | 'disable'= Disable helper-sessions;                                             |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| idle_timeout          |                               | helper-sessions idle-timeout time (Idle-timeout in minutes (default= 1 minute)) |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| limit                 |                               | Limit number of helper-sessions (Limit helper-sessions number)                  |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                              |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
 
 
 

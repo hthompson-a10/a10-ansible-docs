@@ -22,58 +22,63 @@ Specify IPV6 hosts to receive SNMP traps
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  hostname (True, any, None)
-    Hostname of SNMP trap host
-
-
-  udp_port (False, any, None)
-    The trap host's UDP port number(default= 162)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  version (True, any, None)
-    'v1'= Use SNMPv1; 'v2c'= Use SNMPv2c; 'v3'= User SNMPv3;
-
-
-  user (False, any, None)
-    SNMPv3 user to send traps (User Name)
-
-
-  v1_v2c_comm (False, any, None)
-    SNMPv1/v2c community string
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                  |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++=======================+===============================+==========================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                       |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                            |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                        |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                        |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                            |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                         |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command          |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| hostname              |                               | Hostname of SNMP trap host                               |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| version               |                               | 'v1'= Use SNMPv1; 'v2c'= Use SNMPv2c; 'v3'= User SNMPv3; |
+|                       |                               |                                                          |
+| /required             |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| user                  |                               | SNMPv3 user to send traps (User Name)                    |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| v1_v2c_comm           |                               | SNMPv1/v2c community string                              |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| udp_port              |                               | The trap host's UDP port number(default= 162)            |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                       |
+|                       |                               |                                                          |
+|                       |                               |                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------+
 
 
 

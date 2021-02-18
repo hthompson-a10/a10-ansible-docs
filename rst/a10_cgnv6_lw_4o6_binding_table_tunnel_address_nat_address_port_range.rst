@@ -22,58 +22,63 @@ Single Port or Port Range Start
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  port_end (True, any, None)
-    Port Range End
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  binding_table_name (optional, any, None)
-    Key to identify parent object
-
-
-  tunnel_endpoint_address (True, any, None)
-    Configure LW-4over6 IPIP Tunnel Endpoint Address (LW-4over6 Tunnel Endpoint Address)
-
-
-  nat_address_ipv4_nat_addr (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  tunnel_address_ipv6_tunnel_addr (optional, any, None)
-    Key to identify parent object
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  port_start (True, any, None)
-    Single Port or Port Range Start
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| Parameters                      | Choices/Defaults              | Comment                                                                              |
+|                                 |                               |                                                                                      |
+|                                 |                               |                                                                                      |
++=================================+===============================+======================================================================================+
+| state                           | ['noop', 'present', 'absent'] | State of the object to be created.                                                   |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| ansible_host                    |                               | Host for AXAPI authentication                                                        |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| ansible_username                |                               | Username for AXAPI authentication                                                    |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| ansible_password                |                               | Password for AXAPI authentication                                                    |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| ansible_port                    |                               | Port for AXAPI authentication                                                        |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| a10_device_context_id           | ['1-8']                       | Device ID for aVCS configuration                                                     |
+|                                 |                               |                                                                                      |
+|                                 |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| a10_partition                   |                               | Destination/target partition for object/command                                      |
+|                                 |                               |                                                                                      |
+|                                 |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| nat_address_ipv4_nat_addr       |                               | Key to identify parent object                                                        |
+|                                 |                               |                                                                                      |
+|                                 |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| tunnel_address_ipv6_tunnel_addr |                               | Key to identify parent object                                                        |
+|                                 |                               |                                                                                      |
+|                                 |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| binding_table_name              |                               | Key to identify parent object                                                        |
+|                                 |                               |                                                                                      |
+|                                 |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| port_start                      |                               | Single Port or Port Range Start                                                      |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| port_end                        |                               | Port Range End                                                                       |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
+| tunnel_endpoint_address         |                               | Configure LW-4over6 IPIP Tunnel Endpoint Address (LW-4over6 Tunnel Endpoint Address) |
+|                                 |                               |                                                                                      |
+| /required                       |                               |                                                                                      |
++---------------------------------+-------------------------------+--------------------------------------------------------------------------------------+
 
 
 

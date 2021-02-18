@@ -22,272 +22,271 @@ Global IPv6 configuration subcommands
 Parameters
 ----------
 
-  v6_acl_name (False, any, None)
-    Apply ACL rules to incoming packets on this interface (Named Access List)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  inbound (False, any, None)
-    ACL applied on incoming packets to this interface
-
-
-  rip (False, any, None)
-    Field rip
-
-
-    split_horizon_cfg (optional, any, None)
-      Field split_horizon_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  router_adver (False, any, None)
-    Field router_adver
-
-
-    min_interval (optional, any, None)
-      Set Router Advertisement Min Interval (default= 200) (Min Router Advertisement Interval (seconds))
-
-
-    default_lifetime (optional, any, None)
-      Set Router Advertisement Default Lifetime (default= 1800) (Default Lifetime (seconds))
-
-
-    floating_ip (optional, any, None)
-      Use a floating IP as the source address for Router advertisements
-
-
-    retransmit_timer (optional, any, None)
-      Set Router Advertisement Retransmit Timer (default= 0)
-
-
-    use_floating_ip (optional, any, None)
-      Use a floating IP as the source address for Router advertisements
-
-
-    action (optional, any, None)
-      'enable'= Enable Router Advertisements on this interface; 'disable'= Disable Router Advertisements on this interface;
-
-
-    max_interval (optional, any, None)
-      Set Router Advertisement Max Interval (default= 600) (Max Router Advertisement Interval (seconds))
-
-
-    use_floating_ip_default_vrid (optional, any, None)
-      Use a floating IP as the source address for Router advertisements
-
-
-    adver_mtu_disable (optional, any, None)
-      Disable Router Advertisement MTU Option
-
-
-    other_config_action (optional, any, None)
-      'enable'= Enable the Other Stateful Configuration flag; 'disable'= Disable the Other Stateful Configuration flag (default);
-
-
-    floating_ip_default_vrid (optional, any, None)
-      Use a floating IP as the source address for Router advertisements
-
-
-    adver_vrid (optional, any, None)
-      Vrid
-
-
-    prefix_list (optional, any, None)
-      Field prefix_list
-
-
-    rate_limit (optional, any, None)
-      Rate Limit the processing of incoming Router Solicitations (Max Number of Router Solicitations to process per second)
-
-
-    adver_vrid_default (optional, any, None)
-      Default VRRP-A vrid
-
-
-    adver_mtu (optional, any, None)
-      Set Router Advertisement MTU Option
-
-
-    reachable_time (optional, any, None)
-      Set Router Advertisement Reachable ime (default= 0) (Reachable Time (milliseconds))
-
-
-    hop_limit (optional, any, None)
-      Set Router Advertisement Hop Limit (default= 255)
-
-
-    managed_config_action (optional, any, None)
-      'enable'= Enable the Managed Address Configuration flag; 'disable'= Disable the Managed Address Configuration flag (default);
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ve_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  inside (False, any, None)
-    Configure interface as NAT inside
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ipv6_enable (False, any, None)
-    Enable IPv6 processing
-
-
-  outside (False, any, None)
-    Configure interface as NAT outside
-
-
-  ttl_ignore (False, any, None)
-    Ignore TTL decrement for a received packet
-
-
-  router (False, any, None)
-    Field router
-
-
-    ripng (optional, any, None)
-      Field ripng
-
-
-    ospf (optional, any, None)
-      Field ospf
-
-
-    isis (optional, any, None)
-      Field isis
-
-
-
-  stateful_firewall (False, any, None)
-    Field stateful_firewall
-
-
-    class_list (optional, any, None)
-      Class List (Class List Name)
-
-
-    outside (optional, any, None)
-      Outside (public) interface for stateful firewall
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    acl_name (optional, any, None)
-      Access-list Name
-
-
-    inside (optional, any, None)
-      Inside (private) interface for stateful firewall
-
-
-    access_list (optional, any, None)
-      Access-list for traffic from the outside
-
-
-
-  ospf (False, any, None)
-    Field ospf
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    bfd (optional, any, None)
-      Bidirectional Forwarding Detection (BFD)
-
-
-    hello_interval_cfg (optional, any, None)
-      Field hello_interval_cfg
-
-
-    cost_cfg (optional, any, None)
-      Field cost_cfg
-
-
-    network_list (optional, any, None)
-      Field network_list
-
-
-    neighbor_cfg (optional, any, None)
-      Field neighbor_cfg
-
-
-    dead_interval_cfg (optional, any, None)
-      Field dead_interval_cfg
-
-
-    transmit_delay_cfg (optional, any, None)
-      Field transmit_delay_cfg
-
-
-    disable (optional, any, None)
-      Disable BFD
-
-
-    mtu_ignore_cfg (optional, any, None)
-      Field mtu_ignore_cfg
-
-
-    priority_cfg (optional, any, None)
-      Field priority_cfg
-
-
-    retransmit_interval_cfg (optional, any, None)
-      Field retransmit_interval_cfg
-
-
-
-  address_list (False, any, None)
-    Field address_list
-
-
-    ipv6_addr (optional, any, None)
-      Set the IPv6 address of an interface
-
-
-    address_type (optional, any, None)
-      'anycast'= Configure an IPv6 anycast address; 'link-local'= Configure an IPv6 link local address;
-
-
-
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| Parameters                       | Choices/Defaults              | Comment                                                                                                                       |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++==================================+===============================+===============================================================================================================================+
+| state                            | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                            |
+|                                  |                               |                                                                                                                               |
+| /required                        |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host                     |                               | Host for AXAPI authentication                                                                                                 |
+|                                  |                               |                                                                                                                               |
+| /required                        |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username                 |                               | Username for AXAPI authentication                                                                                             |
+|                                  |                               |                                                                                                                               |
+| /required                        |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password                 |                               | Password for AXAPI authentication                                                                                             |
+|                                  |                               |                                                                                                                               |
+| /required                        |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port                     |                               | Port for AXAPI authentication                                                                                                 |
+|                                  |                               |                                                                                                                               |
+| /required                        |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id            | ['1-8']                       | Device ID for aVCS configuration                                                                                              |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition                    |                               | Destination/target partition for object/command                                                                               |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ve_ifnum                         |                               | Key to identify parent object                                                                                                 |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| address_list                     |                               | Field address_list                                                                                                            |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | ipv6_addr                    |                               | Set the IPv6 address of an interface                                                                                          |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | address_type                 |                               | 'anycast'= Configure an IPv6 anycast address; 'link-local'= Configure an IPv6 link local address;                             |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ipv6_enable                      |                               | Enable IPv6 processing                                                                                                        |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| v6_acl_name                      |                               | Apply ACL rules to incoming packets on this interface (Named Access List)                                                     |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| inbound                          |                               | ACL applied on incoming packets to this interface                                                                             |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| inside                           |                               | Configure interface as NAT inside                                                                                             |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| outside                          |                               | Configure interface as NAT outside                                                                                            |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ttl_ignore                       |                               | Ignore TTL decrement for a received packet                                                                                    |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| router_adver                     |                               | Field router_adver                                                                                                            |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | action                       |                               | 'enable'= Enable Router Advertisements on this interface; 'disable'= Disable Router Advertisements on this interface;         |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | default_lifetime             |                               | Set Router Advertisement Default Lifetime (default= 1800) (Default Lifetime (seconds))                                        |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | hop_limit                    |                               | Set Router Advertisement Hop Limit (default= 255)                                                                             |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | max_interval                 |                               | Set Router Advertisement Max Interval (default= 600) (Max Router Advertisement Interval (seconds))                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | min_interval                 |                               | Set Router Advertisement Min Interval (default= 200) (Min Router Advertisement Interval (seconds))                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | rate_limit                   |                               | Rate Limit the processing of incoming Router Solicitations (Max Number of Router Solicitations to process per second)         |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | reachable_time               |                               | Set Router Advertisement Reachable ime (default= 0) (Reachable Time (milliseconds))                                           |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | retransmit_timer             |                               | Set Router Advertisement Retransmit Timer (default= 0)                                                                        |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | adver_mtu_disable            |                               | Disable Router Advertisement MTU Option                                                                                       |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | adver_mtu                    |                               | Set Router Advertisement MTU Option                                                                                           |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | prefix_list                  |                               | Field prefix_list                                                                                                             |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | managed_config_action        |                               | 'enable'= Enable the Managed Address Configuration flag; 'disable'= Disable the Managed Address Configuration flag (default); |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | other_config_action          |                               | 'enable'= Enable the Other Stateful Configuration flag; 'disable'= Disable the Other Stateful Configuration flag (default);   |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | adver_vrid                   |                               | Vrid                                                                                                                          |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | use_floating_ip              |                               | Use a floating IP as the source address for Router advertisements                                                             |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | floating_ip                  |                               | Use a floating IP as the source address for Router advertisements                                                             |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | adver_vrid_default           |                               | Default VRRP-A vrid                                                                                                           |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | use_floating_ip_default_vrid |                               | Use a floating IP as the source address for Router advertisements                                                             |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | floating_ip_default_vrid     |                               | Use a floating IP as the source address for Router advertisements                                                             |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| uuid                             |                               | uuid of the object                                                                                                            |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++----------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| stateful_firewall                |                               | Field stateful_firewall                                                                                                       |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | inside                       |                               | Inside (private) interface for stateful firewall                                                                              |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | class_list                   |                               | Class List (Class List Name)                                                                                                  |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | outside                      |                               | Outside (public) interface for stateful firewall                                                                              |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | access_list                  |                               | Access-list for traffic from the outside                                                                                      |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | acl_name                     |                               | Access-list Name                                                                                                              |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | uuid                         |                               | uuid of the object                                                                                                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| router                           |                               | Field router                                                                                                                  |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | ripng                        |                               | Field ripng                                                                                                                   |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | ospf                         |                               | Field ospf                                                                                                                    |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | isis                         |                               | Field isis                                                                                                                    |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| rip                              |                               | Field rip                                                                                                                     |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | split_horizon_cfg            |                               | Field split_horizon_cfg                                                                                                       |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | uuid                         |                               | uuid of the object                                                                                                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+| ospf                             |                               | Field ospf                                                                                                                    |
+|                                  |                               |                                                                                                                               |
+|                                  |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | network_list                 |                               | Field network_list                                                                                                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | bfd                          |                               | Bidirectional Forwarding Detection (BFD)                                                                                      |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | disable                      |                               | Disable BFD                                                                                                                   |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | cost_cfg                     |                               | Field cost_cfg                                                                                                                |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | dead_interval_cfg            |                               | Field dead_interval_cfg                                                                                                       |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | hello_interval_cfg           |                               | Field hello_interval_cfg                                                                                                      |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | mtu_ignore_cfg               |                               | Field mtu_ignore_cfg                                                                                                          |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | neighbor_cfg                 |                               | Field neighbor_cfg                                                                                                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | priority_cfg                 |                               | Field priority_cfg                                                                                                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | retransmit_interval_cfg      |                               | Field retransmit_interval_cfg                                                                                                 |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | transmit_delay_cfg           |                               | Field transmit_delay_cfg                                                                                                      |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
+|   | uuid                         |                               | uuid of the object                                                                                                            |
+|   |                              |                               |                                                                                                                               |
+|   |                              |                               |                                                                                                                               |
++---+------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 
 

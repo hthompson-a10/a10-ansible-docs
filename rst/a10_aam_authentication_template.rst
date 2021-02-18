@@ -22,160 +22,163 @@ Authentication template
 Parameters
 ----------
 
-  cookie_domain_group (False, any, None)
-    Field cookie_domain_group
-
-
-    cookie_dmngrp (optional, any, None)
-      Specify group id to join in the cookie-domain
-
-
-
-  saml_sp (False, any, None)
-    Specify SAML service provider
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  forward_logout_disable (False, any, None)
-    Disable forward logout request to backend application server. The config-field logout-url must be configured first
-
-
-  service_group (False, any, None)
-    Bind an authentication service group to this template (Specify authentication service group name)
-
-
-  local_logging (False, any, None)
-    Enable local logging
-
-
-  log (False, any, None)
-    'use-partition-level-config'= Use configuration of authentication-log enable command; 'enable'= Enable authentication logs for this template; 'disable'= Disable authentication logs for this template;
-
-
-  cookie_httponly_enable (False, any, None)
-    Enable httponly attribute for AAM cookies
-
-
-  cookie_secure_enable (False, any, None)
-    Enable secure attribute for AAM cookies
-
-
-  logout_url (False, any, None)
-    Specify logout url (Specify logout url string)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  accounting_server (False, any, None)
-    Specify a RADIUS accounting server
-
-
-  saml_idp (False, any, None)
-    Specify SAML identity provider
-
-
-  logout_idle_timeout (False, any, None)
-    Specify idle logout time (Specify idle timeout in seconds, default is 300)
-
-
-  max_session_time (False, any, None)
-    Specify default SAML token lifetime (Specify lifetime (in seconds) of SAML token when it not provided by token attributes, default is 28800. (0 for indefinite))
-
-
-  relay (False, any, None)
-    Specify authentication relay (Specify authentication relay template name)
-
-
-  ntype (False, any, None)
-    'saml'= SAML authentication template; 'standard'= Standard authentication template;
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  redirect_hostname (False, any, None)
-    Hostname(Length 1-31) for transparent-proxy authentication
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  logon (False, any, None)
-    Specify authentication logon (Specify authentication logon template name)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  accounting_service_group (False, any, None)
-    Specify an authentication service group for RADIUS accounting
-
-
-  account (False, any, None)
-    Specify AD domain account
-
-
-  name (True, any, None)
-    Authentication template name
-
-
-  cookie_domain (False, any, None)
-    Field cookie_domain
-
-
-    cookie_dmn (optional, any, None)
-      Specify domain scope for the authentication (ex= .a10networks.com)
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  jwt (False, any, None)
-    Specify authentication jwt template
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  server (False, any, None)
-    Specify authentication server (Specify authentication server template name)
-
-
-  modify_content_security_policy (False, any, None)
-    Put redirect-uri or service-principal-name into CSP header to avoid CPS break authentication process
-
-
-  cookie_max_age (False, any, None)
-    Configure Max-Age for authentication session cookie (Configure Max-Age in seconds. System will not set Max-Age/Expires for value 0 and default is 604800 (1 week).)
-
-
-  cookie_samesite (False, any, None)
-    'strict'= Specify SameSite attribute as Strict for AAM cookie; 'lax'= Specify SameSite attribute as Lax for AAM cookie; 'none'= Specify SameSite attribute as None for AAM cookie;
-
-
-  auth_sess_mode (False, any, None)
-    'cookie-based'= Track auth-session by cookie (default); 'ip-based'= Track auth- session by client IP;
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameters                     | Choices/Defaults              | Comment                                                                                                                                                                                                 |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++================================+===============================+=========================================================================================================================================================================================================+
+| state                          | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                                                                                                      |
+|                                |                               |                                                                                                                                                                                                         |
+| /required                      |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host                   |                               | Host for AXAPI authentication                                                                                                                                                                           |
+|                                |                               |                                                                                                                                                                                                         |
+| /required                      |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username               |                               | Username for AXAPI authentication                                                                                                                                                                       |
+|                                |                               |                                                                                                                                                                                                         |
+| /required                      |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password               |                               | Password for AXAPI authentication                                                                                                                                                                       |
+|                                |                               |                                                                                                                                                                                                         |
+| /required                      |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port                   |                               | Port for AXAPI authentication                                                                                                                                                                           |
+|                                |                               |                                                                                                                                                                                                         |
+| /required                      |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id          | ['1-8']                       | Device ID for aVCS configuration                                                                                                                                                                        |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition                  |                               | Destination/target partition for object/command                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| name                           |                               | Authentication template name                                                                                                                                                                            |
+|                                |                               |                                                                                                                                                                                                         |
+| /required                      |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ntype                          |                               | 'saml'= SAML authentication template; 'standard'= Standard authentication template;                                                                                                                     |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| auth_sess_mode                 |                               | 'cookie-based'= Track auth-session by cookie (default); 'ip-based'= Track auth- session by client IP;                                                                                                   |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| saml_sp                        |                               | Specify SAML service provider                                                                                                                                                                           |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| saml_idp                       |                               | Specify SAML identity provider                                                                                                                                                                          |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cookie_domain                  |                               | Field cookie_domain                                                                                                                                                                                     |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cookie_dmn                 |                               | Specify domain scope for the authentication (ex= .a10networks.com)                                                                                                                                      |
+|   |                            |                               |                                                                                                                                                                                                         |
+|   |                            |                               |                                                                                                                                                                                                         |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cookie_domain_group            |                               | Field cookie_domain_group                                                                                                                                                                               |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | cookie_dmngrp              |                               | Specify group id to join in the cookie-domain                                                                                                                                                           |
+|   |                            |                               |                                                                                                                                                                                                         |
+|   |                            |                               |                                                                                                                                                                                                         |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cookie_max_age                 |                               | Configure Max-Age for authentication session cookie (Configure Max-Age in seconds. System will not set Max-Age/Expires for value 0 and default is 604800 (1 week).)                                     |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cookie_secure_enable           |                               | Enable secure attribute for AAM cookies                                                                                                                                                                 |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cookie_httponly_enable         |                               | Enable httponly attribute for AAM cookies                                                                                                                                                               |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cookie_samesite                |                               | 'strict'= Specify SameSite attribute as Strict for AAM cookie; 'lax'= Specify SameSite attribute as Lax for AAM cookie; 'none'= Specify SameSite attribute as None for AAM cookie;                      |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| max_session_time               |                               | Specify default SAML token lifetime (Specify lifetime (in seconds) of SAML token when it not provided by token attributes, default is 28800. (0 for indefinite))                                        |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| local_logging                  |                               | Enable local logging                                                                                                                                                                                    |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| logon                          |                               | Specify authentication logon (Specify authentication logon template name)                                                                                                                               |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| logout_idle_timeout            |                               | Specify idle logout time (Specify idle timeout in seconds, default is 300)                                                                                                                              |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| logout_url                     |                               | Specify logout url (Specify logout url string)                                                                                                                                                          |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| forward_logout_disable         |                               | Disable forward logout request to backend application server. The config-field logout-url must be configured first                                                                                      |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| relay                          |                               | Specify authentication relay (Specify authentication relay template name)                                                                                                                               |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| jwt                            |                               | Specify authentication jwt template                                                                                                                                                                     |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server                         |                               | Specify authentication server (Specify authentication server template name)                                                                                                                             |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| service_group                  |                               | Bind an authentication service group to this template (Specify authentication service group name)                                                                                                       |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| account                        |                               | Specify AD domain account                                                                                                                                                                               |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| accounting_server              |                               | Specify a RADIUS accounting server                                                                                                                                                                      |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| accounting_service_group       |                               | Specify an authentication service group for RADIUS accounting                                                                                                                                           |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| redirect_hostname              |                               | Hostname(Length 1-31) for transparent-proxy authentication                                                                                                                                              |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| modify_content_security_policy |                               | Put redirect-uri or service-principal-name into CSP header to avoid CPS break authentication process                                                                                                    |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| log                            |                               | 'use-partition-level-config'= Use configuration of authentication-log enable command; 'enable'= Enable authentication logs for this template; 'disable'= Disable authentication logs for this template; |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| uuid                           |                               | uuid of the object                                                                                                                                                                                      |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| user_tag                       |                               | Customized tag                                                                                                                                                                                          |
+|                                |                               |                                                                                                                                                                                                         |
+|                                |                               |                                                                                                                                                                                                         |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 

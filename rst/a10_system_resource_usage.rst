@@ -22,252 +22,255 @@ Configure System Resource Usage
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    nat_pool_addr_min (optional, any, None)
-      Field nat_pool_addr_min
-
-
-    aflex_file_size_min (optional, any, None)
-      Field aflex_file_size_min
-
-
-    aflex_authz_collection_number_default (optional, any, None)
-      Field aflex_authz_collection_number_default
-
-
-    aflex_table_entry_count_min (optional, any, None)
-      Field aflex_table_entry_count_min
-
-
-    class_list_ac_min (optional, any, None)
-      Field class_list_ac_min
-
-
-    aflex_file_size_default (optional, any, None)
-      Field aflex_file_size_default
-
-
-    aflex_authz_collection_number_min (optional, any, None)
-      Field aflex_authz_collection_number_min
-
-
-    aflex_authz_collection_number_max (optional, any, None)
-      Field aflex_authz_collection_number_max
-
-
-    visibility_mon_entity_default (optional, any, None)
-      Field visibility_mon_entity_default
-
-
-    radius_table_size_min (optional, any, None)
-      Field radius_table_size_min
-
-
-    class_list_ipv6_addr_max (optional, any, None)
-      Field class_list_ipv6_addr_max
-
-
-    radius_table_size_max (optional, any, None)
-      Field radius_table_size_max
-
-
-    class_list_ac_max (optional, any, None)
-      Field class_list_ac_max
-
-
-    aflex_table_entry_count_default (optional, any, None)
-      Field aflex_table_entry_count_default
-
-
-    nat_pool_addr_default (optional, any, None)
-      Field nat_pool_addr_default
-
-
-    authz_policy_number_max (optional, any, None)
-      Field authz_policy_number_max
-
-
-    class_list_ipv6_addr_min (optional, any, None)
-      Field class_list_ipv6_addr_min
-
-
-    auth_portal_html_file_size_max (optional, any, None)
-      Field auth_portal_html_file_size_max
-
-
-    radius_table_size_default (optional, any, None)
-      Field radius_table_size_default
-
-
-    visibility_mon_entity_min (optional, any, None)
-      Field visibility_mon_entity_min
-
-
-    l4_session_count_min (optional, any, None)
-      Field l4_session_count_min
-
-
-    class_list_ac_default (optional, any, None)
-      Field class_list_ac_default
-
-
-    auth_portal_html_file_size_default (optional, any, None)
-      Field auth_portal_html_file_size_default
-
-
-    auth_portal_html_file_size_min (optional, any, None)
-      Field auth_portal_html_file_size_min
-
-
-    l4_session_count_default (optional, any, None)
-      Field l4_session_count_default
-
-
-    authz_policy_number_default (optional, any, None)
-      Field authz_policy_number_default
-
-
-    auth_portal_image_file_size_default (optional, any, None)
-      Field auth_portal_image_file_size_default
-
-
-    auth_portal_image_file_size_max (optional, any, None)
-      Field auth_portal_image_file_size_max
-
-
-    l4_session_count_max (optional, any, None)
-      Field l4_session_count_max
-
-
-    visibility_mon_entity_max (optional, any, None)
-      Field visibility_mon_entity_max
-
-
-    aflex_table_entry_count_max (optional, any, None)
-      Field aflex_table_entry_count_max
-
-
-    authz_policy_number_min (optional, any, None)
-      Field authz_policy_number_min
-
-
-    class_list_ipv6_addr_default (optional, any, None)
-      Field class_list_ipv6_addr_default
-
-
-    auth_portal_image_file_size_min (optional, any, None)
-      Field auth_portal_image_file_size_min
-
-
-    nat_pool_addr_max (optional, any, None)
-      Field nat_pool_addr_max
-
-
-    aflex_file_size_max (optional, any, None)
-      Field aflex_file_size_max
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  auth_portal_html_file_size (False, any, None)
-    Specify maximum html file size for each html page in auth portal (in KB)
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  visibility (False, any, None)
-    Field visibility
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    monitored_entity_count (optional, any, None)
-      Total number of monitored entities for visibility
-
-
-
-  aflex_table_entry_count (False, any, None)
-    Total aFleX table entry in the system (Total aFlex entry in the system)
-
-
-  authz_policy_number (False, any, None)
-    Specify the maximum number of authorization policies
-
-
-  class_list_ac_entry_count (False, any, None)
-    Total entries for AC class-list
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  max_aflex_authz_collection_number (False, any, None)
-    Specify the maximum number of collections supported by aFleX authorization
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ssl_context_memory (False, any, None)
-    Total SSL context memory needed in units of MB. Will be rounded to closest multiple of 2MB
-
-
-  nat_pool_addr_count (False, any, None)
-    Total configurable NAT Pool addresses in the System
-
-
-  auth_portal_image_file_size (False, any, None)
-    Specify maximum image file size for default portal (in KB)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  max_aflex_file_size (False, any, None)
-    Set maximum aFleX file size (Maximum file size in KBytes, default is 32K)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ssl_dma_memory (False, any, None)
-    Total SSL DMA memory needed in units of MB. Will be rounded to closest multiple of 2MB
-
-
-  l4_session_count (False, any, None)
-    Total Sessions in the System
-
-
-  class_list_ipv6_addr_count (False, any, None)
-    Total IPv6 addresses for class-list
-
-
-  radius_table_size (False, any, None)
-    Total configurable CGNV6 RADIUS Table entries
-
-
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| Parameters                                | Choices/Defaults              | Comment                                                                                    |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++===========================================+===============================+============================================================================================+
+| state                                     | ['noop', 'present', 'absent'] | State of the object to be created.                                                         |
+|                                           |                               |                                                                                            |
+| /required                                 |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_host                              |                               | Host for AXAPI authentication                                                              |
+|                                           |                               |                                                                                            |
+| /required                                 |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_username                          |                               | Username for AXAPI authentication                                                          |
+|                                           |                               |                                                                                            |
+| /required                                 |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_password                          |                               | Password for AXAPI authentication                                                          |
+|                                           |                               |                                                                                            |
+| /required                                 |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_port                              |                               | Port for AXAPI authentication                                                              |
+|                                           |                               |                                                                                            |
+| /required                                 |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| a10_device_context_id                     | ['1-8']                       | Device ID for aVCS configuration                                                           |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| a10_partition                             |                               | Destination/target partition for object/command                                            |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ssl_context_memory                        |                               | Total SSL context memory needed in units of MB. Will be rounded to closest multiple of 2MB |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ssl_dma_memory                            |                               | Total SSL DMA memory needed in units of MB. Will be rounded to closest multiple of 2MB     |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| nat_pool_addr_count                       |                               | Total configurable NAT Pool addresses in the System                                        |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| l4_session_count                          |                               | Total Sessions in the System                                                               |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| auth_portal_html_file_size                |                               | Specify maximum html file size for each html page in auth portal (in KB)                   |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| auth_portal_image_file_size               |                               | Specify maximum image file size for default portal (in KB)                                 |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| max_aflex_file_size                       |                               | Set maximum aFleX file size (Maximum file size in KBytes, default is 32K)                  |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| aflex_table_entry_count                   |                               | Total aFleX table entry in the system (Total aFlex entry in the system)                    |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| class_list_ipv6_addr_count                |                               | Total IPv6 addresses for class-list                                                        |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| class_list_ac_entry_count                 |                               | Total entries for AC class-list                                                            |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| max_aflex_authz_collection_number         |                               | Specify the maximum number of collections supported by aFleX authorization                 |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| radius_table_size                         |                               | Total configurable CGNV6 RADIUS Table entries                                              |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| authz_policy_number                       |                               | Specify the maximum number of authorization policies                                       |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| uuid                                      |                               | uuid of the object                                                                         |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++-------------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| visibility                                |                               | Field visibility                                                                           |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | monitored_entity_count                |                               | Total number of monitored entities for visibility                                          |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | uuid                                  |                               | uuid of the object                                                                         |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| oper                                      |                               | Field oper                                                                                 |
+|                                           |                               |                                                                                            |
+|                                           |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | l4_session_count_min                  |                               | Field l4_session_count_min                                                                 |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | l4_session_count_max                  |                               | Field l4_session_count_max                                                                 |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | l4_session_count_default              |                               | Field l4_session_count_default                                                             |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | nat_pool_addr_min                     |                               | Field nat_pool_addr_min                                                                    |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | nat_pool_addr_max                     |                               | Field nat_pool_addr_max                                                                    |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | nat_pool_addr_default                 |                               | Field nat_pool_addr_default                                                                |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | class_list_ipv6_addr_min              |                               | Field class_list_ipv6_addr_min                                                             |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | class_list_ipv6_addr_max              |                               | Field class_list_ipv6_addr_max                                                             |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | class_list_ipv6_addr_default          |                               | Field class_list_ipv6_addr_default                                                         |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | class_list_ac_min                     |                               | Field class_list_ac_min                                                                    |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | class_list_ac_max                     |                               | Field class_list_ac_max                                                                    |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | class_list_ac_default                 |                               | Field class_list_ac_default                                                                |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | auth_portal_html_file_size_min        |                               | Field auth_portal_html_file_size_min                                                       |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | auth_portal_html_file_size_max        |                               | Field auth_portal_html_file_size_max                                                       |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | auth_portal_html_file_size_default    |                               | Field auth_portal_html_file_size_default                                                   |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | auth_portal_image_file_size_min       |                               | Field auth_portal_image_file_size_min                                                      |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | auth_portal_image_file_size_max       |                               | Field auth_portal_image_file_size_max                                                      |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | auth_portal_image_file_size_default   |                               | Field auth_portal_image_file_size_default                                                  |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_file_size_min                   |                               | Field aflex_file_size_min                                                                  |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_file_size_max                   |                               | Field aflex_file_size_max                                                                  |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_file_size_default               |                               | Field aflex_file_size_default                                                              |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_table_entry_count_min           |                               | Field aflex_table_entry_count_min                                                          |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_table_entry_count_max           |                               | Field aflex_table_entry_count_max                                                          |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_table_entry_count_default       |                               | Field aflex_table_entry_count_default                                                      |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_authz_collection_number_min     |                               | Field aflex_authz_collection_number_min                                                    |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_authz_collection_number_max     |                               | Field aflex_authz_collection_number_max                                                    |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | aflex_authz_collection_number_default |                               | Field aflex_authz_collection_number_default                                                |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | radius_table_size_min                 |                               | Field radius_table_size_min                                                                |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | radius_table_size_max                 |                               | Field radius_table_size_max                                                                |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | radius_table_size_default             |                               | Field radius_table_size_default                                                            |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | visibility_mon_entity_min             |                               | Field visibility_mon_entity_min                                                            |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | visibility_mon_entity_max             |                               | Field visibility_mon_entity_max                                                            |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | visibility_mon_entity_default         |                               | Field visibility_mon_entity_default                                                        |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | authz_policy_number_min               |                               | Field authz_policy_number_min                                                              |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | authz_policy_number_max               |                               | Field authz_policy_number_max                                                              |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+|   | authz_policy_number_default           |                               | Field authz_policy_number_default                                                          |
+|   |                                       |                               |                                                                                            |
+|   |                                       |                               |                                                                                            |
++---+---------------------------------------+-------------------------------+--------------------------------------------------------------------------------------------+
 
 
 

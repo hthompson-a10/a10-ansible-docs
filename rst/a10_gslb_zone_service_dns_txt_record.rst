@@ -22,84 +22,87 @@ Specify DNS TXT Record
 Parameters
 ----------
 
-  record_name (True, any, None)
-    Specify the Object Name for TXT Data
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  service_name (optional, any, None)
-    Key to identify parent object
-
-
-  ttl (False, any, None)
-    Specify TTL
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  zone_name (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'hits'= Number of times the record has been used;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    hits (optional, any, None)
-      Number of times the record has been used
-
-
-    record_name (optional, any, None)
-      Specify the Object Name for TXT Data
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  service_port (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  txt_data (False, any, None)
-    Specify TXT Data
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                       |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++=======================+===============================+===============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                            |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                              |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command               |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| service_name          |                               | Key to identify parent object                                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| service_port          |                               | Key to identify parent object                                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| zone_name             |                               | Key to identify parent object                                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| record_name           |                               | Specify the Object Name for TXT Data                          |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| txt_data              |                               | Specify TXT Data                                              |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ttl                   |                               | Specify TTL                                                   |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                            |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                         |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'hits'= Number of times the record has been used; |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+| stats                 |                               | Field stats                                                   |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | hits              |                               | Number of times the record has been used                      |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | record_name       |                               | Specify the Object Name for TXT Data                          |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
 
 
 

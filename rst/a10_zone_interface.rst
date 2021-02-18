@@ -22,107 +22,107 @@ Interface
 Parameters
 ----------
 
-  zone_name (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  lif_list (False, any, None)
-    Field lif_list
-
-
-    interface_lif_end (optional, any, None)
-      Field interface_lif_end
-
-
-    interface_lif_start (optional, any, None)
-      Field interface_lif_start
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  tunnel_list (False, any, None)
-    Field tunnel_list
-
-
-    interface_tunnel_end (optional, any, None)
-      Field interface_tunnel_end
-
-
-    interface_tunnel_start (optional, any, None)
-      Field interface_tunnel_start
-
-
-
-  ethernet_list (False, any, None)
-    Field ethernet_list
-
-
-    interface_ethernet_end (optional, any, None)
-      Field interface_ethernet_end
-
-
-    interface_ethernet_start (optional, any, None)
-      Field interface_ethernet_start
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ve_list (False, any, None)
-    Field ve_list
-
-
-    interface_ve_start (optional, any, None)
-      Field interface_ve_start
-
-
-    interface_ve_end (optional, any, None)
-      Field interface_ve_end
-
-
-
-  trunk_list (False, any, None)
-    Field trunk_list
-
-
-    interface_trunk_start (optional, any, None)
-      Field interface_trunk_start
-
-
-    interface_trunk_end (optional, any, None)
-      Field interface_trunk_end
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                   | Choices/Defaults              | Comment                                         |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++==============================+===============================+=================================================+
+| state                        | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                 |                               | Host for AXAPI authentication                   |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username             |                               | Username for AXAPI authentication               |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password             |                               | Password for AXAPI authentication               |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                 |                               | Port for AXAPI authentication                   |
+|                              |                               |                                                 |
+| /required                    |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id        | ['1-8']                       | Device ID for aVCS configuration                |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                |                               | Destination/target partition for object/command |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| zone_name                    |                               | Key to identify parent object                   |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
+| ethernet_list                |                               | Field ethernet_list                             |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_ethernet_start |                               | Field interface_ethernet_start                  |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_ethernet_end   |                               | Field interface_ethernet_end                    |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+| trunk_list                   |                               | Field trunk_list                                |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_trunk_start    |                               | Field interface_trunk_start                     |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_trunk_end      |                               | Field interface_trunk_end                       |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+| ve_list                      |                               | Field ve_list                                   |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_ve_start       |                               | Field interface_ve_start                        |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_ve_end         |                               | Field interface_ve_end                          |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+| lif_list                     |                               | Field lif_list                                  |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_lif_start      |                               | Field interface_lif_start                       |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_lif_end        |                               | Field interface_lif_end                         |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+| tunnel_list                  |                               | Field tunnel_list                               |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_tunnel_start   |                               | Field interface_tunnel_start                    |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+|   | interface_tunnel_end     |                               | Field interface_tunnel_end                      |
+|   |                          |                               |                                                 |
+|   |                          |                               |                                                 |
++---+--------------------------+-------------------------------+-------------------------------------------------+
+| uuid                         |                               | uuid of the object                              |
+|                              |                               |                                                 |
+|                              |                               |                                                 |
++------------------------------+-------------------------------+-------------------------------------------------+
 
 
 

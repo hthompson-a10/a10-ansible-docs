@@ -22,85 +22,87 @@ Specify DNS NS Record
 Parameters
 ----------
 
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'hits'= Number of times the record has been used;
-
-
-
-  oper (False, any, None)
-    Field oper
-
-
-    ns_name (optional, any, None)
-      Specify Domain Name
-
-
-    last_server (optional, any, None)
-      Field last_server
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    hits (optional, any, None)
-      Number of times the record has been used
-
-
-    ns_name (optional, any, None)
-      Specify Domain Name
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ttl (False, any, None)
-    Specify TTL
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  zone_name (optional, any, None)
-    Key to identify parent object
-
-
-  ns_name (True, any, None)
-    Specify Domain Name
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                       |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++=======================+===============================+===============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                            |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                              |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command               |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| zone_name             |                               | Key to identify parent object                                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ns_name               |                               | Specify Domain Name                                           |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ttl                   |                               | Specify TTL                                                   |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                            |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                         |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'hits'= Number of times the record has been used; |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+| oper                  |                               | Field oper                                                    |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | last_server       |                               | Field last_server                                             |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | ns_name           |                               | Specify Domain Name                                           |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+| stats                 |                               | Field stats                                                   |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | hits              |                               | Number of times the record has been used                      |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | ns_name           |                               | Specify Domain Name                                           |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
 
 
 

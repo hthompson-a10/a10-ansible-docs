@@ -22,231 +22,231 @@ SIP Template
 Parameters
 ----------
 
-  alg_source_nat (False, any, None)
-    Translate source IP to NAT IP in SIP message when source NAT is used
-
-
-  smp_call_id_rtp_session (False, any, None)
-    Create the across cpu call-id rtp session
-
-
-  failed_client_selection_message (False, any, None)
-    Send SIP message (includs status code) to server when select client fail(Format= 3 digits(1XX~6XX) space reason)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  acl_id (False, any, None)
-    ACL id
-
-
-  failed_server_selection (False, any, None)
-    Define action when select server fail
-
-
-  alg_dest_nat (False, any, None)
-    Translate VIP to real server IP in SIP message when destination NAT is used
-
-
-  drop_when_client_fail (False, any, None)
-    Drop current SIP message when select client fail
-
-
-  service_group (False, any, None)
-    service group name
-
-
-  client_response_header (False, any, None)
-    Field client_response_header
-
-
-    client_response_header_erase (optional, any, None)
-      Erase a SIP header (Header Name)
-
-
-    client_response_header_insert (optional, any, None)
-      Insert a SIP header (Header Content (Format= 'name=value'))
-
-
-    client_response_erase_all (optional, any, None)
-      Erase all headers
-
-
-    insert_condition_client_response (optional, any, None)
-      'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name;
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  failed_server_selection_message (False, any, None)
-    Send SIP message (includs status code) to client when select server fail(Format= 3 digits(1XX~6XX) space reason)
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  server_keep_alive (False, any, None)
-    Send server keep-alive packet for every persist connection when enable conn- reuse
-
-
-  call_id_persist_disable (False, any, None)
-    Disable call-ID persistence
-
-
-  dialog_aware (False, any, None)
-    Permit system processes dialog session
-
-
-  drop_when_server_fail (False, any, None)
-    Drop current SIP message when select server fail
-
-
-  server_selection_per_request (False, any, None)
-    Force server selection on every SIP request
-
-
-  pstn_gw (False, any, None)
-    configure pstn gw host name for tel= uri translate to sip= uri (Hostname String, default is 'pstn')
-
-
-  client_keep_alive (False, any, None)
-    Respond client keep-alive packet directly instead of forwarding to server
-
-
-  acl_name_value (False, any, None)
-    IPv4 Access List Name
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  insert_client_ip (False, any, None)
-    Insert Client IP address into SIP header
-
-
-  name (True, any, None)
-    SIP Template Name
-
-
-  exclude_translation (False, any, None)
-    Field exclude_translation
-
-
-    header_string (optional, any, None)
-      SIP header name
-
-
-    translation_value (optional, any, None)
-      'start-line'= SIP request line or status line; 'header'= SIP message headers; 'body'= SIP message body;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  client_request_header (False, any, None)
-    Field client_request_header
-
-
-    insert_condition_client_request (optional, any, None)
-      'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name;
-
-
-    client_request_header_erase (optional, any, None)
-      Erase a SIP header (Header Name)
-
-
-    client_request_erase_all (optional, any, None)
-      Erase all headers
-
-
-    client_request_header_insert (optional, any, None)
-      Insert a SIP header (Header Content (Format= 'name=value'))
-
-
-
-  server_response_header (False, any, None)
-    Field server_response_header
-
-
-    server_response_header_erase (optional, any, None)
-      Erase a SIP header (Header Name)
-
-
-    server_response_erase_all (optional, any, None)
-      Erase all headers
-
-
-    server_response_header_insert (optional, any, None)
-      Insert a SIP header (Header Content (Format= 'name=value'))
-
-
-    insert_condition_server_response (optional, any, None)
-      'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name;
-
-
-
-  failed_client_selection (False, any, None)
-    Define action when select client fail
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  interval (False, any, None)
-    The interval of keep-alive packet for each persist connection (second)
-
-
-  keep_server_ip_if_match_acl (False, any, None)
-    Use Real Server IP for addresses matching the ACL for a Call-Id
-
-
-  timeout (False, any, None)
-    Time in minutes
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  server_request_header (False, any, None)
-    Field server_request_header
-
-
-    server_request_erase_all (optional, any, None)
-      Erase all headers
-
-
-    server_request_header_insert (optional, any, None)
-      Insert a SIP header (Header Content (Format= 'name=value'))
-
-
-    insert_condition_server_request (optional, any, None)
-      'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name;
-
-
-    server_request_header_erase (optional, any, None)
-      Erase a SIP header (Header Name)
-
-
-
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameters                           | Choices/Defaults              | Comment                                                                                                                                                          |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++======================================+===============================+==================================================================================================================================================================+
+| state                                | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                                                               |
+|                                      |                               |                                                                                                                                                                  |
+| /required                            |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host                         |                               | Host for AXAPI authentication                                                                                                                                    |
+|                                      |                               |                                                                                                                                                                  |
+| /required                            |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username                     |                               | Username for AXAPI authentication                                                                                                                                |
+|                                      |                               |                                                                                                                                                                  |
+| /required                            |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password                     |                               | Password for AXAPI authentication                                                                                                                                |
+|                                      |                               |                                                                                                                                                                  |
+| /required                            |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port                         |                               | Port for AXAPI authentication                                                                                                                                    |
+|                                      |                               |                                                                                                                                                                  |
+| /required                            |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id                | ['1-8']                       | Device ID for aVCS configuration                                                                                                                                 |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition                        |                               | Destination/target partition for object/command                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| name                                 |                               | SIP Template Name                                                                                                                                                |
+|                                      |                               |                                                                                                                                                                  |
+| /required                            |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| alg_source_nat                       |                               | Translate source IP to NAT IP in SIP message when source NAT is used                                                                                             |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| alg_dest_nat                         |                               | Translate VIP to real server IP in SIP message when destination NAT is used                                                                                      |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| call_id_persist_disable              |                               | Disable call-ID persistence                                                                                                                                      |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| client_keep_alive                    |                               | Respond client keep-alive packet directly instead of forwarding to server                                                                                        |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| pstn_gw                              |                               | configure pstn gw host name for tel= uri translate to sip= uri (Hostname String, default is 'pstn')                                                              |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| client_request_header                |                               | Field client_request_header                                                                                                                                      |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | client_request_header_erase      |                               | Erase a SIP header (Header Name)                                                                                                                                 |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | client_request_erase_all         |                               | Erase all headers                                                                                                                                                |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | client_request_header_insert     |                               | Insert a SIP header (Header Content (Format= 'name=value'))                                                                                                      |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | insert_condition_client_request  |                               | 'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name; |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| client_response_header               |                               | Field client_response_header                                                                                                                                     |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | client_response_header_erase     |                               | Erase a SIP header (Header Name)                                                                                                                                 |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | client_response_erase_all        |                               | Erase all headers                                                                                                                                                |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | client_response_header_insert    |                               | Insert a SIP header (Header Content (Format= 'name=value'))                                                                                                      |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | insert_condition_client_response |                               | 'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name; |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| exclude_translation                  |                               | Field exclude_translation                                                                                                                                        |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | translation_value                |                               | 'start-line'= SIP request line or status line; 'header'= SIP message headers; 'body'= SIP message body;                                                          |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | header_string                    |                               | SIP header name                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| failed_client_selection              |                               | Define action when select client fail                                                                                                                            |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| drop_when_client_fail                |                               | Drop current SIP message when select client fail                                                                                                                 |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| failed_client_selection_message      |                               | Send SIP message (includs status code) to server when select client fail(Format= 3 digits(1XX~6XX) space reason)                                                 |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| failed_server_selection              |                               | Define action when select server fail                                                                                                                            |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| drop_when_server_fail                |                               | Drop current SIP message when select server fail                                                                                                                 |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| failed_server_selection_message      |                               | Send SIP message (includs status code) to client when select server fail(Format= 3 digits(1XX~6XX) space reason)                                                 |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| insert_client_ip                     |                               | Insert Client IP address into SIP header                                                                                                                         |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| keep_server_ip_if_match_acl          |                               | Use Real Server IP for addresses matching the ACL for a Call-Id                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| acl_id                               |                               | ACL id                                                                                                                                                           |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| acl_name_value                       |                               | IPv4 Access List Name                                                                                                                                            |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| service_group                        |                               | service group name                                                                                                                                               |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_keep_alive                    |                               | Send server keep-alive packet for every persist connection when enable conn- reuse                                                                               |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| interval                             |                               | The interval of keep-alive packet for each persist connection (second)                                                                                           |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_request_header                |                               | Field server_request_header                                                                                                                                      |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | server_request_header_erase      |                               | Erase a SIP header (Header Name)                                                                                                                                 |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | server_request_erase_all         |                               | Erase all headers                                                                                                                                                |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | server_request_header_insert     |                               | Insert a SIP header (Header Content (Format= 'name=value'))                                                                                                      |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | insert_condition_server_request  |                               | 'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name; |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_response_header               |                               | Field server_response_header                                                                                                                                     |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | server_response_header_erase     |                               | Erase a SIP header (Header Name)                                                                                                                                 |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | server_response_erase_all        |                               | Erase all headers                                                                                                                                                |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | server_response_header_insert    |                               | Insert a SIP header (Header Content (Format= 'name=value'))                                                                                                      |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | insert_condition_server_response |                               | 'insert-if-not-exist'= Only insert the header when it does not exist; 'insert- always'= Always insert the header even when there is a header with the same name; |
+|   |                                  |                               |                                                                                                                                                                  |
+|   |                                  |                               |                                                                                                                                                                  |
++---+----------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| smp_call_id_rtp_session              |                               | Create the across cpu call-id rtp session                                                                                                                        |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_selection_per_request         |                               | Force server selection on every SIP request                                                                                                                      |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| timeout                              |                               | Time in minutes                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dialog_aware                         |                               | Permit system processes dialog session                                                                                                                           |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| uuid                                 |                               | uuid of the object                                                                                                                                               |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| user_tag                             |                               | Customized tag                                                                                                                                                   |
+|                                      |                               |                                                                                                                                                                  |
+|                                      |                               |                                                                                                                                                                  |
++--------------------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 

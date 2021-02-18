@@ -22,63 +22,67 @@ Configure TACACS+ servers
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  monitor (False, any, None)
-    Configure TACACS+ servers
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  interval (False, any, None)
-    The moniter interval in seconds (default 60)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  host (False, any, None)
-    Field host
-
-
-    tacacs_hostname_list (optional, any, None)
-      Field tacacs_hostname_list
-
-
-    ipv6_list (optional, any, None)
-      Field ipv6_list
-
-
-    ipv4_list (optional, any, None)
-      Field ipv4_list
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++--------------------------+-------------------------------+-------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                         |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++==========================+===============================+=================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| monitor                  |                               | Configure TACACS+ servers                       |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| interval                 |                               | The moniter interval in seconds (default 60)    |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| uuid                     |                               | uuid of the object                              |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| host                     |                               | Field host                                      |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | ipv4_list            |                               | Field ipv4_list                                 |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | ipv6_list            |                               | Field ipv6_list                                 |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | tacacs_hostname_list |                               | Field tacacs_hostname_list                      |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
 
 
 

@@ -22,103 +22,107 @@ Case number
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  repeat (False, any, None)
-    number of times case should be repeated before state transition
-
-
-  name (optional, any, None)
-    Key to identify parent object
-
-
-  action_list (False, any, None)
-    Field action_list
-
-
-    direction (optional, any, None)
-      'send'= Test event; 'expect'= Expected result; 'wait'= Introduce a delay;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    drop (optional, any, None)
-      Packet drop. Only allowed for output spec
-
-
-    udp (optional, any, None)
-      Field udp
-
-
-    tcp (optional, any, None)
-      Field tcp
-
-
-    delay (optional, any, None)
-      Delay in seconds
-
-
-    l2 (optional, any, None)
-      Field l2
-
-
-    l3 (optional, any, None)
-      Field l3
-
-
-    template (optional, any, None)
-      Packet template
-
-
-    l1 (optional, any, None)
-      Field l1
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  state_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  case_number (True, any, None)
-    Field case_number
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                   |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++=======================+===============================+===========================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                        |
+|                       |                               |                                                                           |
+| /required             |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                             |
+|                       |                               |                                                                           |
+| /required             |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                         |
+|                       |                               |                                                                           |
+| /required             |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                         |
+|                       |                               |                                                                           |
+| /required             |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                             |
+|                       |                               |                                                                           |
+| /required             |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                          |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                           |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| name                  |                               | Key to identify parent object                                             |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| state_name            |                               | Key to identify parent object                                             |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| case_number           |                               | Field case_number                                                         |
+|                       |                               |                                                                           |
+| /required             |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| repeat                |                               | number of times case should be repeated before state transition           |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                        |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| user_tag              |                               | Customized tag                                                            |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++-----------------------+-------------------------------+---------------------------------------------------------------------------+
+| action_list           |                               | Field action_list                                                         |
+|                       |                               |                                                                           |
+|                       |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | direction         |                               | 'send'= Test event; 'expect'= Expected result; 'wait'= Introduce a delay; |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | template          |                               | Packet template                                                           |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | drop              |                               | Packet drop. Only allowed for output spec                                 |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | delay             |                               | Delay in seconds                                                          |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | uuid              |                               | uuid of the object                                                        |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | l1                |                               | Field l1                                                                  |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | l2                |                               | Field l2                                                                  |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | l3                |                               | Field l3                                                                  |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | tcp               |                               | Field tcp                                                                 |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | udp               |                               | Field udp                                                                 |
+|   |                   |                               |                                                                           |
+|   |                   |                               |                                                                           |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------+
 
 
 

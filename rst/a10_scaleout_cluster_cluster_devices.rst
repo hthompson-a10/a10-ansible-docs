@@ -22,93 +22,95 @@ Configure devices in the cluster
 Parameters
 ----------
 
-  cluster_discovery_timeout (False, any, None)
-    Field cluster_discovery_timeout
-
-
-    timer_val (optional, any, None)
-      Cluster node discovery timeout value (secs (Default= 120))
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  device_id_list (False, any, None)
-    Field device_id_list
-
-
-    action (optional, any, None)
-      'enable'= enable; 'disable'= disable;
-
-
-    ip (optional, any, None)
-      Field ip
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    device_id (optional, any, None)
-      scaleout device id
-
-
-
-  minimum_nodes (False, any, None)
-    Field minimum_nodes
-
-
-    minimum_nodes_num (optional, any, None)
-      Specify the minimum number of the node required to start service
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  cluster_id (optional, any, None)
-    Key to identify parent object
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++---------------------------+---------------------+------------------------------------------------------------------+
+| Parameters                | Choices/Defaults    | Comment                                                          |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++===========================+=====================+==================================================================+
+| state                     | ['noop', 'present'] | State of the object to be created.                               |
+|                           |                     |                                                                  |
+| /required                 |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| ansible_host              |                     | Host for AXAPI authentication                                    |
+|                           |                     |                                                                  |
+| /required                 |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| ansible_username          |                     | Username for AXAPI authentication                                |
+|                           |                     |                                                                  |
+| /required                 |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| ansible_password          |                     | Password for AXAPI authentication                                |
+|                           |                     |                                                                  |
+| /required                 |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| ansible_port              |                     | Port for AXAPI authentication                                    |
+|                           |                     |                                                                  |
+| /required                 |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| a10_device_context_id     | ['1-8']             | Device ID for aVCS configuration                                 |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| a10_partition             |                     | Destination/target partition for object/command                  |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| cluster_id                |                     | Key to identify parent object                                    |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| uuid                      |                     | uuid of the object                                               |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++---------------------------+---------------------+------------------------------------------------------------------+
+| minimum_nodes             |                     | Field minimum_nodes                                              |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | minimum_nodes_num     |                     | Specify the minimum number of the node required to start service |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | uuid                  |                     | uuid of the object                                               |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+| cluster_discovery_timeout |                     | Field cluster_discovery_timeout                                  |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | timer_val             |                     | Cluster node discovery timeout value (secs (Default= 120))       |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | uuid                  |                     | uuid of the object                                               |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+| device_id_list            |                     | Field device_id_list                                             |
+|                           |                     |                                                                  |
+|                           |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | device_id             |                     | scaleout device id                                               |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | ip                    |                     | Field ip                                                         |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | action                |                     | 'enable'= enable; 'disable'= disable;                            |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | uuid                  |                     | uuid of the object                                               |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
+|   | user_tag              |                     | Customized tag                                                   |
+|   |                       |                     |                                                                  |
+|   |                       |                     |                                                                  |
++---+-----------------------+---------------------+------------------------------------------------------------------+
 
 
 

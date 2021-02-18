@@ -22,75 +22,79 @@ Configure TWAMP responder
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    other_err_v6 (optional, any, None)
-      IPv6 Other error drop
-
-
-    rx_drop_not_enabled_v6 (optional, any, None)
-      Rx IPv6 disabled drop
-
-
-    no_route_err_v6 (optional, any, None)
-      Tx IPv6 no route error drop
-
-
-    rx_pkts_v6 (optional, any, None)
-      Rx IPv6 TWAMP test packets
-
-
-    twamp_hdr_len_err_v6 (optional, any, None)
-      Rx IPv6 TWAMP hdr length error drop
-
-
-    tx_pkts_v6 (optional, any, None)
-      Tx IPv6 TWAMP test packets
-
-
-    rx_acl_drop_v6 (optional, any, None)
-      Rx IPv6 client-list drop
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  v6_acl_name (False, any, None)
-    Apply an access list (Named Access List)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                         |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++============================+===============================+=================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| v6_acl_name                |                               | Apply an access list (Named Access List)        |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                       |                               | uuid of the object                              |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| stats                      |                               | Field stats                                     |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | rx_pkts_v6             |                               | Rx IPv6 TWAMP test packets                      |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | tx_pkts_v6             |                               | Tx IPv6 TWAMP test packets                      |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | rx_drop_not_enabled_v6 |                               | Rx IPv6 disabled drop                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | rx_acl_drop_v6         |                               | Rx IPv6 client-list drop                        |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | twamp_hdr_len_err_v6   |                               | Rx IPv6 TWAMP hdr length error drop             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | no_route_err_v6        |                               | Tx IPv6 no route error drop                     |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | other_err_v6           |                               | IPv6 Other error drop                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
 
 
 

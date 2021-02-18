@@ -22,93 +22,95 @@ VCS Device
 Parameters
 ----------
 
-  enable (False, any, None)
-    Enable
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  affinity_vrrp_a_vrid (False, any, None)
-    vrid-group
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ve_cfg (False, any, None)
-    Field ve_cfg
-
-
-    ve (optional, any, None)
-      VE interface (VE interface number)
-
-
-
-  device (True, any, None)
-    Device ID
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  unicast_port (False, any, None)
-    Port used in unicast communication (Port number)
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  management (False, any, None)
-    Management interface
-
-
-  trunk_cfg (False, any, None)
-    Field trunk_cfg
-
-
-    trunk (optional, any, None)
-      Trunk interface (Trunk interface number)
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  priority (False, any, None)
-    Device priority
-
-
-  ethernet_cfg (False, any, None)
-    Field ethernet_cfg
-
-
-    ethernet (optional, any, None)
-      Ethernet (Ethernet interface number)
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                          |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++=======================+===============================+==================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.               |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                 |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| device                |                               | Device ID                                        |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| priority              |                               | Device priority                                  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| unicast_port          |                               | Port used in unicast communication (Port number) |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| management            |                               | Management interface                             |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ve_cfg                |                               | Field ve_cfg                                     |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+|   | ve                |                               | VE interface (VE interface number)               |
+|   |                   |                               |                                                  |
+|   |                   |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+| trunk_cfg             |                               | Field trunk_cfg                                  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+|   | trunk             |                               | Trunk interface (Trunk interface number)         |
+|   |                   |                               |                                                  |
+|   |                   |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+| ethernet_cfg          |                               | Field ethernet_cfg                               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+|   | ethernet          |                               | Ethernet (Ethernet interface number)             |
+|   |                   |                               |                                                  |
+|   |                   |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+| affinity_vrrp_a_vrid  |                               | vrid-group                                       |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| enable                |                               | Enable                                           |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| uuid                  |                               | uuid of the object                               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| user_tag              |                               | Customized tag                                   |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
 
 
 

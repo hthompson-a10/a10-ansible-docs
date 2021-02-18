@@ -22,63 +22,67 @@ Field ip_entries
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    nat_pool (optional, any, None)
-      Field nat_pool
-
-
-    v4_netmask (optional, any, None)
-      Field v4_netmask
-
-
-    total_entries (optional, any, None)
-      Field total_entries
-
-
-    ddos_ip_entries_list (optional, any, None)
-      Field ddos_ip_entries_list
-
-
-    all (optional, any, None)
-      Field all
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++--------------------------+-------------------------------+-------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                         |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++==========================+===============================+=================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| uuid                     |                               | uuid of the object                              |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| oper                     |                               | Field oper                                      |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | ddos_ip_entries_list |                               | Field ddos_ip_entries_list                      |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | total_entries        |                               | Field total_entries                             |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | all                  |                               | Field all                                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | nat_pool             |                               | Field nat_pool                                  |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | v4_netmask           |                               | Field v4_netmask                                |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
 
 
 

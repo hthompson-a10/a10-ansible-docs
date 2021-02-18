@@ -22,167 +22,171 @@ Version Information
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    up_time (optional, any, None)
-      Field up_time
-
-
-    cots_sys_mfg (optional, any, None)
-      Field cots_sys_mfg
-
-
-    sw_version (optional, any, None)
-      Field sw_version
-
-
-    sys_poll_mode (optional, any, None)
-      Field sys_poll_mode
-
-
-    hw_platform (optional, any, None)
-      Field hw_platform
-
-
-    series_name (optional, any, None)
-      Field series_name
-
-
-    pri_gui_version (optional, any, None)
-      Field pri_gui_version
-
-
-    boot_from (optional, any, None)
-      Field boot_from
-
-
-    last_config_saved_time (optional, any, None)
-      Field last_config_saved_time
-
-
-    buff_size (optional, any, None)
-      Field buff_size
-
-
-    cots_sys_ver (optional, any, None)
-      Field cots_sys_ver
-
-
-    firmware_version (optional, any, None)
-      Field firmware_version
-
-
-    hd_sec (optional, any, None)
-      Field hd_sec
-
-
-    build_type (optional, any, None)
-      Field build_type
-
-
-    sec_gui_version (optional, any, None)
-      Field sec_gui_version
-
-
-    current_time (optional, any, None)
-      Field current_time
-
-
-    cots_sys_name (optional, any, None)
-      Field cots_sys_name
-
-
-    cf_sec (optional, any, None)
-      Field cf_sec
-
-
-    io_buff_enabled (optional, any, None)
-      Field io_buff_enabled
-
-
-    copyright (optional, any, None)
-      Field copyright
-
-
-    nun_ctrl_cpus (optional, any, None)
-      Field nun_ctrl_cpus
-
-
-    hostname (optional, any, None)
-      Field hostname
-
-
-    hd_pri (optional, any, None)
-      Field hd_pri
-
-
-    cf_pri (optional, any, None)
-      Field cf_pri
-
-
-    plat_features (optional, any, None)
-      Field plat_features
-
-
-    aflex_version (optional, any, None)
-      Field aflex_version
-
-
-    serial_number (optional, any, None)
-      Field serial_number
-
-
-    cylance_version (optional, any, None)
-      Field cylance_version
-
-
-    axapi_version (optional, any, None)
-      Field axapi_version
-
-
-    hw_code (optional, any, None)
-      Field hw_code
-
-
-    virtualization_type (optional, any, None)
-      Field virtualization_type
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                         |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++============================+===============================+=================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                       |                               | uuid of the object                              |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| oper                       |                               | Field oper                                      |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | hw_platform            |                               | Field hw_platform                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | copyright              |                               | Field copyright                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | sw_version             |                               | Field sw_version                                |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | plat_features          |                               | Field plat_features                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | boot_from              |                               | Field boot_from                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | serial_number          |                               | Field serial_number                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | aflex_version          |                               | Field aflex_version                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | axapi_version          |                               | Field axapi_version                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | pri_gui_version        |                               | Field pri_gui_version                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | sec_gui_version        |                               | Field sec_gui_version                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | cylance_version        |                               | Field cylance_version                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | firmware_version       |                               | Field firmware_version                          |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | hd_pri                 |                               | Field hd_pri                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | hd_sec                 |                               | Field hd_sec                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | cf_pri                 |                               | Field cf_pri                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | cf_sec                 |                               | Field cf_sec                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | last_config_saved_time |                               | Field last_config_saved_time                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | virtualization_type    |                               | Field virtualization_type                       |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | sys_poll_mode          |                               | Field sys_poll_mode                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | hw_code                |                               | Field hw_code                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | current_time           |                               | Field current_time                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | up_time                |                               | Field up_time                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | nun_ctrl_cpus          |                               | Field nun_ctrl_cpus                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | buff_size              |                               | Field buff_size                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | io_buff_enabled        |                               | Field io_buff_enabled                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | build_type             |                               | Field build_type                                |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | cots_sys_mfg           |                               | Field cots_sys_mfg                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | cots_sys_name          |                               | Field cots_sys_name                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | cots_sys_ver           |                               | Field cots_sys_ver                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | series_name            |                               | Field series_name                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | hostname               |                               | Field hostname                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
 
 
 

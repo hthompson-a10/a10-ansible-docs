@@ -22,59 +22,63 @@ Configure lldp management-address dns address
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  dns (True, any, None)
-    Configure lldp management-address, subtype is dns (lldp management-address dns address)
-
-
-  interface (False, any, None)
-    Field interface
-
-
-    ethernet (optional, any, None)
-      configure lldp management-address interface ethernet (lldp management-address interface port number)
-
-
-    management (optional, any, None)
-      configure lldp management-address interface management
-
-
-    ve (optional, any, None)
-      configure lldp management-address interface management (lldp management-address interface port number)
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                |
+|                       |                               |                                                                                                        |
+|                       |                               |                                                                                                        |
++=======================+===============================+========================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                     |
+|                       |                               |                                                                                                        |
+| /required             |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                          |
+|                       |                               |                                                                                                        |
+| /required             |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                      |
+|                       |                               |                                                                                                        |
+| /required             |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                      |
+|                       |                               |                                                                                                        |
+| /required             |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                          |
+|                       |                               |                                                                                                        |
+| /required             |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                       |
+|                       |                               |                                                                                                        |
+|                       |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                        |
+|                       |                               |                                                                                                        |
+|                       |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| dns                   |                               | Configure lldp management-address, subtype is dns (lldp management-address dns address)                |
+|                       |                               |                                                                                                        |
+| /required             |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| interface             |                               | Field interface                                                                                        |
+|                       |                               |                                                                                                        |
+|                       |                               |                                                                                                        |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+|   | ethernet          |                               | configure lldp management-address interface ethernet (lldp management-address interface port number)   |
+|   |                   |                               |                                                                                                        |
+|   |                   |                               |                                                                                                        |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+|   | ve                |                               | configure lldp management-address interface management (lldp management-address interface port number) |
+|   |                   |                               |                                                                                                        |
+|   |                   |                               |                                                                                                        |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+|   | management        |                               | configure lldp management-address interface management                                                 |
+|   |                   |                               |                                                                                                        |
+|   |                   |                               |                                                                                                        |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                     |
+|                       |                               |                                                                                                        |
+|                       |                               |                                                                                                        |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
 
 
 

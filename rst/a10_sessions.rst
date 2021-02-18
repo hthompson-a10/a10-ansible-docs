@@ -22,230 +22,231 @@ Field sessions
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    app (optional, any, None)
-      Field app
-
-
-    nat_ipv4_addr (optional, any, None)
-      Field nat_ipv4_addr
-
-
-    nat_port (optional, any, None)
-      Field nat_port
-
-
-    total_sessions (optional, any, None)
-      Field total_sessions
-
-
-    fw_dest_zone (optional, any, None)
-      Field fw_dest_zone
-
-
-    name_str (optional, any, None)
-      Field name_str
-
-
-    zone_name (optional, any, None)
-      Field zone_name
-
-
-    dest_port (optional, any, None)
-      Field dest_port
-
-
-    check_inside_user (optional, any, None)
-      Field check_inside_user
-
-
-    src_port (optional, any, None)
-      Field src_port
-
-
-    src_ipv6_addr (optional, any, None)
-      Field src_ipv6_addr
-
-
-    fw_dest_obj_grp (optional, any, None)
-      Field fw_dest_obj_grp
-
-
-    smp (optional, any, None)
-      Field smp
-
-
-    smp_table (optional, any, None)
-      Field smp_table
-
-
-    application (optional, any, None)
-      Field application
-
-
-    sport_rate_limit_curr (optional, any, None)
-      Field sport_rate_limit_curr
-
-
-    fw_dest_rserver (optional, any, None)
-      Field fw_dest_rserver
-
-
-    fw_src_rserver (optional, any, None)
-      Field fw_src_rserver
-
-
-    fw_dest_obj (optional, any, None)
-      Field fw_dest_obj
-
-
-    fw_src_obj_grp (optional, any, None)
-      Field fw_src_obj_grp
-
-
-    session_list (optional, any, None)
-      Field session_list
-
-
-    app_category (optional, any, None)
-      Field app_category
-
-
-    fw_ip_type (optional, any, None)
-      Field fw_ip_type
-
-
-    dst_ipv4_addr (optional, any, None)
-      Field dst_ipv4_addr
-
-
-    filter_type (optional, any, None)
-      Field filter_type
-
-
-    fw_src_zone (optional, any, None)
-      Field fw_src_zone
-
-
-    src_ipv6_prefix (optional, any, None)
-      Field src_ipv6_prefix
-
-
-    fw_dest_vserver (optional, any, None)
-      Field fw_dest_vserver
-
-
-    full_width (optional, any, None)
-      Field full_width
-
-
-    src_ipv4_addr (optional, any, None)
-      Field src_ipv4_addr
-
-
-    sport_rate_limit_exceed (optional, any, None)
-      Field sport_rate_limit_exceed
-
-
-    fw_helper_sessions (optional, any, None)
-      Field fw_helper_sessions
-
-
-    dst_ipv6_addr (optional, any, None)
-      Field dst_ipv6_addr
-
-
-    l4_protocol (optional, any, None)
-      Field l4_protocol
-
-
-    app_sessions (optional, any, None)
-      Field app_sessions
-
-
-    session_id (optional, any, None)
-      Field session_id
-
-
-    ext (optional, any, None)
-      Field ext
-
-
-    dst_ipv6_prefix (optional, any, None)
-      Field dst_ipv6_prefix
-
-
-    fw_src_obj (optional, any, None)
-      Field fw_src_obj
-
-
-    fw_rule (optional, any, None)
-      Field fw_rule
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  smp (False, any, None)
-    Field smp
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  smp_table (False, any, None)
-    Field smp_table
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ext (False, any, None)
-    Field ext
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                         |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++=============================+===============================+=================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                        |                               | uuid of the object                              |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ext                         |                               | Field ext                                       |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                    |                               | uuid of the object                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+| smp                         |                               | Field smp                                       |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                    |                               | uuid of the object                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+| smp_table                   |                               | Field smp_table                                 |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                    |                               | uuid of the object                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+| oper                        |                               | Field oper                                      |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | session_list            |                               | Field session_list                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | total_sessions          |                               | Field total_sessions                            |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | app_sessions            |                               | Field app_sessions                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | filter_type             |                               | Field filter_type                               |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | src_ipv4_addr           |                               | Field src_ipv4_addr                             |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | dst_ipv4_addr           |                               | Field dst_ipv4_addr                             |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | nat_ipv4_addr           |                               | Field nat_ipv4_addr                             |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | src_ipv6_addr           |                               | Field src_ipv6_addr                             |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | dst_ipv6_addr           |                               | Field dst_ipv6_addr                             |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | name_str                |                               | Field name_str                                  |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | dest_port               |                               | Field dest_port                                 |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | src_port                |                               | Field src_port                                  |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | nat_port                |                               | Field nat_port                                  |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | app_category            |                               | Field app_category                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | app                     |                               | Field app                                       |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | l4_protocol             |                               | Field l4_protocol                               |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_helper_sessions      |                               | Field fw_helper_sessions                        |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_ip_type              |                               | Field fw_ip_type                                |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_rule                 |                               | Field fw_rule                                   |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_dest_zone            |                               | Field fw_dest_zone                              |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_src_zone             |                               | Field fw_src_zone                               |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_dest_obj             |                               | Field fw_dest_obj                               |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_src_obj              |                               | Field fw_src_obj                                |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_dest_obj_grp         |                               | Field fw_dest_obj_grp                           |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_src_obj_grp          |                               | Field fw_src_obj_grp                            |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_dest_rserver         |                               | Field fw_dest_rserver                           |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_src_rserver          |                               | Field fw_src_rserver                            |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | fw_dest_vserver         |                               | Field fw_dest_vserver                           |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | application             |                               | Field application                               |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | session_id              |                               | Field session_id                                |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | zone_name               |                               | Field zone_name                                 |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | sport_rate_limit_exceed |                               | Field sport_rate_limit_exceed                   |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | sport_rate_limit_curr   |                               | Field sport_rate_limit_curr                     |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | src_ipv6_prefix         |                               | Field src_ipv6_prefix                           |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | dst_ipv6_prefix         |                               | Field dst_ipv6_prefix                           |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | check_inside_user       |                               | Field check_inside_user                         |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | full_width              |                               | Field full_width                                |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | ext                     |                               | Field ext                                       |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | smp                     |                               | Field smp                                       |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | smp_table               |                               | Field smp_table                                 |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
 
 
 

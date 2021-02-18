@@ -22,58 +22,63 @@ Virtual ethernet interface
 Parameters
 ----------
 
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ve_num (True, any, None)
-    Virtual ethernet interface
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  threshold (False, any, None)
-    action triggering threshold
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  nexthop_ipv6_ll (True, any, None)
-    Nexthop IPv6 address (Link-local)
-
-
-  template (False, any, None)
-    Configure tracking template (bind tracking template name)
-
-
-  action (False, any, None)
-    'down'= BFD down;  (BFD state)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                   |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++=======================+===============================+===========================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                        |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                             |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                         |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                         |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                             |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                          |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command           |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ve_num                |                               | Virtual ethernet interface                                |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| nexthop_ipv6_ll       |                               | Nexthop IPv6 address (Link-local)                         |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| template              |                               | Configure tracking template (bind tracking template name) |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| threshold             |                               | action triggering threshold                               |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| action                |                               | 'down'= BFD down;  (BFD state)                            |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                        |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
 
 
 

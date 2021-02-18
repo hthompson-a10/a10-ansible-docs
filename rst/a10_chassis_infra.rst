@@ -22,58 +22,63 @@ Chassis infrastructure commands
 Parameters
 ----------
 
-  detailed (False, any, None)
-    Give Chassis filesystem info( USED BY TAC ONLY )
-
-
-  debug_enable (False, any, None)
-    Enable chassis infrastruture debugging
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  system_sync_verify (False, any, None)
-    Validate chassis filesytem synchronization status (For A10 TAC Use Only)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  sys_sync (False, any, None)
-    Synchronize the Master and Blade filesystems (For A10 TAC Use Only)
-
-
-  debug_status (False, any, None)
-    Show chassis infrastruture debugging status
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  debug_disable (False, any, None)
-    Disable chassis infrastruture debugging
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                  |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++=======================+===============================+==========================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                       |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                            |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                            |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                         |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                          |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| debug_enable          |                               | Enable chassis infrastruture debugging                                   |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| debug_disable         |                               | Disable chassis infrastruture debugging                                  |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| debug_status          |                               | Show chassis infrastruture debugging status                              |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| system_sync_verify    |                               | Validate chassis filesytem synchronization status (For A10 TAC Use Only) |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| detailed              |                               | Give Chassis filesystem info( USED BY TAC ONLY )                         |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| sys_sync              |                               | Synchronize the Master and Blade filesystems (For A10 TAC Use Only)      |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
 
 
 

@@ -22,66 +22,71 @@ SSHD service operation
 Parameters
 ----------
 
-  load (False, any, None)
-    Load SSH key
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  regenerate (False, any, None)
-    Wipe and generate SSH key
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  file_url (False, any, None)
-    File URL
-
-
-  generate (False, any, None)
-    Generate SSH key
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  use_mgmt_port (False, any, None)
-    Use management port as source port
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  wipe (False, any, None)
-    Wipe SSH key
-
-
-  restart (False, any, None)
-    Restart SSH service
-
-
-  size (False, any, None)
-    '2048'= Key size 2048bit; '4096'= Key size 4096bit;
-
-
++-----------------------+---------------------+-----------------------------------------------------+
+| Parameters            | Choices/Defaults    | Comment                                             |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++=======================+=====================+=====================================================+
+| state                 | ['noop', 'present'] | State of the object to be created.                  |
+|                       |                     |                                                     |
+| /required             |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| ansible_host          |                     | Host for AXAPI authentication                       |
+|                       |                     |                                                     |
+| /required             |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| ansible_username      |                     | Username for AXAPI authentication                   |
+|                       |                     |                                                     |
+| /required             |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| ansible_password      |                     | Password for AXAPI authentication                   |
+|                       |                     |                                                     |
+| /required             |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| ansible_port          |                     | Port for AXAPI authentication                       |
+|                       |                     |                                                     |
+| /required             |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| a10_device_context_id | ['1-8']             | Device ID for aVCS configuration                    |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| a10_partition         |                     | Destination/target partition for object/command     |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| restart               |                     | Restart SSH service                                 |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| wipe                  |                     | Wipe SSH key                                        |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| regenerate            |                     | Wipe and generate SSH key                           |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| generate              |                     | Generate SSH key                                    |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| size                  |                     | '2048'= Key size 2048bit; '4096'= Key size 4096bit; |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| load                  |                     | Load SSH key                                        |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| use_mgmt_port         |                     | Use management port as source port                  |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
+| file_url              |                     | File URL                                            |
+|                       |                     |                                                     |
+|                       |                     |                                                     |
++-----------------------+---------------------+-----------------------------------------------------+
 
 
 

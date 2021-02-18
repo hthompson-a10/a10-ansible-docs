@@ -22,110 +22,111 @@ Web-service secure operation
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  certificate (False, any, None)
-    Field certificate
-
-
-    load (optional, any, None)
-      Load WEB certificate
-
-
-    file_url (optional, any, None)
-      File URL
-
-
-    use_mgmt_port (optional, any, None)
-      Use management port as source port
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  regenerate (False, any, None)
-    Field regenerate
-
-
-    country (optional, any, None)
-      The country name
-
-
-    state (optional, any, None)
-      The location
-
-
-    domain_name (optional, any, None)
-      The domain name
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  private_key (False, any, None)
-    Field private_key
-
-
-    load (optional, any, None)
-      Load WEB private-key
-
-
-    file_url (optional, any, None)
-      File URL
-
-
-    use_mgmt_port (optional, any, None)
-      Use management port as source port
-
-
-
-  generate (False, any, None)
-    Field generate
-
-
-    country (optional, any, None)
-      The country name
-
-
-    state (optional, any, None)
-      The location
-
-
-    domain_name (optional, any, None)
-      The domain name
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  wipe (False, any, None)
-    Wipe WEB private-key and certificate
-
-
-  restart (False, any, None)
-    Restart WEB service
-
-
++-----------------------+---------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults    | Comment                                         |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++=======================+=====================+=================================================+
+| state                 | ['noop', 'present'] | State of the object to be created.              |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_host          |                     | Host for AXAPI authentication                   |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_username      |                     | Username for AXAPI authentication               |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_password      |                     | Password for AXAPI authentication               |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_port          |                     | Port for AXAPI authentication                   |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']             | Device ID for aVCS configuration                |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| a10_partition         |                     | Destination/target partition for object/command |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| restart               |                     | Restart WEB service                             |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| wipe                  |                     | Wipe WEB private-key and certificate            |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| generate              |                     | Field generate                                  |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | domain_name       |                     | The domain name                                 |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | country           |                     | The country name                                |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | state             |                     | The location                                    |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+| regenerate            |                     | Field regenerate                                |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | domain_name       |                     | The domain name                                 |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | country           |                     | The country name                                |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | state             |                     | The location                                    |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+| certificate           |                     | Field certificate                               |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | load              |                     | Load WEB certificate                            |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | use_mgmt_port     |                     | Use management port as source port              |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | file_url          |                     | File URL                                        |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+| private_key           |                     | Field private_key                               |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | load              |                     | Load WEB private-key                            |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | use_mgmt_port     |                     | Use management port as source port              |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | file_url          |                     | File URL                                        |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
 
 
 

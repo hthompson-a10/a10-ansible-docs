@@ -22,92 +22,95 @@ Logging Server Port
 Parameters
 ----------
 
-  health_check (False, any, None)
-    Health Check (Monitor Name)
-
-
-  protocol (True, any, None)
-    'tcp'= TCP Port; 'udp'= UDP Port;
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  port_number (True, any, None)
-    Port Number
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  health_check_disable (False, any, None)
-    Disable health check
-
-
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'msgs_sent'= Number of log messages sent;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    port_number (optional, any, None)
-      Port Number
-
-
-    protocol (optional, any, None)
-      'tcp'= TCP Port; 'udp'= UDP Port;
-
-
-    msgs_sent (optional, any, None)
-      Number of log messages sent
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  log_server_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  action (False, any, None)
-    'enable'= enable; 'disable'= disable;
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++-----------------------+-------------------------------+-------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                               |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++=======================+===============================+=======================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                    |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                         |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                     |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                     |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                         |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                      |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command       |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| log_server_name       |                               | Key to identify parent object                         |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| port_number           |                               | Port Number                                           |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| protocol              |                               | 'tcp'= TCP Port; 'udp'= UDP Port;                     |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| action                |                               | 'enable'= enable; 'disable'= disable;                 |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| health_check          |                               | Health Check (Monitor Name)                           |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| health_check_disable  |                               | Disable health check                                  |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                    |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| user_tag              |                               | Customized tag                                        |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                 |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++---+-------------------+-------------------------------+-------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'msgs_sent'= Number of log messages sent; |
+|   |                   |                               |                                                       |
+|   |                   |                               |                                                       |
++---+-------------------+-------------------------------+-------------------------------------------------------+
+| stats                 |                               | Field stats                                           |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++---+-------------------+-------------------------------+-------------------------------------------------------+
+|   | msgs_sent         |                               | Number of log messages sent                           |
+|   |                   |                               |                                                       |
+|   |                   |                               |                                                       |
++---+-------------------+-------------------------------+-------------------------------------------------------+
+|   | port_number       |                               | Port Number                                           |
+|   |                   |                               |                                                       |
+|   |                   |                               |                                                       |
++---+-------------------+-------------------------------+-------------------------------------------------------+
+|   | protocol          |                               | 'tcp'= TCP Port; 'udp'= UDP Port;                     |
+|   |                   |                               |                                                       |
+|   |                   |                               |                                                       |
++---+-------------------+-------------------------------+-------------------------------------------------------+
 
 
 

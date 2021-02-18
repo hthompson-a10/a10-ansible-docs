@@ -22,66 +22,71 @@ POP3 type
 Parameters
 ----------
 
-  pop3_password (False, any, None)
-    Specify the user password
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  pop3_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  pop3 (False, any, None)
-    POP3 type
-
-
-  monitor_name (optional, any, None)
-    Key to identify parent object
-
-
-  pop3_port (False, any, None)
-    Specify the POP3 port, default is 110 (Port Number (default 110))
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  pop3_password_string (False, any, None)
-    Specify the user password, '' means empty password
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  pop3_username (False, any, None)
-    Specify the username
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                             |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++=======================+===============================+=====================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                  |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                    |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                     |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| monitor_name          |                               | Key to identify parent object                                                                       |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| pop3                  |                               | POP3 type                                                                                           |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| pop3_username         |                               | Specify the username                                                                                |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| pop3_password         |                               | Specify the user password                                                                           |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| pop3_password_string  |                               | Specify the user password, '' means empty password                                                  |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| pop3_encrypted        |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| pop3_port             |                               | Specify the POP3 port, default is 110 (Port Number (default 110))                                   |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                  |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 
 

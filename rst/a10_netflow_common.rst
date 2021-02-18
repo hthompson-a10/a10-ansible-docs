@@ -22,46 +22,51 @@ NetFlow/IPFIX common settings
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  max_packet_queue_time (False, any, None)
-    Configure netflow packet queue time (Max packet queue time(*20ms). Default=50( *20ms = 1s)))
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  reset_time_on_flow_record (False, any, None)
-    Reset session start time to current time on each flow timeout export for long- lasting session (default= disabled).
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| Parameters                | Choices/Defaults              | Comment                                                                                                             |
+|                           |                               |                                                                                                                     |
+|                           |                               |                                                                                                                     |
++===========================+===============================+=====================================================================================================================+
+| state                     | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                  |
+|                           |                               |                                                                                                                     |
+| /required                 |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| ansible_host              |                               | Host for AXAPI authentication                                                                                       |
+|                           |                               |                                                                                                                     |
+| /required                 |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| ansible_username          |                               | Username for AXAPI authentication                                                                                   |
+|                           |                               |                                                                                                                     |
+| /required                 |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| ansible_password          |                               | Password for AXAPI authentication                                                                                   |
+|                           |                               |                                                                                                                     |
+| /required                 |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| ansible_port              |                               | Port for AXAPI authentication                                                                                       |
+|                           |                               |                                                                                                                     |
+| /required                 |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id     | ['1-8']                       | Device ID for aVCS configuration                                                                                    |
+|                           |                               |                                                                                                                     |
+|                           |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| a10_partition             |                               | Destination/target partition for object/command                                                                     |
+|                           |                               |                                                                                                                     |
+|                           |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| max_packet_queue_time     |                               | Configure netflow packet queue time (Max packet queue time(*20ms). Default=50( *20ms = 1s)))                        |
+|                           |                               |                                                                                                                     |
+|                           |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| reset_time_on_flow_record |                               | Reset session start time to current time on each flow timeout export for long- lasting session (default= disabled). |
+|                           |                               |                                                                                                                     |
+|                           |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
+| uuid                      |                               | uuid of the object                                                                                                  |
+|                           |                               |                                                                                                                     |
+|                           |                               |                                                                                                                     |
++---------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------------+
 
 
 

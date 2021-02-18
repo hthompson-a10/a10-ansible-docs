@@ -22,67 +22,71 @@ Configure remote tunnel end point parameters
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  vtep_id (optional, any, None)
-    Key to identify parent object
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ip_address (True, any, None)
-    IP Address of the remote VTEP
-
-
-  vni_list (False, any, None)
-    Field vni_list
-
-
-    segment (optional, any, None)
-      VNI configured for the remote VTEP
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  encap (False, any, None)
-    'nvgre'= Tunnel Encapsulation Type is NVGRE; 'vxlan'= Tunnel Encapsulation Type is VXLAN;
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                   |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++=======================+===============================+===========================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                        |
+|                       |                               |                                                                                           |
+| /required             |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                             |
+|                       |                               |                                                                                           |
+| /required             |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                         |
+|                       |                               |                                                                                           |
+| /required             |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                         |
+|                       |                               |                                                                                           |
+| /required             |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                             |
+|                       |                               |                                                                                           |
+| /required             |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                          |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                           |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| vtep_id               |                               | Key to identify parent object                                                             |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| ip_address            |                               | IP Address of the remote VTEP                                                             |
+|                       |                               |                                                                                           |
+| /required             |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| encap                 |                               | 'nvgre'= Tunnel Encapsulation Type is NVGRE; 'vxlan'= Tunnel Encapsulation Type is VXLAN; |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                        |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| user_tag              |                               | Customized tag                                                                            |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+| vni_list              |                               | Field vni_list                                                                            |
+|                       |                               |                                                                                           |
+|                       |                               |                                                                                           |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+|   | segment           |                               | VNI configured for the remote VTEP                                                        |
+|   |                   |                               |                                                                                           |
+|   |                   |                               |                                                                                           |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------+
+|   | uuid              |                               | uuid of the object                                                                        |
+|   |                   |                               |                                                                                           |
+|   |                   |                               |                                                                                           |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------------+
 
 
 

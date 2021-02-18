@@ -22,105 +22,107 @@ Create/unload a Network partition
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    partition_name (optional, any, None)
-      Object partition name
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  template (False, any, None)
-    Field template
-
-
-    resource_accounting (optional, any, None)
-      Attach a resource accounting template (Name of the template)
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  application_type (False, any, None)
-    'adc'= Application type ADC; 'cgnv6'= Application type CGNv6;
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  shared_vlan (False, any, None)
-    Field shared_vlan
-
-
-    allowable_ip_range (optional, any, None)
-      Field allowable_ip_range
-
-
-    vlan (optional, any, None)
-      Field vlan
-
-
-    mgmt_floating_ip_address (optional, any, None)
-      IPv4 Address for Shared VLAN Mgmt IP Address
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    vrid (optional, any, None)
-      Specify VRRP-A vrid
-
-
-    allowable_ipv6_range (optional, any, None)
-      Field allowable_ipv6_range
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  id (False, any, None)
-    Specify unique Partition id
-
-
-  partition_name (True, any, None)
-    Object partition name
-
-
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| Parameters                   | Choices/Defaults              | Comment                                                       |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++==============================+===============================+===============================================================+
+| state                        | ['noop', 'present', 'absent'] | State of the object to be created.                            |
+|                              |                               |                                                               |
+| /required                    |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_host                 |                               | Host for AXAPI authentication                                 |
+|                              |                               |                                                               |
+| /required                    |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_username             |                               | Username for AXAPI authentication                             |
+|                              |                               |                                                               |
+| /required                    |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_password             |                               | Password for AXAPI authentication                             |
+|                              |                               |                                                               |
+| /required                    |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_port                 |                               | Port for AXAPI authentication                                 |
+|                              |                               |                                                               |
+| /required                    |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| a10_device_context_id        | ['1-8']                       | Device ID for aVCS configuration                              |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| a10_partition                |                               | Destination/target partition for object/command               |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| partition_name               |                               | Object partition name                                         |
+|                              |                               |                                                               |
+| /required                    |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| id                           |                               | Specify unique Partition id                                   |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| application_type             |                               | 'adc'= Application type ADC; 'cgnv6'= Application type CGNv6; |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| uuid                         |                               | uuid of the object                                            |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| user_tag                     |                               | Customized tag                                                |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++------------------------------+-------------------------------+---------------------------------------------------------------+
+| shared_vlan                  |                               | Field shared_vlan                                             |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | vlan                     |                               | Field vlan                                                    |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | allowable_ip_range       |                               | Field allowable_ip_range                                      |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | allowable_ipv6_range     |                               | Field allowable_ipv6_range                                    |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | mgmt_floating_ip_address |                               | IPv4 Address for Shared VLAN Mgmt IP Address                  |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | vrid                     |                               | Specify VRRP-A vrid                                           |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | uuid                     |                               | uuid of the object                                            |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+| template                     |                               | Field template                                                |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | resource_accounting      |                               | Attach a resource accounting template (Name of the template)  |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | uuid                     |                               | uuid of the object                                            |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+| stats                        |                               | Field stats                                                   |
+|                              |                               |                                                               |
+|                              |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
+|   | partition_name           |                               | Object partition name                                         |
+|   |                          |                               |                                                               |
+|   |                          |                               |                                                               |
++---+--------------------------+-------------------------------+---------------------------------------------------------------+
 
 
 

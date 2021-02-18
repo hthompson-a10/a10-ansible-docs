@@ -22,70 +22,75 @@ IP Source NAT Static range list
 Parameters
 ----------
 
-  v4_count (False, any, None)
-    Number of addresses to be translated in this range
-
-
-  local_netmaskv4 (False, any, None)
-    Mask for this Address range
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  local_start_ipv4_addr (False, any, None)
-    Local Start IPv4 Address of this list
-
-
-  global_start_ipv4_addr (False, any, None)
-    Global Start IPv4 Address of this list
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    Name for this Static List
-
-
-  partition (True, any, None)
-    Inside User Partition (Partition Name)
-
-
-  v4_vrid (False, any, None)
-    VRRP-A vrid (Specify ha VRRP-A vrid)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  global_netmaskv4 (False, any, None)
-    Mask for this Address range
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++------------------------+-------------------------------+----------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                            |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++========================+===============================+====================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                 |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                      |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                  |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                  |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                      |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                   |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command    |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| name                   |                               | Name for this Static List                          |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| local_start_ipv4_addr  |                               | Local Start IPv4 Address of this list              |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| local_netmaskv4        |                               | Mask for this Address range                        |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| partition              |                               | Inside User Partition (Partition Name)             |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| global_start_ipv4_addr |                               | Global Start IPv4 Address of this list             |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| global_netmaskv4       |                               | Mask for this Address range                        |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| v4_count               |                               | Number of addresses to be translated in this range |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| v4_vrid                |                               | VRRP-A vrid (Specify ha VRRP-A vrid)               |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| uuid                   |                               | uuid of the object                                 |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
 
 
 

@@ -22,74 +22,79 @@ Debug Harmony Controller
 Parameters
 ----------
 
-  object_uuid (False, any, None)
-    UUID of the object to filter
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  app_svc_id (False, any, None)
-    Application service id (virtual-server_port_protocol)
-
-
-  metrics (False, any, None)
-    Debug logs for harmony controller (metrics)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  registration (False, any, None)
-    Debug logs for harmony controller (registration)
-
-
-  per_request (False, any, None)
-    Debug logs for harmony controller (per-request)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  per_connection (False, any, None)
-    Debug logs for harmony controller (per-connection)
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  uri (False, any, None)
-    URI of the object to filter
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  error (False, any, None)
-    Debug logs for harmony controller (error)
-
-
-  anomaly (False, any, None)
-    Dump per-request in anomaly cases only
-
-
++-----------------------+-------------------------------+-------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                               |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++=======================+===============================+=======================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                    |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                         |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                     |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                     |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                         |
+|                       |                               |                                                       |
+| /required             |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                      |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command       |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| metrics               |                               | Debug logs for harmony controller (metrics)           |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| object_uuid           |                               | UUID of the object to filter                          |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| uri                   |                               | URI of the object to filter                           |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| per_request           |                               | Debug logs for harmony controller (per-request)       |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| app_svc_id            |                               | Application service id (virtual-server_port_protocol) |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| anomaly               |                               | Dump per-request in anomaly cases only                |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| registration          |                               | Debug logs for harmony controller (registration)      |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| error                 |                               | Debug logs for harmony controller (error)             |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| per_connection        |                               | Debug logs for harmony controller (per-connection)    |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                    |
+|                       |                               |                                                       |
+|                       |                               |                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------+
 
 
 

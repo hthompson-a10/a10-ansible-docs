@@ -22,67 +22,71 @@ slb vport statistics in RRD
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    slb_vport_type (optional, any, None)
-      Field slb_vport_type
-
-
-    end_time (optional, any, None)
-      Field end_time
-
-
-    slb_server_statistics (optional, any, None)
-      Field slb_server_statistics
-
-
-    slb_vport_number (optional, any, None)
-      Field slb_vport_number
-
-
-    start_time (optional, any, None)
-      Field start_time
-
-
-    slb_virtual_server_name (optional, any, None)
-      Field slb_virtual_server_name
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                         |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++=============================+===============================+=================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication               |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                   |
+|                             |                               |                                                 |
+| /required                   |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                        |                               | uuid of the object                              |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| oper                        |                               | Field oper                                      |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | start_time              |                               | Field start_time                                |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | end_time                |                               | Field end_time                                  |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | slb_virtual_server_name |                               | Field slb_virtual_server_name                   |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | slb_vport_number        |                               | Field slb_vport_number                          |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | slb_vport_type          |                               | Field slb_vport_type                            |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
+|   | slb_server_statistics   |                               | Field slb_server_statistics                     |
+|   |                         |                               |                                                 |
+|   |                         |                               |                                                 |
++---+-------------------------+-------------------------------+-------------------------------------------------+
 
 
 

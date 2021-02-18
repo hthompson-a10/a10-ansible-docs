@@ -22,60 +22,63 @@ Change LSN ESP ALG Settings
 Parameters
 ----------
 
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'session-created'= ESP Sessions Created; 'placeholder-debug'= Placeholder Debug;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    session_created (optional, any, None)
-      ESP Sessions Created
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  esp_value (False, any, None)
-    'enable'= Enable ESP ALG for LSN;
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                      |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++=======================+===============================+==============================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                           |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                            |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                            |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                             |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                              |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| esp_value             |                               | 'enable'= Enable ESP ALG for LSN;                                                            |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                           |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                                                        |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'session-created'= ESP Sessions Created; 'placeholder-debug'= Placeholder Debug; |
+|   |                   |                               |                                                                                              |
+|   |                   |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| stats                 |                               | Field stats                                                                                  |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | session_created   |                               | ESP Sessions Created                                                                         |
+|   |                   |                               |                                                                                              |
+|   |                   |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
 
 
 

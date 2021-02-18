@@ -22,84 +22,87 @@ Filter networks in routing updates
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  acl_cfg (False, any, None)
-    Field acl_cfg
-
-
-    acl_direction (optional, any, None)
-      'in'= Filter incoming routing updates; 'out'= Filter outgoing routing updates;
-
-
-    ve (optional, any, None)
-      Virtual ethernet interface (Virtual ethernet interface number)
-
-
-    loopback (optional, any, None)
-      Loopback interface (Port number)
-
-
-    tunnel (optional, any, None)
-      Tunnel interface (Tunnel interface number)
-
-
-    ethernet (optional, any, None)
-      Ethernet interface (Port number)
-
-
-    trunk (optional, any, None)
-      Trunk interface (Trunk interface number)
-
-
-    acl (optional, any, None)
-      Access-list name
-
-
-
-  prefix (False, any, None)
-    Field prefix
-
-
-    prefix_cfg (optional, any, None)
-      Field prefix_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                        |
+|                       |                               |                                                                                |
+|                       |                               |                                                                                |
++=======================+===============================+================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                             |
+|                       |                               |                                                                                |
+| /required             |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                  |
+|                       |                               |                                                                                |
+| /required             |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                              |
+|                       |                               |                                                                                |
+| /required             |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                              |
+|                       |                               |                                                                                |
+| /required             |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                  |
+|                       |                               |                                                                                |
+| /required             |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                               |
+|                       |                               |                                                                                |
+|                       |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                |
+|                       |                               |                                                                                |
+|                       |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| acl_cfg               |                               | Field acl_cfg                                                                  |
+|                       |                               |                                                                                |
+|                       |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | acl               |                               | Access-list name                                                               |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | acl_direction     |                               | 'in'= Filter incoming routing updates; 'out'= Filter outgoing routing updates; |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | ethernet          |                               | Ethernet interface (Port number)                                               |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | loopback          |                               | Loopback interface (Port number)                                               |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | trunk             |                               | Trunk interface (Trunk interface number)                                       |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | tunnel            |                               | Tunnel interface (Tunnel interface number)                                     |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | ve                |                               | Virtual ethernet interface (Virtual ethernet interface number)                 |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                             |
+|                       |                               |                                                                                |
+|                       |                               |                                                                                |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------+
+| prefix                |                               | Field prefix                                                                   |
+|                       |                               |                                                                                |
+|                       |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | prefix_cfg        |                               | Field prefix_cfg                                                               |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
+|   | uuid              |                               | uuid of the object                                                             |
+|   |                   |                               |                                                                                |
+|   |                   |                               |                                                                                |
++---+-------------------+-------------------------------+--------------------------------------------------------------------------------+
 
 
 

@@ -22,88 +22,91 @@ Change or Disable NAT translation values
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  service_timeout_list (False, any, None)
-    Field service_timeout_list
-
-
-    service_type (optional, any, None)
-      'tcp'= TCP Protocol; 'udp'= UDP Protocol;
-
-
-    timeout_type (optional, any, None)
-      'age'= Expiration time; 'fast'= Use Fast aging;
-
-
-    timeout_val (optional, any, None)
-      Timeout in seconds (Interval of 60 seconds)
-
-
-    port (optional, any, None)
-      Port Number
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  tcp_timeout (False, any, None)
-    TCP protocol extended translations (Timeout in seconds (Interval of 60 seconds), default is 300 seconds (5 minutes))
-
-
-  udp_timeout (False, any, None)
-    UDP protocol extended translations (Timeout in seconds (Interval of 60 seconds), default is 300 seconds (5 minutes))
-
-
-  ignore_tcp_msl (False, any, None)
-    reclaim TCP resource immediately without MSL
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  icmp_timeout (False, any, None)
-    Field icmp_timeout
-
-
-    icmp_timeout_val (optional, any, None)
-      Timeout in seconds (Interval of 60 seconds)
-
-
-    icmp_timeout (optional, any, None)
-      'age'= Expiration time; 'fast'= Use Fast aging;
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                              |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++=======================+===============================+======================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                   |
+|                       |                               |                                                                                                                      |
+| /required             |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                        |
+|                       |                               |                                                                                                                      |
+| /required             |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                    |
+|                       |                               |                                                                                                                      |
+| /required             |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                    |
+|                       |                               |                                                                                                                      |
+| /required             |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                        |
+|                       |                               |                                                                                                                      |
+| /required             |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                     |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                      |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| icmp_timeout          |                               | Field icmp_timeout                                                                                                   |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+|   | icmp_timeout      |                               | 'age'= Expiration time; 'fast'= Use Fast aging;                                                                      |
+|   |                   |                               |                                                                                                                      |
+|   |                   |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+|   | icmp_timeout_val  |                               | Timeout in seconds (Interval of 60 seconds)                                                                          |
+|   |                   |                               |                                                                                                                      |
+|   |                   |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| tcp_timeout           |                               | TCP protocol extended translations (Timeout in seconds (Interval of 60 seconds), default is 300 seconds (5 minutes)) |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| udp_timeout           |                               | UDP protocol extended translations (Timeout in seconds (Interval of 60 seconds), default is 300 seconds (5 minutes)) |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| ignore_tcp_msl        |                               | reclaim TCP resource immediately without MSL                                                                         |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                   |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+| service_timeout_list  |                               | Field service_timeout_list                                                                                           |
+|                       |                               |                                                                                                                      |
+|                       |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+|   | service_type      |                               | 'tcp'= TCP Protocol; 'udp'= UDP Protocol;                                                                            |
+|   |                   |                               |                                                                                                                      |
+|   |                   |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+|   | port              |                               | Port Number                                                                                                          |
+|   |                   |                               |                                                                                                                      |
+|   |                   |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+|   | timeout_type      |                               | 'age'= Expiration time; 'fast'= Use Fast aging;                                                                      |
+|   |                   |                               |                                                                                                                      |
+|   |                   |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+|   | timeout_val       |                               | Timeout in seconds (Interval of 60 seconds)                                                                          |
+|   |                   |                               |                                                                                                                      |
+|   |                   |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
+|   | uuid              |                               | uuid of the object                                                                                                   |
+|   |                   |                               |                                                                                                                      |
+|   |                   |                               |                                                                                                                      |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------------------+
 
 
 

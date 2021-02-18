@@ -22,132 +22,131 @@ Define a VRRP-A failover policy template
 Parameters
 ----------
 
-  vlan_cfg (False, any, None)
-    Field vlan_cfg
-
-
-    vlan (optional, any, None)
-      VLAN tracking (VLAN id)
-
-
-    timeout (optional, any, None)
-      Field timeout
-
-
-    weight (optional, any, None)
-      The failover event weight
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  interface (False, any, None)
-    Field interface
-
-
-    ethernet (optional, any, None)
-      Ethernet Interface (Ethernet interface number)
-
-
-    weight (optional, any, None)
-      The failover event weight
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  gateway (False, any, None)
-    Field gateway
-
-
-    gw_ipv6_address_cfg (optional, any, None)
-      Field gw_ipv6_address_cfg
-
-
-    gw_ipv4_address_cfg (optional, any, None)
-      Field gw_ipv4_address_cfg
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  trunk_cfg (False, any, None)
-    Field trunk_cfg
-
-
-    per_port_weight (optional, any, None)
-      Per port failover weight
-
-
-    weight (optional, any, None)
-      failover event weight
-
-
-    trunk (optional, any, None)
-      trunk tracking (trunk id)
-
-
-
-  name (True, any, None)
-    VRRP-A fail over policy template name
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  route (False, any, None)
-    Field route
-
-
-    ipv6_destination_cfg (optional, any, None)
-      Field ipv6_destination_cfg
-
-
-    ip_destination_cfg (optional, any, None)
-      Field ip_destination_cfg
-
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  bgp (False, any, None)
-    Field bgp
-
-
-    bgp_ipv6_address_cfg (optional, any, None)
-      Field bgp_ipv6_address_cfg
-
-
-    bgp_ipv4_address_cfg (optional, any, None)
-      Field bgp_ipv4_address_cfg
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++--------------------------+-------------------------------+-------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                         |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++==========================+===============================+=================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication               |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                   |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| name                     |                               | VRRP-A fail over policy template name           |
+|                          |                               |                                                 |
+| /required                |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| interface                |                               | Field interface                                 |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | ethernet             |                               | Ethernet Interface (Ethernet interface number)  |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | weight               |                               | The failover event weight                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| gateway                  |                               | Field gateway                                   |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | gw_ipv4_address_cfg  |                               | Field gw_ipv4_address_cfg                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | gw_ipv6_address_cfg  |                               | Field gw_ipv6_address_cfg                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| bgp                      |                               | Field bgp                                       |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | bgp_ipv4_address_cfg |                               | Field bgp_ipv4_address_cfg                      |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | bgp_ipv6_address_cfg |                               | Field bgp_ipv6_address_cfg                      |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| trunk_cfg                |                               | Field trunk_cfg                                 |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | trunk                |                               | trunk tracking (trunk id)                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | weight               |                               | failover event weight                           |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | per_port_weight      |                               | Per port failover weight                        |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| route                    |                               | Field route                                     |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | ip_destination_cfg   |                               | Field ip_destination_cfg                        |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | ipv6_destination_cfg |                               | Field ipv6_destination_cfg                      |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| vlan_cfg                 |                               | Field vlan_cfg                                  |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | vlan                 |                               | VLAN tracking (VLAN id)                         |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | timeout              |                               | Field timeout                                   |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+|   | weight               |                               | The failover event weight                       |
+|   |                      |                               |                                                 |
+|   |                      |                               |                                                 |
++---+----------------------+-------------------------------+-------------------------------------------------+
+| uuid                     |                               | uuid of the object                              |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
+| user_tag                 |                               | Customized tag                                  |
+|                          |                               |                                                 |
+|                          |                               |                                                 |
++--------------------------+-------------------------------+-------------------------------------------------+
 
 
 

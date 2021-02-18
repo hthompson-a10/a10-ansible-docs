@@ -22,75 +22,79 @@ Configure Prefix-list
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    Name of a prefix list
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  rules (False, any, None)
-    Field rules
-
-
-    ge (optional, any, None)
-      Minimum prefix length to be matched
-
-
-    le (optional, any, None)
-      Maximum prefix length to be matched
-
-
-    description (optional, any, None)
-      Prefix-list specific description (Up to 80 characters describing this prefix- list)
-
-
-    seq (optional, any, None)
-      Sequence number of an entry
-
-
-    action (optional, any, None)
-      'deny'= Specify packets to reject; 'permit'= Specify packets to forward;
-
-
-    ipaddr (optional, any, None)
-      IPv6 prefix, e.g., 3ffe==/16
-
-
-    any (optional, any, None)
-      Any prefix match. Same as '==0/0 le 128'
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                             |
+|                       |                               |                                                                                     |
+|                       |                               |                                                                                     |
++=======================+===============================+=====================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                  |
+|                       |                               |                                                                                     |
+| /required             |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                       |
+|                       |                               |                                                                                     |
+| /required             |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                   |
+|                       |                               |                                                                                     |
+| /required             |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                   |
+|                       |                               |                                                                                     |
+| /required             |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                       |
+|                       |                               |                                                                                     |
+| /required             |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                    |
+|                       |                               |                                                                                     |
+|                       |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                     |
+|                       |                               |                                                                                     |
+|                       |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| name                  |                               | Name of a prefix list                                                               |
+|                       |                               |                                                                                     |
+| /required             |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| rules                 |                               | Field rules                                                                         |
+|                       |                               |                                                                                     |
+|                       |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | seq               |                               | Sequence number of an entry                                                         |
+|   |                   |                               |                                                                                     |
+|   |                   |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | description       |                               | Prefix-list specific description (Up to 80 characters describing this prefix- list) |
+|   |                   |                               |                                                                                     |
+|   |                   |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | action            |                               | 'deny'= Specify packets to reject; 'permit'= Specify packets to forward;            |
+|   |                   |                               |                                                                                     |
+|   |                   |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | any               |                               | Any prefix match. Same as '==0/0 le 128'                                            |
+|   |                   |                               |                                                                                     |
+|   |                   |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | ipaddr            |                               | IPv6 prefix, e.g., 3ffe==/16                                                        |
+|   |                   |                               |                                                                                     |
+|   |                   |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | ge                |                               | Minimum prefix length to be matched                                                 |
+|   |                   |                               |                                                                                     |
+|   |                   |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | le                |                               | Maximum prefix length to be matched                                                 |
+|   |                   |                               |                                                                                     |
+|   |                   |                               |                                                                                     |
++---+-------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                  |
+|                       |                               |                                                                                     |
+|                       |                               |                                                                                     |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------+
 
 
 

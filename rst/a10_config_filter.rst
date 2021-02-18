@@ -22,42 +22,47 @@ Filter for config-replace-{start/end}
 Parameters
 ----------
 
-  lineage (False, any, None)
-    lineage to filter
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  action (False, any, None)
-    'skip'= Skip current lineage during replace; 'accept'= Skip other lineages during replace;
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                    |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++=======================+===============================+============================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                         |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                              |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                          |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                          |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                              |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                           |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                            |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| lineage               |                               | lineage to filter                                                                          |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| action                |                               | 'skip'= Skip current lineage during replace; 'accept'= Skip other lineages during replace; |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
 
 
 

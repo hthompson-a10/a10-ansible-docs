@@ -22,50 +22,55 @@ Logging via email filter settings
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  expression (False, any, None)
-    Reverse Polish Notation, consists of level 0-7, module AFLEX/HMON/..., pattern log-content-pattern, and or/and/not
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  trigger (False, any, None)
-    Trigger email, override buffer settings
-
-
-  filter_id (True, any, None)
-    Logging via email filter settings
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                            |
+|                       |                               |                                                                                                                    |
+|                       |                               |                                                                                                                    |
++=======================+===============================+====================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                 |
+|                       |                               |                                                                                                                    |
+| /required             |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                      |
+|                       |                               |                                                                                                                    |
+| /required             |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                  |
+|                       |                               |                                                                                                                    |
+| /required             |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                  |
+|                       |                               |                                                                                                                    |
+| /required             |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                      |
+|                       |                               |                                                                                                                    |
+| /required             |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                   |
+|                       |                               |                                                                                                                    |
+|                       |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                    |
+|                       |                               |                                                                                                                    |
+|                       |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| filter_id             |                               | Logging via email filter settings                                                                                  |
+|                       |                               |                                                                                                                    |
+| /required             |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| expression            |                               | Reverse Polish Notation, consists of level 0-7, module AFLEX/HMON/..., pattern log-content-pattern, and or/and/not |
+|                       |                               |                                                                                                                    |
+|                       |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| trigger               |                               | Trigger email, override buffer settings                                                                            |
+|                       |                               |                                                                                                                    |
+|                       |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                 |
+|                       |                               |                                                                                                                    |
+|                       |                               |                                                                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------+
 
 
 

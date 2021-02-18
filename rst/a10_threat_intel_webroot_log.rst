@@ -22,67 +22,71 @@ webroot log information
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    webroot_log_list (optional, any, None)
-      Field webroot_log_list
-
-
-    num_lines (optional, any, None)
-      Field num_lines
-
-
-    webroot_log_over (optional, any, None)
-      Field webroot_log_over
-
-
-    from_start (optional, any, None)
-      Field from_start
-
-
-    follow (optional, any, None)
-      Field follow
-
-
-    webroot_log_offset (optional, any, None)
-      Field webroot_log_offset
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------+-------------------------------+-------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                         |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++========================+===============================+=================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| uuid                   |                               | uuid of the object                              |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| oper                   |                               | Field oper                                      |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | webroot_log_list   |                               | Field webroot_log_list                          |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | webroot_log_offset |                               | Field webroot_log_offset                        |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | webroot_log_over   |                               | Field webroot_log_over                          |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | follow             |                               | Field follow                                    |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | from_start         |                               | Field from_start                                |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | num_lines          |                               | Field num_lines                                 |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
 
 
 

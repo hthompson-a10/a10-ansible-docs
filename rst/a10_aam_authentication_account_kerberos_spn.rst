@@ -22,70 +22,75 @@ AD domain account associated with a SPN
 Parameters
 ----------
 
-  secret_string (False, any, None)
-    Password of AD account
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.)
-
-
-  account (False, any, None)
-    Specify domain account for SPN
-
-
-  service_principal_name (False, any, None)
-    Specify service principal name
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  password (False, any, None)
-    Specify password of domain account
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  realm (False, any, None)
-    Specify Kerberos realm
-
-
-  name (True, any, None)
-    Specify AD account name
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                             |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++========================+===============================+=====================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                  |
+|                        |                               |                                                                     |
+| /required              |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                       |
+|                        |                               |                                                                     |
+| /required              |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                   |
+|                        |                               |                                                                     |
+| /required              |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                   |
+|                        |                               |                                                                     |
+| /required              |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                       |
+|                        |                               |                                                                     |
+| /required              |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                    |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                     |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| name                   |                               | Specify AD account name                                             |
+|                        |                               |                                                                     |
+| /required              |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| realm                  |                               | Specify Kerberos realm                                              |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| account                |                               | Specify domain account for SPN                                      |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| service_principal_name |                               | Specify service principal name                                      |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| password               |                               | Specify password of domain account                                  |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| secret_string          |                               | Password of AD account                                              |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| encrypted              |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                                  |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
+| user_tag               |                               | Customized tag                                                      |
+|                        |                               |                                                                     |
+|                        |                               |                                                                     |
++------------------------+-------------------------------+---------------------------------------------------------------------+
 
 
 

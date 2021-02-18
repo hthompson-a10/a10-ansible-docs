@@ -22,70 +22,75 @@ Disable fixed-nat configuration (Operation)
 Parameters
 ----------
 
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  clear_session (False, any, None)
-    Clear all sessions
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  inside_end_v4address (False, any, None)
-    IPv4 Inside User End Address
-
-
-  inside_start_v4address (False, any, None)
-    IPv4 Inside User Start Address
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  v6_netmask (False, any, None)
-    Inside User IPv6 Netmask
-
-
-  inside_end_v6address (False, any, None)
-    IPv6 Inside User End Address
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ip_list (False, any, None)
-    Name of IP List used to specify Inside Users
-
-
-  inside_start_v6address (False, any, None)
-    IPv6 Inside User Start Address
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  partition (False, any, None)
-    Inside User Partition (Partition Name)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  v4_netmask (False, any, None)
-    IPv4 Netmask
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++------------------------+---------------------+-------------------------------------------------+
+| Parameters             | Choices/Defaults    | Comment                                         |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++========================+=====================+=================================================+
+| state                  | ['noop', 'present'] | State of the object to be created.              |
+|                        |                     |                                                 |
+| /required              |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| ansible_host           |                     | Host for AXAPI authentication                   |
+|                        |                     |                                                 |
+| /required              |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| ansible_username       |                     | Username for AXAPI authentication               |
+|                        |                     |                                                 |
+| /required              |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| ansible_password       |                     | Password for AXAPI authentication               |
+|                        |                     |                                                 |
+| /required              |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| ansible_port           |                     | Port for AXAPI authentication                   |
+|                        |                     |                                                 |
+| /required              |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| a10_device_context_id  | ['1-8']             | Device ID for aVCS configuration                |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| a10_partition          |                     | Destination/target partition for object/command |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| inside_start_v4address |                     | IPv4 Inside User Start Address                  |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| inside_end_v4address   |                     | IPv4 Inside User End Address                    |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| v4_netmask             |                     | IPv4 Netmask                                    |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| inside_start_v6address |                     | IPv6 Inside User Start Address                  |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| inside_end_v6address   |                     | IPv6 Inside User End Address                    |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| v6_netmask             |                     | Inside User IPv6 Netmask                        |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| ip_list                |                     | Name of IP List used to specify Inside Users    |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| partition              |                     | Inside User Partition (Partition Name)          |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
+| clear_session          |                     | Clear all sessions                              |
+|                        |                     |                                                 |
+|                        |                     |                                                 |
++------------------------+---------------------+-------------------------------------------------+
 
 
 

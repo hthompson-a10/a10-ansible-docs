@@ -22,83 +22,87 @@ Client Side SSH Template
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  forward_proxy_enable (False, any, None)
-    Enable SSH forward proxy
-
-
-  name (True, any, None)
-    Client SSH Template Name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-  forward_proxy_hostkey (False, any, None)
-    Specify private-key (Key Name)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  passphrase (False, any, None)
-    Password Phrase
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    forwarding_errors (optional, any, None)
-      Field forwarding_errors
-
-
-    successful_handshakes (optional, any, None)
-      Field successful_handshakes
-
-
-    failed_handshakes (optional, any, None)
-      Field failed_handshakes
-
-
-    name (optional, any, None)
-      Client SSH Template Name
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| Parameters                | Choices/Defaults              | Comment                                                                                             |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++===========================+===============================+=====================================================================================================+
+| state                     | ['noop', 'present', 'absent'] | State of the object to be created.                                                                  |
+|                           |                               |                                                                                                     |
+| /required                 |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_host              |                               | Host for AXAPI authentication                                                                       |
+|                           |                               |                                                                                                     |
+| /required                 |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_username          |                               | Username for AXAPI authentication                                                                   |
+|                           |                               |                                                                                                     |
+| /required                 |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_password          |                               | Password for AXAPI authentication                                                                   |
+|                           |                               |                                                                                                     |
+| /required                 |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_port              |                               | Port for AXAPI authentication                                                                       |
+|                           |                               |                                                                                                     |
+| /required                 |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_device_context_id     | ['1-8']                       | Device ID for aVCS configuration                                                                    |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_partition             |                               | Destination/target partition for object/command                                                     |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| name                      |                               | Client SSH Template Name                                                                            |
+|                           |                               |                                                                                                     |
+| /required                 |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| forward_proxy_enable      |                               | Enable SSH forward proxy                                                                            |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| forward_proxy_hostkey     |                               | Specify private-key (Key Name)                                                                      |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| passphrase                |                               | Password Phrase                                                                                     |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| encrypted                 |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| uuid                      |                               | uuid of the object                                                                                  |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| user_tag                  |                               | Customized tag                                                                                      |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| stats                     |                               | Field stats                                                                                         |
+|                           |                               |                                                                                                     |
+|                           |                               |                                                                                                     |
++---+-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|   | successful_handshakes |                               | Field successful_handshakes                                                                         |
+|   |                       |                               |                                                                                                     |
+|   |                       |                               |                                                                                                     |
++---+-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|   | failed_handshakes     |                               | Field failed_handshakes                                                                             |
+|   |                       |                               |                                                                                                     |
+|   |                       |                               |                                                                                                     |
++---+-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|   | forwarding_errors     |                               | Field forwarding_errors                                                                             |
+|   |                       |                               |                                                                                                     |
+|   |                       |                               |                                                                                                     |
++---+-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|   | name                  |                               | Client SSH Template Name                                                                            |
+|   |                       |                               |                                                                                                     |
+|   |                       |                               |                                                                                                     |
++---+-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 
 

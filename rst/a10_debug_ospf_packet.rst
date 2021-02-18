@@ -22,70 +22,75 @@ OSPFv3 packets
 Parameters
 ----------
 
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  dd (False, any, None)
-    OSPFv3 Database Description
-
-
-  ls_request (False, any, None)
-    OSPFv3 Link State Request
-
-
-  ls_update (False, any, None)
-    OSPFv3 Link State Update
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  recv (False, any, None)
-    Packet received
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ls_ack (False, any, None)
-    OSPFv3 Link State Acknowledgment
-
-
-  detail (False, any, None)
-    Detail information
-
-
-  send (False, any, None)
-    Packet sent
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  hello (False, any, None)
-    OSPFv3 Hello
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| dd                    |                               | OSPFv3 Database Description                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| detail                |                               | Detail information                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| hello                 |                               | OSPFv3 Hello                                    |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ls_ack                |                               | OSPFv3 Link State Acknowledgment                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ls_request            |                               | OSPFv3 Link State Request                       |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ls_update             |                               | OSPFv3 Link State Update                        |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| recv                  |                               | Packet received                                 |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| send                  |                               | Packet sent                                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
 
 
 

@@ -22,83 +22,87 @@ Configure Standard Access List
 Parameters
 ----------
 
-  std (True, any, None)
-    IP standard access list
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  stdrules (False, any, None)
-    Field stdrules
-
-
-    subnet (optional, any, None)
-      Source Address
-
-
-    std_remark (optional, any, None)
-      Access list entry comment (Notes for this ACL)
-
-
-    log (optional, any, None)
-      Log matches against this entry
-
-
-    seq_num (optional, any, None)
-      Sequence number
-
-
-    host (optional, any, None)
-      A single source host (Host address)
-
-
-    rev_subnet_mask (optional, any, None)
-      Network Mask 0=apply 255=ignore
-
-
-    action (optional, any, None)
-      'deny'= Deny; 'permit'= Permit; 'l3-vlan-fwd-disable'= Disable L3 forwarding between VLANs;
-
-
-    transparent_session_only (optional, any, None)
-      Only log transparent sessions
-
-
-    any (optional, any, None)
-      Any source host
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| Parameters                   | Choices/Defaults              | Comment                                                                                     |
+|                              |                               |                                                                                             |
+|                              |                               |                                                                                             |
++==============================+===============================+=============================================================================================+
+| state                        | ['noop', 'present', 'absent'] | State of the object to be created.                                                          |
+|                              |                               |                                                                                             |
+| /required                    |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| ansible_host                 |                               | Host for AXAPI authentication                                                               |
+|                              |                               |                                                                                             |
+| /required                    |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| ansible_username             |                               | Username for AXAPI authentication                                                           |
+|                              |                               |                                                                                             |
+| /required                    |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| ansible_password             |                               | Password for AXAPI authentication                                                           |
+|                              |                               |                                                                                             |
+| /required                    |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| ansible_port                 |                               | Port for AXAPI authentication                                                               |
+|                              |                               |                                                                                             |
+| /required                    |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| a10_device_context_id        | ['1-8']                       | Device ID for aVCS configuration                                                            |
+|                              |                               |                                                                                             |
+|                              |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| a10_partition                |                               | Destination/target partition for object/command                                             |
+|                              |                               |                                                                                             |
+|                              |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| std                          |                               | IP standard access list                                                                     |
+|                              |                               |                                                                                             |
+| /required                    |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| stdrules                     |                               | Field stdrules                                                                              |
+|                              |                               |                                                                                             |
+|                              |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | seq_num                  |                               | Sequence number                                                                             |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | std_remark               |                               | Access list entry comment (Notes for this ACL)                                              |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | action                   |                               | 'deny'= Deny; 'permit'= Permit; 'l3-vlan-fwd-disable'= Disable L3 forwarding between VLANs; |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | any                      |                               | Any source host                                                                             |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | host                     |                               | A single source host (Host address)                                                         |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | subnet                   |                               | Source Address                                                                              |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | rev_subnet_mask          |                               | Network Mask 0=apply 255=ignore                                                             |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | log                      |                               | Log matches against this entry                                                              |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+|   | transparent_session_only |                               | Only log transparent sessions                                                               |
+|   |                          |                               |                                                                                             |
+|   |                          |                               |                                                                                             |
++---+--------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
+| uuid                         |                               | uuid of the object                                                                          |
+|                              |                               |                                                                                             |
+|                              |                               |                                                                                             |
++------------------------------+-------------------------------+---------------------------------------------------------------------------------------------+
 
 
 

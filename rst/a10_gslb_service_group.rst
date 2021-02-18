@@ -22,109 +22,111 @@ Specify GSLB Service Group
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    session_list (optional, any, None)
-      Field session_list
-
-
-    service_group_name (optional, any, None)
-      Specify Service Group name
-
-
-    total_sessions (optional, any, None)
-      Field total_sessions
-
-
-    matched (optional, any, None)
-      Field matched
-
-
-
-  disable_site_list (False, any, None)
-    Field disable_site_list
-
-
-    disable_site (optional, any, None)
-      Site name
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  service_group_name (True, any, None)
-    Specify Service Group name
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  disable (False, any, None)
-    Disable all members
-
-
-  persistent_ipv6_mask (False, any, None)
-    Specify IPv6 mask length, default is 128
-
-
-  persistent_mask (False, any, None)
-    Specify IP mask, default is /32
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  member (False, any, None)
-    Field member
-
-
-    member_name (optional, any, None)
-      Service name
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  persistent_site (False, any, None)
-    Persistent based on site
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  persistent_aging_time (False, any, None)
-    Specify aging-time, unit= min, default is 5 (Aging time)
-
-
-  dependency_site (False, any, None)
-    Dependency on site
-
-
++------------------------+-------------------------------+----------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                  |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++========================+===============================+==========================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                       |
+|                        |                               |                                                          |
+| /required              |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                            |
+|                        |                               |                                                          |
+| /required              |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                        |
+|                        |                               |                                                          |
+| /required              |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                        |
+|                        |                               |                                                          |
+| /required              |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                            |
+|                        |                               |                                                          |
+| /required              |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                         |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command          |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| service_group_name     |                               | Specify Service Group name                               |
+|                        |                               |                                                          |
+| /required              |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| member                 |                               | Field member                                             |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+|   | member_name        |                               | Service name                                             |
+|   |                    |                               |                                                          |
+|   |                    |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+| disable                |                               | Disable all members                                      |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| disable_site_list      |                               | Field disable_site_list                                  |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+|   | disable_site       |                               | Site name                                                |
+|   |                    |                               |                                                          |
+|   |                    |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+| dependency_site        |                               | Dependency on site                                       |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| persistent_site        |                               | Persistent based on site                                 |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| persistent_mask        |                               | Specify IP mask, default is /32                          |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| persistent_ipv6_mask   |                               | Specify IPv6 mask length, default is 128                 |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| persistent_aging_time  |                               | Specify aging-time, unit= min, default is 5 (Aging time) |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                       |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| user_tag               |                               | Customized tag                                           |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++------------------------+-------------------------------+----------------------------------------------------------+
+| oper                   |                               | Field oper                                               |
+|                        |                               |                                                          |
+|                        |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+|   | session_list       |                               | Field session_list                                       |
+|   |                    |                               |                                                          |
+|   |                    |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+|   | matched            |                               | Field matched                                            |
+|   |                    |                               |                                                          |
+|   |                    |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+|   | total_sessions     |                               | Field total_sessions                                     |
+|   |                    |                               |                                                          |
+|   |                    |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
+|   | service_group_name |                               | Specify Service Group name                               |
+|   |                    |                               |                                                          |
+|   |                    |                               |                                                          |
++---+--------------------+-------------------------------+----------------------------------------------------------+
 
 
 

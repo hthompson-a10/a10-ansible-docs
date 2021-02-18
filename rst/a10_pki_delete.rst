@@ -22,63 +22,67 @@ Delete SSL cert
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    filename (optional, any, None)
-      Field filename
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ca (False, any, None)
-    CA certificate file name
-
-
-  private_key (False, any, None)
-    Private key file name
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  cert_name (False, any, None)
-    Certificate file name
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  crl (False, any, None)
-    CRL file name
-
-
-  csr (False, any, None)
-    CSR file name
-
-
++-----------------------+---------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults    | Comment                                         |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++=======================+=====================+=================================================+
+| state                 | ['noop', 'present'] | State of the object to be created.              |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_host          |                     | Host for AXAPI authentication                   |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_username      |                     | Username for AXAPI authentication               |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_password      |                     | Password for AXAPI authentication               |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ansible_port          |                     | Port for AXAPI authentication                   |
+|                       |                     |                                                 |
+| /required             |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']             | Device ID for aVCS configuration                |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| a10_partition         |                     | Destination/target partition for object/command |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| cert_name             |                     | Certificate file name                           |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| ca                    |                     | CA certificate file name                        |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| private_key           |                     | Private key file name                           |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| crl                   |                     | CRL file name                                   |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| csr                   |                     | CSR file name                                   |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++-----------------------+---------------------+-------------------------------------------------+
+| oper                  |                     | Field oper                                      |
+|                       |                     |                                                 |
+|                       |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
+|   | filename          |                     | Field filename                                  |
+|   |                   |                     |                                                 |
+|   |                   |                     |                                                 |
++---+-------------------+---------------------+-------------------------------------------------+
 
 
 

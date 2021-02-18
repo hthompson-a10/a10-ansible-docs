@@ -22,62 +22,67 @@ Connect to GLM through proxy server
 Parameters
 ----------
 
-  username (False, any, None)
-    Username for proxy authentication
-
-
-  secret_string (False, any, None)
-    password value
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  host (False, any, None)
-    Proxy server hostname or IP address
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  password (False, any, None)
-    Password for proxy authentication
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  port (False, any, None)
-    Proxy server port
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                           |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++=======================+===============================+===================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                  |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                   |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| host                  |                               | Proxy server hostname or IP address                                                               |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| port                  |                               | Proxy server port                                                                                 |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| username              |                               | Username for proxy authentication                                                                 |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| password              |                               | Password for proxy authentication                                                                 |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| secret_string         |                               | password value                                                                                    |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| encrypted             |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string) |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 

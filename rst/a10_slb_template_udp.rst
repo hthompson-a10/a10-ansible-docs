@@ -22,86 +22,91 @@ L4 UDP switch config
 Parameters
 ----------
 
-  qos (False, any, None)
-    QOS level (number)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  radius_lb_method_hash_type (False, any, None)
-    'ip'= IP-Hash;
-
-
-  disable_clear_session (False, any, None)
-    Disable immediate clearing of session
-
-
-  avp (False, any, None)
-    '4'= NAS-IP-address; '8'= Framed-IP-Address;
-
-
-  re_select_if_server_down (False, any, None)
-    re-select another server if service port is down
-
-
-  immediate (False, any, None)
-    Immediate Removal after Transaction
-
-
-  idle_timeout (False, any, None)
-    Idle Timeout value (Interval of 60 seconds), default 120 seconds (idle timeout in second, default 120)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  short (False, any, None)
-    Short lived session
-
-
-  name (True, any, None)
-    Fast UDP Template Name
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  age (False, any, None)
-    short age (in sec), default is 31
-
-
-  stateless_conn_timeout (False, any, None)
-    Stateless Current Connection Timeout value (5 - 120 seconds) (idle timeout in second, default 120)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                                                                                |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++============================+===============================+========================================================================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.                                                                     |
+|                            |                               |                                                                                                        |
+| /required                  |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                                                                          |
+|                            |                               |                                                                                                        |
+| /required                  |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication                                                                      |
+|                            |                               |                                                                                                        |
+| /required                  |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication                                                                      |
+|                            |                               |                                                                                                        |
+| /required                  |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                                                                          |
+|                            |                               |                                                                                                        |
+| /required                  |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                                                                       |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command                                                        |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| name                       |                               | Fast UDP Template Name                                                                                 |
+|                            |                               |                                                                                                        |
+| /required                  |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| idle_timeout               |                               | Idle Timeout value (Interval of 60 seconds), default 120 seconds (idle timeout in second, default 120) |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| qos                        |                               | QOS level (number)                                                                                     |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| stateless_conn_timeout     |                               | Stateless Current Connection Timeout value (5 - 120 seconds) (idle timeout in second, default 120)     |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| immediate                  |                               | Immediate Removal after Transaction                                                                    |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| short                      |                               | Short lived session                                                                                    |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| age                        |                               | short age (in sec), default is 31                                                                      |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| re_select_if_server_down   |                               | re-select another server if service port is down                                                       |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| disable_clear_session      |                               | Disable immediate clearing of session                                                                  |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| radius_lb_method_hash_type |                               | 'ip'= IP-Hash;                                                                                         |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| avp                        |                               | '4'= NAS-IP-address; '8'= Framed-IP-Address;                                                           |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| uuid                       |                               | uuid of the object                                                                                     |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| user_tag                   |                               | Customized tag                                                                                         |
+|                            |                               |                                                                                                        |
+|                            |                               |                                                                                                        |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
 
 
 

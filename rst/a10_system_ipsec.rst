@@ -22,59 +22,63 @@ Configure Crypto Cores for IPsec processing
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  crypto_mem (False, any, None)
-    Crypto memory percentage assigned for IPsec processing (rounded to increments of 10)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  crypto_core (False, any, None)
-    Crypto cores assigned for IPsec processing
-
-
-  packet_round_robin (False, any, None)
-    Enable packet round robin for IPsec packets
-
-
-  fpga_decrypt (False, any, None)
-    Field fpga_decrypt
-
-
-    action (optional, any, None)
-      'enable'= Enable FPGA decryption offload; 'disable'= Disable FPGA decryption offload;
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                               |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++=======================+===============================+=======================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                    |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                         |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                     |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                     |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                         |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                      |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                       |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| packet_round_robin    |                               | Enable packet round robin for IPsec packets                                           |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| crypto_core           |                               | Crypto cores assigned for IPsec processing                                            |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| crypto_mem            |                               | Crypto memory percentage assigned for IPsec processing (rounded to increments of 10)  |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                    |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| fpga_decrypt          |                               | Field fpga_decrypt                                                                    |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------------------+
+|   | action            |                               | 'enable'= Enable FPGA decryption offload; 'disable'= Disable FPGA decryption offload; |
+|   |                   |                               |                                                                                       |
+|   |                   |                               |                                                                                       |
++---+-------------------+-------------------------------+---------------------------------------------------------------------------------------+
 
 
 

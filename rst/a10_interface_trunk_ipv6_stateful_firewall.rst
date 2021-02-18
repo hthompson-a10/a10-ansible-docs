@@ -22,62 +22,67 @@ Configure Stateful Firewall direction
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  acl_name (False, any, None)
-    Access-list Name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  inside (False, any, None)
-    Inside (private) interface for stateful firewall
-
-
-  trunk_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  access_list (False, any, None)
-    Access-list for traffic from the outside
-
-
-  class_list (False, any, None)
-    Class List (Class List Name)
-
-
-  outside (False, any, None)
-    Outside (public) interface for stateful firewall
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                          |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++=======================+===============================+==================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.               |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                 |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| trunk_ifnum           |                               | Key to identify parent object                    |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| inside                |                               | Inside (private) interface for stateful firewall |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| class_list            |                               | Class List (Class List Name)                     |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| outside               |                               | Outside (public) interface for stateful firewall |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| access_list           |                               | Access-list for traffic from the outside         |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| acl_name              |                               | Access-list Name                                 |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| uuid                  |                               | uuid of the object                               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
 
 
 

@@ -22,75 +22,79 @@ Configure a GSLB global geo-location object
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  geo_locn_multiple_addresses (False, any, None)
-    Field geo_locn_multiple_addresses
-
-
-    first_ipv6_address (optional, any, None)
-      Specify IPv6 address
-
-
-    ip_addr2 (optional, any, None)
-      Specify IP address range
-
-
-    ipv6_addr2 (optional, any, None)
-      Specify IPv6 address range
-
-
-    geol_ipv6_mask (optional, any, None)
-      Specify IPv6 mask
-
-
-    geol_ipv4_mask (optional, any, None)
-      Specify IPv4 mask
-
-
-    first_ip_address (optional, any, None)
-      Specify IP information (Specify IP address)
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  geo_locn_obj_name (True, any, None)
-    Specify geo-location name, section range is (1-15)
-
-
++-----------------------------+-------------------------------+----------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                            |
+|                             |                               |                                                    |
+|                             |                               |                                                    |
++=============================+===============================+====================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.                 |
+|                             |                               |                                                    |
+| /required                   |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                      |
+|                             |                               |                                                    |
+| /required                   |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication                  |
+|                             |                               |                                                    |
+| /required                   |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication                  |
+|                             |                               |                                                    |
+| /required                   |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                      |
+|                             |                               |                                                    |
+| /required                   |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                   |
+|                             |                               |                                                    |
+|                             |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command    |
+|                             |                               |                                                    |
+|                             |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| geo_locn_obj_name           |                               | Specify geo-location name, section range is (1-15) |
+|                             |                               |                                                    |
+| /required                   |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| geo_locn_multiple_addresses |                               | Field geo_locn_multiple_addresses                  |
+|                             |                               |                                                    |
+|                             |                               |                                                    |
++---+-------------------------+-------------------------------+----------------------------------------------------+
+|   | first_ip_address        |                               | Specify IP information (Specify IP address)        |
+|   |                         |                               |                                                    |
+|   |                         |                               |                                                    |
++---+-------------------------+-------------------------------+----------------------------------------------------+
+|   | geol_ipv4_mask          |                               | Specify IPv4 mask                                  |
+|   |                         |                               |                                                    |
+|   |                         |                               |                                                    |
++---+-------------------------+-------------------------------+----------------------------------------------------+
+|   | ip_addr2                |                               | Specify IP address range                           |
+|   |                         |                               |                                                    |
+|   |                         |                               |                                                    |
++---+-------------------------+-------------------------------+----------------------------------------------------+
+|   | first_ipv6_address      |                               | Specify IPv6 address                               |
+|   |                         |                               |                                                    |
+|   |                         |                               |                                                    |
++---+-------------------------+-------------------------------+----------------------------------------------------+
+|   | geol_ipv6_mask          |                               | Specify IPv6 mask                                  |
+|   |                         |                               |                                                    |
+|   |                         |                               |                                                    |
++---+-------------------------+-------------------------------+----------------------------------------------------+
+|   | ipv6_addr2              |                               | Specify IPv6 address range                         |
+|   |                         |                               |                                                    |
+|   |                         |                               |                                                    |
++---+-------------------------+-------------------------------+----------------------------------------------------+
+| uuid                        |                               | uuid of the object                                 |
+|                             |                               |                                                    |
+|                             |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
+| user_tag                    |                               | Customized tag                                     |
+|                             |                               |                                                    |
+|                             |                               |                                                    |
++-----------------------------+-------------------------------+----------------------------------------------------+
 
 
 

@@ -22,74 +22,79 @@ Active RDT options
 Parameters
 ----------
 
-  site_name (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  bind_geoloc (False, any, None)
-    Bind RDT to geo-location
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  aging_time (False, any, None)
-    Aging Time, Unit= min, default is 10
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ignore_count (False, any, None)
-    Ignore count if RDT is out of range, default is 5
-
-
-  mask (False, any, None)
-    Client IP subnet mask, default is 32
-
-
-  overlap (False, any, None)
-    Enable overlap for geo-location to do longest match
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  limit (False, any, None)
-    Limit of valid RDT, default is 16383 (Limit, unit= millisecond)
-
-
-  smooth_factor (False, any, None)
-    Factor of Smooth RDT, default is 10
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  range_factor (False, any, None)
-    Factor of RDT Range, default is 25 (Range Factor of Smooth RDT)
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                         |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++=======================+===============================+=================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                              |
+|                       |                               |                                                                 |
+| /required             |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                   |
+|                       |                               |                                                                 |
+| /required             |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                               |
+|                       |                               |                                                                 |
+| /required             |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                               |
+|                       |                               |                                                                 |
+| /required             |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                   |
+|                       |                               |                                                                 |
+| /required             |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                 |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| site_name             |                               | Key to identify parent object                                   |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| aging_time            |                               | Aging Time, Unit= min, default is 10                            |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| smooth_factor         |                               | Factor of Smooth RDT, default is 10                             |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| range_factor          |                               | Factor of RDT Range, default is 25 (Range Factor of Smooth RDT) |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| limit                 |                               | Limit of valid RDT, default is 16383 (Limit, unit= millisecond) |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| mask                  |                               | Client IP subnet mask, default is 32                            |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| ignore_count          |                               | Ignore count if RDT is out of range, default is 5               |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| bind_geoloc           |                               | Bind RDT to geo-location                                        |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| overlap               |                               | Enable overlap for geo-location to do longest match             |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                              |
+|                       |                               |                                                                 |
+|                       |                               |                                                                 |
++-----------------------+-------------------------------+-----------------------------------------------------------------+
 
 
 

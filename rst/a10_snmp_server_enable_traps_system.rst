@@ -22,118 +22,123 @@ Enable system group traps
 Parameters
 ----------
 
-  smp_resource_event (False, any, None)
-    Enable system smp resource event trap
-
-
-  sec_disk (False, any, None)
-    Enable system secondary hard disk trap
-
-
-  all (False, any, None)
-    Enable all system group traps
-
-
-  low_temp (False, any, None)
-    Enable system low temperature trap
-
-
-  high_memory_use (False, any, None)
-    Enable system high memory usage trap
-
-
-  power (False, any, None)
-    Enable system power supply trap
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  high_temp (False, any, None)
-    Enable system high temperature trap
-
-
-  tacacs_server_up_down (False, any, None)
-    Enable system TACACS monitor server up/down trap
-
-
-  file_sys_read_only (False, any, None)
-    Enable file system read-only trap
-
-
-  fan (False, any, None)
-    Enable system fan trap
-
-
-  shutdown (False, any, None)
-    Enable system shutdown trap
-
-
-  control_cpu_high (False, any, None)
-    Enable control CPU usage high trap
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  syslog_severity_one (False, any, None)
-    Enable system syslog severity one messages trap
-
-
-  restart (False, any, None)
-    Enable system restart trap
-
-
-  packet_drop (False, any, None)
-    Enable system packet dropped trap
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  license_management (False, any, None)
-    Enable system license management traps
-
-
-  high_disk_use (False, any, None)
-    Enable system high disk usage trap
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  start (False, any, None)
-    Enable system start trap
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  data_cpu_high (False, any, None)
-    Enable data CPU usage high trap
-
-
-  pri_disk (False, any, None)
-    Enable system primary hard disk trap
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                          |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++=======================+===============================+==================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.               |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                 |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| all                   |                               | Enable all system group traps                    |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| control_cpu_high      |                               | Enable control CPU usage high trap               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| data_cpu_high         |                               | Enable data CPU usage high trap                  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| fan                   |                               | Enable system fan trap                           |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| file_sys_read_only    |                               | Enable file system read-only trap                |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| high_disk_use         |                               | Enable system high disk usage trap               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| high_memory_use       |                               | Enable system high memory usage trap             |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| high_temp             |                               | Enable system high temperature trap              |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| low_temp              |                               | Enable system low temperature trap               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| license_management    |                               | Enable system license management traps           |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| packet_drop           |                               | Enable system packet dropped trap                |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| power                 |                               | Enable system power supply trap                  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| pri_disk              |                               | Enable system primary hard disk trap             |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| restart               |                               | Enable system restart trap                       |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| sec_disk              |                               | Enable system secondary hard disk trap           |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| shutdown              |                               | Enable system shutdown trap                      |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| smp_resource_event    |                               | Enable system smp resource event trap            |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| syslog_severity_one   |                               | Enable system syslog severity one messages trap  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| tacacs_server_up_down |                               | Enable system TACACS monitor server up/down trap |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| start                 |                               | Enable system start trap                         |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| uuid                  |                               | uuid of the object                               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
 
 
 

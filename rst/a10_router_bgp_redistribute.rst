@@ -22,198 +22,191 @@ Redistribute information from another routing protocol
 Parameters
 ----------
 
-  ip_nat_cfg (False, any, None)
-    Field ip_nat_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    ip_nat (optional, any, None)
-      IP NAT
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  bgp_as_number (optional, any, None)
-    Key to identify parent object
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  vip (False, any, None)
-    Field vip
-
-
-    only_not_flagged_cfg (optional, any, None)
-      Field only_not_flagged_cfg
-
-
-    only_flagged_cfg (optional, any, None)
-      Field only_flagged_cfg
-
-
-
-  floating_ip_cfg (False, any, None)
-    Field floating_ip_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    floating_ip (optional, any, None)
-      Floating IP
-
-
-
-  lw4o6_cfg (False, any, None)
-    Field lw4o6_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    lw4o6 (optional, any, None)
-      LW4O6 Prefix
-
-
-
-  isis_cfg (False, any, None)
-    Field isis_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    isis (optional, any, None)
-      ISO IS-IS
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  static_cfg (False, any, None)
-    Field static_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    static (optional, any, None)
-      Static routes
-
-
-
-  ip_nat_list_cfg (False, any, None)
-    Field ip_nat_list_cfg
-
-
-    ip_nat_list (optional, any, None)
-      IP NAT list
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-
-  connected_cfg (False, any, None)
-    Field connected_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    connected (optional, any, None)
-      Connected
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ospf_cfg (False, any, None)
-    Field ospf_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    ospf (optional, any, None)
-      Open Shortest Path First (OSPF)
-
-
-
-  rip_cfg (False, any, None)
-    Field rip_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    rip (optional, any, None)
-      Routing Information Protocol (RIP)
-
-
-
-  nat_map_cfg (False, any, None)
-    Field nat_map_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    nat_map (optional, any, None)
-      NAT MAP Prefix
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  static_nat_cfg (False, any, None)
-    Field static_nat_cfg
-
-
-    route_map (optional, any, None)
-      Route map reference (Pointer to route-map entries)
-
-
-    static_nat (optional, any, None)
-      Static NAT Prefix
-
-
-
++--------------------------+-------------------------------+----------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                            |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++==========================+===============================+====================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.                 |
+|                          |                               |                                                    |
+| /required                |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                      |
+|                          |                               |                                                    |
+| /required                |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication                  |
+|                          |                               |                                                    |
+| /required                |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication                  |
+|                          |                               |                                                    |
+| /required                |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                      |
+|                          |                               |                                                    |
+| /required                |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                   |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command    |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| bgp_as_number            |                               | Key to identify parent object                      |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
+| connected_cfg            |                               | Field connected_cfg                                |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | connected            |                               | Connected                                          |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| floating_ip_cfg          |                               | Field floating_ip_cfg                              |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | floating_ip          |                               | Floating IP                                        |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| lw4o6_cfg                |                               | Field lw4o6_cfg                                    |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | lw4o6                |                               | LW4O6 Prefix                                       |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| static_nat_cfg           |                               | Field static_nat_cfg                               |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | static_nat           |                               | Static NAT Prefix                                  |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| ip_nat_cfg               |                               | Field ip_nat_cfg                                   |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | ip_nat               |                               | IP NAT                                             |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| ip_nat_list_cfg          |                               | Field ip_nat_list_cfg                              |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | ip_nat_list          |                               | IP NAT list                                        |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| isis_cfg                 |                               | Field isis_cfg                                     |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | isis                 |                               | ISO IS-IS                                          |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| ospf_cfg                 |                               | Field ospf_cfg                                     |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | ospf                 |                               | Open Shortest Path First (OSPF)                    |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| rip_cfg                  |                               | Field rip_cfg                                      |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | rip                  |                               | Routing Information Protocol (RIP)                 |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| static_cfg               |                               | Field static_cfg                                   |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | static               |                               | Static routes                                      |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| nat_map_cfg              |                               | Field nat_map_cfg                                  |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | nat_map              |                               | NAT MAP Prefix                                     |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | route_map            |                               | Route map reference (Pointer to route-map entries) |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| vip                      |                               | Field vip                                          |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | only_flagged_cfg     |                               | Field only_flagged_cfg                             |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+|   | only_not_flagged_cfg |                               | Field only_not_flagged_cfg                         |
+|   |                      |                               |                                                    |
+|   |                      |                               |                                                    |
++---+----------------------+-------------------------------+----------------------------------------------------+
+| uuid                     |                               | uuid of the object                                 |
+|                          |                               |                                                    |
+|                          |                               |                                                    |
++--------------------------+-------------------------------+----------------------------------------------------+
 
 
 

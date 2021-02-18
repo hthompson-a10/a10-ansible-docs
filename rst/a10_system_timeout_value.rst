@@ -22,62 +22,67 @@ set the timeout to stop transferring a file
 Parameters
 ----------
 
-  ftp (False, any, None)
-    set timeout to stop ftp transfer in seconds, 0 is no limit
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  http (False, any, None)
-    set timeout to stop http transfer in seconds, 0 is no limit
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  sftp (False, any, None)
-    set timeout to stop sftp transfer in seconds, 0 is no limit
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  https (False, any, None)
-    set timeout to stop https transfer in seconds, 0 is no limit
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  tftp (False, any, None)
-    set timeout to stop tftp transfer in seconds, 0 is no limit
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  scp (False, any, None)
-    set timeout to stop scp transfer in seconds, 0 is no limit
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                      |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++=======================+===============================+==============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                           |
+|                       |                               |                                                              |
+| /required             |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                |
+|                       |                               |                                                              |
+| /required             |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                            |
+|                       |                               |                                                              |
+| /required             |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                            |
+|                       |                               |                                                              |
+| /required             |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                |
+|                       |                               |                                                              |
+| /required             |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                             |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command              |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| ftp                   |                               | set timeout to stop ftp transfer in seconds, 0 is no limit   |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| scp                   |                               | set timeout to stop scp transfer in seconds, 0 is no limit   |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| sftp                  |                               | set timeout to stop sftp transfer in seconds, 0 is no limit  |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| tftp                  |                               | set timeout to stop tftp transfer in seconds, 0 is no limit  |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| http                  |                               | set timeout to stop http transfer in seconds, 0 is no limit  |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| https                 |                               | set timeout to stop https transfer in seconds, 0 is no limit |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                           |
+|                       |                               |                                                              |
+|                       |                               |                                                              |
++-----------------------+-------------------------------+--------------------------------------------------------------+
 
 
 

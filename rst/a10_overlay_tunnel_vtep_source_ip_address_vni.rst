@@ -22,58 +22,63 @@ IP Address of the local tunnel end point
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  vtep_id (optional, any, None)
-    Key to identify parent object
-
-
-  segment (True, any, None)
-    Id of the segment that is being extended
-
-
-  partition (False, any, None)
-    Name of the Partition with the L2 segment being extended (Name of the User Partition with the L2 segment being extended)
-
-
-  lif (False, any, None)
-    Logical interface binding the Provider Partition to the User Partition (logical interface number)
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  gateway (False, any, None)
-    This is a Gateway segment id
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                                  |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++=======================+===============================+==========================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                       |
+|                       |                               |                                                                                                                          |
+| /required             |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                            |
+|                       |                               |                                                                                                                          |
+| /required             |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                        |
+|                       |                               |                                                                                                                          |
+| /required             |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                        |
+|                       |                               |                                                                                                                          |
+| /required             |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                            |
+|                       |                               |                                                                                                                          |
+| /required             |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                         |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                          |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| vtep_id               |                               | Key to identify parent object                                                                                            |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| segment               |                               | Id of the segment that is being extended                                                                                 |
+|                       |                               |                                                                                                                          |
+| /required             |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| partition             |                               | Name of the Partition with the L2 segment being extended (Name of the User Partition with the L2 segment being extended) |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| gateway               |                               | This is a Gateway segment id                                                                                             |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| lif                   |                               | Logical interface binding the Provider Partition to the User Partition (logical interface number)                        |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                       |
+|                       |                               |                                                                                                                          |
+|                       |                               |                                                                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------+
 
 
 

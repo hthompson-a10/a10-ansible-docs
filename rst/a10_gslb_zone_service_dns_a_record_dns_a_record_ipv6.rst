@@ -22,108 +22,111 @@ Specify DNS Address Record
 Parameters
 ----------
 
-  dns_a_record_ipv6 (True, any, None)
-    IPV6 address
-
-
-  as_replace (False, any, None)
-    Return this Service-IP when enable ip-replace
-
-
-  weight (False, any, None)
-    Specify weight for Service-IP (Weight value)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  service_name (optional, any, None)
-    Key to identify parent object
-
-
-  disable (False, any, None)
-    Disable this Service-IP
-
-
-  static (False, any, None)
-    Return this Service-IP in DNS server mode
-
-
-  ttl (False, any, None)
-    Specify TTL for Service-IP
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  zone_name (optional, any, None)
-    Key to identify parent object
-
-
-  admin_ip (False, any, None)
-    Specify admin priority of Service-IP (Specify the priority)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'hits'= Number of times the record has been used;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    dns_a_record_ipv6 (optional, any, None)
-      IPV6 address
-
-
-    hits (optional, any, None)
-      Number of times the record has been used
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  service_port (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  as_backup (False, any, None)
-    As backup when fail
-
-
-  no_resp (False, any, None)
-    Don't use this Service-IP as DNS response
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                       |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++=======================+===============================+===============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                            |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                              |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command               |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| service_name          |                               | Key to identify parent object                                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| service_port          |                               | Key to identify parent object                                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| zone_name             |                               | Key to identify parent object                                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| dns_a_record_ipv6     |                               | IPV6 address                                                  |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| no_resp               |                               | Don't use this Service-IP as DNS response                     |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| as_backup             |                               | As backup when fail                                           |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| weight                |                               | Specify weight for Service-IP (Weight value)                  |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ttl                   |                               | Specify TTL for Service-IP                                    |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| as_replace            |                               | Return this Service-IP when enable ip-replace                 |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| disable               |                               | Disable this Service-IP                                       |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| static                |                               | Return this Service-IP in DNS server mode                     |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| admin_ip              |                               | Specify admin priority of Service-IP (Specify the priority)   |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                            |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                         |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'hits'= Number of times the record has been used; |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+| stats                 |                               | Field stats                                                   |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | hits              |                               | Number of times the record has been used                      |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | dns_a_record_ipv6 |                               | IPV6 address                                                  |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
 
 
 

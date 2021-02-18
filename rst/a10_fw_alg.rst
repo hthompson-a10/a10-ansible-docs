@@ -22,149 +22,147 @@ Configure ALG
 Parameters
 ----------
 
-  ftp (False, any, None)
-    Field ftp
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    default_port_disable (optional, any, None)
-      'default-port-disable'= Disable FTP ALG default port 21;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  sip (False, any, None)
-    Field sip
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    default_port_disable (optional, any, None)
-      'default-port-disable'= Disable SIP ALG default port 5060;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  pptp (False, any, None)
-    Field pptp
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    default_port_disable (optional, any, None)
-      'default-port-disable'= Disable PPTP ALG default port 1723;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  rtsp (False, any, None)
-    Field rtsp
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    default_port_disable (optional, any, None)
-      'default-port-disable'= Disable RTSP ALG default port 554;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  dns (False, any, None)
-    Field dns
-
-
-    default_port_disable (optional, any, None)
-      'default-port-disable'= Disable DNS ALG default port 53;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  tftp (False, any, None)
-    Field tftp
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    default_port_disable (optional, any, None)
-      'default-port-disable'= Disable TFTP ALG default port 69;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  icmp (False, any, None)
-    Field icmp
-
-
-    disable (optional, any, None)
-      'disable'= Disable ICMP ALG which allows ICMP errors to pass the firewall;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                                                    |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++==========================+===============================+============================================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.                                         |
+|                          |                               |                                                                            |
+| /required                |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                                              |
+|                          |                               |                                                                            |
+| /required                |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication                                          |
+|                          |                               |                                                                            |
+| /required                |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication                                          |
+|                          |                               |                                                                            |
+| /required                |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                                              |
+|                          |                               |                                                                            |
+| /required                |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                                           |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command                            |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| uuid                     |                               | uuid of the object                                                         |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++--------------------------+-------------------------------+----------------------------------------------------------------------------+
+| ftp                      |                               | Field ftp                                                                  |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | default_port_disable |                               | 'default-port-disable'= Disable FTP ALG default port 21;                   |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                         |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | sampling_enable      |                               | Field sampling_enable                                                      |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+| tftp                     |                               | Field tftp                                                                 |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | default_port_disable |                               | 'default-port-disable'= Disable TFTP ALG default port 69;                  |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                         |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | sampling_enable      |                               | Field sampling_enable                                                      |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+| rtsp                     |                               | Field rtsp                                                                 |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | default_port_disable |                               | 'default-port-disable'= Disable RTSP ALG default port 554;                 |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                         |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | sampling_enable      |                               | Field sampling_enable                                                      |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+| pptp                     |                               | Field pptp                                                                 |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | default_port_disable |                               | 'default-port-disable'= Disable PPTP ALG default port 1723;                |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                         |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | sampling_enable      |                               | Field sampling_enable                                                      |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+| sip                      |                               | Field sip                                                                  |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | default_port_disable |                               | 'default-port-disable'= Disable SIP ALG default port 5060;                 |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                         |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | sampling_enable      |                               | Field sampling_enable                                                      |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+| dns                      |                               | Field dns                                                                  |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | default_port_disable |                               | 'default-port-disable'= Disable DNS ALG default port 53;                   |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                         |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+| icmp                     |                               | Field icmp                                                                 |
+|                          |                               |                                                                            |
+|                          |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | disable              |                               | 'disable'= Disable ICMP ALG which allows ICMP errors to pass the firewall; |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                         |
+|   |                      |                               |                                                                            |
+|   |                      |                               |                                                                            |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------+
 
 
 

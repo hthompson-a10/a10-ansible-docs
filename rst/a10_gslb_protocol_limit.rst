@@ -22,62 +22,67 @@ Specify limit for GSLB Message Protocol
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ardt_session (False, any, None)
-    Sessions of Active RDT, default is 32768 (Number)
-
-
-  ardt_response (False, any, None)
-    Response Messages of Active RDT, default is 1000 (Number)
-
-
-  conn_response (False, any, None)
-    Response Messages of Connection Load, default is no limit (Number)
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ardt_query (False, any, None)
-    Query Messages of Active RDT, default is 200 (Number)
-
-
-  message (False, any, None)
-    Amount of Messages, default is 10000 (Number)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  response (False, any, None)
-    Amount of Response Messages, default is 3600 (Number)
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                            |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++=======================+===============================+====================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                 |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                      |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                  |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                  |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                      |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                   |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                    |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ardt_query            |                               | Query Messages of Active RDT, default is 200 (Number)              |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ardt_response         |                               | Response Messages of Active RDT, default is 1000 (Number)          |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ardt_session          |                               | Sessions of Active RDT, default is 32768 (Number)                  |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| conn_response         |                               | Response Messages of Connection Load, default is no limit (Number) |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| response              |                               | Amount of Response Messages, default is 3600 (Number)              |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| message               |                               | Amount of Messages, default is 10000 (Number)                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                 |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
 
 
 

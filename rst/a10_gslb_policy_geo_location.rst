@@ -22,84 +22,87 @@ Specify geo-location
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    Specify geo-location name, section range is (1-15)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  policy_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ip_multiple_fields (False, any, None)
-    Field ip_multiple_fields
-
-
-    ip_mask_sub (optional, any, None)
-      Specify IP/mask format (Specify IP address mask)
-
-
-    ip_addr2_sub (optional, any, None)
-      Specify IP address range
-
-
-    ip_sub (optional, any, None)
-      Specify IP information
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ipv6_multiple_fields (False, any, None)
-    Field ipv6_multiple_fields
-
-
-    ipv6_sub (optional, any, None)
-      Specify IPv6 information
-
-
-    ipv6_mask_sub (optional, any, None)
-      Specify IPv6/mask format (Specify IP address mask)
-
-
-    ipv6_addr2_sub (optional, any, None)
-      Specify IPv6 address range
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+----------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                            |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++=======================+===============================+====================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                 |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                      |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                  |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                  |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                      |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                   |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command    |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| policy_name           |                               | Key to identify parent object                      |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| name                  |                               | Specify geo-location name, section range is (1-15) |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ip_multiple_fields    |                               | Field ip_multiple_fields                           |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | ip_sub            |                               | Specify IP information                             |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | ip_mask_sub       |                               | Specify IP/mask format (Specify IP address mask)   |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | ip_addr2_sub      |                               | Specify IP address range                           |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+| ipv6_multiple_fields  |                               | Field ipv6_multiple_fields                         |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | ipv6_sub          |                               | Specify IPv6 information                           |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | ipv6_mask_sub     |                               | Specify IPv6/mask format (Specify IP address mask) |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+|   | ipv6_addr2_sub    |                               | Specify IPv6 address range                         |
+|   |                   |                               |                                                    |
+|   |                   |                               |                                                    |
++---+-------------------+-------------------------------+----------------------------------------------------+
+| uuid                  |                               | uuid of the object                                 |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| user_tag              |                               | Customized tag                                     |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
 
 
 

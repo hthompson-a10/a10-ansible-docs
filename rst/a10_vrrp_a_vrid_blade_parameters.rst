@@ -22,83 +22,87 @@ blade parameters of VRRP-A vrid
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  tracking_options (False, any, None)
-    Field tracking_options
-
-
-    bgp (optional, any, None)
-      Field bgp
-
-
-    trunk_cfg (optional, any, None)
-      Field trunk_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    interface (optional, any, None)
-      Field interface
-
-
-    vlan_cfg (optional, any, None)
-      Field vlan_cfg
-
-
-    route (optional, any, None)
-      Field route
-
-
-    gateway (optional, any, None)
-      Field gateway
-
-
-
-  vrid_val (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  priority (False, any, None)
-    VRRP-A priorty (Priority, default is 150)
-
-
-  fail_over_policy_template (False, any, None)
-    Apply a fail over policy template (VRRP-A fail over policy template name)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| Parameters                | Choices/Defaults              | Comment                                                                   |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++===========================+===============================+===========================================================================+
+| state                     | ['noop', 'present', 'absent'] | State of the object to be created.                                        |
+|                           |                               |                                                                           |
+| /required                 |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_host              |                               | Host for AXAPI authentication                                             |
+|                           |                               |                                                                           |
+| /required                 |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_username          |                               | Username for AXAPI authentication                                         |
+|                           |                               |                                                                           |
+| /required                 |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_password          |                               | Password for AXAPI authentication                                         |
+|                           |                               |                                                                           |
+| /required                 |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| ansible_port              |                               | Port for AXAPI authentication                                             |
+|                           |                               |                                                                           |
+| /required                 |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| a10_device_context_id     | ['1-8']                       | Device ID for aVCS configuration                                          |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| a10_partition             |                               | Destination/target partition for object/command                           |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| vrid_val                  |                               | Key to identify parent object                                             |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| priority                  |                               | VRRP-A priorty (Priority, default is 150)                                 |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| fail_over_policy_template |                               | Apply a fail over policy template (VRRP-A fail over policy template name) |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| uuid                      |                               | uuid of the object                                                        |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++---------------------------+-------------------------------+---------------------------------------------------------------------------+
+| tracking_options          |                               | Field tracking_options                                                    |
+|                           |                               |                                                                           |
+|                           |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | interface             |                               | Field interface                                                           |
+|   |                       |                               |                                                                           |
+|   |                       |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | route                 |                               | Field route                                                               |
+|   |                       |                               |                                                                           |
+|   |                       |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | trunk_cfg             |                               | Field trunk_cfg                                                           |
+|   |                       |                               |                                                                           |
+|   |                       |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | bgp                   |                               | Field bgp                                                                 |
+|   |                       |                               |                                                                           |
+|   |                       |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | vlan_cfg              |                               | Field vlan_cfg                                                            |
+|   |                       |                               |                                                                           |
+|   |                       |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | uuid                  |                               | uuid of the object                                                        |
+|   |                       |                               |                                                                           |
+|   |                       |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
+|   | gateway               |                               | Field gateway                                                             |
+|   |                       |                               |                                                                           |
+|   |                       |                               |                                                                           |
++---+-----------------------+-------------------------------+---------------------------------------------------------------------------+
 
 
 

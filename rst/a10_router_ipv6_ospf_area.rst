@@ -22,108 +22,111 @@ OSPF area parameters
 Parameters
 ----------
 
-  range_list (False, any, None)
-    Field range_list
-
-
-    option (optional, any, None)
-      'advertise'= Advertise this range (default); 'not-advertise'= DoNotAdvertise this range;
-
-
-    value (optional, any, None)
-      Area range for IPv6 prefix
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  area_num (True, any, None)
-    OSPFv3 area ID as a decimal value
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  ospf_process_id (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  virtual_link_list (False, any, None)
-    Field virtual_link_list
-
-
-    instance_id (optional, any, None)
-      OSPFv3 instance ID
-
-
-    retransmit_interval (optional, any, None)
-      LSA retransmit interval (Seconds)
-
-
-    dead_interval (optional, any, None)
-      Dead router detection time (Seconds)
-
-
-    transmit_delay (optional, any, None)
-      LSA transmission delay (Seconds)
-
-
-    hello_interval (optional, any, None)
-      Hello packet interval (Seconds)
-
-
-    bfd (optional, any, None)
-      Bidirectional Forwarding Detection (BFD)
-
-
-    value (optional, any, None)
-      ID (IP addr) associated with virtual link neighbor
-
-
-
-  area_ipv4 (True, any, None)
-    OSPFv3 area ID in IP address format
-
-
-  stub (False, any, None)
-    Configure OSPFv3 area as stub
-
-
-  default_cost (False, any, None)
-    Set the summary-default cost of a NSSA or stub area (Stub's advertised default summary cost)
-
-
-  no_summary (False, any, None)
-    Do not inject inter-area routes into area
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                                                                      |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++=========================+===============================+==============================================================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.                                                           |
+|                         |                               |                                                                                              |
+| /required               |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                                                                |
+|                         |                               |                                                                                              |
+| /required               |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication                                                            |
+|                         |                               |                                                                                              |
+| /required               |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication                                                            |
+|                         |                               |                                                                                              |
+| /required               |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                                                                |
+|                         |                               |                                                                                              |
+| /required               |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                                                             |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command                                              |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ospf_process_id         |                               | Key to identify parent object                                                                |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| area_ipv4               |                               | OSPFv3 area ID in IP address format                                                          |
+|                         |                               |                                                                                              |
+| /required               |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| area_num                |                               | OSPFv3 area ID as a decimal value                                                            |
+|                         |                               |                                                                                              |
+| /required               |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| default_cost            |                               | Set the summary-default cost of a NSSA or stub area (Stub's advertised default summary cost) |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| range_list              |                               | Field range_list                                                                             |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | value               |                               | Area range for IPv6 prefix                                                                   |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | option              |                               | 'advertise'= Advertise this range (default); 'not-advertise'= DoNotAdvertise this range;     |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| stub                    |                               | Configure OSPFv3 area as stub                                                                |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| no_summary              |                               | Do not inject inter-area routes into area                                                    |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| virtual_link_list       |                               | Field virtual_link_list                                                                      |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | value               |                               | ID (IP addr) associated with virtual link neighbor                                           |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | dead_interval       |                               | Dead router detection time (Seconds)                                                         |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | bfd                 |                               | Bidirectional Forwarding Detection (BFD)                                                     |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | hello_interval      |                               | Hello packet interval (Seconds)                                                              |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | retransmit_interval |                               | LSA retransmit interval (Seconds)                                                            |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | transmit_delay      |                               | LSA transmission delay (Seconds)                                                             |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | instance_id         |                               | OSPFv3 instance ID                                                                           |
+|   |                     |                               |                                                                                              |
+|   |                     |                               |                                                                                              |
++---+---------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| uuid                    |                               | uuid of the object                                                                           |
+|                         |                               |                                                                                              |
+|                         |                               |                                                                                              |
++-------------------------+-------------------------------+----------------------------------------------------------------------------------------------+
 
 
 

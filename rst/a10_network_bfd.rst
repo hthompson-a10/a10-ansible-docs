@@ -22,63 +22,67 @@ Configure BFD (Bidirectional Forwarding Detection)
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  enable (False, any, None)
-    Enable BFD
-
-
-  interval_cfg (False, any, None)
-    Field interval_cfg
-
-
-    interval (optional, any, None)
-      Transmit interval between BFD packets (Milliseconds (default= 800))
-
-
-    min_rx (optional, any, None)
-      Minimum receive interval capability (Milliseconds (default= 800))
-
-
-    multiplier (optional, any, None)
-      Multiplier value used to compute holddown (value used to multiply the interval (default= 4))
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  echo (False, any, None)
-    Enable BFD Echo
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                      |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++=======================+===============================+==============================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                           |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                            |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                            |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                |
+|                       |                               |                                                                                              |
+| /required             |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                             |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                              |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| echo                  |                               | Enable BFD Echo                                                                              |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| enable                |                               | Enable BFD                                                                                   |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| interval_cfg          |                               | Field interval_cfg                                                                           |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | interval          |                               | Transmit interval between BFD packets (Milliseconds (default= 800))                          |
+|   |                   |                               |                                                                                              |
+|   |                   |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | min_rx            |                               | Minimum receive interval capability (Milliseconds (default= 800))                            |
+|   |                   |                               |                                                                                              |
+|   |                   |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+|   | multiplier        |                               | Multiplier value used to compute holddown (value used to multiply the interval (default= 4)) |
+|   |                   |                               |                                                                                              |
+|   |                   |                               |                                                                                              |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                           |
+|                       |                               |                                                                                              |
+|                       |                               |                                                                                              |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------+
 
 
 

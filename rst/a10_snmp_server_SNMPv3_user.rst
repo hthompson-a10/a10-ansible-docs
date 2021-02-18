@@ -22,74 +22,79 @@ Define a user who can access the SNMP engine
 Parameters
 ----------
 
-  username (True, any, None)
-    Name of the user
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  passwd (False, any, None)
-    Password of this user
-
-
-  pw_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED passphrase string)
-
-
-  v3 (False, any, None)
-    'auth'= Using the authNoPriv Security Level; 'noauth'= Using the noAuthNoPriv Security Level;
-
-
-  priv_pw_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED passphrase string)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  auth_val (False, any, None)
-    'md5'= Use HMAC MD5 algorithm for authentication; 'sha'= Use HMAC SHA algorithm for authentication;
-
-
-  priv (False, any, None)
-    'des'= DES encryption alogrithm; 'aes'= AES encryption alogrithm;  (Encryption type)
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  group (False, any, None)
-    Group to which the user belongs
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  encpasswd (False, any, None)
-    Passphrase for encryption
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                               |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++=======================+===============================+=======================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                    |
+|                       |                               |                                                                                                       |
+| /required             |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                         |
+|                       |                               |                                                                                                       |
+| /required             |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                       |
+| /required             |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                       |
+| /required             |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                         |
+|                       |                               |                                                                                                       |
+| /required             |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                      |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                       |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| username              |                               | Name of the user                                                                                      |
+|                       |                               |                                                                                                       |
+| /required             |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| group                 |                               | Group to which the user belongs                                                                       |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| v3                    |                               | 'auth'= Using the authNoPriv Security Level; 'noauth'= Using the noAuthNoPriv Security Level;         |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| auth_val              |                               | 'md5'= Use HMAC MD5 algorithm for authentication; 'sha'= Use HMAC SHA algorithm for authentication;   |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| passwd                |                               | Password of this user                                                                                 |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| pw_encrypted          |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED passphrase string) |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| priv                  |                               | 'des'= DES encryption alogrithm; 'aes'= AES encryption alogrithm;  (Encryption type)                  |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| encpasswd             |                               | Passphrase for encryption                                                                             |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| priv_pw_encrypted     |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED passphrase string) |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                    |
+|                       |                               |                                                                                                       |
+|                       |                               |                                                                                                       |
++-----------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
 
 
 

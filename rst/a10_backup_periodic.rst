@@ -22,78 +22,83 @@ Configure backup periodically
 Parameters
 ----------
 
-  week (False, any, None)
-    Specify interval weeks
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  use_mgmt_port (False, any, None)
-    Use management port as source port
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  fixed_nat (False, any, None)
-    Backup fixed-nat port mapping files
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  day (False, any, None)
-    Specify interval days
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  encrypt (False, any, None)
-    Encrypt the backup file
-
-
-  log (False, any, None)
-    Backup log files
-
-
-  hour (False, any, None)
-    Specify interval hours
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  system (False, any, None)
-    Backup system files
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  store_name (False, any, None)
-    profile name to store remote url
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  remote_file (False, any, None)
-    profile name for remote url
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| system                |                               | Backup system files                             |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| log                   |                               | Backup log files                                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| fixed_nat             |                               | Backup fixed-nat port mapping files             |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| day                   |                               | Specify interval days                           |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| hour                  |                               | Specify interval hours                          |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| week                  |                               | Specify interval weeks                          |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| encrypt               |                               | Encrypt the backup file                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| use_mgmt_port         |                               | Use management port as source port              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| remote_file           |                               | profile name for remote url                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| store_name            |                               | profile name to store remote url                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
 
 
 

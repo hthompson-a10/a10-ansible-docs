@@ -22,91 +22,95 @@ TCP Aging options
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  tcp_idle_timeout (False, any, None)
-    Idle Timeout (sec), default is 600 (number)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  session_aging_name (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  half_close_idle_timeout (False, any, None)
-    TCP Half Close Idle Timeout (sec), default is off (number)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  force_delete_timeout (False, any, None)
-    The maximum time that a session can stay in the system before being deleted, default is off (number (second))
-
-
-  force_delete_timeout_100ms (False, any, None)
-    The maximum time that a session can stay in the system before being deleted, default is off (number in 100ms)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  half_open_idle_timeout (False, any, None)
-    TCP Half Open Idle Timeout (sec), default is off (number)
-
-
-  port_cfg (False, any, None)
-    Field port_cfg
-
-
-    half_close_idle_timeout (optional, any, None)
-      TCP Half Close Idle Timeout (sec), default is off (number)
-
-
-    force_delete_timeout (optional, any, None)
-      The maximum time that a session can stay in the system before being deleted, default is off (number (second))
-
-
-    tcp_idle_timeout (optional, any, None)
-      Idle Timeout (sec), default is 600 (number)
-
-
-    force_delete_timeout_100ms (optional, any, None)
-      The maximum time that a session can stay in the system before being deleted, default is off (number in 100ms)
-
-
-    tcp_port (optional, any, None)
-      Field tcp_port
-
-
-    half_open_idle_timeout (optional, any, None)
-      TCP Half Open Idle Timeout (sec), default is off (number)
-
-
-
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| Parameters                     | Choices/Defaults              | Comment                                                                                                       |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++================================+===============================+===============================================================================================================+
+| state                          | ['noop', 'present', 'absent'] | State of the object to be created.                                                                            |
+|                                |                               |                                                                                                               |
+| /required                      |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| ansible_host                   |                               | Host for AXAPI authentication                                                                                 |
+|                                |                               |                                                                                                               |
+| /required                      |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| ansible_username               |                               | Username for AXAPI authentication                                                                             |
+|                                |                               |                                                                                                               |
+| /required                      |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| ansible_password               |                               | Password for AXAPI authentication                                                                             |
+|                                |                               |                                                                                                               |
+| /required                      |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| ansible_port                   |                               | Port for AXAPI authentication                                                                                 |
+|                                |                               |                                                                                                               |
+| /required                      |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id          | ['1-8']                       | Device ID for aVCS configuration                                                                              |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| a10_partition                  |                               | Destination/target partition for object/command                                                               |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| session_aging_name             |                               | Key to identify parent object                                                                                 |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| tcp_idle_timeout               |                               | Idle Timeout (sec), default is 600 (number)                                                                   |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| half_open_idle_timeout         |                               | TCP Half Open Idle Timeout (sec), default is off (number)                                                     |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| half_close_idle_timeout        |                               | TCP Half Close Idle Timeout (sec), default is off (number)                                                    |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| force_delete_timeout           |                               | The maximum time that a session can stay in the system before being deleted, default is off (number (second)) |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| force_delete_timeout_100ms     |                               | The maximum time that a session can stay in the system before being deleted, default is off (number in 100ms) |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| port_cfg                       |                               | Field port_cfg                                                                                                |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+|   | tcp_port                   |                               | Field tcp_port                                                                                                |
+|   |                            |                               |                                                                                                               |
+|   |                            |                               |                                                                                                               |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+|   | tcp_idle_timeout           |                               | Idle Timeout (sec), default is 600 (number)                                                                   |
+|   |                            |                               |                                                                                                               |
+|   |                            |                               |                                                                                                               |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+|   | half_open_idle_timeout     |                               | TCP Half Open Idle Timeout (sec), default is off (number)                                                     |
+|   |                            |                               |                                                                                                               |
+|   |                            |                               |                                                                                                               |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+|   | half_close_idle_timeout    |                               | TCP Half Close Idle Timeout (sec), default is off (number)                                                    |
+|   |                            |                               |                                                                                                               |
+|   |                            |                               |                                                                                                               |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+|   | force_delete_timeout       |                               | The maximum time that a session can stay in the system before being deleted, default is off (number (second)) |
+|   |                            |                               |                                                                                                               |
+|   |                            |                               |                                                                                                               |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+|   | force_delete_timeout_100ms |                               | The maximum time that a session can stay in the system before being deleted, default is off (number in 100ms) |
+|   |                            |                               |                                                                                                               |
+|   |                            |                               |                                                                                                               |
++---+----------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
+| uuid                           |                               | uuid of the object                                                                                            |
+|                                |                               |                                                                                                               |
+|                                |                               |                                                                                                               |
++--------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 
 

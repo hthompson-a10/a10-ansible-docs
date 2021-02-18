@@ -22,62 +22,67 @@ Compact flash
 Parameters
 ----------
 
-  reboot_after_upgrade (False, any, None)
-    reboot system after upgrade is done
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  local (False, any, None)
-    Use image from local VCS image repository (Specify an image name, format= aximage_XX_XX_XX_XX.tar.gz)
-
-
-  image (False, any, None)
-    'pri'= Primary image;
-
-
-  file_url (False, any, None)
-    File URL
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  staggered_upgrade_mode (False, any, None)
-    in staggered upgrade mode
-
-
-  use_mgmt_port (False, any, None)
-    Use management port as source port
-
-
-  Device (False, any, None)
-    Field Device
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                                                               |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++========================+===============================+=======================================================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                                                    |
+|                        |                               |                                                                                                       |
+| /required              |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                                                         |
+|                        |                               |                                                                                                       |
+| /required              |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                                                     |
+|                        |                               |                                                                                                       |
+| /required              |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                                                     |
+|                        |                               |                                                                                                       |
+| /required              |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                                                         |
+|                        |                               |                                                                                                       |
+| /required              |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                                                      |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                                                       |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| image                  |                               | 'pri'= Primary image;                                                                                 |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| local                  |                               | Use image from local VCS image repository (Specify an image name, format= aximage_XX_XX_XX_XX.tar.gz) |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| use_mgmt_port          |                               | Use management port as source port                                                                    |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| file_url               |                               | File URL                                                                                              |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| staggered_upgrade_mode |                               | in staggered upgrade mode                                                                             |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| Device                 |                               | Field Device                                                                                          |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
+| reboot_after_upgrade   |                               | reboot system after upgrade is done                                                                   |
+|                        |                               |                                                                                                       |
+|                        |                               |                                                                                                       |
++------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------+
 
 
 

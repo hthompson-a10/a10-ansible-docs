@@ -22,78 +22,83 @@ Enable SLB change traps
 Parameters
 ----------
 
-  ssl_cert_expire (False, any, None)
-    Enable SSL certificate expiring trap
-
-
-  all (False, any, None)
-    Enable all system group traps
-
-
-  ssl_cert_change (False, any, None)
-    Enable SSL certificate change trap
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  vip (False, any, None)
-    Enable slb vip create/delete trap
-
-
-  system_threshold (False, any, None)
-    Enable slb system threshold trap
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  connection_resource_event (False, any, None)
-    Enable system connection resource event trap
-
-
-  resource_usage_warning (False, any, None)
-    Enable partition resource usage warning trap
-
-
-  server (False, any, None)
-    Enable slb server create/delete trap
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  server_port (False, any, None)
-    Enable slb server port create/delete trap
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vip_port (False, any, None)
-    Enable slb vip-port create/delete trap
-
-
++---------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                | Choices/Defaults              | Comment                                         |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++===========================+===============================+=================================================+
+| state                     | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                           |                               |                                                 |
+| /required                 |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host              |                               | Host for AXAPI authentication                   |
+|                           |                               |                                                 |
+| /required                 |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username          |                               | Username for AXAPI authentication               |
+|                           |                               |                                                 |
+| /required                 |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password          |                               | Password for AXAPI authentication               |
+|                           |                               |                                                 |
+| /required                 |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port              |                               | Port for AXAPI authentication                   |
+|                           |                               |                                                 |
+| /required                 |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id     | ['1-8']                       | Device ID for aVCS configuration                |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition             |                               | Destination/target partition for object/command |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| all                       |                               | Enable all system group traps                   |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| resource_usage_warning    |                               | Enable partition resource usage warning trap    |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| connection_resource_event |                               | Enable system connection resource event trap    |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| server                    |                               | Enable slb server create/delete trap            |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| server_port               |                               | Enable slb server port create/delete trap       |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| ssl_cert_change           |                               | Enable SSL certificate change trap              |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| ssl_cert_expire           |                               | Enable SSL certificate expiring trap            |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| vip                       |                               | Enable slb vip create/delete trap               |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| vip_port                  |                               | Enable slb vip-port create/delete trap          |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| system_threshold          |                               | Enable slb system threshold trap                |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
+| uuid                      |                               | uuid of the object                              |
+|                           |                               |                                                 |
+|                           |                               |                                                 |
++---------------------------+-------------------------------+-------------------------------------------------+
 
 
 

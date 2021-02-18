@@ -22,78 +22,83 @@ RADIUS type
 Parameters
 ----------
 
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  radius_response_code (False, any, None)
-    Specify response code range (e.g. 2,4-7) (Format is xx,xx-xx (xx between [1, 13]))
-
-
-  radius_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  radius (False, any, None)
-    RADIUS type
-
-
-  radius_password_string (False, any, None)
-    Configure password, '' means empty password
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  radius_password (False, any, None)
-    Specify the user password
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  monitor_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  radius_username (False, any, None)
-    Specify the username
-
-
-  radius_port (False, any, None)
-    Specify the RADIUS port, default is 1812 (Port number (default 1812))
-
-
-  radius_secret (False, any, None)
-    Specify the shared secret of RADIUS server (Shared Crypto Key)
-
-
-  radius_expect (False, any, None)
-    Specify what you expect from the response message
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                                                             |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++========================+===============================+=====================================================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                                                  |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                                                       |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                                                   |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                                                   |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                                                       |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                                                    |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                                                     |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| monitor_name           |                               | Key to identify parent object                                                                       |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius                 |                               | RADIUS type                                                                                         |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_username        |                               | Specify the username                                                                                |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_password        |                               | Specify the user password                                                                           |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_password_string |                               | Configure password, '' means empty password                                                         |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_encrypted       |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_secret          |                               | Specify the shared secret of RADIUS server (Shared Crypto Key)                                      |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_port            |                               | Specify the RADIUS port, default is 1812 (Port number (default 1812))                               |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_expect          |                               | Specify what you expect from the response message                                                   |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| radius_response_code   |                               | Specify response code range (e.g. 2,4-7) (Format is xx,xx-xx (xx between [1, 13]))                  |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                                                                  |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 
 

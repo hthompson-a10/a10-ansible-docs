@@ -22,83 +22,87 @@ VCS Summary Information
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    vmaster_maintenance_interval (optional, any, None)
-      Field vmaster_maintenance_interval
-
-
-    vcs_enabled (optional, any, None)
-      Field vcs_enabled
-
-
-    multicast_addr (optional, any, None)
-      Field multicast_addr
-
-
-    floating_ipv6_list (optional, any, None)
-      Field floating_ipv6_list
-
-
-    chassis_id (optional, any, None)
-      Field chassis_id
-
-
-    version (optional, any, None)
-      Field version
-
-
-    member_list (optional, any, None)
-      Field member_list
-
-
-    floating_ipv4_list (optional, any, None)
-      Field floating_ipv4_list
-
-
-    vmaster_maintenance_left (optional, any, None)
-      Field vmaster_maintenance_left
-
-
-    multicast_port (optional, any, None)
-      Field multicast_port
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++----------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                       | Choices/Defaults              | Comment                                         |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++==================================+===============================+=================================================+
+| state                            | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                     |                               | Host for AXAPI authentication                   |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username                 |                               | Username for AXAPI authentication               |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password                 |                               | Password for AXAPI authentication               |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                     |                               | Port for AXAPI authentication                   |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id            | ['1-8']                       | Device ID for aVCS configuration                |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                    |                               | Destination/target partition for object/command |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| uuid                             |                               | uuid of the object                              |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| oper                             |                               | Field oper                                      |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | vcs_enabled                  |                               | Field vcs_enabled                               |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | chassis_id                   |                               | Field chassis_id                                |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | multicast_addr               |                               | Field multicast_addr                            |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | multicast_port               |                               | Field multicast_port                            |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | version                      |                               | Field version                                   |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | vmaster_maintenance_interval |                               | Field vmaster_maintenance_interval              |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | vmaster_maintenance_left     |                               | Field vmaster_maintenance_left                  |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | floating_ipv4_list           |                               | Field floating_ipv4_list                        |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | floating_ipv6_list           |                               | Field floating_ipv6_list                        |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | member_list                  |                               | Field member_list                               |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
 
 
 

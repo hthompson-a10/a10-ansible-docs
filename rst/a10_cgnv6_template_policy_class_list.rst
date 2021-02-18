@@ -22,123 +22,127 @@ Configure classification list
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  client_ip_l7_header (False, any, None)
-    Use extract client IP address from L7 header
-
-
-  name (True, any, None)
-    Class list name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  policy_name (optional, any, None)
-    Key to identify parent object
-
-
-  client_ip_l3_dest (False, any, None)
-    Use destination IP as client IP address
-
-
-  lid_list (False, any, None)
-    Field lid_list
-
-
-    action_value (optional, any, None)
-      'forward'= Forward the traffic even it exceeds limit; 'reset'= Reset the connection when it exceeds limit;
-
-
-    lidnum (optional, any, None)
-      Specify a limit ID
-
-
-    conn_rate_limit (optional, any, None)
-      Specify connection rate limit
-
-
-    log (optional, any, None)
-      Log a message
-
-
-    over_limit_action (optional, any, None)
-      Set action when exceeds limit
-
-
-    request_per (optional, any, None)
-      Per (Specify interval in number of 100ms)
-
-
-    dns64 (optional, any, None)
-      Field dns64
-
-
-    interval (optional, any, None)
-      Specify log interval in minutes, by default system will log every over limit instance
-
-
-    request_rate_limit (optional, any, None)
-      Request rate limit (Specify request rate limit)
-
-
-    conn_limit (optional, any, None)
-      Connection limit
-
-
-    lockout (optional, any, None)
-      Don't accept any new connection for certain time (Lockout duration in minutes)
-
-
-    request_limit (optional, any, None)
-      Request limit (Specify request limit)
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    conn_per (optional, any, None)
-      Per (Specify interval in number of 100ms)
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  header_name (False, any, None)
-    Specify L7 header name
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                                                                    |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++========================+===============================+============================================================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                                                         |
+|                        |                               |                                                                                                            |
+| /required              |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                                                              |
+|                        |                               |                                                                                                            |
+| /required              |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                                                          |
+|                        |                               |                                                                                                            |
+| /required              |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                                                          |
+|                        |                               |                                                                                                            |
+| /required              |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                                                              |
+|                        |                               |                                                                                                            |
+| /required              |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                                                           |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                                                            |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| policy_name            |                               | Key to identify parent object                                                                              |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| name                   |                               | Class list name                                                                                            |
+|                        |                               |                                                                                                            |
+| /required              |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| client_ip_l3_dest      |                               | Use destination IP as client IP address                                                                    |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| client_ip_l7_header    |                               | Use extract client IP address from L7 header                                                               |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| header_name            |                               | Specify L7 header name                                                                                     |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                                                                         |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++------------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+| lid_list               |                               | Field lid_list                                                                                             |
+|                        |                               |                                                                                                            |
+|                        |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | lidnum             |                               | Specify a limit ID                                                                                         |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | conn_limit         |                               | Connection limit                                                                                           |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | conn_rate_limit    |                               | Specify connection rate limit                                                                              |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | conn_per           |                               | Per (Specify interval in number of 100ms)                                                                  |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | request_limit      |                               | Request limit (Specify request limit)                                                                      |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | request_rate_limit |                               | Request rate limit (Specify request rate limit)                                                            |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | request_per        |                               | Per (Specify interval in number of 100ms)                                                                  |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | over_limit_action  |                               | Set action when exceeds limit                                                                              |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | action_value       |                               | 'forward'= Forward the traffic even it exceeds limit; 'reset'= Reset the connection when it exceeds limit; |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | lockout            |                               | Don't accept any new connection for certain time (Lockout duration in minutes)                             |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | log                |                               | Log a message                                                                                              |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | interval           |                               | Specify log interval in minutes, by default system will log every over limit instance                      |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | dns64              |                               | Field dns64                                                                                                |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                                                                         |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
+|   | user_tag           |                               | Customized tag                                                                                             |
+|   |                    |                               |                                                                                                            |
+|   |                    |                               |                                                                                                            |
++---+--------------------+-------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 

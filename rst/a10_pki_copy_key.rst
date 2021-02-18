@@ -22,50 +22,55 @@ Copy SSL key to another file
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  dest_key (False, any, None)
-    Destination key file
-
-
-  src_key (False, any, None)
-    Source key file
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  rotation (False, any, None)
-    Specify rotation number of SCEP generated key file
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  overwrite (False, any, None)
-    Overwrite the destination file if already present
-
-
++-----------------------+---------------------+----------------------------------------------------+
+| Parameters            | Choices/Defaults    | Comment                                            |
+|                       |                     |                                                    |
+|                       |                     |                                                    |
++=======================+=====================+====================================================+
+| state                 | ['noop', 'present'] | State of the object to be created.                 |
+|                       |                     |                                                    |
+| /required             |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| ansible_host          |                     | Host for AXAPI authentication                      |
+|                       |                     |                                                    |
+| /required             |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| ansible_username      |                     | Username for AXAPI authentication                  |
+|                       |                     |                                                    |
+| /required             |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| ansible_password      |                     | Password for AXAPI authentication                  |
+|                       |                     |                                                    |
+| /required             |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| ansible_port          |                     | Port for AXAPI authentication                      |
+|                       |                     |                                                    |
+| /required             |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| a10_device_context_id | ['1-8']             | Device ID for aVCS configuration                   |
+|                       |                     |                                                    |
+|                       |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| a10_partition         |                     | Destination/target partition for object/command    |
+|                       |                     |                                                    |
+|                       |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| src_key               |                     | Source key file                                    |
+|                       |                     |                                                    |
+|                       |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| rotation              |                     | Specify rotation number of SCEP generated key file |
+|                       |                     |                                                    |
+|                       |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| dest_key              |                     | Destination key file                               |
+|                       |                     |                                                    |
+|                       |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
+| overwrite             |                     | Overwrite the destination file if already present  |
+|                       |                     |                                                    |
+|                       |                     |                                                    |
++-----------------------+---------------------+----------------------------------------------------+
 
 
 

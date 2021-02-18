@@ -22,55 +22,59 @@ Field reset_unknown_conn
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    unknown_conn_rate_limit (optional, any, None)
-      Field unknown_conn_rate_limit
-
-
-    unknown_conn_rate_limit_drop (optional, any, None)
-      Field unknown_conn_rate_limit_drop
-
-
-    unknown_conn_current_rate (optional, any, None)
-      Field unknown_conn_current_rate
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++----------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                       | Choices/Defaults              | Comment                                         |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++==================================+===============================+=================================================+
+| state                            | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                     |                               | Host for AXAPI authentication                   |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username                 |                               | Username for AXAPI authentication               |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password                 |                               | Password for AXAPI authentication               |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                     |                               | Port for AXAPI authentication                   |
+|                                  |                               |                                                 |
+| /required                        |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id            | ['1-8']                       | Device ID for aVCS configuration                |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                    |                               | Destination/target partition for object/command |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| uuid                             |                               | uuid of the object                              |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++----------------------------------+-------------------------------+-------------------------------------------------+
+| oper                             |                               | Field oper                                      |
+|                                  |                               |                                                 |
+|                                  |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | unknown_conn_rate_limit      |                               | Field unknown_conn_rate_limit                   |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | unknown_conn_current_rate    |                               | Field unknown_conn_current_rate                 |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
+|   | unknown_conn_rate_limit_drop |                               | Field unknown_conn_rate_limit_drop              |
+|   |                              |                               |                                                 |
+|   |                              |                               |                                                 |
++---+------------------------------+-------------------------------+-------------------------------------------------+
 
 
 

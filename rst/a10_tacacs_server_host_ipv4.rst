@@ -22,83 +22,87 @@ Specify the hostname of TACACS+ server
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  secret (False, any, None)
-    Field secret
-
-
-    source_trunk (optional, any, None)
-      Trunk interface (Trunk interface number)
-
-
-    source_lif (optional, any, None)
-      Logical interface (Lif interface number)
-
-
-    source_ve (optional, any, None)
-      Virtual ethernet interface (Virtual ethernet interface number)
-
-
-    encrypted (optional, any, None)
-      Do NOT use this option manually. (This is an A10 reserved keyword.) help-val The ENCRYPTED secret string
-
-
-    source_loopback (optional, any, None)
-      Loopback interface (Port number)
-
-
-    source_ip (optional, any, None)
-      IP address
-
-
-    secret_value (optional, any, None)
-      The TACACS+ server's secret
-
-
-    source_eth (optional, any, None)
-      Ethernet interface (Port number)
-
-
-    port_cfg (optional, any, None)
-      Field port_cfg
-
-
-
-  ipv4_addr (True, any, None)
-    IPV4 address of TACACS+ server
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                  |
+|                       |                               |                                                                                                          |
+|                       |                               |                                                                                                          |
++=======================+===============================+==========================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                       |
+|                       |                               |                                                                                                          |
+| /required             |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                            |
+|                       |                               |                                                                                                          |
+| /required             |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                        |
+|                       |                               |                                                                                                          |
+| /required             |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                        |
+|                       |                               |                                                                                                          |
+| /required             |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                            |
+|                       |                               |                                                                                                          |
+| /required             |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                         |
+|                       |                               |                                                                                                          |
+|                       |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                          |
+|                       |                               |                                                                                                          |
+|                       |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| ipv4_addr             |                               | IPV4 address of TACACS+ server                                                                           |
+|                       |                               |                                                                                                          |
+| /required             |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| secret                |                               | Field secret                                                                                             |
+|                       |                               |                                                                                                          |
+|                       |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | secret_value      |                               | The TACACS+ server's secret                                                                              |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | encrypted         |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) help-val The ENCRYPTED secret string |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | source_ip         |                               | IP address                                                                                               |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | source_loopback   |                               | Loopback interface (Port number)                                                                         |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | source_eth        |                               | Ethernet interface (Port number)                                                                         |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | source_ve         |                               | Virtual ethernet interface (Virtual ethernet interface number)                                           |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | source_trunk      |                               | Trunk interface (Trunk interface number)                                                                 |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | source_lif        |                               | Logical interface (Lif interface number)                                                                 |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+|   | port_cfg          |                               | Field port_cfg                                                                                           |
+|   |                   |                               |                                                                                                          |
+|   |                   |                               |                                                                                                          |
++---+-------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                       |
+|                       |                               |                                                                                                          |
+|                       |                               |                                                                                                          |
++-----------------------+-------------------------------+----------------------------------------------------------------------------------------------------------+
 
 
 

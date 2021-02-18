@@ -22,102 +22,107 @@ Logging template
 Parameters
 ----------
 
-  tcp_proxy (False, any, None)
-    TCP Proxy Template Name
-
-
-  pool_shared (False, any, None)
-    Specify NAT pool or pool group
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  auto (False, any, None)
-    'auto'= Configure auto NAT for logging, default is auto enabled;
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  keep_end (False, any, None)
-    Number of unmasked characters at the end (default= 0)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  keep_start (False, any, None)
-    Number of unmasked characters at the beginning (default= 0)
-
-
-  template_tcp_proxy_shared (False, any, None)
-    TCP Proxy Template name
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  pool (False, any, None)
-    Specify NAT pool or pool group
-
-
-  shared_partition_tcp_proxy_template (False, any, None)
-    Reference a TCP Proxy template from shared partition
-
-
-  service_group (False, any, None)
-    Bind a Service Group to the logging template (Service Group Name)
-
-
-  local_logging (False, any, None)
-    1 to enable local logging (1 to enable local logging, default 0)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  format (False, any, None)
-    Specify a format string for web logging (format string(less than 250 characters) for web logging)
-
-
-  mask (False, any, None)
-    Character to mask the matched pattern (default= X)
-
-
-  pcre_mask (False, any, None)
-    Mask matched PCRE pattern in the log
-
-
-  name (True, any, None)
-    Logging Template Name
-
-
-  shared_partition_pool (False, any, None)
-    Reference a NAT pool or pool group from shared partition
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| Parameters                          | Choices/Defaults              | Comment                                                                                           |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++=====================================+===============================+===================================================================================================+
+| state                               | ['noop', 'present', 'absent'] | State of the object to be created.                                                                |
+|                                     |                               |                                                                                                   |
+| /required                           |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_host                        |                               | Host for AXAPI authentication                                                                     |
+|                                     |                               |                                                                                                   |
+| /required                           |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_username                    |                               | Username for AXAPI authentication                                                                 |
+|                                     |                               |                                                                                                   |
+| /required                           |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_password                    |                               | Password for AXAPI authentication                                                                 |
+|                                     |                               |                                                                                                   |
+| /required                           |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_port                        |                               | Port for AXAPI authentication                                                                     |
+|                                     |                               |                                                                                                   |
+| /required                           |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_device_context_id               | ['1-8']                       | Device ID for aVCS configuration                                                                  |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_partition                       |                               | Destination/target partition for object/command                                                   |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| name                                |                               | Logging Template Name                                                                             |
+|                                     |                               |                                                                                                   |
+| /required                           |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| format                              |                               | Specify a format string for web logging (format string(less than 250 characters) for web logging) |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| local_logging                       |                               | 1 to enable local logging (1 to enable local logging, default 0)                                  |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| service_group                       |                               | Bind a Service Group to the logging template (Service Group Name)                                 |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| pcre_mask                           |                               | Mask matched PCRE pattern in the log                                                              |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| mask                                |                               | Character to mask the matched pattern (default= X)                                                |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| keep_end                            |                               | Number of unmasked characters at the end (default= 0)                                             |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| keep_start                          |                               | Number of unmasked characters at the beginning (default= 0)                                       |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| tcp_proxy                           |                               | TCP Proxy Template Name                                                                           |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| shared_partition_tcp_proxy_template |                               | Reference a TCP Proxy template from shared partition                                              |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| template_tcp_proxy_shared           |                               | TCP Proxy Template name                                                                           |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| pool                                |                               | Specify NAT pool or pool group                                                                    |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| shared_partition_pool               |                               | Reference a NAT pool or pool group from shared partition                                          |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| pool_shared                         |                               | Specify NAT pool or pool group                                                                    |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| auto                                |                               | 'auto'= Configure auto NAT for logging, default is auto enabled;                                  |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| uuid                                |                               | uuid of the object                                                                                |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| user_tag                            |                               | Customized tag                                                                                    |
+|                                     |                               |                                                                                                   |
+|                                     |                               |                                                                                                   |
++-------------------------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 

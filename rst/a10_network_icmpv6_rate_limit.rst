@@ -22,50 +22,55 @@ Limit the rate of ICMPv6 packet
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  icmpv6_lockup_period (False, any, None)
-    Lockup period (second)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  icmpv6_normal_rate_limit (False, any, None)
-    Normal rate limit. If exceeds this limit, drop the ICMP packet that goes over the limit
-
-
-  icmpv6_lockup (False, any, None)
-    Enter lockup state when ICMP rate exceeds lockup rate limit (Maximum rate limit. If exceeds this limit, drop all ICMP packet for a time period)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                                                                                                                         |
+|                          |                               |                                                                                                                                                 |
+|                          |                               |                                                                                                                                                 |
++==========================+===============================+=================================================================================================================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                                              |
+|                          |                               |                                                                                                                                                 |
+| /required                |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                                                                                                                   |
+|                          |                               |                                                                                                                                                 |
+| /required                |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication                                                                                                               |
+|                          |                               |                                                                                                                                                 |
+| /required                |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication                                                                                                               |
+|                          |                               |                                                                                                                                                 |
+| /required                |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                                                                                                                   |
+|                          |                               |                                                                                                                                                 |
+| /required                |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                                                                                                                |
+|                          |                               |                                                                                                                                                 |
+|                          |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command                                                                                                 |
+|                          |                               |                                                                                                                                                 |
+|                          |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| icmpv6_normal_rate_limit |                               | Normal rate limit. If exceeds this limit, drop the ICMP packet that goes over the limit                                                         |
+|                          |                               |                                                                                                                                                 |
+|                          |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| icmpv6_lockup            |                               | Enter lockup state when ICMP rate exceeds lockup rate limit (Maximum rate limit. If exceeds this limit, drop all ICMP packet for a time period) |
+|                          |                               |                                                                                                                                                 |
+|                          |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| icmpv6_lockup_period     |                               | Lockup period (second)                                                                                                                          |
+|                          |                               |                                                                                                                                                 |
+|                          |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+| uuid                     |                               | uuid of the object                                                                                                                              |
+|                          |                               |                                                                                                                                                 |
+|                          |                               |                                                                                                                                                 |
++--------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 

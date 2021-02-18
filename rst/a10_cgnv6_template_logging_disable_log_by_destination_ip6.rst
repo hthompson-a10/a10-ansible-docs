@@ -22,84 +22,87 @@ Configure a filter IPv6 enrty
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  tcp_list (False, any, None)
-    Field tcp_list
-
-
-    tcp_port_start (optional, any, None)
-      Destination Port (Single Destination Port or Port Range Start)
-
-
-    tcp_port_end (optional, any, None)
-      Port Range End
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  udp_list (False, any, None)
-    Field udp_list
-
-
-    udp_port_start (optional, any, None)
-      Destination Port (Single Destination Port or Port Range Start)
-
-
-    udp_port_end (optional, any, None)
-      Port Range End
-
-
-
-  ipv6_addr (True, any, None)
-    Configure an IPv6 subnet
-
-
-  logging_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  others (False, any, None)
-    Disable logging for other L4 protocols
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  icmp (False, any, None)
-    Disable logging for icmp traffic
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                        |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++=======================+===============================+================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                             |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                  |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                              |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                              |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                  |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                               |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| logging_name          |                               | Key to identify parent object                                  |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ipv6_addr             |                               | Configure an IPv6 subnet                                       |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| tcp_list              |                               | Field tcp_list                                                 |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | tcp_port_start    |                               | Destination Port (Single Destination Port or Port Range Start) |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | tcp_port_end      |                               | Port Range End                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+| udp_list              |                               | Field udp_list                                                 |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | udp_port_start    |                               | Destination Port (Single Destination Port or Port Range Start) |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | udp_port_end      |                               | Port Range End                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+| icmp                  |                               | Disable logging for icmp traffic                               |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| others                |                               | Disable logging for other L4 protocols                         |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                             |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| user_tag              |                               | Customized tag                                                 |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
 
 
 

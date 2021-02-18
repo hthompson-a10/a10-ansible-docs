@@ -22,142 +22,143 @@ Disable logging by destination ip address protocol and port
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ip6_list (False, any, None)
-    Field ip6_list
-
-
-    ipv6_addr (optional, any, None)
-      Configure an IPv6 subnet
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    others (optional, any, None)
-      Disable logging for other L4 protocols
-
-
-    tcp_list (optional, any, None)
-      Field tcp_list
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    icmp (optional, any, None)
-      Disable logging for icmp traffic
-
-
-    udp_list (optional, any, None)
-      Field udp_list
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  tcp_list (False, any, None)
-    Field tcp_list
-
-
-    tcp_port_start (optional, any, None)
-      Destination Port (Single Destination Port or Port Range Start)
-
-
-    tcp_port_end (optional, any, None)
-      Port Range End
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  udp_list (False, any, None)
-    Field udp_list
-
-
-    udp_port_start (optional, any, None)
-      Destination Port (Single Destination Port or Port Range Start)
-
-
-    udp_port_end (optional, any, None)
-      Port Range End
-
-
-
-  logging_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  others (False, any, None)
-    Disable logging for other L4 protocols
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  icmp (False, any, None)
-    Disable logging for icmp traffic
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ip_list (False, any, None)
-    Field ip_list
-
-
-    ipv4_addr (optional, any, None)
-      Configure an IP subnet
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    others (optional, any, None)
-      Disable logging for other L4 protocols
-
-
-    tcp_list (optional, any, None)
-      Field tcp_list
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    icmp (optional, any, None)
-      Disable logging for icmp traffic
-
-
-    udp_list (optional, any, None)
-      Field udp_list
-
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                        |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++=======================+===============================+================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                             |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                  |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                              |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                              |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                  |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                               |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| logging_name          |                               | Key to identify parent object                                  |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| tcp_list              |                               | Field tcp_list                                                 |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | tcp_port_start    |                               | Destination Port (Single Destination Port or Port Range Start) |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | tcp_port_end      |                               | Port Range End                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+| udp_list              |                               | Field udp_list                                                 |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | udp_port_start    |                               | Destination Port (Single Destination Port or Port Range Start) |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | udp_port_end      |                               | Port Range End                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+| icmp                  |                               | Disable logging for icmp traffic                               |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| others                |                               | Disable logging for other L4 protocols                         |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                             |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ip_list               |                               | Field ip_list                                                  |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | ipv4_addr         |                               | Configure an IP subnet                                         |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | tcp_list          |                               | Field tcp_list                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | udp_list          |                               | Field udp_list                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | icmp              |                               | Disable logging for icmp traffic                               |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | others            |                               | Disable logging for other L4 protocols                         |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | uuid              |                               | uuid of the object                                             |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | user_tag          |                               | Customized tag                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+| ip6_list              |                               | Field ip6_list                                                 |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | ipv6_addr         |                               | Configure an IPv6 subnet                                       |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | tcp_list          |                               | Field tcp_list                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | udp_list          |                               | Field udp_list                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | icmp              |                               | Disable logging for icmp traffic                               |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | others            |                               | Disable logging for other L4 protocols                         |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | uuid              |                               | uuid of the object                                             |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
+|   | user_tag          |                               | Customized tag                                                 |
+|   |                   |                               |                                                                |
+|   |                   |                               |                                                                |
++---+-------------------+-------------------------------+----------------------------------------------------------------+
 
 
 

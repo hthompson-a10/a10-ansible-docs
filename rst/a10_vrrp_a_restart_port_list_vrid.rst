@@ -22,59 +22,63 @@ Specify VRRP-A vrid
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vrid_val (True, any, None)
-    Specify ha VRRP-A vrid
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ethernet_cfg (False, any, None)
-    Field ethernet_cfg
-
-
-    flap_ethernet_end (optional, any, None)
-      Ethernet Port
-
-
-    flap_ethernet_start (optional, any, None)
-      Ethernet Port
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++-------------------------+-------------------------------+-------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                         |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++=========================+===============================+=================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                   |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication               |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication               |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                   |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| vrid_val                |                               | Specify ha VRRP-A vrid                          |
+|                         |                               |                                                 |
+| /required               |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| ethernet_cfg            |                               | Field ethernet_cfg                              |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | flap_ethernet_start |                               | Ethernet Port                                   |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+|   | flap_ethernet_end   |                               | Ethernet Port                                   |
+|   |                     |                               |                                                 |
+|   |                     |                               |                                                 |
++---+---------------------+-------------------------------+-------------------------------------------------+
+| uuid                    |                               | uuid of the object                              |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
+| user_tag                |                               | Customized tag                                  |
+|                         |                               |                                                 |
+|                         |                               |                                                 |
++-------------------------+-------------------------------+-------------------------------------------------+
 
 
 

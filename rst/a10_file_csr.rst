@@ -22,75 +22,79 @@ ssl certificate signing request file
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    sortby_name (optional, any, None)
-      Field sortby_name
-
-
-    ssl_csr (optional, any, None)
-      Field ssl_csr
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  file_handle (False, any, None)
-    full path of the uploaded file
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  file_content (False, any, None)
-    Content of the uploaded file
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  dst_file (False, any, None)
-    destination file name for copy and rename action
-
-
-  action (False, any, None)
-    'export'= export;
-
-
-  file (False, any, None)
-    Specify the File Name
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  size (False, any, None)
-    CSR file size in byte
-
-
++-----------------------+-------------------------------+--------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                          |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++=======================+===============================+==================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.               |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                 |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| file_content          |                               | Content of the uploaded file                     |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| file                  |                               | Specify the File Name                            |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| size                  |                               | CSR file size in byte                            |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| file_handle           |                               | full path of the uploaded file                   |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| action                |                               | 'export'= export;                                |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| dst_file              |                               | destination file name for copy and rename action |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| uuid                  |                               | uuid of the object                               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| oper                  |                               | Field oper                                       |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+|   | ssl_csr           |                               | Field ssl_csr                                    |
+|   |                   |                               |                                                  |
+|   |                   |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
+|   | sortby_name       |                               | Field sortby_name                                |
+|   |                   |                               |                                                  |
+|   |                   |                               |                                                  |
++---+-------------------+-------------------------------+--------------------------------------------------+
 
 
 

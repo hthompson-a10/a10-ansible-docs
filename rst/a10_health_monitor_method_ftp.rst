@@ -22,66 +22,71 @@ FTP type
 Parameters
 ----------
 
-  ftp (False, any, None)
-    FTP type
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ftp_port (False, any, None)
-    Specify FTP port (Specify port number, default is 21)
-
-
-  ftp_username (False, any, None)
-    Specify the username
-
-
-  ftp_encrypted (False, any, None)
-    Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  monitor_name (optional, any, None)
-    Key to identify parent object
-
-
-  ftp_password_string (False, any, None)
-    Specify the user password, '' means empty password
-
-
-  ftp_password (False, any, None)
-    Specify the user password
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                             |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++=======================+===============================+=====================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                  |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                   |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                       |
+|                       |                               |                                                                                                     |
+| /required             |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                    |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                     |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| monitor_name          |                               | Key to identify parent object                                                                       |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ftp                   |                               | FTP type                                                                                            |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ftp_port              |                               | Specify FTP port (Specify port number, default is 21)                                               |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ftp_username          |                               | Specify the username                                                                                |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ftp_password          |                               | Specify the user password                                                                           |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ftp_password_string   |                               | Specify the user password, '' means empty password                                                  |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ftp_encrypted         |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                  |
+|                       |                               |                                                                                                     |
+|                       |                               |                                                                                                     |
++-----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 
 

@@ -22,62 +22,67 @@ Set Port Reservations
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  inside_port_end (True, any, None)
-    Inside End Port
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  inside (True, any, None)
-    Inside User Address and Port Range (Inside User IP address)
-
-
-  nat_port_end (True, any, None)
-    NAT End Port
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  inside_port_start (True, any, None)
-    Inside Start Port
-
-
-  nat (True, any, None)
-    NAT IP address
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  nat_port_start (True, any, None)
-    NAT Start Port
-
-
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                     |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++=======================+===============================+=============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                          |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                               |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                           |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                           |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                               |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                            |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command             |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| inside                |                               | Inside User Address and Port Range (Inside User IP address) |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| inside_port_start     |                               | Inside Start Port                                           |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| inside_port_end       |                               | Inside End Port                                             |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| nat                   |                               | NAT IP address                                              |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| nat_port_start        |                               | NAT Start Port                                              |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| nat_port_end          |                               | NAT End Port                                                |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                          |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
 
 
 

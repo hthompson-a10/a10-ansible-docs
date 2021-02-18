@@ -22,63 +22,67 @@ FPGA Core CRC check Global Commands
 Parameters
 ----------
 
-  monitor_disable (False, any, None)
-    Disable FPGA Core CRC error monitoring and act on it
-
-
-  oper (False, any, None)
-    Field oper
-
-
-    reboot_val (optional, any, None)
-      Field reboot_val
-
-
-    crc_error_present (optional, any, None)
-      Field crc_error_present
-
-
-    enable_val (optional, any, None)
-      Field enable_val
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  reboot_enable (False, any, None)
-    Enable system reboot if system encounters FPGA Core CRC error
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                       |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++=======================+===============================+===============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                            |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                              |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command               |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| monitor_disable       |                               | Disable FPGA Core CRC error monitoring and act on it          |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| reboot_enable         |                               | Enable system reboot if system encounters FPGA Core CRC error |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                            |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| oper                  |                               | Field oper                                                    |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | enable_val        |                               | Field enable_val                                              |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | reboot_val        |                               | Field reboot_val                                              |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
+|   | crc_error_present |                               | Field crc_error_present                                       |
+|   |                   |                               |                                                               |
+|   |                   |                               |                                                               |
++---+-------------------+-------------------------------+---------------------------------------------------------------+
 
 
 

@@ -22,67 +22,71 @@ Specify a IP List
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  gslb_ip_list_filename (False, any, None)
-    Load IP List file (IP List filename)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  gslb_ip_list_addr_list (False, any, None)
-    Field gslb_ip_list_addr_list
-
-
-    ip (optional, any, None)
-      Specify IP address
-
-
-    id (optional, any, None)
-      ID Number
-
-
-    ip_mask (optional, any, None)
-      IP mask
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  gslb_ip_list_obj_name (True, any, None)
-    Specify IP List name
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------+-------------------------------+-------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                         |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++========================+===============================+=================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication               |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                   |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| gslb_ip_list_obj_name  |                               | Specify IP List name                            |
+|                        |                               |                                                 |
+| /required              |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| gslb_ip_list_filename  |                               | Load IP List file (IP List filename)            |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| gslb_ip_list_addr_list |                               | Field gslb_ip_list_addr_list                    |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | ip                 |                               | Specify IP address                              |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | ip_mask            |                               | IP mask                                         |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+|   | id                 |                               | ID Number                                       |
+|   |                    |                               |                                                 |
+|   |                    |                               |                                                 |
++---+--------------------+-------------------------------+-------------------------------------------------+
+| uuid                   |                               | uuid of the object                              |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
+| user_tag               |                               | Customized tag                                  |
+|                        |                               |                                                 |
+|                        |                               |                                                 |
++------------------------+-------------------------------+-------------------------------------------------+
 
 
 

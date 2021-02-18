@@ -22,54 +22,59 @@ module partition
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  logging (False, any, None)
-    'on'= enable this action; 'off'= disable this action;
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  vnp_events (True, any, None)
-    'part-create'= Create new partition; 'part-del'= Delete a partition;
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  email (False, any, None)
-    'on'= enable this action; 'off'= disable this action;
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                              |
+|                       |                               |                                                                      |
+|                       |                               |                                                                      |
++=======================+===============================+======================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                   |
+|                       |                               |                                                                      |
+| /required             |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                        |
+|                       |                               |                                                                      |
+| /required             |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                    |
+|                       |                               |                                                                      |
+| /required             |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                    |
+|                       |                               |                                                                      |
+| /required             |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                        |
+|                       |                               |                                                                      |
+| /required             |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                     |
+|                       |                               |                                                                      |
+|                       |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                      |
+|                       |                               |                                                                      |
+|                       |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| vnp_events            |                               | 'part-create'= Create new partition; 'part-del'= Delete a partition; |
+|                       |                               |                                                                      |
+| /required             |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| email                 |                               | 'on'= enable this action; 'off'= disable this action;                |
+|                       |                               |                                                                      |
+|                       |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| logging               |                               | 'on'= enable this action; 'off'= disable this action;                |
+|                       |                               |                                                                      |
+|                       |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                   |
+|                       |                               |                                                                      |
+|                       |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
+| user_tag              |                               | Customized tag                                                       |
+|                       |                               |                                                                      |
+|                       |                               |                                                                      |
++-----------------------+-------------------------------+----------------------------------------------------------------------+
 
 
 

@@ -22,92 +22,95 @@ Establish static routes
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ipv6_nexthop_ipv6 (False, any, None)
-    Field ipv6_nexthop_ipv6
-
-
-    distance (optional, any, None)
-      Distance value for this route
-
-
-    ipv6_nexthop (optional, any, None)
-      Forwarding router's address
-
-
-    description (optional, any, None)
-      Description for static route
-
-
-    trunk (optional, any, None)
-      Trunk interface (Trunk interface number)
-
-
-    ethernet (optional, any, None)
-      Ethernet interface (Ethernet interface number)
-
-
-    ve (optional, any, None)
-      Virtual Ethernet interface (Virtual Ethernet interface number)
-
-
-
-  ipv6_address (True, any, None)
-    IPV6 address
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ipv6_nexthop_tunnel (False, any, None)
-    Field ipv6_nexthop_tunnel
-
-
-    tunnel (optional, any, None)
-      Tunnel interface (Tunnel interface number)
-
-
-    distance_nexthop_tunnel (optional, any, None)
-      Distance value for this route
-
-
-    ipv6_nexthop_tunnel_addr (optional, any, None)
-      Forwarding router's address
-
-
-    description (optional, any, None)
-      Description for static route
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| Parameters                   | Choices/Defaults              | Comment                                                        |
+|                              |                               |                                                                |
+|                              |                               |                                                                |
++==============================+===============================+================================================================+
+| state                        | ['noop', 'present', 'absent'] | State of the object to be created.                             |
+|                              |                               |                                                                |
+| /required                    |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_host                 |                               | Host for AXAPI authentication                                  |
+|                              |                               |                                                                |
+| /required                    |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_username             |                               | Username for AXAPI authentication                              |
+|                              |                               |                                                                |
+| /required                    |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_password             |                               | Password for AXAPI authentication                              |
+|                              |                               |                                                                |
+| /required                    |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_port                 |                               | Port for AXAPI authentication                                  |
+|                              |                               |                                                                |
+| /required                    |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| a10_device_context_id        | ['1-8']                       | Device ID for aVCS configuration                               |
+|                              |                               |                                                                |
+|                              |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| a10_partition                |                               | Destination/target partition for object/command                |
+|                              |                               |                                                                |
+|                              |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| ipv6_address                 |                               | IPV6 address                                                   |
+|                              |                               |                                                                |
+| /required                    |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
+| ipv6_nexthop_ipv6            |                               | Field ipv6_nexthop_ipv6                                        |
+|                              |                               |                                                                |
+|                              |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | ipv6_nexthop             |                               | Forwarding router's address                                    |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | ethernet                 |                               | Ethernet interface (Ethernet interface number)                 |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | ve                       |                               | Virtual Ethernet interface (Virtual Ethernet interface number) |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | trunk                    |                               | Trunk interface (Trunk interface number)                       |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | distance                 |                               | Distance value for this route                                  |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | description              |                               | Description for static route                                   |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+| ipv6_nexthop_tunnel          |                               | Field ipv6_nexthop_tunnel                                      |
+|                              |                               |                                                                |
+|                              |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | tunnel                   |                               | Tunnel interface (Tunnel interface number)                     |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | ipv6_nexthop_tunnel_addr |                               | Forwarding router's address                                    |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | distance_nexthop_tunnel  |                               | Distance value for this route                                  |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+|   | description              |                               | Description for static route                                   |
+|   |                          |                               |                                                                |
+|   |                          |                               |                                                                |
++---+--------------------------+-------------------------------+----------------------------------------------------------------+
+| uuid                         |                               | uuid of the object                                             |
+|                              |                               |                                                                |
+|                              |                               |                                                                |
++------------------------------+-------------------------------+----------------------------------------------------------------+
 
 
 

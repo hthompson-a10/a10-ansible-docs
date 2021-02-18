@@ -22,91 +22,95 @@ Configure CGNv6 one-to-one pool
 Parameters
 ----------
 
-  pool_name (True, any, None)
-    Specify pool name or pool group
-
-
-  vrid (False, any, None)
-    Configure VRRP-A vrid (Specify ha VRRP-A vrid)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  start_address (False, any, None)
-    Configure start IP address of NAT pool
-
-
-  netmask (False, any, None)
-    Configure mask for pool
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    pool_name (optional, any, None)
-      Specify pool name or pool group
-
-
-    total_address (optional, any, None)
-      Total Address
-
-
-    used_address (optional, any, None)
-      Used Address
-
-
-    free_address (optional, any, None)
-      Free Address
-
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  group (False, any, None)
-    Share with a partition group (Partition Group Name)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  end_address (False, any, None)
-    Configure end IP address of NAT pool
-
-
-  partition (False, any, None)
-    Share with a single partition (Partition Name)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  shared (False, any, None)
-    Share this pool with other partitions (default= not shared)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                     |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++=======================+===============================+=============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                          |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                               |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                           |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                           |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                               |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                            |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command             |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| pool_name             |                               | Specify pool name or pool group                             |
+|                       |                               |                                                             |
+| /required             |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| start_address         |                               | Configure start IP address of NAT pool                      |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| end_address           |                               | Configure end IP address of NAT pool                        |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| netmask               |                               | Configure mask for pool                                     |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| vrid                  |                               | Configure VRRP-A vrid (Specify ha VRRP-A vrid)              |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| shared                |                               | Share this pool with other partitions (default= not shared) |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| group                 |                               | Share with a partition group (Partition Group Name)         |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| partition             |                               | Share with a single partition (Partition Name)              |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                          |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++-----------------------+-------------------------------+-------------------------------------------------------------+
+| stats                 |                               | Field stats                                                 |
+|                       |                               |                                                             |
+|                       |                               |                                                             |
++---+-------------------+-------------------------------+-------------------------------------------------------------+
+|   | total_address     |                               | Total Address                                               |
+|   |                   |                               |                                                             |
+|   |                   |                               |                                                             |
++---+-------------------+-------------------------------+-------------------------------------------------------------+
+|   | used_address      |                               | Used Address                                                |
+|   |                   |                               |                                                             |
+|   |                   |                               |                                                             |
++---+-------------------+-------------------------------+-------------------------------------------------------------+
+|   | free_address      |                               | Free Address                                                |
+|   |                   |                               |                                                             |
+|   |                   |                               |                                                             |
++---+-------------------+-------------------------------+-------------------------------------------------------------+
+|   | pool_name         |                               | Specify pool name or pool group                             |
+|   |                   |                               |                                                             |
+|   |                   |                               |                                                             |
++---+-------------------+-------------------------------+-------------------------------------------------------------+
 
 
 

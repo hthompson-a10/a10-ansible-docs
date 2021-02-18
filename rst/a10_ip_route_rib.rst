@@ -22,118 +22,119 @@ Establish static routes
 Parameters
 ----------
 
-  ip_nexthop_lif (False, any, None)
-    Field ip_nexthop_lif
-
-
-    lif (optional, any, None)
-      LIF Interface (Logical tunnel interface number)
-
-
-    description_nexthop_lif (optional, any, None)
-      Description for static route
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ip_nexthop_ipv4 (False, any, None)
-    Field ip_nexthop_ipv4
-
-
-    description_nexthop_ip (optional, any, None)
-      Description for static route
-
-
-    ip_next_hop (optional, any, None)
-      Forwarding router's address
-
-
-    distance_nexthop_ip (optional, any, None)
-      Distance value for this route
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ip_mask (True, any, None)
-    Destination prefix mask
-
-
-  ip_nexthop_tunnel (False, any, None)
-    Field ip_nexthop_tunnel
-
-
-    tunnel (optional, any, None)
-      Tunnel interface (Tunnel interface number)
-
-
-    distance_nexthop_tunnel (optional, any, None)
-      Distance value for this route
-
-
-    ip_next_hop_tunnel (optional, any, None)
-      Forwarding router's address
-
-
-    description_nexthop_tunnel (optional, any, None)
-      Description for static route
-
-
-
-  ip_dest_addr (True, any, None)
-    Destination prefix
-
-
-  ip_nexthop_partition (False, any, None)
-    Field ip_nexthop_partition
-
-
-    description_nexthop_partition (optional, any, None)
-      Description for static route
-
-
-    partition_name (optional, any, None)
-      Name of network partition
-
-
-    vrid_num_in_partition (optional, any, None)
-      Specify ha VRRP-A vrid
-
-
-    description_partition_vrid (optional, any, None)
-      Description for static route
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                        | Choices/Defaults              | Comment                                         |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++===================================+===============================+=================================================+
+| state                             | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                                   |                               |                                                 |
+| /required                         |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                      |                               | Host for AXAPI authentication                   |
+|                                   |                               |                                                 |
+| /required                         |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username                  |                               | Username for AXAPI authentication               |
+|                                   |                               |                                                 |
+| /required                         |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password                  |                               | Password for AXAPI authentication               |
+|                                   |                               |                                                 |
+| /required                         |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                      |                               | Port for AXAPI authentication                   |
+|                                   |                               |                                                 |
+| /required                         |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id             | ['1-8']                       | Device ID for aVCS configuration                |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                     |                               | Destination/target partition for object/command |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| ip_dest_addr                      |                               | Destination prefix                              |
+|                                   |                               |                                                 |
+| /required                         |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| ip_mask                           |                               | Destination prefix mask                         |
+|                                   |                               |                                                 |
+| /required                         |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
+| ip_nexthop_ipv4                   |                               | Field ip_nexthop_ipv4                           |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | ip_next_hop                   |                               | Forwarding router's address                     |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | distance_nexthop_ip           |                               | Distance value for this route                   |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | description_nexthop_ip        |                               | Description for static route                    |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+| ip_nexthop_lif                    |                               | Field ip_nexthop_lif                            |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | lif                           |                               | LIF Interface (Logical tunnel interface number) |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | description_nexthop_lif       |                               | Description for static route                    |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+| ip_nexthop_tunnel                 |                               | Field ip_nexthop_tunnel                         |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | tunnel                        |                               | Tunnel interface (Tunnel interface number)      |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | ip_next_hop_tunnel            |                               | Forwarding router's address                     |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | distance_nexthop_tunnel       |                               | Distance value for this route                   |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | description_nexthop_tunnel    |                               | Description for static route                    |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+| ip_nexthop_partition              |                               | Field ip_nexthop_partition                      |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | partition_name                |                               | Name of network partition                       |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | vrid_num_in_partition         |                               | Specify ha VRRP-A vrid                          |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | description_nexthop_partition |                               | Description for static route                    |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+|   | description_partition_vrid    |                               | Description for static route                    |
+|   |                               |                               |                                                 |
+|   |                               |                               |                                                 |
++---+-------------------------------+-------------------------------+-------------------------------------------------+
+| uuid                              |                               | uuid of the object                              |
+|                                   |                               |                                                 |
+|                                   |                               |                                                 |
++-----------------------------------+-------------------------------+-------------------------------------------------+
 
 
 

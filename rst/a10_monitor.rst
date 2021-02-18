@@ -22,106 +22,111 @@ System monitor configuration
 Parameters
 ----------
 
-  ctrl_cpu (False, any, None)
-    Monitor control CPU threshold (Threshold value in percentage, default 90)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  warn_temp (False, any, None)
-    Monitor warning system temperature threshold (Threshold value in Celsius, default 68)
-
-
-  buffer_drop (False, any, None)
-    Monitor buffer drop threshold (Threshold value)
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  conn_type1 (False, any, None)
-    Conn resource type 1 (Threshold value, default 32767)
-
-
-  conn_type0 (False, any, None)
-    Conn resource type 0 (Threshold value, default 32767)
-
-
-  conn_type3 (False, any, None)
-    Conn resource type 3 (Threshold value, default 32767)
-
-
-  conn_type2 (False, any, None)
-    Conn resource type 2 (Threshold value, default 32767)
-
-
-  conn_type4 (False, any, None)
-    Conn resource type 4 (Threshold value, default 32767)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  disk (False, any, None)
-    Monitor hard disk usage threshold (Threshold value in percentage, default 85)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  smp_type0 (False, any, None)
-    SMP resource type 0 (Threshold value, default 32767)
-
-
-  smp_type1 (False, any, None)
-    SMP resource type 1 (Threshold value, default 32767)
-
-
-  smp_type2 (False, any, None)
-    SMP resource type 2 (Threshold value, default 32767)
-
-
-  smp_type3 (False, any, None)
-    SMP resource type 3 (Threshold value, default 32767)
-
-
-  smp_type4 (False, any, None)
-    SMP resource type 4 (Threshold value, default 32767)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  buffer_usage (False, any, None)
-    Monitor IO buffer usage threshold (Threshold value)
-
-
-  memory (False, any, None)
-    Monitor memory usage threshold (Threshold value in percentage, default 95)
-
-
-  data_cpu (False, any, None)
-    Monitor data CPU threshold (Threshold value in percentage, default 90)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                               |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++=======================+===============================+=======================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                    |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                         |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                     |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                     |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                         |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                      |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                       |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| disk                  |                               | Monitor hard disk usage threshold (Threshold value in percentage, default 85)         |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| memory                |                               | Monitor memory usage threshold (Threshold value in percentage, default 95)            |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ctrl_cpu              |                               | Monitor control CPU threshold (Threshold value in percentage, default 90)             |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| data_cpu              |                               | Monitor data CPU threshold (Threshold value in percentage, default 90)                |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| buffer_usage          |                               | Monitor IO buffer usage threshold (Threshold value)                                   |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| buffer_drop           |                               | Monitor buffer drop threshold (Threshold value)                                       |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| warn_temp             |                               | Monitor warning system temperature threshold (Threshold value in Celsius, default 68) |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| conn_type0            |                               | Conn resource type 0 (Threshold value, default 32767)                                 |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| conn_type1            |                               | Conn resource type 1 (Threshold value, default 32767)                                 |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| conn_type2            |                               | Conn resource type 2 (Threshold value, default 32767)                                 |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| conn_type3            |                               | Conn resource type 3 (Threshold value, default 32767)                                 |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| conn_type4            |                               | Conn resource type 4 (Threshold value, default 32767)                                 |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| smp_type0             |                               | SMP resource type 0 (Threshold value, default 32767)                                  |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| smp_type1             |                               | SMP resource type 1 (Threshold value, default 32767)                                  |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| smp_type2             |                               | SMP resource type 2 (Threshold value, default 32767)                                  |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| smp_type3             |                               | SMP resource type 3 (Threshold value, default 32767)                                  |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| smp_type4             |                               | SMP resource type 4 (Threshold value, default 32767)                                  |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                    |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
 
 
 

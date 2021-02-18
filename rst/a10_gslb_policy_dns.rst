@@ -22,281 +22,283 @@ DNS related policy
 Parameters
 ----------
 
-  server_sec (False, any, None)
-    Provide DNSSEC support
-
-
-  geoloc_alias (False, any, None)
-    Return alias name by geo-location
-
-
-  server_naptr (False, any, None)
-    Provide NAPTR Records
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  block_value (False, any, None)
-    Field block_value
-
-
-    block_value (optional, any, None)
-      Specify Type Number
-
-
-
-  geoloc_policy (False, any, None)
-    Apply different policy by geo-location
-
-
-  proxy_block_port_range_list (False, any, None)
-    Field proxy_block_port_range_list
-
-
-    proxy_block_range_to (optional, any, None)
-      To
-
-
-    proxy_block_range_from (optional, any, None)
-      Specify Type Range (From)
-
-
-
-  sticky (False, any, None)
-    Make DNS Record sticky for certain time
-
-
-  delegation (False, any, None)
-    Zone Delegation
-
-
-  ip_replace (False, any, None)
-    Replace DNS Server Response with GSLB Service-IPs
-
-
-  server_cname (False, any, None)
-    Provide CNAME Records
-
-
-  ttl (False, any, None)
-    Specify the TTL value contained in DNS record (TTL value, unit= second, default is 10)
-
-
-  server_ptr (False, any, None)
-    Provide PTR Records
-
-
-  aging_time (False, any, None)
-    Specify aging-time, default is TTL in DNS record, unit= second (Aging time, default 0 means using TTL in DNS record as aging time)
-
-
-  geoloc_action (False, any, None)
-    Apply DNS action by geo-location
-
-
-  dynamic_preference (False, any, None)
-    Make dynamically change the preference
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  server_any_with_metric (False, any, None)
-    Provide All Records with GSLB Metrics applied to A/AAAA Records
-
-
-  external_soa (False, any, None)
-    Return DNS response with external SOA Record
-
-
-  server_any (False, any, None)
-    Provide All Records
-
-
-  selected_only_value (False, any, None)
-    Answer Number
-
-
-  cache (False, any, None)
-    Cache DNS Server response
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  server_auto_ptr (False, any, None)
-    Provide PTR Records automatically
-
-
-  server_mx (False, any, None)
-    Provide MX Records
-
-
-  server_authoritative (False, any, None)
-    As authoritative server
-
-
-  template (False, any, None)
-    Logging template (Logging Template Name)
-
-
-  ipv6 (False, any, None)
-    Field ipv6
-
-
-    dns_ipv6_option (optional, any, None)
-      'mix'= Return both AAAA Record and A Record; 'smart'= Return AAAA Record by DNS Query Type; 'mapping'= Map A Record to AAAA Record;
-
-
-    dns_ipv6_mapping_type (optional, any, None)
-      'addition'= Append Mapped Record in DNS Addition Section; 'answer'= Append Mapped Record in DNS Answer Section; 'exclusive'= Only return AAAA Record; 'replace'= Replace Record with Mapped Record;
-
-
-
-  dynamic_weight (False, any, None)
-    dynamically change the weight
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  server_auto_ns (False, any, None)
-    Provide A-Records for NS-Records automatically
-
-
-  use_server_ttl (False, any, None)
-    Use DNS Server Response TTL value in GSLB Proxy mode
-
-
-  block_type (False, any, None)
-    Field block_type
-
-
-  dns_auto_map (False, any, None)
-    Automatically build DNS Infrastructure
-
-
-  dns_addition_mx (False, any, None)
-    Append MX Records in Addition Section
-
-
-  active_only_fail_safe (False, any, None)
-    Continue if no candidate
-
-
-  cname_detect (False, any, None)
-    Apply GSLB for DNS Server response when service is Canonical Name (CNAME)
-
-
-  backup_server (False, any, None)
-    Return fallback server when fail
-
-
-  server_full_list (False, any, None)
-    Append All A Records in Authoritative Section
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  sticky_ipv6_mask (False, any, None)
-    Specify IPv6 mask length, default is 128
-
-
-  policy_name (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  sticky_aging_time (False, any, None)
-    Specify aging-time, unit= min, default is 5 (Aging time)
-
-
-  server_addition_mx (False, any, None)
-    Append MX Records in Addition Section
-
-
-  active_only (False, any, None)
-    Only keep active servers
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  backup_alias (False, any, None)
-    Return alias name when fail
-
-
-  logging (False, any, None)
-    'none'= None; 'query'= DNS Query; 'response'= DNS Response; 'both'= Both DNS Query and Response;
-
-
-  server_ns_list (False, any, None)
-    Append All NS Records in Authoritative Section
-
-
-  selected_only (False, any, None)
-    Only keep selected servers
-
-
-  external_ip (False, any, None)
-    Return DNS response with external IP address
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  hint (False, any, None)
-    'none'= None; 'answer'= Append Hint Records in DNS Answer Section; 'addition'= Append Hint Records in DNS Addition Section;
-
-
-  server_txt (False, any, None)
-    Provide TXT Records
-
-
-  server (False, any, None)
-    Run GSLB as DNS server mode
-
-
-  server_srv (False, any, None)
-    Provide SRV Records
-
-
-  block_action (False, any, None)
-    Specify Action
-
-
-  server_mode_only (False, any, None)
-    Only run GSLB as DNS server mode
-
-
-  action_type (False, any, None)
-    'drop'= Drop query; 'reject'= Send refuse response; 'ignore'= Send empty response;
-
-
-  action (False, any, None)
-    Apply DNS action for service
-
-
-  server_ns (False, any, None)
-    Provide NS Records
-
-
-  sticky_mask (False, any, None)
-    Specify IP mask, default is /32
-
-
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                                                                                                                                                                             |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++=============================+===============================+=====================================================================================================================================================================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                                                                                                  |
+|                             |                               |                                                                                                                                                                                                     |
+| /required                   |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                                                                                                                                                                       |
+|                             |                               |                                                                                                                                                                                                     |
+| /required                   |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication                                                                                                                                                                   |
+|                             |                               |                                                                                                                                                                                                     |
+| /required                   |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication                                                                                                                                                                   |
+|                             |                               |                                                                                                                                                                                                     |
+| /required                   |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                                                                                                                                                                       |
+|                             |                               |                                                                                                                                                                                                     |
+| /required                   |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                                                                                                                                                                    |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| policy_name                 |                               | Key to identify parent object                                                                                                                                                                       |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| action                      |                               | Apply DNS action for service                                                                                                                                                                        |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| active_only                 |                               | Only keep active servers                                                                                                                                                                            |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| active_only_fail_safe       |                               | Continue if no candidate                                                                                                                                                                            |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dns_addition_mx             |                               | Append MX Records in Addition Section                                                                                                                                                               |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dns_auto_map                |                               | Automatically build DNS Infrastructure                                                                                                                                                              |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| backup_alias                |                               | Return alias name when fail                                                                                                                                                                         |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| backup_server               |                               | Return fallback server when fail                                                                                                                                                                    |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| external_ip                 |                               | Return DNS response with external IP address                                                                                                                                                        |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| external_soa                |                               | Return DNS response with external SOA Record                                                                                                                                                        |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cname_detect                |                               | Apply GSLB for DNS Server response when service is Canonical Name (CNAME)                                                                                                                           |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ip_replace                  |                               | Replace DNS Server Response with GSLB Service-IPs                                                                                                                                                   |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| geoloc_alias                |                               | Return alias name by geo-location                                                                                                                                                                   |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| geoloc_action               |                               | Apply DNS action by geo-location                                                                                                                                                                    |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| geoloc_policy               |                               | Apply different policy by geo-location                                                                                                                                                              |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| selected_only               |                               | Only keep selected servers                                                                                                                                                                          |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| selected_only_value         |                               | Answer Number                                                                                                                                                                                       |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| cache                       |                               | Cache DNS Server response                                                                                                                                                                           |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| aging_time                  |                               | Specify aging-time, default is TTL in DNS record, unit= second (Aging time, default 0 means using TTL in DNS record as aging time)                                                                  |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| delegation                  |                               | Zone Delegation                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| hint                        |                               | 'none'= None; 'answer'= Append Hint Records in DNS Answer Section; 'addition'= Append Hint Records in DNS Addition Section;                                                                         |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| logging                     |                               | 'none'= None; 'query'= DNS Query; 'response'= DNS Response; 'both'= Both DNS Query and Response;                                                                                                    |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| template                    |                               | Logging template (Logging Template Name)                                                                                                                                                            |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ttl                         |                               | Specify the TTL value contained in DNS record (TTL value, unit= second, default is 10)                                                                                                              |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| use_server_ttl              |                               | Use DNS Server Response TTL value in GSLB Proxy mode                                                                                                                                                |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server                      |                               | Run GSLB as DNS server mode                                                                                                                                                                         |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_srv                  |                               | Provide SRV Records                                                                                                                                                                                 |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_mx                   |                               | Provide MX Records                                                                                                                                                                                  |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_naptr                |                               | Provide NAPTR Records                                                                                                                                                                               |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_addition_mx          |                               | Append MX Records in Addition Section                                                                                                                                                               |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_ns                   |                               | Provide NS Records                                                                                                                                                                                  |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_auto_ns              |                               | Provide A-Records for NS-Records automatically                                                                                                                                                      |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_ptr                  |                               | Provide PTR Records                                                                                                                                                                                 |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_auto_ptr             |                               | Provide PTR Records automatically                                                                                                                                                                   |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_txt                  |                               | Provide TXT Records                                                                                                                                                                                 |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_any                  |                               | Provide All Records                                                                                                                                                                                 |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_any_with_metric      |                               | Provide All Records with GSLB Metrics applied to A/AAAA Records                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_authoritative        |                               | As authoritative server                                                                                                                                                                             |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_sec                  |                               | Provide DNSSEC support                                                                                                                                                                              |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_ns_list              |                               | Append All NS Records in Authoritative Section                                                                                                                                                      |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_full_list            |                               | Append All A Records in Authoritative Section                                                                                                                                                       |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_mode_only            |                               | Only run GSLB as DNS server mode                                                                                                                                                                    |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| server_cname                |                               | Provide CNAME Records                                                                                                                                                                               |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ipv6                        |                               | Field ipv6                                                                                                                                                                                          |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | dns_ipv6_option         |                               | 'mix'= Return both AAAA Record and A Record; 'smart'= Return AAAA Record by DNS Query Type; 'mapping'= Map A Record to AAAA Record;                                                                 |
+|   |                         |                               |                                                                                                                                                                                                     |
+|   |                         |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | dns_ipv6_mapping_type   |                               | 'addition'= Append Mapped Record in DNS Addition Section; 'answer'= Append Mapped Record in DNS Answer Section; 'exclusive'= Only return AAAA Record; 'replace'= Replace Record with Mapped Record; |
+|   |                         |                               |                                                                                                                                                                                                     |
+|   |                         |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| block_action                |                               | Specify Action                                                                                                                                                                                      |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| action_type                 |                               | 'drop'= Drop query; 'reject'= Send refuse response; 'ignore'= Send empty response;                                                                                                                  |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| proxy_block_port_range_list |                               | Field proxy_block_port_range_list                                                                                                                                                                   |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | proxy_block_range_from  |                               | Specify Type Range (From)                                                                                                                                                                           |
+|   |                         |                               |                                                                                                                                                                                                     |
+|   |                         |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | proxy_block_range_to    |                               | To                                                                                                                                                                                                  |
+|   |                         |                               |                                                                                                                                                                                                     |
+|   |                         |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| block_value                 |                               | Field block_value                                                                                                                                                                                   |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|   | block_value             |                               | Specify Type Number                                                                                                                                                                                 |
+|   |                         |                               |                                                                                                                                                                                                     |
+|   |                         |                               |                                                                                                                                                                                                     |
++---+-------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| block_type                  |                               | Field block_type                                                                                                                                                                                    |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sticky                      |                               | Make DNS Record sticky for certain time                                                                                                                                                             |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sticky_mask                 |                               | Specify IP mask, default is /32                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sticky_ipv6_mask            |                               | Specify IPv6 mask length, default is 128                                                                                                                                                            |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sticky_aging_time           |                               | Specify aging-time, unit= min, default is 5 (Aging time)                                                                                                                                            |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dynamic_preference          |                               | Make dynamically change the preference                                                                                                                                                              |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dynamic_weight              |                               | dynamically change the weight                                                                                                                                                                       |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| uuid                        |                               | uuid of the object                                                                                                                                                                                  |
+|                             |                               |                                                                                                                                                                                                     |
+|                             |                               |                                                                                                                                                                                                     |
++-----------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 

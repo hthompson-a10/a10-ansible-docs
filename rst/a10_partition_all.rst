@@ -22,55 +22,59 @@ Display all partitions in the system
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    manageable (optional, any, None)
-      Field manageable
-
-
-    partition_list (optional, any, None)
-      Field partition_list
-
-
-    active_partition_count (optional, any, None)
-      Field active_partition_count
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                         |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++============================+===============================+=================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                       |                               | uuid of the object                              |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| oper                       |                               | Field oper                                      |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | partition_list         |                               | Field partition_list                            |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | active_partition_count |                               | Field active_partition_count                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | manageable             |                               | Field manageable                                |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
 
 
 

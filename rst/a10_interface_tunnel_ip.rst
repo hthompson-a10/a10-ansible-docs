@@ -22,109 +22,111 @@ Global IP configuration subcommands
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  generate_membership_query_val (False, any, None)
-    1 - 255 (Default is 125)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ospf (False, any, None)
-    Field ospf
-
-
-    ospf_global (optional, any, None)
-      Field ospf_global
-
-
-    ospf_ip_list (optional, any, None)
-      Field ospf_ip_list
-
-
-
-  max_resp_time (False, any, None)
-    Max Response Time (Default is 100)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  rip (False, any, None)
-    Field rip
-
-
-    split_horizon_cfg (optional, any, None)
-      Field split_horizon_cfg
-
-
-    receive_packet (optional, any, None)
-      Enable receiving packet through the specified interface
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    receive_cfg (optional, any, None)
-      Field receive_cfg
-
-
-    authentication (optional, any, None)
-      Field authentication
-
-
-    send_packet (optional, any, None)
-      Enable sending packets through the specified interface
-
-
-    send_cfg (optional, any, None)
-      Field send_cfg
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  address (False, any, None)
-    Field address
-
-
-    ip_cfg (optional, any, None)
-      Field ip_cfg
-
-
-
-  tunnel_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  generate_membership_query (False, any, None)
-    Enable Membership Query
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| Parameters                    | Choices/Defaults              | Comment                                                 |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++===============================+===============================+=========================================================+
+| state                         | ['noop', 'present', 'absent'] | State of the object to be created.                      |
+|                               |                               |                                                         |
+| /required                     |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| ansible_host                  |                               | Host for AXAPI authentication                           |
+|                               |                               |                                                         |
+| /required                     |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| ansible_username              |                               | Username for AXAPI authentication                       |
+|                               |                               |                                                         |
+| /required                     |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| ansible_password              |                               | Password for AXAPI authentication                       |
+|                               |                               |                                                         |
+| /required                     |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| ansible_port                  |                               | Port for AXAPI authentication                           |
+|                               |                               |                                                         |
+| /required                     |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| a10_device_context_id         | ['1-8']                       | Device ID for aVCS configuration                        |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| a10_partition                 |                               | Destination/target partition for object/command         |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| tunnel_ifnum                  |                               | Key to identify parent object                           |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| address                       |                               | Field address                                           |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | ip_cfg                    |                               | Field ip_cfg                                            |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+| generate_membership_query     |                               | Enable Membership Query                                 |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| generate_membership_query_val |                               | 1 - 255 (Default is 125)                                |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| max_resp_time                 |                               | Max Response Time (Default is 100)                      |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| uuid                          |                               | uuid of the object                                      |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++-------------------------------+-------------------------------+---------------------------------------------------------+
+| rip                           |                               | Field rip                                               |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | authentication            |                               | Field authentication                                    |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | send_packet               |                               | Enable sending packets through the specified interface  |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | receive_packet            |                               | Enable receiving packet through the specified interface |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | send_cfg                  |                               | Field send_cfg                                          |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | receive_cfg               |                               | Field receive_cfg                                       |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | split_horizon_cfg         |                               | Field split_horizon_cfg                                 |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | uuid                      |                               | uuid of the object                                      |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+| ospf                          |                               | Field ospf                                              |
+|                               |                               |                                                         |
+|                               |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | ospf_global               |                               | Field ospf_global                                       |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
+|   | ospf_ip_list              |                               | Field ospf_ip_list                                      |
+|   |                           |                               |                                                         |
+|   |                           |                               |                                                         |
++---+---------------------------+-------------------------------+---------------------------------------------------------+
 
 
 

@@ -22,120 +22,123 @@ Configure CGNV6 Resource Usage
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    lsn_nat_addr_count_max (optional, any, None)
-      Field lsn_nat_addr_count_max
-
-
-    fixed_nat_inside_user_count_min (optional, any, None)
-      Field fixed_nat_inside_user_count_min
-
-
-    fixed_nat_inside_user_count_default (optional, any, None)
-      Field fixed_nat_inside_user_count_default
-
-
-    lsn_nat_addr_count_default (optional, any, None)
-      Field lsn_nat_addr_count_default
-
-
-    radius_table_size_min (optional, any, None)
-      Field radius_table_size_min
-
-
-    fixed_nat_ip_addr_count_min (optional, any, None)
-      Field fixed_nat_ip_addr_count_min
-
-
-    radius_table_size_max (optional, any, None)
-      Field radius_table_size_max
-
-
-    fixed_nat_inside_user_count_max (optional, any, None)
-      Field fixed_nat_inside_user_count_max
-
-
-    fixed_nat_ip_addr_count_default (optional, any, None)
-      Field fixed_nat_ip_addr_count_default
-
-
-    fixed_nat_ip_addr_count_max (optional, any, None)
-      Field fixed_nat_ip_addr_count_max
-
-
-    lsn_nat_addr_count_min (optional, any, None)
-      Field lsn_nat_addr_count_min
-
-
-    radius_table_size_default (optional, any, None)
-      Field radius_table_size_default
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  radius_table_size (False, any, None)
-    Total configurable CGNV6 RADIUS Table entries
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  stateless_entries (False, any, None)
-    Field stateless_entries
-
-
-    l4_session_count (optional, any, None)
-      Helper size for CGN Stateless Technologies
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  fixed_nat_ip_addr_count (False, any, None)
-    Total configurable CGNV6 Fixed NAT addresses
-
-
-  fixed_nat_inside_user_count (False, any, None)
-    Total configurable CGNV6 Fixed NAT inside users
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  lsn_nat_addr_count (False, any, None)
-    Total configurable CGNV6 NAT Pool addresses
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                              | Choices/Defaults              | Comment                                         |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++=========================================+===============================+=================================================+
+| state                                   | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                                         |                               |                                                 |
+| /required                               |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                            |                               | Host for AXAPI authentication                   |
+|                                         |                               |                                                 |
+| /required                               |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username                        |                               | Username for AXAPI authentication               |
+|                                         |                               |                                                 |
+| /required                               |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password                        |                               | Password for AXAPI authentication               |
+|                                         |                               |                                                 |
+| /required                               |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                            |                               | Port for AXAPI authentication                   |
+|                                         |                               |                                                 |
+| /required                               |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id                   | ['1-8']                       | Device ID for aVCS configuration                |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                           |                               | Destination/target partition for object/command |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| lsn_nat_addr_count                      |                               | Total configurable CGNV6 NAT Pool addresses     |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| fixed_nat_ip_addr_count                 |                               | Total configurable CGNV6 Fixed NAT addresses    |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| fixed_nat_inside_user_count             |                               | Total configurable CGNV6 Fixed NAT inside users |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| radius_table_size                       |                               | Total configurable CGNV6 RADIUS Table entries   |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| uuid                                    |                               | uuid of the object                              |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++-----------------------------------------+-------------------------------+-------------------------------------------------+
+| stateless_entries                       |                               | Field stateless_entries                         |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | l4_session_count                    |                               | Helper size for CGN Stateless Technologies      |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | uuid                                |                               | uuid of the object                              |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+| oper                                    |                               | Field oper                                      |
+|                                         |                               |                                                 |
+|                                         |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | lsn_nat_addr_count_min              |                               | Field lsn_nat_addr_count_min                    |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | lsn_nat_addr_count_max              |                               | Field lsn_nat_addr_count_max                    |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | lsn_nat_addr_count_default          |                               | Field lsn_nat_addr_count_default                |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | fixed_nat_ip_addr_count_min         |                               | Field fixed_nat_ip_addr_count_min               |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | fixed_nat_ip_addr_count_max         |                               | Field fixed_nat_ip_addr_count_max               |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | fixed_nat_ip_addr_count_default     |                               | Field fixed_nat_ip_addr_count_default           |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | fixed_nat_inside_user_count_min     |                               | Field fixed_nat_inside_user_count_min           |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | fixed_nat_inside_user_count_max     |                               | Field fixed_nat_inside_user_count_max           |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | fixed_nat_inside_user_count_default |                               | Field fixed_nat_inside_user_count_default       |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | radius_table_size_min               |                               | Field radius_table_size_min                     |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | radius_table_size_max               |                               | Field radius_table_size_max                     |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
+|   | radius_table_size_default           |                               | Field radius_table_size_default                 |
+|   |                                     |                               |                                                 |
+|   |                                     |                               |                                                 |
++---+-------------------------------------+-------------------------------+-------------------------------------------------+
 
 
 

@@ -22,141 +22,139 @@ Open Shortest Path First for IPv6 (OSPFv3)
 Parameters
 ----------
 
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  hello_interval_cfg (False, any, None)
-    Field hello_interval_cfg
-
-
-    instance_id (optional, any, None)
-      Specify the interface instance ID
-
-
-    hello_interval (optional, any, None)
-      Time between HELLO packets (Seconds)
-
-
-
-  cost_cfg (False, any, None)
-    Field cost_cfg
-
-
-    instance_id (optional, any, None)
-      Specify the interface instance ID
-
-
-    cost (optional, any, None)
-      Interface cost
-
-
-
-  dead_interval_cfg (False, any, None)
-    Field dead_interval_cfg
-
-
-    instance_id (optional, any, None)
-      Specify the interface instance ID
-
-
-    dead_interval (optional, any, None)
-      Interval after which a neighbor is declared dead (Seconds)
-
-
-
-  disable (False, any, None)
-    Disable BFD
-
-
-  mtu_ignore_cfg (False, any, None)
-    Field mtu_ignore_cfg
-
-
-    instance_id (optional, any, None)
-      Specify the interface instance ID
-
-
-    mtu_ignore (optional, any, None)
-      Ignores the MTU in DBD packets
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  loopback_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  bfd (False, any, None)
-    Bidirectional Forwarding Detection (BFD)
-
-
-  retransmit_interval_cfg (False, any, None)
-    Field retransmit_interval_cfg
-
-
-    instance_id (optional, any, None)
-      Specify the interface instance ID
-
-
-    retransmit_interval (optional, any, None)
-      Time between retransmitting lost link state advertisements (Seconds)
-
-
-
-  transmit_delay_cfg (False, any, None)
-    Field transmit_delay_cfg
-
-
-    instance_id (optional, any, None)
-      Specify the interface instance ID
-
-
-    transmit_delay (optional, any, None)
-      Link state transmit delay (Seconds)
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  priority_cfg (False, any, None)
-    Field priority_cfg
-
-
-    priority (optional, any, None)
-      Router priority
-
-
-    instance_id (optional, any, None)
-      Specify the interface instance ID
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                                              |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++=========================+===============================+======================================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.                                   |
+|                         |                               |                                                                      |
+| /required               |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                                        |
+|                         |                               |                                                                      |
+| /required               |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication                                    |
+|                         |                               |                                                                      |
+| /required               |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication                                    |
+|                         |                               |                                                                      |
+| /required               |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                                        |
+|                         |                               |                                                                      |
+| /required               |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                                     |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command                      |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| loopback_ifnum          |                               | Key to identify parent object                                        |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| bfd                     |                               | Bidirectional Forwarding Detection (BFD)                             |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| disable                 |                               | Disable BFD                                                          |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
+| cost_cfg                |                               | Field cost_cfg                                                       |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | cost                |                               | Interface cost                                                       |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | instance_id         |                               | Specify the interface instance ID                                    |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+| dead_interval_cfg       |                               | Field dead_interval_cfg                                              |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | dead_interval       |                               | Interval after which a neighbor is declared dead (Seconds)           |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | instance_id         |                               | Specify the interface instance ID                                    |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+| hello_interval_cfg      |                               | Field hello_interval_cfg                                             |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | hello_interval      |                               | Time between HELLO packets (Seconds)                                 |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | instance_id         |                               | Specify the interface instance ID                                    |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+| mtu_ignore_cfg          |                               | Field mtu_ignore_cfg                                                 |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | mtu_ignore          |                               | Ignores the MTU in DBD packets                                       |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | instance_id         |                               | Specify the interface instance ID                                    |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+| priority_cfg            |                               | Field priority_cfg                                                   |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | priority            |                               | Router priority                                                      |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | instance_id         |                               | Specify the interface instance ID                                    |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+| retransmit_interval_cfg |                               | Field retransmit_interval_cfg                                        |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | retransmit_interval |                               | Time between retransmitting lost link state advertisements (Seconds) |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | instance_id         |                               | Specify the interface instance ID                                    |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+| transmit_delay_cfg      |                               | Field transmit_delay_cfg                                             |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | transmit_delay      |                               | Link state transmit delay (Seconds)                                  |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+|   | instance_id         |                               | Specify the interface instance ID                                    |
+|   |                     |                               |                                                                      |
+|   |                     |                               |                                                                      |
++---+---------------------+-------------------------------+----------------------------------------------------------------------+
+| uuid                    |                               | uuid of the object                                                   |
+|                         |                               |                                                                      |
+|                         |                               |                                                                      |
++-------------------------+-------------------------------+----------------------------------------------------------------------+
 
 
 

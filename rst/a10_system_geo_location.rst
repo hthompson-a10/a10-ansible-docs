@@ -22,92 +22,95 @@ Configure system global geo-location
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  geoloc_load_file_list (False, any, None)
-    Field geoloc_load_file_list
-
-
-    geo_location_load_filename (optional, any, None)
-      Specify file to be loaded
-
-
-    template_name (optional, any, None)
-      CSV template to load this file
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  geolite2_city_include_ipv6 (False, any, None)
-    Include IPv6 address
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  geo_location_iana (False, any, None)
-    Load built-in IANA Database
-
-
-  geo_location_geolite2_country (False, any, None)
-    Load built-in Maxmind GeoLite2-Country database. Database available from http=//www.maxmind.com
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  geo_location_geolite2_city (False, any, None)
-    Load built-in Maxmind GeoLite2-City database. Database available from http=//www.maxmind.com
-
-
-  entry_list (False, any, None)
-    Field entry_list
-
-
-    geo_locn_multiple_addresses (optional, any, None)
-      Field geo_locn_multiple_addresses
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    geo_locn_obj_name (optional, any, None)
-      Specify geo-location name, section range is (1-15)
-
-
-
-  geolite2_country_include_ipv6 (False, any, None)
-    Include IPv6 address
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| Parameters                      | Choices/Defaults              | Comment                                                                                         |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++=================================+===============================+=================================================================================================+
+| state                           | ['noop', 'present', 'absent'] | State of the object to be created.                                                              |
+|                                 |                               |                                                                                                 |
+| /required                       |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| ansible_host                    |                               | Host for AXAPI authentication                                                                   |
+|                                 |                               |                                                                                                 |
+| /required                       |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| ansible_username                |                               | Username for AXAPI authentication                                                               |
+|                                 |                               |                                                                                                 |
+| /required                       |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| ansible_password                |                               | Password for AXAPI authentication                                                               |
+|                                 |                               |                                                                                                 |
+| /required                       |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| ansible_port                    |                               | Port for AXAPI authentication                                                                   |
+|                                 |                               |                                                                                                 |
+| /required                       |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| a10_device_context_id           | ['1-8']                       | Device ID for aVCS configuration                                                                |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| a10_partition                   |                               | Destination/target partition for object/command                                                 |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| geo_location_iana               |                               | Load built-in IANA Database                                                                     |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| geo_location_geolite2_city      |                               | Load built-in Maxmind GeoLite2-City database. Database available from http=//www.maxmind.com    |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| geolite2_city_include_ipv6      |                               | Include IPv6 address                                                                            |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| geo_location_geolite2_country   |                               | Load built-in Maxmind GeoLite2-Country database. Database available from http=//www.maxmind.com |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| geolite2_country_include_ipv6   |                               | Include IPv6 address                                                                            |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| geoloc_load_file_list           |                               | Field geoloc_load_file_list                                                                     |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+|   | geo_location_load_filename  |                               | Specify file to be loaded                                                                       |
+|   |                             |                               |                                                                                                 |
+|   |                             |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+|   | template_name               |                               | CSV template to load this file                                                                  |
+|   |                             |                               |                                                                                                 |
+|   |                             |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| uuid                            |                               | uuid of the object                                                                              |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---------------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+| entry_list                      |                               | Field entry_list                                                                                |
+|                                 |                               |                                                                                                 |
+|                                 |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+|   | geo_locn_obj_name           |                               | Specify geo-location name, section range is (1-15)                                              |
+|   |                             |                               |                                                                                                 |
+|   |                             |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+|   | geo_locn_multiple_addresses |                               | Field geo_locn_multiple_addresses                                                               |
+|   |                             |                               |                                                                                                 |
+|   |                             |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+|   | uuid                        |                               | uuid of the object                                                                              |
+|   |                             |                               |                                                                                                 |
+|   |                             |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
+|   | user_tag                    |                               | Customized tag                                                                                  |
+|   |                             |                               |                                                                                                 |
+|   |                             |                               |                                                                                                 |
++---+-----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------+
 
 
 

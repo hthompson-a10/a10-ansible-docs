@@ -22,62 +22,67 @@ Global overlay-tunnel configuration options
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  tcp_mss_adjust_disable (False, any, None)
-    Disable TCP MSS adjustment in SYN packet for tunnels
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vxlan_dest_port (False, any, None)
-    VXLAN UDP Destination Port (UDP Port Number (default 4789))
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  nvgre_key_mode_lower24 (False, any, None)
-    Use the lower 24-bits of the GRE key as the VSID
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ip_dscp_preserve (False, any, None)
-    Copy DSCP bits from inner IP to outer IP header
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  gateway_mac (False, any, None)
-    MAC to be used with Gateway segment Id (MAC Address for the Gateway segment)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  nvgre_disable_flow_id (False, any, None)
-    Disable Flow-ID computation for NVGRE
-
-
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                                      |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++========================+===============================+==============================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                           |
+|                        |                               |                                                                              |
+| /required              |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                                |
+|                        |                               |                                                                              |
+| /required              |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                            |
+|                        |                               |                                                                              |
+| /required              |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                            |
+|                        |                               |                                                                              |
+| /required              |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                                |
+|                        |                               |                                                                              |
+| /required              |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                             |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                              |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| ip_dscp_preserve       |                               | Copy DSCP bits from inner IP to outer IP header                              |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| nvgre_disable_flow_id  |                               | Disable Flow-ID computation for NVGRE                                        |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| nvgre_key_mode_lower24 |                               | Use the lower 24-bits of the GRE key as the VSID                             |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| tcp_mss_adjust_disable |                               | Disable TCP MSS adjustment in SYN packet for tunnels                         |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| gateway_mac            |                               | MAC to be used with Gateway segment Id (MAC Address for the Gateway segment) |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| vxlan_dest_port        |                               | VXLAN UDP Destination Port (UDP Port Number (default 4789))                  |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                                           |
+|                        |                               |                                                                              |
+|                        |                               |                                                                              |
++------------------------+-------------------------------+------------------------------------------------------------------------------+
 
 
 

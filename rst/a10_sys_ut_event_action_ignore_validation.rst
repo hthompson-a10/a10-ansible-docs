@@ -22,66 +22,71 @@ Ignore following layers for validation
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  event_number (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  l4 (False, any, None)
-    Dont validate L4 header
-
-
-  l2 (False, any, None)
-    Dont validate L2 header
-
-
-  l3 (False, any, None)
-    Dont validate L3 header
-
-
-  all (False, any, None)
-    Skip validation
-
-
-  l1 (False, any, None)
-    Dont validate TX descriptor. This includes Tx port, Len & vlan
-
-
-  action_direction (optional, any, None)
-    Key to identify parent object
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                        |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++=======================+===============================+================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                             |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                  |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                              |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                              |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                  |
+|                       |                               |                                                                |
+| /required             |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                               |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| action_direction      |                               | Key to identify parent object                                  |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| event_number          |                               | Key to identify parent object                                  |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| l1                    |                               | Dont validate TX descriptor. This includes Tx port, Len & vlan |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| l2                    |                               | Dont validate L2 header                                        |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| l3                    |                               | Dont validate L3 header                                        |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| l4                    |                               | Dont validate L4 header                                        |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| all                   |                               | Skip validation                                                |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                             |
+|                       |                               |                                                                |
+|                       |                               |                                                                |
++-----------------------+-------------------------------+----------------------------------------------------------------+
 
 
 

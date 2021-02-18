@@ -22,50 +22,55 @@ Configure an AS-path list for BGP
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  access_list (True, any, None)
-    Specify an access list name (Regular expression access-list name)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  value (True, any, None)
-    A regular-expression to match the BGP AS paths
-
-
-  action (True, any, None)
-    'deny'= Specify packets to reject; 'permit'= Specify packets to forward;
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                  |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++=======================+===============================+==========================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                       |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                            |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                            |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                         |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                          |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| access_list           |                               | Specify an access list name (Regular expression access-list name)        |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| action                |                               | 'deny'= Specify packets to reject; 'permit'= Specify packets to forward; |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| value                 |                               | A regular-expression to match the BGP AS paths                           |
+|                       |                               |                                                                          |
+| /required             |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                       |
+|                       |                               |                                                                          |
+|                       |                               |                                                                          |
++-----------------------+-------------------------------+--------------------------------------------------------------------------+
 
 
 

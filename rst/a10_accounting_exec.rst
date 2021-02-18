@@ -22,46 +22,51 @@ Configuration for EXEC <shell> accounting
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  accounting_exec_type (False, any, None)
-    'start-stop'= Record start and stop without waiting; 'stop-only'= Record stop when service terminates;
-
-
-  accounting_exec_method (False, any, None)
-    'tacplus'= Use TACACS+ servers for accounting; 'radius'= Use radius servers for accounting;
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                                                                |
+|                        |                               |                                                                                                        |
+|                        |                               |                                                                                                        |
++========================+===============================+========================================================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                                                     |
+|                        |                               |                                                                                                        |
+| /required              |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                                                          |
+|                        |                               |                                                                                                        |
+| /required              |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                                                      |
+|                        |                               |                                                                                                        |
+| /required              |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                                                      |
+|                        |                               |                                                                                                        |
+| /required              |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                                                          |
+|                        |                               |                                                                                                        |
+| /required              |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                                                       |
+|                        |                               |                                                                                                        |
+|                        |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                                                        |
+|                        |                               |                                                                                                        |
+|                        |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| accounting_exec_type   |                               | 'start-stop'= Record start and stop without waiting; 'stop-only'= Record stop when service terminates; |
+|                        |                               |                                                                                                        |
+|                        |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| accounting_exec_method |                               | 'tacplus'= Use TACACS+ servers for accounting; 'radius'= Use radius servers for accounting;            |
+|                        |                               |                                                                                                        |
+|                        |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                                                                     |
+|                        |                               |                                                                                                        |
+|                        |                               |                                                                                                        |
++------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------+
 
 
 

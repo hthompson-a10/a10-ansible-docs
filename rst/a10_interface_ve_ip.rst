@@ -22,192 +22,191 @@ Global IP configuration subcommands
 Parameters
 ----------
 
-  query_interval (False, any, None)
-    1 - 255 (Default is 125)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  max_resp_time (False, any, None)
-    Maximum Response Time (Max Response Time (Default is 100))
-
-
-  rip (False, any, None)
-    Field rip
-
-
-    split_horizon_cfg (optional, any, None)
-      Field split_horizon_cfg
-
-
-    receive_packet (optional, any, None)
-      Enable receiving packet through the specified interface
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    receive_cfg (optional, any, None)
-      Field receive_cfg
-
-
-    authentication (optional, any, None)
-      Field authentication
-
-
-    send_packet (optional, any, None)
-      Enable sending packets through the specified interface
-
-
-    send_cfg (optional, any, None)
-      Field send_cfg
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  router (False, any, None)
-    Field router
-
-
-    isis (optional, any, None)
-      Field isis
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ve_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  slb_partition_redirect (False, any, None)
-    Redirect SLB traffic across partition
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  inside (False, any, None)
-    Configure interface as inside
-
-
-  allow_promiscuous_vip (False, any, None)
-    Allow traffic to be associated with promiscuous VIP
-
-
-  server (False, any, None)
-    Server facing interface for IPv4/v6 traffic
-
-
-  outside (False, any, None)
-    Configure interface as outside
-
-
-  client (False, any, None)
-    Client facing interface for IPv4/v6 traffic
-
-
-  ttl_ignore (False, any, None)
-    Ignore TTL decrement for a received packet
-
-
-  generate_membership_query (False, any, None)
-    Enable Membership Query
-
-
-  dhcp (False, any, None)
-    Use DHCP to configure IP address
-
-
-  stateful_firewall (False, any, None)
-    Field stateful_firewall
-
-
-    class_list (optional, any, None)
-      Class List (Class List Name)
-
-
-    outside (optional, any, None)
-      Outside (public) interface for stateful firewall
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    inside (optional, any, None)
-      Inside (private) interface for stateful firewall
-
-
-    acl_id (optional, any, None)
-      ACL id
-
-
-    access_list (optional, any, None)
-      Access-list for traffic from the outside
-
-
-
-  address_list (False, any, None)
-    Field address_list
-
-
-    ipv4_address (optional, any, None)
-      IP address
-
-
-    ipv4_netmask (optional, any, None)
-      IP subnet mask
-
-
-
-  ospf (False, any, None)
-    Field ospf
-
-
-    ospf_global (optional, any, None)
-      Field ospf_global
-
-
-    ospf_ip_list (optional, any, None)
-      Field ospf_ip_list
-
-
-
-  helper_address_list (False, any, None)
-    Field helper_address_list
-
-
-    helper_address (optional, any, None)
-      Helper address for DHCP packets (IP address)
-
-
-
++---------------------------+-------------------------------+------------------------------------------------------------+
+| Parameters                | Choices/Defaults              | Comment                                                    |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++===========================+===============================+============================================================+
+| state                     | ['noop', 'present', 'absent'] | State of the object to be created.                         |
+|                           |                               |                                                            |
+| /required                 |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| ansible_host              |                               | Host for AXAPI authentication                              |
+|                           |                               |                                                            |
+| /required                 |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| ansible_username          |                               | Username for AXAPI authentication                          |
+|                           |                               |                                                            |
+| /required                 |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| ansible_password          |                               | Password for AXAPI authentication                          |
+|                           |                               |                                                            |
+| /required                 |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| ansible_port              |                               | Port for AXAPI authentication                              |
+|                           |                               |                                                            |
+| /required                 |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| a10_device_context_id     | ['1-8']                       | Device ID for aVCS configuration                           |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| a10_partition             |                               | Destination/target partition for object/command            |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| ve_ifnum                  |                               | Key to identify parent object                              |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| dhcp                      |                               | Use DHCP to configure IP address                           |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| address_list              |                               | Field address_list                                         |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | ipv4_address          |                               | IP address                                                 |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | ipv4_netmask          |                               | IP subnet mask                                             |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+| allow_promiscuous_vip     |                               | Allow traffic to be associated with promiscuous VIP        |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| client                    |                               | Client facing interface for IPv4/v6 traffic                |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| server                    |                               | Server facing interface for IPv4/v6 traffic                |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| helper_address_list       |                               | Field helper_address_list                                  |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | helper_address        |                               | Helper address for DHCP packets (IP address)               |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+| inside                    |                               | Configure interface as inside                              |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| outside                   |                               | Configure interface as outside                             |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| ttl_ignore                |                               | Ignore TTL decrement for a received packet                 |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| slb_partition_redirect    |                               | Redirect SLB traffic across partition                      |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| generate_membership_query |                               | Enable Membership Query                                    |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| query_interval            |                               | 1 - 255 (Default is 125)                                   |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| max_resp_time             |                               | Maximum Response Time (Max Response Time (Default is 100)) |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| uuid                      |                               | uuid of the object                                         |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---------------------------+-------------------------------+------------------------------------------------------------+
+| stateful_firewall         |                               | Field stateful_firewall                                    |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | inside                |                               | Inside (private) interface for stateful firewall           |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | class_list            |                               | Class List (Class List Name)                               |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | outside               |                               | Outside (public) interface for stateful firewall           |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | access_list           |                               | Access-list for traffic from the outside                   |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | acl_id                |                               | ACL id                                                     |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | uuid                  |                               | uuid of the object                                         |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+| router                    |                               | Field router                                               |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | isis                  |                               | Field isis                                                 |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+| rip                       |                               | Field rip                                                  |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | authentication        |                               | Field authentication                                       |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | send_packet           |                               | Enable sending packets through the specified interface     |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | receive_packet        |                               | Enable receiving packet through the specified interface    |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | send_cfg              |                               | Field send_cfg                                             |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | receive_cfg           |                               | Field receive_cfg                                          |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | split_horizon_cfg     |                               | Field split_horizon_cfg                                    |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | uuid                  |                               | uuid of the object                                         |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+| ospf                      |                               | Field ospf                                                 |
+|                           |                               |                                                            |
+|                           |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | ospf_global           |                               | Field ospf_global                                          |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
+|   | ospf_ip_list          |                               | Field ospf_ip_list                                         |
+|   |                       |                               |                                                            |
+|   |                       |                               |                                                            |
++---+-----------------------+-------------------------------+------------------------------------------------------------+
 
 
 

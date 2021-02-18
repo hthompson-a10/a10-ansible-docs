@@ -22,70 +22,75 @@ DS-Lite Static Port Reservation
 Parameters
 ----------
 
-  nat_start_port (True, any, None)
-    NAT Start Port
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  nat_end_port (True, any, None)
-    NAT End Port
-
-
-  inside_addr (True, any, None)
-    Inside User IP address
-
-
-  inside_end_port (True, any, None)
-    Inside End Port
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  inside_start_port (True, any, None)
-    Inside Start Port
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  tunnel_dest_address (True, any, None)
-    DS-Lite Inside User's Tunnel Destination IPv6 Address
-
-
-  inside (True, any, None)
-    Inside User Address and Port Range (DS-Lite Inside User's Tunnel Source IPv6 Address)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  nat (True, any, None)
-    NAT Port Range (NAT IP address)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                               |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++=======================+===============================+=======================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                    |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                         |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                     |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                     |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                         |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                      |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                       |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| inside                |                               | Inside User Address and Port Range (DS-Lite Inside User's Tunnel Source IPv6 Address) |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| tunnel_dest_address   |                               | DS-Lite Inside User's Tunnel Destination IPv6 Address                                 |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| inside_addr           |                               | Inside User IP address                                                                |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| inside_start_port     |                               | Inside Start Port                                                                     |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| inside_end_port       |                               | Inside End Port                                                                       |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| nat                   |                               | NAT Port Range (NAT IP address)                                                       |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| nat_start_port        |                               | NAT Start Port                                                                        |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| nat_end_port          |                               | NAT End Port                                                                          |
+|                       |                               |                                                                                       |
+| /required             |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                    |
+|                       |                               |                                                                                       |
+|                       |                               |                                                                                       |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------+
 
 
 

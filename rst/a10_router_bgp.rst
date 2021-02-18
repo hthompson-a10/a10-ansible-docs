@@ -22,270 +22,267 @@ Border Gateway Protocol (BGP)
 Parameters
 ----------
 
-  as_number (True, any, None)
-    AS number
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  aggregate_address_list (False, any, None)
-    Field aggregate_address_list
-
-
-    summary_only (optional, any, None)
-      Filter more specific routes from updates
-
-
-    aggregate_address (optional, any, None)
-      Configure BGP aggregate entries (Aggregate prefix)
-
-
-    as_set (optional, any, None)
-      Generate AS set path information
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  synchronization (False, any, None)
-    Perform IGP synchronization
-
-
-  maximum_paths_value (False, any, None)
-    Supported BGP multipath numbers
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  distance_list (False, any, None)
-    Field distance_list
-
-
-    acl_str (optional, any, None)
-      Access list name
-
-
-    local_routes_dist (optional, any, None)
-      Distance for local routes
-
-
-    src_prefix (optional, any, None)
-      IP source prefix
-
-
-    int_routes_dist (optional, any, None)
-      Distance for routes internal to the AS
-
-
-    ext_routes_dist (optional, any, None)
-      Distance for routes external to the AS
-
-
-    admin_distance (optional, any, None)
-      Define an administrative distance
-
-
-
-  redistribute (False, any, None)
-    Field redistribute
-
-
-    ip_nat_cfg (optional, any, None)
-      Field ip_nat_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    static_cfg (optional, any, None)
-      Field static_cfg
-
-
-    ip_nat_list_cfg (optional, any, None)
-      Field ip_nat_list_cfg
-
-
-    connected_cfg (optional, any, None)
-      Field connected_cfg
-
-
-    vip (optional, any, None)
-      Field vip
-
-
-    ospf_cfg (optional, any, None)
-      Field ospf_cfg
-
-
-    rip_cfg (optional, any, None)
-      Field rip_cfg
-
-
-    nat_map_cfg (optional, any, None)
-      Field nat_map_cfg
-
-
-    lw4o6_cfg (optional, any, None)
-      Field lw4o6_cfg
-
-
-    isis_cfg (optional, any, None)
-      Field isis_cfg
-
-
-    floating_ip_cfg (optional, any, None)
-      Field floating_ip_cfg
-
-
-    static_nat_cfg (optional, any, None)
-      Field static_nat_cfg
-
-
-
-  address_family (False, any, None)
-    Field address_family
-
-
-    ipv6 (optional, any, None)
-      Field ipv6
-
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  originate (False, any, None)
-    Distribute a default route
-
-
-  auto_summary (False, any, None)
-    Enable automatic network number summarization
-
-
-  bgp (False, any, None)
-    Field bgp
-
-
-    router_id (optional, any, None)
-      Override current router identifier (peers will reset) (Manually configured router identifier)
-
-
-    deterministic_med (optional, any, None)
-      Pick the best-MED path among paths advertised from the neighboring AS
-
-
-    scan_time (optional, any, None)
-      Configure background scan interval (Scan interval (sec) [Default=60 Disable=0])
-
-
-    always_compare_med (optional, any, None)
-      Allow comparing MED from different neighbors
-
-
-    bestpath_cfg (optional, any, None)
-      Field bestpath_cfg
-
-
-    enforce_first_as (optional, any, None)
-      Enforce the first AS for EBGP routes
-
-
-    fast_external_failover (optional, any, None)
-      Immediately reset session if a link to a directly connected external peer goes down
-
-
-    override_validation (optional, any, None)
-      override router-id validation
-
-
-    nexthop_trigger_count (optional, any, None)
-      BGP nexthop-tracking status (count)
-
-
-    log_neighbor_changes (optional, any, None)
-      Log neighbor up/down and reset reason
-
-
-    local_preference_value (optional, any, None)
-      Configure default local preference value
-
-
-    dampening_cfg (optional, any, None)
-      Field dampening_cfg
-
-
-
-  network (False, any, None)
-    Field network
-
-
-    synchronization (optional, any, None)
-      Field synchronization
-
-
-    ip_cidr_list (optional, any, None)
-      Field ip_cidr_list
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  timers (False, any, None)
-    Field timers
-
-
-    bgp_holdtime (optional, any, None)
-      Holdtime
-
-
-    bgp_keepalive (optional, any, None)
-      Keepalive interval
-
-
-
-  neighbor (False, any, None)
-    Field neighbor
-
-
-    ipv6_neighbor_list (optional, any, None)
-      Field ipv6_neighbor_list
-
-
-    ipv4_neighbor_list (optional, any, None)
-      Field ipv4_neighbor_list
-
-
-    peer_group_neighbor_list (optional, any, None)
-      Field peer_group_neighbor_list
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| Parameters                   | Choices/Defaults              | Comment                                                                                       |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++==============================+===============================+===============================================================================================+
+| state                        | ['noop', 'present', 'absent'] | State of the object to be created.                                                            |
+|                              |                               |                                                                                               |
+| /required                    |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| ansible_host                 |                               | Host for AXAPI authentication                                                                 |
+|                              |                               |                                                                                               |
+| /required                    |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| ansible_username             |                               | Username for AXAPI authentication                                                             |
+|                              |                               |                                                                                               |
+| /required                    |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| ansible_password             |                               | Password for AXAPI authentication                                                             |
+|                              |                               |                                                                                               |
+| /required                    |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| ansible_port                 |                               | Port for AXAPI authentication                                                                 |
+|                              |                               |                                                                                               |
+| /required                    |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| a10_device_context_id        | ['1-8']                       | Device ID for aVCS configuration                                                              |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| a10_partition                |                               | Destination/target partition for object/command                                               |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| as_number                    |                               | AS number                                                                                     |
+|                              |                               |                                                                                               |
+| /required                    |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| aggregate_address_list       |                               | Field aggregate_address_list                                                                  |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | aggregate_address        |                               | Configure BGP aggregate entries (Aggregate prefix)                                            |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | as_set                   |                               | Generate AS set path information                                                              |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | summary_only             |                               | Filter more specific routes from updates                                                      |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| bgp                          |                               | Field bgp                                                                                     |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | always_compare_med       |                               | Allow comparing MED from different neighbors                                                  |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | bestpath_cfg             |                               | Field bestpath_cfg                                                                            |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | dampening_cfg            |                               | Field dampening_cfg                                                                           |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | local_preference_value   |                               | Configure default local preference value                                                      |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | deterministic_med        |                               | Pick the best-MED path among paths advertised from the neighboring AS                         |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | enforce_first_as         |                               | Enforce the first AS for EBGP routes                                                          |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | fast_external_failover   |                               | Immediately reset session if a link to a directly connected external peer goes down           |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | log_neighbor_changes     |                               | Log neighbor up/down and reset reason                                                         |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | nexthop_trigger_count    |                               | BGP nexthop-tracking status (count)                                                           |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | router_id                |                               | Override current router identifier (peers will reset) (Manually configured router identifier) |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | override_validation      |                               | override router-id validation                                                                 |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | scan_time                |                               | Configure background scan interval (Scan interval (sec) [Default=60 Disable=0])               |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| distance_list                |                               | Field distance_list                                                                           |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | admin_distance           |                               | Define an administrative distance                                                             |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | src_prefix               |                               | IP source prefix                                                                              |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | acl_str                  |                               | Access list name                                                                              |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ext_routes_dist          |                               | Distance for routes external to the AS                                                        |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | int_routes_dist          |                               | Distance for routes internal to the AS                                                        |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | local_routes_dist        |                               | Distance for local routes                                                                     |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| maximum_paths_value          |                               | Supported BGP multipath numbers                                                               |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| originate                    |                               | Distribute a default route                                                                    |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| timers                       |                               | Field timers                                                                                  |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | bgp_keepalive            |                               | Keepalive interval                                                                            |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | bgp_holdtime             |                               | Holdtime                                                                                      |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| synchronization              |                               | Perform IGP synchronization                                                                   |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| auto_summary                 |                               | Enable automatic network number summarization                                                 |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| uuid                         |                               | uuid of the object                                                                            |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| user_tag                     |                               | Customized tag                                                                                |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| network                      |                               | Field network                                                                                 |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | synchronization          |                               | Field synchronization                                                                         |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ip_cidr_list             |                               | Field ip_cidr_list                                                                            |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| neighbor                     |                               | Field neighbor                                                                                |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | peer_group_neighbor_list |                               | Field peer_group_neighbor_list                                                                |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ipv4_neighbor_list       |                               | Field ipv4_neighbor_list                                                                      |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ipv6_neighbor_list       |                               | Field ipv6_neighbor_list                                                                      |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| redistribute                 |                               | Field redistribute                                                                            |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | connected_cfg            |                               | Field connected_cfg                                                                           |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | floating_ip_cfg          |                               | Field floating_ip_cfg                                                                         |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | lw4o6_cfg                |                               | Field lw4o6_cfg                                                                               |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | static_nat_cfg           |                               | Field static_nat_cfg                                                                          |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ip_nat_cfg               |                               | Field ip_nat_cfg                                                                              |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ip_nat_list_cfg          |                               | Field ip_nat_list_cfg                                                                         |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | isis_cfg                 |                               | Field isis_cfg                                                                                |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ospf_cfg                 |                               | Field ospf_cfg                                                                                |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | rip_cfg                  |                               | Field rip_cfg                                                                                 |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | static_cfg               |                               | Field static_cfg                                                                              |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | nat_map_cfg              |                               | Field nat_map_cfg                                                                             |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | vip                      |                               | Field vip                                                                                     |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | uuid                     |                               | uuid of the object                                                                            |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+| address_family               |                               | Field address_family                                                                          |
+|                              |                               |                                                                                               |
+|                              |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
+|   | ipv6                     |                               | Field ipv6                                                                                    |
+|   |                          |                               |                                                                                               |
+|   |                          |                               |                                                                                               |
++---+--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------+
 
 
 

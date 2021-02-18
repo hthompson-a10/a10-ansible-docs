@@ -22,323 +22,327 @@ Display Health Monitor Information for a given PIN and PID
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    expect_resp_code (optional, any, None)
-      Field expect_resp_code
-
-
-    attr_rpn (optional, any, None)
-      Field attr_rpn
-
-
-    starttls (optional, any, None)
-      Field starttls
-
-
-    attr_port (optional, any, None)
-      Field attr_port
-
-
-    ipaddr (optional, any, None)
-      Field ipaddr
-
-
-    attr_program (optional, any, None)
-      Field attr_program
-
-
-    community (optional, any, None)
-      Field community
-
-
-    dns_qtype (optional, any, None)
-      Field dns_qtype
-
-
-    base_dn (optional, any, None)
-      Field base_dn
-
-
-    health_state (optional, any, None)
-      Field health_state
-
-
-    query (optional, any, None)
-      Field query
-
-
-    tcp_only (optional, any, None)
-      Field tcp_only
-
-
-    expect_text (optional, any, None)
-      Field expect_text
-
-
-    rcv_integer (optional, any, None)
-      Field rcv_integer
-
-
-    send (optional, any, None)
-      Field send
-
-
-    secret (optional, any, None)
-      Field secret
-
-
-    sip_register (optional, any, None)
-      Field sip_register
-
-
-    db_row (optional, any, None)
-      Field db_row
-
-
-    resp_cont (optional, any, None)
-      Field resp_cont
-
-
-    attr_alias_addr (optional, any, None)
-      Field attr_alias_addr
-
-
-    http_req_sent (optional, any, None)
-      Field http_req_sent
-
-
-    mail_from (optional, any, None)
-      Field mail_from
-
-
-    rcpt_to (optional, any, None)
-      Field rcpt_to
-
-
-    db_name (optional, any, None)
-      Field db_name
-
-
-    pname (optional, any, None)
-      Field pname
-
-
-    force_up (optional, any, None)
-      Field force_up
-
-
-    dns_recurse (optional, any, None)
-      Field dns_recurse
-
-
-    status_code_rcv (optional, any, None)
-      Field status_code_rcv
-
-
-    curr_tcp_rtt (optional, any, None)
-      Field curr_tcp_rtt
-
-
-    expect_text_regex (optional, any, None)
-      Field expect_text_regex
-
-
-    receive (optional, any, None)
-      Field receive
-
-
-    kerberos_kdc (optional, any, None)
-      Field kerberos_kdc
-
-
-    avg_tcp_rtt (optional, any, None)
-      Field avg_tcp_rtt
-
-
-    expect_resp_regex_code (optional, any, None)
-      Field expect_resp_regex_code
-
-
-    http_wait_resp (optional, any, None)
-      Field http_wait_resp
-
-
-    curr_rtt (optional, any, None)
-      Field curr_rtt
-
-
-    curr_interval (optional, any, None)
-      Field curr_interval
-
-
-    domain (optional, any, None)
-      Field domain
-
-
-    l4_errors (optional, any, None)
-      Field l4_errors
-
-
-    postdata (optional, any, None)
-      Field postdata
-
-
-    half_open (optional, any, None)
-      Field half_open
-
-
-    pass (optional, any, None)
-      Field pass
-
-
-    dns_expect (optional, any, None)
-      Field dns_expect
-
-
-    monitor_name (optional, any, None)
-      Field monitor_name
-
-
-    received_fail (optional, any, None)
-      Field received_fail
-
-
-    state_reason (optional, any, None)
-      Field state_reason
-
-
-    pin_id (optional, any, None)
-      Field pin_id
-
-
-    snmp_operation (optional, any, None)
-      Field snmp_operation
-
-
-    maintenance_code (optional, any, None)
-      Field maintenance_code
-
-
-    arguments (optional, any, None)
-      Field arguments
-
-
-    method (optional, any, None)
-      Field method
-
-
-    avg_rtt (optional, any, None)
-      Field avg_rtt
-
-
-    response_timeout (optional, any, None)
-      Field response_timeout
-
-
-    oid (optional, any, None)
-      Field oid
-
-
-    http_errors (optional, any, None)
-      Field http_errors
-
-
-    host (optional, any, None)
-      Field host
-
-
-    l4_conn_num (optional, any, None)
-      Field l4_conn_num
-
-
-    ldap_ssl (optional, any, None)
-      Field ldap_ssl
-
-
-    user (optional, any, None)
-      Field user
-
-
-    received_success (optional, any, None)
-      Field received_success
-
-
-    kerberos_realm (optional, any, None)
-      Field kerberos_realm
-
-
-    ldap_tls (optional, any, None)
-      Field ldap_tls
-
-
-    process_index (optional, any, None)
-      Field process_index
-
-
-    db_column (optional, any, None)
-      Field db_column
-
-
-    url (optional, any, None)
-      Field url
-
-
-    kerberos_port (optional, any, None)
-      Field kerberos_port
-
-
-    transport_proto (optional, any, None)
-      Field transport_proto
-
-
-    mac_addr (optional, any, None)
-      Field mac_addr
-
-
-    dns_expect_type (optional, any, None)
-      Field dns_expect_type
-
-
-    attr_type (optional, any, None)
-      Field attr_type
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                         |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++============================+===============================+=================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication               |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                   |
+|                            |                               |                                                 |
+| /required                  |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                       |                               | uuid of the object                              |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++----------------------------+-------------------------------+-------------------------------------------------+
+| oper                       |                               | Field oper                                      |
+|                            |                               |                                                 |
+|                            |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | pin_id                 |                               | Field pin_id                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | process_index          |                               | Field process_index                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | health_state           |                               | Field health_state                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | state_reason           |                               | Field state_reason                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | monitor_name           |                               | Field monitor_name                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | received_success       |                               | Field received_success                          |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | received_fail          |                               | Field received_fail                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | response_timeout       |                               | Field response_timeout                          |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | curr_interval          |                               | Field curr_interval                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | method                 |                               | Field method                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | attr_alias_addr        |                               | Field attr_alias_addr                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | attr_port              |                               | Field attr_port                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | half_open              |                               | Field half_open                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | send                   |                               | Field send                                      |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | resp_cont              |                               | Field resp_cont                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | force_up               |                               | Field force_up                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | url                    |                               | Field url                                       |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | expect_text            |                               | Field expect_text                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | expect_resp_code       |                               | Field expect_resp_code                          |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | expect_text_regex      |                               | Field expect_text_regex                         |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | expect_resp_regex_code |                               | Field expect_resp_regex_code                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | maintenance_code       |                               | Field maintenance_code                          |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | user                   |                               | Field user                                      |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | pass                   |                               | Field pass                                      |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | postdata               |                               | Field postdata                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | host                   |                               | Field host                                      |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | kerberos_realm         |                               | Field kerberos_realm                            |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | kerberos_kdc           |                               | Field kerberos_kdc                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | kerberos_port          |                               | Field kerberos_port                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | snmp_operation         |                               | Field snmp_operation                            |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | community              |                               | Field community                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | oid                    |                               | Field oid                                       |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | domain                 |                               | Field domain                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | starttls               |                               | Field starttls                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | mail_from              |                               | Field mail_from                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | rcpt_to                |                               | Field rcpt_to                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | ipaddr                 |                               | Field ipaddr                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | dns_qtype              |                               | Field dns_qtype                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | dns_recurse            |                               | Field dns_recurse                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | dns_expect_type        |                               | Field dns_expect_type                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | dns_expect             |                               | Field dns_expect                                |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | transport_proto        |                               | Field transport_proto                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | sip_register           |                               | Field sip_register                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | secret                 |                               | Field secret                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | query                  |                               | Field query                                     |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | base_dn                |                               | Field base_dn                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | ldap_ssl               |                               | Field ldap_ssl                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | ldap_tls               |                               | Field ldap_tls                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | attr_type              |                               | Field attr_type                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | db_name                |                               | Field db_name                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | receive                |                               | Field receive                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | rcv_integer            |                               | Field rcv_integer                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | db_row                 |                               | Field db_row                                    |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | db_column              |                               | Field db_column                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | pname                  |                               | Field pname                                     |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | tcp_only               |                               | Field tcp_only                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | attr_program           |                               | Field attr_program                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | arguments              |                               | Field arguments                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | attr_rpn               |                               | Field attr_rpn                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | http_wait_resp         |                               | Field http_wait_resp                            |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l4_conn_num            |                               | Field l4_conn_num                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | l4_errors              |                               | Field l4_errors                                 |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | avg_rtt                |                               | Field avg_rtt                                   |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | curr_rtt               |                               | Field curr_rtt                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | avg_tcp_rtt            |                               | Field avg_tcp_rtt                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | curr_tcp_rtt           |                               | Field curr_tcp_rtt                              |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | status_code_rcv        |                               | Field status_code_rcv                           |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | http_req_sent          |                               | Field http_req_sent                             |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | http_errors            |                               | Field http_errors                               |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
+|   | mac_addr               |                               | Field mac_addr                                  |
+|   |                        |                               |                                                 |
+|   |                        |                               |                                                 |
++---+------------------------+-------------------------------+-------------------------------------------------+
 
 
 

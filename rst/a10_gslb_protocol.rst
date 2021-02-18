@@ -22,117 +22,119 @@ Specify GSLB Message Protocol parameters
 Parameters
 ----------
 
-  oper (False, any, None)
-    Field oper
-
-
-    session_list (optional, any, None)
-      Field session_list
-
-
-
-  auto_detect (False, any, None)
-    Automatically detect SLB Config
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  status_interval (False, any, None)
-    Specify GSLB Message Protocol update period (The GSLB Protocol update interval (seconds), default is 30)
-
-
-  ping_site (False, any, None)
-    name of site or ip address to ping
-
-
-  use_mgmt_port (False, any, None)
-    Use management port for connections in Shared Partition
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  use_mgmt_port_for_all_partitions (False, any, None)
-    Use management port for connections in all L3v Partitions
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  msg_format_acos_2x (False, any, None)
-    Run GSLB Protocol in compatible mode with a ACOS 2.x GSLB peer
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  enable_list (False, any, None)
-    Field enable_list
-
-
-    ntype (optional, any, None)
-      'controller'= Enable/Disable GSLB protocol as GSLB controller; 'device'= Enable/Disable GSLB protocol as site device;
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  limit (False, any, None)
-    Field limit
-
-
-    message (optional, any, None)
-      Amount of Messages, default is 10000 (Number)
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    ardt_session (optional, any, None)
-      Sessions of Active RDT, default is 32768 (Number)
-
-
-    ardt_query (optional, any, None)
-      Query Messages of Active RDT, default is 200 (Number)
-
-
-    ardt_response (optional, any, None)
-      Response Messages of Active RDT, default is 1000 (Number)
-
-
-    conn_response (optional, any, None)
-      Response Messages of Connection Load, default is no limit (Number)
-
-
-    response (optional, any, None)
-      Amount of Response Messages, default is 3600 (Number)
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| Parameters                       | Choices/Defaults              | Comment                                                                                                               |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++==================================+===============================+=======================================================================================================================+
+| state                            | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                    |
+|                                  |                               |                                                                                                                       |
+| /required                        |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| ansible_host                     |                               | Host for AXAPI authentication                                                                                         |
+|                                  |                               |                                                                                                                       |
+| /required                        |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| ansible_username                 |                               | Username for AXAPI authentication                                                                                     |
+|                                  |                               |                                                                                                                       |
+| /required                        |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| ansible_password                 |                               | Password for AXAPI authentication                                                                                     |
+|                                  |                               |                                                                                                                       |
+| /required                        |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| ansible_port                     |                               | Port for AXAPI authentication                                                                                         |
+|                                  |                               |                                                                                                                       |
+| /required                        |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id            | ['1-8']                       | Device ID for aVCS configuration                                                                                      |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| a10_partition                    |                               | Destination/target partition for object/command                                                                       |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| auto_detect                      |                               | Automatically detect SLB Config                                                                                       |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| use_mgmt_port                    |                               | Use management port for connections in Shared Partition                                                               |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| use_mgmt_port_for_all_partitions |                               | Use management port for connections in all L3v Partitions                                                             |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| status_interval                  |                               | Specify GSLB Message Protocol update period (The GSLB Protocol update interval (seconds), default is 30)              |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| ping_site                        |                               | name of site or ip address to ping                                                                                    |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| msg_format_acos_2x               |                               | Run GSLB Protocol in compatible mode with a ACOS 2.x GSLB peer                                                        |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| uuid                             |                               | uuid of the object                                                                                                    |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++----------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| enable_list                      |                               | Field enable_list                                                                                                     |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | ntype                        |                               | 'controller'= Enable/Disable GSLB protocol as GSLB controller; 'device'= Enable/Disable GSLB protocol as site device; |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | uuid                         |                               | uuid of the object                                                                                                    |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| limit                            |                               | Field limit                                                                                                           |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | ardt_query                   |                               | Query Messages of Active RDT, default is 200 (Number)                                                                 |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | ardt_response                |                               | Response Messages of Active RDT, default is 1000 (Number)                                                             |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | ardt_session                 |                               | Sessions of Active RDT, default is 32768 (Number)                                                                     |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | conn_response                |                               | Response Messages of Connection Load, default is no limit (Number)                                                    |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | response                     |                               | Amount of Response Messages, default is 3600 (Number)                                                                 |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | message                      |                               | Amount of Messages, default is 10000 (Number)                                                                         |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | uuid                         |                               | uuid of the object                                                                                                    |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+| oper                             |                               | Field oper                                                                                                            |
+|                                  |                               |                                                                                                                       |
+|                                  |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+|   | session_list                 |                               | Field session_list                                                                                                    |
+|   |                              |                               |                                                                                                                       |
+|   |                              |                               |                                                                                                                       |
++---+------------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------------+
 
 
 

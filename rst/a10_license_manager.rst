@@ -22,150 +22,151 @@ Configure license manager
 Parameters
 ----------
 
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  host_list (False, any, None)
-    Field host_list
-
-
-    host_ipv6 (optional, any, None)
-      Configure license manager server ipv6-address
-
-
-    port (optional, any, None)
-      Configure the license manager port, default is 443
-
-
-    host_ipv4 (optional, any, None)
-      license server ip address (length=1-31)
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  connect (False, any, None)
-    Field connect
-
-
-    connect (optional, any, None)
-      Connect to license manager to activate
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  use_mgmt_port (False, any, None)
-    Use management port to connect license server
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  bandwidth_unrestricted (False, any, None)
-    Set the bandwidth to maximum
-
-
-  instance_name (False, any, None)
-    Configure instance name [format= (string).(string).(string).(string)]
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  bandwidth_base (False, any, None)
-    Configure feature bandwidth base (Mb)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  interval (False, any, None)
-    Configure interval profile (1 monthly, 2 daily, 3 hourly)
-
-
-  overage (False, any, None)
-    Field overage
-
-
-    kb (optional, any, None)
-      Number of KB
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    mb (optional, any, None)
-      Number of MB
-
-
-    seconds (optional, any, None)
-      Number of seconds
-
-
-    bytes (optional, any, None)
-      Number of bytes
-
-
-    days (optional, any, None)
-      Number of days
-
-
-    hours (optional, any, None)
-      Number of hours
-
-
-    gb (optional, any, None)
-      Number of GB
-
-
-    minutes (optional, any, None)
-      Number of minutes
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  sn (False, any, None)
-    serial number
-
-
-  reminder_list (False, any, None)
-    Field reminder_list
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    reminder_value (optional, any, None)
-      Configure reminder for grace time (Hour)
-
-
-
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                               |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++========================+===============================+=======================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                    |
+|                        |                               |                                                                       |
+| /required              |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                         |
+|                        |                               |                                                                       |
+| /required              |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                     |
+|                        |                               |                                                                       |
+| /required              |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                     |
+|                        |                               |                                                                       |
+| /required              |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                         |
+|                        |                               |                                                                       |
+| /required              |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                      |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                       |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| use_mgmt_port          |                               | Use management port to connect license server                         |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| sn                     |                               | serial number                                                         |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| interval               |                               | Configure interval profile (1 monthly, 2 daily, 3 hourly)             |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| instance_name          |                               | Configure instance name [format= (string).(string).(string).(string)] |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| bandwidth_base         |                               | Configure feature bandwidth base (Mb)                                 |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| bandwidth_unrestricted |                               | Set the bandwidth to maximum                                          |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                                    |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++------------------------+-------------------------------+-----------------------------------------------------------------------+
+| host_list              |                               | Field host_list                                                       |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | host_ipv4          |                               | license server ip address (length=1-31)                               |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | host_ipv6          |                               | Configure license manager server ipv6-address                         |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | port               |                               | Configure the license manager port, default is 443                    |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                                    |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+| reminder_list          |                               | Field reminder_list                                                   |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | reminder_value     |                               | Configure reminder for grace time (Hour)                              |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                                    |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+| overage                |                               | Field overage                                                         |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | days               |                               | Number of days                                                        |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | hours              |                               | Number of hours                                                       |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | minutes            |                               | Number of minutes                                                     |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | seconds            |                               | Number of seconds                                                     |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | gb                 |                               | Number of GB                                                          |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | mb                 |                               | Number of MB                                                          |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | kb                 |                               | Number of KB                                                          |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | bytes              |                               | Number of bytes                                                       |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                                    |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+| connect                |                               | Field connect                                                         |
+|                        |                               |                                                                       |
+|                        |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | connect            |                               | Connect to license manager to activate                                |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                                    |
+|   |                    |                               |                                                                       |
+|   |                    |                               |                                                                       |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------+
 
 
 

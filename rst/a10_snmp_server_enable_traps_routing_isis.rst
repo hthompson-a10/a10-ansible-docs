@@ -22,106 +22,111 @@ Enable isis traps
 Parameters
 ----------
 
-  isisOwnLSPPurge (False, any, None)
-    Enable isisOwnLSPPurge traps
-
-
-  isisSequenceNumberSkip (False, any, None)
-    Enable isisSequenceNumberSkip traps
-
-
-  isisAdjacencyChange (False, any, None)
-    Enable isisAdjacencyChange traps
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  isisAreaMismatch (False, any, None)
-    Enable isisAreaMismatch traps
-
-
-  isisAttemptToExceedMaxSequence (False, any, None)
-    Enable isisAttemptToExceedMaxSequence traps
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  isisVersionSkew (False, any, None)
-    Enable isisVersionSkew traps
-
-
-  isisManualAddressDrops (False, any, None)
-    Enable isisManualAddressDrops traps
-
-
-  isisCorruptedLSPDetected (False, any, None)
-    Enable isisCorruptedLSPDetected traps
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  isisAuthenticationFailure (False, any, None)
-    Enable isisAuthenticationFailure traps
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  isisProtocolsSupportedMismatch (False, any, None)
-    Enable isisProtocolsSupportedMismatch traps
-
-
-  isisRejectedAdjacency (False, any, None)
-    Enable isisRejectedAdjacency traps
-
-
-  isisMaxAreaAddressesMismatch (False, any, None)
-    Enable isisMaxAreaAddressesMismatch traps
-
-
-  isisOriginatingLSPBufferSizeMismatch (False, any, None)
-    Enable isisOriginatingLSPBufferSizeMismatch traps
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  isisLSPTooLargeToPropagate (False, any, None)
-    Enable isisLSPTooLargeToPropagate traps
-
-
-  isisDatabaseOverload (False, any, None)
-    Enable isisDatabaseOverload traps
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  isisIDLenMismatch (False, any, None)
-    Enable isisIDLenMismatch traps
-
-
-  isisAuthenticationTypeFailure (False, any, None)
-    Enable isisAuthenticationTypeFailure traps
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| Parameters                           | Choices/Defaults              | Comment                                           |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++======================================+===============================+===================================================+
+| state                                | ['noop', 'present', 'absent'] | State of the object to be created.                |
+|                                      |                               |                                                   |
+| /required                            |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| ansible_host                         |                               | Host for AXAPI authentication                     |
+|                                      |                               |                                                   |
+| /required                            |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| ansible_username                     |                               | Username for AXAPI authentication                 |
+|                                      |                               |                                                   |
+| /required                            |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| ansible_password                     |                               | Password for AXAPI authentication                 |
+|                                      |                               |                                                   |
+| /required                            |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| ansible_port                         |                               | Port for AXAPI authentication                     |
+|                                      |                               |                                                   |
+| /required                            |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| a10_device_context_id                | ['1-8']                       | Device ID for aVCS configuration                  |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| a10_partition                        |                               | Destination/target partition for object/command   |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisAdjacencyChange                  |                               | Enable isisAdjacencyChange traps                  |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisAreaMismatch                     |                               | Enable isisAreaMismatch traps                     |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisAttemptToExceedMaxSequence       |                               | Enable isisAttemptToExceedMaxSequence traps       |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisAuthenticationFailure            |                               | Enable isisAuthenticationFailure traps            |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisAuthenticationTypeFailure        |                               | Enable isisAuthenticationTypeFailure traps        |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisCorruptedLSPDetected             |                               | Enable isisCorruptedLSPDetected traps             |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisDatabaseOverload                 |                               | Enable isisDatabaseOverload traps                 |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisIDLenMismatch                    |                               | Enable isisIDLenMismatch traps                    |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisLSPTooLargeToPropagate           |                               | Enable isisLSPTooLargeToPropagate traps           |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisManualAddressDrops               |                               | Enable isisManualAddressDrops traps               |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisMaxAreaAddressesMismatch         |                               | Enable isisMaxAreaAddressesMismatch traps         |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisOriginatingLSPBufferSizeMismatch |                               | Enable isisOriginatingLSPBufferSizeMismatch traps |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisOwnLSPPurge                      |                               | Enable isisOwnLSPPurge traps                      |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisProtocolsSupportedMismatch       |                               | Enable isisProtocolsSupportedMismatch traps       |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisRejectedAdjacency                |                               | Enable isisRejectedAdjacency traps                |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisSequenceNumberSkip               |                               | Enable isisSequenceNumberSkip traps               |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| isisVersionSkew                      |                               | Enable isisVersionSkew traps                      |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
+| uuid                                 |                               | uuid of the object                                |
+|                                      |                               |                                                   |
+|                                      |                               |                                                   |
++--------------------------------------+-------------------------------+---------------------------------------------------+
 
 
 

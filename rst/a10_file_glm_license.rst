@@ -22,58 +22,63 @@ glm license file information and management commands
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  file_handle (False, any, None)
-    full path of the uploaded file
-
-
-  file (False, any, None)
-    glm license local file name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  file_content (False, any, None)
-    Content of the uploaded file
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  action (False, any, None)
-    'import'= import;
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  dst_file (False, any, None)
-    destination file name for copy and rename action
-
-
-  device (False, any, None)
-    Device (Device ID)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                          |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++=======================+===============================+==================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.               |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                    |
+|                       |                               |                                                  |
+| /required             |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                 |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command  |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| file_content          |                               | Content of the uploaded file                     |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| device                |                               | Device (Device ID)                               |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| file                  |                               | glm license local file name                      |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| file_handle           |                               | full path of the uploaded file                   |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| action                |                               | 'import'= import;                                |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
+| dst_file              |                               | destination file name for copy and rename action |
+|                       |                               |                                                  |
+|                       |                               |                                                  |
++-----------------------+-------------------------------+--------------------------------------------------+
 
 
 

@@ -22,111 +22,115 @@ IP address configuration for Open Shortest Path First for IPv4 (OSPF)
 Parameters
 ----------
 
-  ip_addr (True, any, None)
-    Address of interface
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  database_filter (False, any, None)
-    'all'= Filter all LSA;
-
-
-  message_digest_cfg (False, any, None)
-    Field message_digest_cfg
-
-
-    encrypted (optional, any, None)
-      Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)
-
-
-    md5_value (optional, any, None)
-      The OSPF password (1-16)
-
-
-    message_digest_key (optional, any, None)
-      Message digest authentication password (key) (Key id)
-
-
-
-  dead_interval (False, any, None)
-    Interval after which a neighbor is declared dead (Seconds)
-
-
-  hello_interval (False, any, None)
-    Time between HELLO packets (Seconds)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  transmit_delay (False, any, None)
-    Link state transmit delay (Seconds)
-
-
-  out (False, any, None)
-    Outgoing LSA
-
-
-  retransmit_interval (False, any, None)
-    Time between retransmitting lost link state advertisements (Seconds)
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  authentication (False, any, None)
-    Enable authentication
-
-
-  value (False, any, None)
-    'message-digest'= Use message-digest authentication; 'null'= Use no authentication;
-
-
-  mtu_ignore (False, any, None)
-    Ignores the MTU in DBD packets
-
-
-  priority (False, any, None)
-    Router priority
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  cost (False, any, None)
-    Interface cost
-
-
-  tunnel_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  authentication_key (False, any, None)
-    Authentication password (key) (The OSPF password (key))
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                                                                             |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++========================+===============================+=====================================================================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                                                                  |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                                                                       |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                                                                   |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                                                                   |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                                                                       |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                                                                    |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command                                                     |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| tunnel_ifnum           |                               | Key to identify parent object                                                                       |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| ip_addr                |                               | Address of interface                                                                                |
+|                        |                               |                                                                                                     |
+| /required              |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| authentication         |                               | Enable authentication                                                                               |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| value                  |                               | 'message-digest'= Use message-digest authentication; 'null'= Use no authentication;                 |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| authentication_key     |                               | Authentication password (key) (The OSPF password (key))                                             |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| cost                   |                               | Interface cost                                                                                      |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| database_filter        |                               | 'all'= Filter all LSA;                                                                              |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| out                    |                               | Outgoing LSA                                                                                        |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| dead_interval          |                               | Interval after which a neighbor is declared dead (Seconds)                                          |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| hello_interval         |                               | Time between HELLO packets (Seconds)                                                                |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| message_digest_cfg     |                               | Field message_digest_cfg                                                                            |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|   | message_digest_key |                               | Message digest authentication password (key) (Key id)                                               |
+|   |                    |                               |                                                                                                     |
+|   |                    |                               |                                                                                                     |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|   | md5_value          |                               | The OSPF password (1-16)                                                                            |
+|   |                    |                               |                                                                                                     |
+|   |                    |                               |                                                                                                     |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+|   | encrypted          |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string) |
+|   |                    |                               |                                                                                                     |
+|   |                    |                               |                                                                                                     |
++---+--------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| mtu_ignore             |                               | Ignores the MTU in DBD packets                                                                      |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| priority               |                               | Router priority                                                                                     |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| retransmit_interval    |                               | Time between retransmitting lost link state advertisements (Seconds)                                |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| transmit_delay         |                               | Link state transmit delay (Seconds)                                                                 |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
+| uuid                   |                               | uuid of the object                                                                                  |
+|                        |                               |                                                                                                     |
+|                        |                               |                                                                                                     |
++------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------+
 
 
 

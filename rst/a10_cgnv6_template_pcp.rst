@@ -22,94 +22,99 @@ Port Control Protocol Template
 Parameters
 ----------
 
-  map (False, any, None)
-    PCP MAP Opcode (default is enabled)
-
-
-  check_client_nonce (False, any, None)
-    To validate NONCE value in PCP request (default= disabled)
-
-
-  source_ipv6 (False, any, None)
-    Specify source IPv6 address for IPv6 ANNOUNCE message
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  allow_third_party_from_lan (False, any, None)
-    Allow third party request coming from LAN (default is disabled)
-
-
-  minimum (False, any, None)
-    To set minimum lifetime of PCP mappings (default 2 minutes)
-
-
-  peer (False, any, None)
-    PCP PEER Opcode (default is enabled)
-
-
-  disable_map_filter (False, any, None)
-    To disable processing of FILTER options in MAP request
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  name (True, any, None)
-    PCP Template name
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  source_ip (False, any, None)
-    Specify source IP address for IPv4 ANNOUNCE message
-
-
-  maximum (False, any, None)
-    To set maximum lifetime of PCP mappings (default 1440 minutes)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  pcp_server_port (False, any, None)
-    PCP server listening port (default 5351) (PCP UDP destination port)
-
-
-  announce (False, any, None)
-    PCP ANNOUNCE Opcode (default is enabled)
-
-
-  allow_third_party_from_wan (False, any, None)
-    Allow third party request coming from WAN (default is disabled)
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                                             |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++============================+===============================+=====================================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.                                  |
+|                            |                               |                                                                     |
+| /required                  |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                                       |
+|                            |                               |                                                                     |
+| /required                  |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication                                   |
+|                            |                               |                                                                     |
+| /required                  |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication                                   |
+|                            |                               |                                                                     |
+| /required                  |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                                       |
+|                            |                               |                                                                     |
+| /required                  |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                                    |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command                     |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| name                       |                               | PCP Template name                                                   |
+|                            |                               |                                                                     |
+| /required                  |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| allow_third_party_from_lan |                               | Allow third party request coming from LAN (default is disabled)     |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| allow_third_party_from_wan |                               | Allow third party request coming from WAN (default is disabled)     |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| check_client_nonce         |                               | To validate NONCE value in PCP request (default= disabled)          |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| disable_map_filter         |                               | To disable processing of FILTER options in MAP request              |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| announce                   |                               | PCP ANNOUNCE Opcode (default is enabled)                            |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| map                        |                               | PCP MAP Opcode (default is enabled)                                 |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| peer                       |                               | PCP PEER Opcode (default is enabled)                                |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| maximum                    |                               | To set maximum lifetime of PCP mappings (default 1440 minutes)      |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| minimum                    |                               | To set minimum lifetime of PCP mappings (default 2 minutes)         |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| pcp_server_port            |                               | PCP server listening port (default 5351) (PCP UDP destination port) |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| source_ip                  |                               | Specify source IP address for IPv4 ANNOUNCE message                 |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| source_ipv6                |                               | Specify source IPv6 address for IPv6 ANNOUNCE message               |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| uuid                       |                               | uuid of the object                                                  |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
+| user_tag                   |                               | Customized tag                                                      |
+|                            |                               |                                                                     |
+|                            |                               |                                                                     |
++----------------------------+-------------------------------+---------------------------------------------------------------------+
 
 
 

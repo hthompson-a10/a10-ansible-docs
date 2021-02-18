@@ -22,157 +22,159 @@ Server Port
 Parameters
 ----------
 
-  service_ip_node_name (optional, any, None)
-    Key to identify parent object
-
-
-  oper (False, any, None)
-    Field oper
-
-
-    use_gslb_state (optional, any, None)
-      Field use_gslb_state
-
-
-    local_protocol (optional, any, None)
-      Field local_protocol
-
-
-    service_port (optional, any, None)
-      Field service_port
-
-
-    dynamic (optional, any, None)
-      Field dynamic
-
-
-    tcp (optional, any, None)
-      Field tcp
-
-
-    disabled (optional, any, None)
-      Field disabled
-
-
-    state (optional, any, None)
-      Field state
-
-
-    manually_health_check (optional, any, None)
-      Field manually_health_check
-
-
-    port_num (optional, any, None)
-      Port Number
-
-
-    gslb_protocol (optional, any, None)
-      Field gslb_protocol
-
-
-    port_proto (optional, any, None)
-      'tcp'= TCP Port; 'udp'= UDP Port;
-
-
-
-  health_check (False, any, None)
-    Health Check Monitor (Monitor Name)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  health_check_protocol_disable (False, any, None)
-    Disable GSLB Protocol Health Monitor
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  follow_port_protocol (False, any, None)
-    'tcp'= TCP Port; 'udp'= UDP Port;
-
-
-  health_check_disable (False, any, None)
-    Disable Health Check Monitor
-
-
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'active'= Active Servers; 'current'= Current Connections;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    active (optional, any, None)
-      Active Servers
-
-
-    current (optional, any, None)
-      Current Connections
-
-
-    port_num (optional, any, None)
-      Port Number
-
-
-    port_proto (optional, any, None)
-      'tcp'= TCP Port; 'udp'= UDP Port;
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  port_num (True, any, None)
-    Port Number
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  action (False, any, None)
-    'enable'= Enable this GSLB server port; 'disable'= Disable this GSLB server port;
-
-
-  port_proto (True, any, None)
-    'tcp'= TCP Port; 'udp'= UDP Port;
-
-
-  health_check_follow_port (False, any, None)
-    Specify which port to follow for health status (Port Number)
-
-
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| Parameters                    | Choices/Defaults              | Comment                                                                           |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++===============================+===============================+===================================================================================+
+| state                         | ['noop', 'present', 'absent'] | State of the object to be created.                                                |
+|                               |                               |                                                                                   |
+| /required                     |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| ansible_host                  |                               | Host for AXAPI authentication                                                     |
+|                               |                               |                                                                                   |
+| /required                     |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| ansible_username              |                               | Username for AXAPI authentication                                                 |
+|                               |                               |                                                                                   |
+| /required                     |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| ansible_password              |                               | Password for AXAPI authentication                                                 |
+|                               |                               |                                                                                   |
+| /required                     |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| ansible_port                  |                               | Port for AXAPI authentication                                                     |
+|                               |                               |                                                                                   |
+| /required                     |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| a10_device_context_id         | ['1-8']                       | Device ID for aVCS configuration                                                  |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| a10_partition                 |                               | Destination/target partition for object/command                                   |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| service_ip_node_name          |                               | Key to identify parent object                                                     |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| port_num                      |                               | Port Number                                                                       |
+|                               |                               |                                                                                   |
+| /required                     |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| port_proto                    |                               | 'tcp'= TCP Port; 'udp'= UDP Port;                                                 |
+|                               |                               |                                                                                   |
+| /required                     |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| action                        |                               | 'enable'= Enable this GSLB server port; 'disable'= Disable this GSLB server port; |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| health_check                  |                               | Health Check Monitor (Monitor Name)                                               |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| health_check_follow_port      |                               | Specify which port to follow for health status (Port Number)                      |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| follow_port_protocol          |                               | 'tcp'= TCP Port; 'udp'= UDP Port;                                                 |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| health_check_protocol_disable |                               | Disable GSLB Protocol Health Monitor                                              |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| health_check_disable          |                               | Disable Health Check Monitor                                                      |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| uuid                          |                               | uuid of the object                                                                |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| user_tag                      |                               | Customized tag                                                                    |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++-------------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| sampling_enable               |                               | Field sampling_enable                                                             |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | counters1                 |                               | 'all'= all; 'active'= Active Servers; 'current'= Current Connections;             |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| oper                          |                               | Field oper                                                                        |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | service_port              |                               | Field service_port                                                                |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | state                     |                               | Field state                                                                       |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | disabled                  |                               | Field disabled                                                                    |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | gslb_protocol             |                               | Field gslb_protocol                                                               |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | local_protocol            |                               | Field local_protocol                                                              |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | tcp                       |                               | Field tcp                                                                         |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | manually_health_check     |                               | Field manually_health_check                                                       |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | use_gslb_state            |                               | Field use_gslb_state                                                              |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | dynamic                   |                               | Field dynamic                                                                     |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | port_num                  |                               | Port Number                                                                       |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | port_proto                |                               | 'tcp'= TCP Port; 'udp'= UDP Port;                                                 |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+| stats                         |                               | Field stats                                                                       |
+|                               |                               |                                                                                   |
+|                               |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | active                    |                               | Active Servers                                                                    |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | current                   |                               | Current Connections                                                               |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | port_num                  |                               | Port Number                                                                       |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
+|   | port_proto                |                               | 'tcp'= TCP Port; 'udp'= UDP Port;                                                 |
+|   |                           |                               |                                                                                   |
+|   |                           |                               |                                                                                   |
++---+---------------------------+-------------------------------+-----------------------------------------------------------------------------------+
 
 
 

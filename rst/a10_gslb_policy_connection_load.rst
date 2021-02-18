@@ -22,66 +22,71 @@ Select Service-IP with the lowest connection-load
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  connection_load_fail_break (False, any, None)
-    Break when exceed limit
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  connection_load_samples (False, any, None)
-    Specify samples for connection-load (Number of samples used to calculate the connection load, default is 5)
-
-
-  connection_load_enable (False, any, None)
-    Enable connection-load
-
-
-  policy_name (optional, any, None)
-    Key to identify parent object
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  limit (False, any, None)
-    Limit of maxinum connection load, default is unlimited
-
-
-  connection_load_interval (False, any, None)
-    Interval between two samples, Unit= second (Interval value,default is 5)
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  connection_load_limit (False, any, None)
-    The value of the connection-load limit, default is unlimited
-
-
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                                                                                     |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++============================+===============================+=============================================================================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.                                                                          |
+|                            |                               |                                                                                                             |
+| /required                  |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                                                                               |
+|                            |                               |                                                                                                             |
+| /required                  |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication                                                                           |
+|                            |                               |                                                                                                             |
+| /required                  |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication                                                                           |
+|                            |                               |                                                                                                             |
+| /required                  |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                                                                               |
+|                            |                               |                                                                                                             |
+| /required                  |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                                                                            |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command                                                             |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| policy_name                |                               | Key to identify parent object                                                                               |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| connection_load_enable     |                               | Enable connection-load                                                                                      |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| connection_load_fail_break |                               | Break when exceed limit                                                                                     |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| connection_load_samples    |                               | Specify samples for connection-load (Number of samples used to calculate the connection load, default is 5) |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| connection_load_interval   |                               | Interval between two samples, Unit= second (Interval value,default is 5)                                    |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| limit                      |                               | Limit of maxinum connection load, default is unlimited                                                      |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| connection_load_limit      |                               | The value of the connection-load limit, default is unlimited                                                |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
+| uuid                       |                               | uuid of the object                                                                                          |
+|                            |                               |                                                                                                             |
+|                            |                               |                                                                                                             |
++----------------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------+
 
 
 

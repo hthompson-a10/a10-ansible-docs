@@ -22,142 +22,147 @@ Virtual port template
 Parameters
 ----------
 
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  allow_syn_otherflags (False, any, None)
-    Allow initial SYN packet with other flags
-
-
-  reset_l7_on_failover (False, any, None)
-    Send reset to L7 client and server connection upon a failover
-
-
-  reset_unknown_conn (False, any, None)
-    Send reset back if receives TCP packet without SYN or RST flag and it does not belong to any existing connections
-
-
-  rate (False, any, None)
-    Source IP and port rate limit (Packet rate limit)
-
-
-  pkt_rate_type (False, any, None)
-    'src-ip-port'= Source IP and port rate limit; 'src-port'= Source port rate limit;
-
-
-  aflow (False, any, None)
-    Use aFlow to eliminate the traffic surge
-
-
-  conn_rate_limit (False, any, None)
-    Connection rate limit
-
-
-  snat_msl (False, any, None)
-    Source NAT MSL (Source NAT MSL value (seconds))
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  non_syn_initiation (False, any, None)
-    Allow initial TCP packet to be non-SYN
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  drop_unknown_conn (False, any, None)
-    Drop conection if receives TCP packet without SYN or RST flag and it does not belong to any existing connections
-
-
-  allow_vip_to_rport_mapping (False, any, None)
-    Allow mapping of VIP to real port
-
-
-  conn_rate_limit_no_logging (False, any, None)
-    Do not log connection over limit event
-
-
-  conn_limit_no_logging (False, any, None)
-    Do not log connection over limit event
-
-
-  when_rr_enable (False, any, None)
-    Only do rate limit if CPU RR triggered
-
-
-  snat_port_preserve (False, any, None)
-    Source NAT Port Preservation
-
-
-  ignore_tcp_msl (False, any, None)
-    reclaim TCP resource immediately without MSL
-
-
-  dscp (False, any, None)
-    Differentiated Services Code Point (DSCP to Real Server IP Mapping Value)
-
-
-  conn_limit (False, any, None)
-    Connection limit
-
-
-  conn_limit_reset (False, any, None)
-    Send client reset when connection over limit
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  log_options (False, any, None)
-    'no-logging'= Do not log over limit event; 'no-repeat-logging'= log once for over limit event. Default is log once per minute;
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    Virtual port template name
-
-
-  pkt_rate_limit_reset (False, any, None)
-    send client-side reset (reset after packet limit)
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  pkt_rate_interval (False, any, None)
-    '100ms'= Source IP and port rate limit per 100ms; 'second'= Source IP and port rate limit per second (default);
-
-
-  conn_rate_limit_reset (False, any, None)
-    Send client reset when connection rate over limit
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  rate_interval (False, any, None)
-    '100ms'= Use 100 ms as sampling interval; 'second'= Use 1 second as sampling interval;
-
-
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Parameters                 | Choices/Defaults              | Comment                                                                                                                        |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++============================+===============================+================================================================================================================================+
+| state                      | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                             |
+|                            |                               |                                                                                                                                |
+| /required                  |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host               |                               | Host for AXAPI authentication                                                                                                  |
+|                            |                               |                                                                                                                                |
+| /required                  |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username           |                               | Username for AXAPI authentication                                                                                              |
+|                            |                               |                                                                                                                                |
+| /required                  |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password           |                               | Password for AXAPI authentication                                                                                              |
+|                            |                               |                                                                                                                                |
+| /required                  |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port               |                               | Port for AXAPI authentication                                                                                                  |
+|                            |                               |                                                                                                                                |
+| /required                  |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id      | ['1-8']                       | Device ID for aVCS configuration                                                                                               |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition              |                               | Destination/target partition for object/command                                                                                |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| name                       |                               | Virtual port template name                                                                                                     |
+|                            |                               |                                                                                                                                |
+| /required                  |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| aflow                      |                               | Use aFlow to eliminate the traffic surge                                                                                       |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| allow_syn_otherflags       |                               | Allow initial SYN packet with other flags                                                                                      |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| conn_limit                 |                               | Connection limit                                                                                                               |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| conn_limit_reset           |                               | Send client reset when connection over limit                                                                                   |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| conn_limit_no_logging      |                               | Do not log connection over limit event                                                                                         |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| conn_rate_limit            |                               | Connection rate limit                                                                                                          |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| rate_interval              |                               | '100ms'= Use 100 ms as sampling interval; 'second'= Use 1 second as sampling interval;                                         |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| conn_rate_limit_reset      |                               | Send client reset when connection rate over limit                                                                              |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| conn_rate_limit_no_logging |                               | Do not log connection over limit event                                                                                         |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| pkt_rate_type              |                               | 'src-ip-port'= Source IP and port rate limit; 'src-port'= Source port rate limit;                                              |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| rate                       |                               | Source IP and port rate limit (Packet rate limit)                                                                              |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| pkt_rate_interval          |                               | '100ms'= Source IP and port rate limit per 100ms; 'second'= Source IP and port rate limit per second (default);                |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| pkt_rate_limit_reset       |                               | send client-side reset (reset after packet limit)                                                                              |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| log_options                |                               | 'no-logging'= Do not log over limit event; 'no-repeat-logging'= log once for over limit event. Default is log once per minute; |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| when_rr_enable             |                               | Only do rate limit if CPU RR triggered                                                                                         |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| allow_vip_to_rport_mapping |                               | Allow mapping of VIP to real port                                                                                              |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| dscp                       |                               | Differentiated Services Code Point (DSCP to Real Server IP Mapping Value)                                                      |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| drop_unknown_conn          |                               | Drop conection if receives TCP packet without SYN or RST flag and it does not belong to any existing connections               |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| reset_unknown_conn         |                               | Send reset back if receives TCP packet without SYN or RST flag and it does not belong to any existing connections              |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| reset_l7_on_failover       |                               | Send reset to L7 client and server connection upon a failover                                                                  |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| ignore_tcp_msl             |                               | reclaim TCP resource immediately without MSL                                                                                   |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| snat_msl                   |                               | Source NAT MSL (Source NAT MSL value (seconds))                                                                                |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| snat_port_preserve         |                               | Source NAT Port Preservation                                                                                                   |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| non_syn_initiation         |                               | Allow initial TCP packet to be non-SYN                                                                                         |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| uuid                       |                               | uuid of the object                                                                                                             |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+| user_tag                   |                               | Customized tag                                                                                                                 |
+|                            |                               |                                                                                                                                |
+|                            |                               |                                                                                                                                |
++----------------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 
 

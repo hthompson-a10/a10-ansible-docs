@@ -22,67 +22,71 @@ SSL certificate expiration check
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  exception (False, any, None)
-    Field exception
-
-
-    action (optional, any, None)
-      'add'= Add an exception; 'delete'= Delete an exception; 'clean'= Delete all exception;
-
-
-    certificate_name (optional, any, None)
-      The certificate name
-
-
-
-  expire_address1 (False, any, None)
-    Email address for certificate expiration check
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ssl_expire_email_address (False, any, None)
-    Config Email address for certificate expiration check
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  interval_days (False, any, None)
-    The interval of days notice after expiration, default is 2
-
-
-  before (False, any, None)
-    The number of days in advance notice before expiration, default is 5
-
-
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                                                                |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++==========================+===============================+========================================================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.                                                     |
+|                          |                               |                                                                                        |
+| /required                |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                                                          |
+|                          |                               |                                                                                        |
+| /required                |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication                                                      |
+|                          |                               |                                                                                        |
+| /required                |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication                                                      |
+|                          |                               |                                                                                        |
+| /required                |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                                                          |
+|                          |                               |                                                                                        |
+| /required                |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                                                       |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command                                        |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| ssl_expire_email_address |                               | Config Email address for certificate expiration check                                  |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| expire_address1          |                               | Email address for certificate expiration check                                         |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| before                   |                               | The number of days in advance notice before expiration, default is 5                   |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| interval_days            |                               | The interval of days notice after expiration, default is 2                             |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| uuid                     |                               | uuid of the object                                                                     |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++--------------------------+-------------------------------+----------------------------------------------------------------------------------------+
+| exception                |                               | Field exception                                                                        |
+|                          |                               |                                                                                        |
+|                          |                               |                                                                                        |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------------------+
+|   | action               |                               | 'add'= Add an exception; 'delete'= Delete an exception; 'clean'= Delete all exception; |
+|   |                      |                               |                                                                                        |
+|   |                      |                               |                                                                                        |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------------------+
+|   | certificate_name     |                               | The certificate name                                                                   |
+|   |                      |                               |                                                                                        |
+|   |                      |                               |                                                                                        |
++---+----------------------+-------------------------------+----------------------------------------------------------------------------------------+
 
 
 

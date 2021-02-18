@@ -22,155 +22,155 @@ Configure LSN Rule-List
 Parameters
 ----------
 
-  domain_name_list (False, any, None)
-    Field domain_name_list
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    name_domain (optional, any, None)
-      Configure a Specific Rule-Set (Domain Name)
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    rule_cfg (optional, any, None)
-      Field rule_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  domain_ip (False, any, None)
-    Field domain_ip
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  domain_list_name_list (False, any, None)
-    Field domain_list_name_list
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    name_domain_list (optional, any, None)
-      Configure a Specific Rule-Set (Domain List Name)
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    rule_cfg (optional, any, None)
-      Field rule_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  name (True, any, None)
-    LSN Rule-List Name
-
-
-  default (False, any, None)
-    Field default
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    rule_cfg (optional, any, None)
-      Field rule_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ip_list (False, any, None)
-    Field ip_list
-
-
-    sampling_enable (optional, any, None)
-      Field sampling_enable
-
-
-    ipv4_addr (optional, any, None)
-      Configure a Specific Rule-Set (IP Network Address)
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    rule_cfg (optional, any, None)
-      Field rule_cfg
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  http_match_domain_name (False, any, None)
-    Enable match domain name in http request
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++------------------------+-------------------------------+----------------------------------------------------+
+| Parameters             | Choices/Defaults              | Comment                                            |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++========================+===============================+====================================================+
+| state                  | ['noop', 'present', 'absent'] | State of the object to be created.                 |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_host           |                               | Host for AXAPI authentication                      |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_username       |                               | Username for AXAPI authentication                  |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_password       |                               | Password for AXAPI authentication                  |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| ansible_port           |                               | Port for AXAPI authentication                      |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| a10_device_context_id  | ['1-8']                       | Device ID for aVCS configuration                   |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| a10_partition          |                               | Destination/target partition for object/command    |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| name                   |                               | LSN Rule-List Name                                 |
+|                        |                               |                                                    |
+| /required              |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| http_match_domain_name |                               | Enable match domain name in http request           |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| uuid                   |                               | uuid of the object                                 |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| user_tag               |                               | Customized tag                                     |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++------------------------+-------------------------------+----------------------------------------------------+
+| domain_ip              |                               | Field domain_ip                                    |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                 |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | sampling_enable    |                               | Field sampling_enable                              |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+| default                |                               | Field default                                      |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | rule_cfg           |                               | Field rule_cfg                                     |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                 |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | sampling_enable    |                               | Field sampling_enable                              |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+| domain_name_list       |                               | Field domain_name_list                             |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | name_domain        |                               | Configure a Specific Rule-Set (Domain Name)        |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | rule_cfg           |                               | Field rule_cfg                                     |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                 |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | user_tag           |                               | Customized tag                                     |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | sampling_enable    |                               | Field sampling_enable                              |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+| domain_list_name_list  |                               | Field domain_list_name_list                        |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | name_domain_list   |                               | Configure a Specific Rule-Set (Domain List Name)   |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | rule_cfg           |                               | Field rule_cfg                                     |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                 |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | user_tag           |                               | Customized tag                                     |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | sampling_enable    |                               | Field sampling_enable                              |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+| ip_list                |                               | Field ip_list                                      |
+|                        |                               |                                                    |
+|                        |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | ipv4_addr          |                               | Configure a Specific Rule-Set (IP Network Address) |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | rule_cfg           |                               | Field rule_cfg                                     |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | uuid               |                               | uuid of the object                                 |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | user_tag           |                               | Customized tag                                     |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
+|   | sampling_enable    |                               | Field sampling_enable                              |
+|   |                    |                               |                                                    |
+|   |                    |                               |                                                    |
++---+--------------------+-------------------------------+----------------------------------------------------+
 
 
 

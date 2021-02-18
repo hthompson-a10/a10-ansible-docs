@@ -22,54 +22,59 @@ DNSSEC Key rollover
 Parameters
 ----------
 
-  ds_ready_in_parent_zone (False, any, None)
-    DS RR is already ready in the parent zone
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ksk_start (False, any, None)
-    start KSK rollover in emergency mode
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  zsk_start (False, any, None)
-    start ZSK rollover in emergency mode
-
-
-  dnssec_key_type (False, any, None)
-    'ZSK'= Zone Signing Key; 'KSK'= Key Signing Key;
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  zone_name (False, any, None)
-    Specify the name for the DNS zone
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-------------------------+-------------------------------+--------------------------------------------------+
+| Parameters              | Choices/Defaults              | Comment                                          |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++=========================+===============================+==================================================+
+| state                   | ['noop', 'present', 'absent'] | State of the object to be created.               |
+|                         |                               |                                                  |
+| /required               |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| ansible_host            |                               | Host for AXAPI authentication                    |
+|                         |                               |                                                  |
+| /required               |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| ansible_username        |                               | Username for AXAPI authentication                |
+|                         |                               |                                                  |
+| /required               |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| ansible_password        |                               | Password for AXAPI authentication                |
+|                         |                               |                                                  |
+| /required               |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| ansible_port            |                               | Port for AXAPI authentication                    |
+|                         |                               |                                                  |
+| /required               |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| a10_device_context_id   | ['1-8']                       | Device ID for aVCS configuration                 |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| a10_partition           |                               | Destination/target partition for object/command  |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| zone_name               |                               | Specify the name for the DNS zone                |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| dnssec_key_type         |                               | 'ZSK'= Zone Signing Key; 'KSK'= Key Signing Key; |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| zsk_start               |                               | start ZSK rollover in emergency mode             |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| ksk_start               |                               | start KSK rollover in emergency mode             |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
+| ds_ready_in_parent_zone |                               | DS RR is already ready in the parent zone        |
+|                         |                               |                                                  |
+|                         |                               |                                                  |
++-------------------------+-------------------------------+--------------------------------------------------+
 
 
 

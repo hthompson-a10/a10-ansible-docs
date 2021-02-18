@@ -22,42 +22,47 @@ Rename external health monitor script
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  dst_file (False, any, None)
-    Destination external health monitor script file name
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  src_file (False, any, None)
-    Source external health monitor script file name
-
-
++-----------------------+-------------------------------+------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                              |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++=======================+===============================+======================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                   |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                        |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                    |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                    |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                        |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                     |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command      |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| src_file              |                               | Source external health monitor script file name      |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| dst_file              |                               | Destination external health monitor script file name |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
 
 
 

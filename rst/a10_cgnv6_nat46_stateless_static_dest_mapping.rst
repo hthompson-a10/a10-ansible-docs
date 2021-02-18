@@ -22,62 +22,67 @@ Stateless NAT46 mapping (IPv4 <-> IPv6)
 Parameters
 ----------
 
-  count (False, any, None)
-    Set number of consecutive mappings (Number of mappings)
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vrid (False, any, None)
-    VRRP-A vrid (Specify ha VRRP-A vrid)
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  to_shared (False, any, None)
-    Send NATed traffic through shared partition
-
-
-  v6_address (True, any, None)
-    IPv6 address
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  shared (False, any, None)
-    Share/Expose this mapping with other partitions
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  v4_address (True, any, None)
-    IPv4 address
-
-
++-----------------------+-------------------------------+---------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                 |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++=======================+===============================+=========================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                      |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                           |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                       |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                       |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                           |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                        |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command         |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| v4_address            |                               | IPv4 address                                            |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| v6_address            |                               | IPv6 address                                            |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| count                 |                               | Set number of consecutive mappings (Number of mappings) |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| vrid                  |                               | VRRP-A vrid (Specify ha VRRP-A vrid)                    |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| shared                |                               | Share/Expose this mapping with other partitions         |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| to_shared             |                               | Send NATed traffic through shared partition             |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                      |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
 
 
 

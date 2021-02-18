@@ -22,161 +22,163 @@ Notification template configuration
 Parameters
 ----------
 
-  ipv6_address (False, any, None)
-    Configure the host IPv6 address
-
-
-  relative_uri (False, any, None)
-    Configure the relative uri(e.g /example , default /)
-
-
-  protocol (False, any, None)
-    'http'= Use http protocol; 'https'= Use https protocol(default);  (http protocol)
-
-
-  https_port (False, any, None)
-    Configure the https port to use(default 443) (http port(default 443))
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ipv4_address (False, any, None)
-    Configure the host IPv4 address
-
-
-  test_connectivity (False, any, None)
-    Test connectivity to notification receiver
-
-
-  use_mgmt_port (False, any, None)
-    Use management port for notifications
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  name (True, any, None)
-    Notification template name
-
-
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'sent_successful'= Sent successful; 'send_fail'= Send failures; 'response_fail'= Response failures;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  http_port (False, any, None)
-    Configure the http port to use(default 80) (http port(default 80))
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    sent_successful (optional, any, None)
-      Sent successful
-
-
-    send_fail (optional, any, None)
-      Send failures
-
-
-    name (optional, any, None)
-      Notification template name
-
-
-    response_fail (optional, any, None)
-      Response failures
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  authentication (False, any, None)
-    Field authentication
-
-
-    auth_password_string (optional, any, None)
-      Configure the authentication user password (Authentication password)
-
-
-    auth_password (optional, any, None)
-      Configure the authentication user password (Authentication password)
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    encrypted (optional, any, None)
-      Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-    relative_logoff_uri (optional, any, None)
-      Configure the authentication logoff uri
-
-
-    api_key_encrypted (optional, any, None)
-      Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)
-
-
-    relative_login_uri (optional, any, None)
-      Configure the authentication login uri
-
-
-    api_key_string (optional, any, None)
-      Configure api-key as a mode of authentication
-
-
-    api_key (optional, any, None)
-      Configure api-key as a mode of authentication
-
-
-    auth_username (optional, any, None)
-      Configure the authentication user name
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  debug_mode (False, any, None)
-    Enable debug mode
-
-
-  host_name (False, any, None)
-    Configure the host name(e.g www.a10networks.com)
-
-
-  action (False, any, None)
-    'enable'= Enable; 'disable'= Disable;
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| Parameters               | Choices/Defaults              | Comment                                                                                                         |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++==========================+===============================+=================================================================================================================+
+| state                    | ['noop', 'present', 'absent'] | State of the object to be created.                                                                              |
+|                          |                               |                                                                                                                 |
+| /required                |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| ansible_host             |                               | Host for AXAPI authentication                                                                                   |
+|                          |                               |                                                                                                                 |
+| /required                |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| ansible_username         |                               | Username for AXAPI authentication                                                                               |
+|                          |                               |                                                                                                                 |
+| /required                |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| ansible_password         |                               | Password for AXAPI authentication                                                                               |
+|                          |                               |                                                                                                                 |
+| /required                |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| ansible_port             |                               | Port for AXAPI authentication                                                                                   |
+|                          |                               |                                                                                                                 |
+| /required                |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id    | ['1-8']                       | Device ID for aVCS configuration                                                                                |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| a10_partition            |                               | Destination/target partition for object/command                                                                 |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| name                     |                               | Notification template name                                                                                      |
+|                          |                               |                                                                                                                 |
+| /required                |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| ipv4_address             |                               | Configure the host IPv4 address                                                                                 |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| ipv6_address             |                               | Configure the host IPv6 address                                                                                 |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| host_name                |                               | Configure the host name(e.g www.a10networks.com)                                                                |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| use_mgmt_port            |                               | Use management port for notifications                                                                           |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| protocol                 |                               | 'http'= Use http protocol; 'https'= Use https protocol(default);  (http protocol)                               |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| http_port                |                               | Configure the http port to use(default 80) (http port(default 80))                                              |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| https_port               |                               | Configure the https port to use(default 443) (http port(default 443))                                           |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| relative_uri             |                               | Configure the relative uri(e.g /example , default /)                                                            |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| action                   |                               | 'enable'= Enable; 'disable'= Disable;                                                                           |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| debug_mode               |                               | Enable debug mode                                                                                               |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| test_connectivity        |                               | Test connectivity to notification receiver                                                                      |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| uuid                     |                               | uuid of the object                                                                                              |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++--------------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| sampling_enable          |                               | Field sampling_enable                                                                                           |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | counters1            |                               | 'all'= all; 'sent_successful'= Sent successful; 'send_fail'= Send failures; 'response_fail'= Response failures; |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| authentication           |                               | Field authentication                                                                                            |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | relative_login_uri   |                               | Configure the authentication login uri                                                                          |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | relative_logoff_uri  |                               | Configure the authentication logoff uri                                                                         |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | auth_username        |                               | Configure the authentication user name                                                                          |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | auth_password        |                               | Configure the authentication user password (Authentication password)                                            |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | auth_password_string |                               | Configure the authentication user password (Authentication password)                                            |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | encrypted            |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)               |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | api_key              |                               | Configure api-key as a mode of authentication                                                                   |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | api_key_string       |                               | Configure api-key as a mode of authentication                                                                   |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | api_key_encrypted    |                               | Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED secret string)               |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | uuid                 |                               | uuid of the object                                                                                              |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+| stats                    |                               | Field stats                                                                                                     |
+|                          |                               |                                                                                                                 |
+|                          |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | sent_successful      |                               | Sent successful                                                                                                 |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | send_fail            |                               | Send failures                                                                                                   |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | response_fail        |                               | Response failures                                                                                               |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
+|   | name                 |                               | Notification template name                                                                                      |
+|   |                      |                               |                                                                                                                 |
+|   |                      |                               |                                                                                                                 |
++---+----------------------+-------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 
 

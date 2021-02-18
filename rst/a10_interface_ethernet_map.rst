@@ -22,58 +22,63 @@ Configure MAP on this interface
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  inside (False, any, None)
-    Configure MAP inside interface (connected to MAP domains)
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  outside (False, any, None)
-    Configure MAP outside interface
-
-
-  ethernet_ifnum (optional, any, None)
-    Key to identify parent object
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  map_t_inside (False, any, None)
-    Configure MAP inside interface (connected to MAP domains)
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  map_t_outside (False, any, None)
-    Configure MAP outside interface
-
-
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                   |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++=======================+===============================+===========================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                        |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                             |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                         |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                         |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                             |
+|                       |                               |                                                           |
+| /required             |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                          |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command           |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| ethernet_ifnum        |                               | Key to identify parent object                             |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| inside                |                               | Configure MAP inside interface (connected to MAP domains) |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| outside               |                               | Configure MAP outside interface                           |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| map_t_inside          |                               | Configure MAP inside interface (connected to MAP domains) |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| map_t_outside         |                               | Configure MAP outside interface                           |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                        |
+|                       |                               |                                                           |
+|                       |                               |                                                           |
++-----------------------+-------------------------------+-----------------------------------------------------------+
 
 
 

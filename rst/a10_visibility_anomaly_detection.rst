@@ -22,50 +22,55 @@ Anomaly detection parameters
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  logging (False, any, None)
-    'per-entity'= Enable per entity logging; 'per-metric'= Enable per metric logging with threshold details; 'disable'= Disable anomaly notifications (Default);
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  sensitivity (False, any, None)
-    'high'= Highly sensitive anomaly detection. Can lead to false positives; 'low'= Low sensitivity anomaly detection. Can cause delay in detection and might not detect certain attacks. (default);
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  feature_status (False, any, None)
-    'enable'= Enable anomaly-detection; 'disable'= Disable anomaly detection (default);
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                                                                                                                          |
+|                       |                               |                                                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
++=======================+===============================+==================================================================================================================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                  |
+| /required             |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                                                                                                                    |
+|                       |                               |                                                                                                                                                                                                  |
+| /required             |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                                                                                                                |
+|                       |                               |                                                                                                                                                                                                  |
+| /required             |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                                                                                                                |
+|                       |                               |                                                                                                                                                                                                  |
+| /required             |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                                                                                                                    |
+|                       |                               |                                                                                                                                                                                                  |
+| /required             |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                                                                                                                 |
+|                       |                               |                                                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| sensitivity           |                               | 'high'= Highly sensitive anomaly detection. Can lead to false positives; 'low'= Low sensitivity anomaly detection. Can cause delay in detection and might not detect certain attacks. (default); |
+|                       |                               |                                                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| feature_status        |                               | 'enable'= Enable anomaly-detection; 'disable'= Disable anomaly detection (default);                                                                                                              |
+|                       |                               |                                                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| logging               |                               | 'per-entity'= Enable per entity logging; 'per-metric'= Enable per metric logging with threshold details; 'disable'= Disable anomaly notifications (Default);                                     |
+|                       |                               |                                                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                                                                                                               |
+|                       |                               |                                                                                                                                                                                                  |
+|                       |                               |                                                                                                                                                                                                  |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 

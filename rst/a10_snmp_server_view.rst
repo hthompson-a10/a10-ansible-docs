@@ -22,54 +22,59 @@ Defines named 'view' - a subset of the overall OID tree
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  oid (True, any, None)
-    MIB view family name or oid
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  viewname (True, any, None)
-    Name of the view
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  ntype (False, any, None)
-    'included'= MIB family is included in the view; 'excluded'= MIB family is excluded from the view;
-
-
-  mask (False, any, None)
-    Hex octets, separated by '.', mask of oid
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                           |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++=======================+===============================+===================================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                                |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                                 |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                                     |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                                  |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                                   |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| viewname              |                               | Name of the view                                                                                  |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| oid                   |                               | MIB view family name or oid                                                                       |
+|                       |                               |                                                                                                   |
+| /required             |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| ntype                 |                               | 'included'= MIB family is included in the view; 'excluded'= MIB family is excluded from the view; |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| mask                  |                               | Hex octets, separated by '.', mask of oid                                                         |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                                |
+|                       |                               |                                                                                                   |
+|                       |                               |                                                                                                   |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------------------------+
 
 
 

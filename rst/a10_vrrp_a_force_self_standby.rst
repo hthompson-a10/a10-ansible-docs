@@ -22,46 +22,51 @@ HA VRRP-A Operational Command to force the unit or a group to HA standby state
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vrid (False, any, None)
-    Specify one VRRP-A vrid to force into standby state
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  action (False, any, None)
-    'enable'= enable vrrp-a force-self-standby; 'disable'= disable vrrp-a force- self-standby;
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  all_partitions (False, any, None)
-    force all partitions in standby state
-
-
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults    | Comment                                                                                    |
+|                       |                     |                                                                                            |
+|                       |                     |                                                                                            |
++=======================+=====================+============================================================================================+
+| state                 | ['noop', 'present'] | State of the object to be created.                                                         |
+|                       |                     |                                                                                            |
+| /required             |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| ansible_host          |                     | Host for AXAPI authentication                                                              |
+|                       |                     |                                                                                            |
+| /required             |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| ansible_username      |                     | Username for AXAPI authentication                                                          |
+|                       |                     |                                                                                            |
+| /required             |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| ansible_password      |                     | Password for AXAPI authentication                                                          |
+|                       |                     |                                                                                            |
+| /required             |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| ansible_port          |                     | Port for AXAPI authentication                                                              |
+|                       |                     |                                                                                            |
+| /required             |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']             | Device ID for aVCS configuration                                                           |
+|                       |                     |                                                                                            |
+|                       |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| a10_partition         |                     | Destination/target partition for object/command                                            |
+|                       |                     |                                                                                            |
+|                       |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| vrid                  |                     | Specify one VRRP-A vrid to force into standby state                                        |
+|                       |                     |                                                                                            |
+|                       |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| all_partitions        |                     | force all partitions in standby state                                                      |
+|                       |                     |                                                                                            |
+|                       |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
+| action                |                     | 'enable'= enable vrrp-a force-self-standby; 'disable'= disable vrrp-a force- self-standby; |
+|                       |                     |                                                                                            |
+|                       |                     |                                                                                            |
++-----------------------+---------------------+--------------------------------------------------------------------------------------------+
 
 
 

@@ -22,54 +22,59 @@ Static MAC commands
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  dest (False, any, None)
-    Trap MAC with this DA to CPU
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vlan (True, any, None)
-    VLAN Id
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  mac (True, any, None)
-    Configure a Static MAC address
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  port (False, any, None)
-    Ethernet Port on which the Address is applicable (Port Value)
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                       |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++=======================+===============================+===============================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                            |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                             |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                 |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                              |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command               |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| mac                   |                               | Configure a Static MAC address                                |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| port                  |                               | Ethernet Port on which the Address is applicable (Port Value) |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| vlan                  |                               | VLAN Id                                                       |
+|                       |                               |                                                               |
+| /required             |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| dest                  |                               | Trap MAC with this DA to CPU                                  |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                            |
+|                       |                               |                                                               |
+|                       |                               |                                                               |
++-----------------------+-------------------------------+---------------------------------------------------------------+
 
 
 

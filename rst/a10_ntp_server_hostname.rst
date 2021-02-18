@@ -22,54 +22,59 @@ IPV4 address, IPV6 address or host name of NTP server
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  prefer (False, any, None)
-    Set this NTP server as preferred
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  host_servername (True, any, None)
-    IPV4 address, IPV6 address or host name of NTP server(string1~63)
-
-
-  key (False, any, None)
-    Use trusted key to authenticate this NTP server (The trusted key number to use)
-
-
-  action (False, any, None)
-    'enable'= Enable this NTP server; 'disable'= Disable this NTP server;
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                         |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++=======================+===============================+=================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                              |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                   |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                               |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                               |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                   |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                 |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| host_servername       |                               | IPV4 address, IPV6 address or host name of NTP server(string1~63)               |
+|                       |                               |                                                                                 |
+| /required             |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| key                   |                               | Use trusted key to authenticate this NTP server (The trusted key number to use) |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| prefer                |                               | Set this NTP server as preferred                                                |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| action                |                               | 'enable'= Enable this NTP server; 'disable'= Disable this NTP server;           |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                              |
+|                       |                               |                                                                                 |
+|                       |                               |                                                                                 |
++-----------------------+-------------------------------+---------------------------------------------------------------------------------+
 
 
 

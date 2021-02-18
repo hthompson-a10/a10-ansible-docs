@@ -22,50 +22,55 @@ Configure license manager host
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  host_ipv4 (True, any, None)
-    license server ip address (length=1-31)
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  host_ipv6 (True, any, None)
-    Configure license manager server ipv6-address
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  port (False, any, None)
-    Configure the license manager port, default is 443
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+----------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                            |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++=======================+===============================+====================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                 |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                      |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                  |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                  |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                      |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                   |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command    |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| host_ipv4             |                               | license server ip address (length=1-31)            |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| host_ipv6             |                               | Configure license manager server ipv6-address      |
+|                       |                               |                                                    |
+| /required             |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| port                  |                               | Configure the license manager port, default is 443 |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
+| uuid                  |                               | uuid of the object                                 |
+|                       |                               |                                                    |
+|                       |                               |                                                    |
++-----------------------+-------------------------------+----------------------------------------------------+
 
 
 

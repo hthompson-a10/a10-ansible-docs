@@ -22,235 +22,231 @@ Open Shortest Path First (OSPF) for IPv6
 Parameters
 ----------
 
-  all (False, any, None)
-    Field all
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ifsm (False, any, None)
-    Field ifsm
-
-
-    status (optional, any, None)
-      IFSM Status Information
-
-
-    timers (optional, any, None)
-      IFSM Timer Information
-
-
-    events (optional, any, None)
-      IFSM Event Information
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  nfsm (False, any, None)
-    Field nfsm
-
-
-    status (optional, any, None)
-      NFSM Status Information
-
-
-    timers (optional, any, None)
-      NFSM Timer Information
-
-
-    events (optional, any, None)
-      NFSM Event Information
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  packet (False, any, None)
-    Field packet
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    ls_ack (optional, any, None)
-      OSPFv3 Link State Acknowledgment
-
-
-    dd (optional, any, None)
-      OSPFv3 Database Description
-
-
-    ls_request (optional, any, None)
-      OSPFv3 Link State Request
-
-
-    detail (optional, any, None)
-      Detail information
-
-
-    send (optional, any, None)
-      Packet sent
-
-
-    ls_update (optional, any, None)
-      OSPFv3 Link State Update
-
-
-    recv (optional, any, None)
-      Packet received
-
-
-    hello (optional, any, None)
-      OSPFv3 Hello
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  nsm (False, any, None)
-    Field nsm
-
-
-    interface (optional, any, None)
-      NSM interface
-
-
-    redistribute (optional, any, None)
-      NSM redistribute
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  bfd (False, any, None)
-    Field bfd
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  route (False, any, None)
-    Field route
-
-
-    ia (optional, any, None)
-      Inter-Area route calculation information
-
-
-    ase (optional, any, None)
-      External route calculation information
-
-
-    install (optional, any, None)
-      Route installation information
-
-
-    spf (optional, any, None)
-      SPF calculation information
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  lsa (False, any, None)
-    Field lsa
-
-
-    gererate (optional, any, None)
-      LSA Generation
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    install (optional, any, None)
-      LSA Installation
-
-
-    flooding (optional, any, None)
-      LSA Flooding
-
-
-    maxage (optional, any, None)
-      LSA MaxAge processing
-
-
-    refresh (optional, any, None)
-      LSA Refreshment
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  events (False, any, None)
-    Field events
-
-
-    asbr (optional, any, None)
-      OSPF ASBR events
-
-
-    abr (optional, any, None)
-      OSPF ABR events
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    router (optional, any, None)
-      Other router events
-
-
-    vlink (optional, any, None)
-      Virtual-Link event
-
-
-    os (optional, any, None)
-      OS events
-
-
-
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| /required             |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| all                   |                               | Field all                                       |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| bfd                   |                               | Field bfd                                       |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| events                |                               | Field events                                    |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | abr               |                               | OSPF ABR events                                 |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | asbr              |                               | OSPF ASBR events                                |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | os                |                               | OS events                                       |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | router            |                               | Other router events                             |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | vlink             |                               | Virtual-Link event                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| ifsm                  |                               | Field ifsm                                      |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | events            |                               | IFSM Event Information                          |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | status            |                               | IFSM Status Information                         |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | timers            |                               | IFSM Timer Information                          |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| lsa                   |                               | Field lsa                                       |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | flooding          |                               | LSA Flooding                                    |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | gererate          |                               | LSA Generation                                  |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | install           |                               | LSA Installation                                |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | maxage            |                               | LSA MaxAge processing                           |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | refresh           |                               | LSA Refreshment                                 |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| nfsm                  |                               | Field nfsm                                      |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | events            |                               | NFSM Event Information                          |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | status            |                               | NFSM Status Information                         |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | timers            |                               | NFSM Timer Information                          |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| nsm                   |                               | Field nsm                                       |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | interface         |                               | NSM interface                                   |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | redistribute      |                               | NSM redistribute                                |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| packet                |                               | Field packet                                    |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | dd                |                               | OSPFv3 Database Description                     |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | detail            |                               | Detail information                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | hello             |                               | OSPFv3 Hello                                    |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ls_ack            |                               | OSPFv3 Link State Acknowledgment                |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ls_request        |                               | OSPFv3 Link State Request                       |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ls_update         |                               | OSPFv3 Link State Update                        |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | recv              |                               | Packet received                                 |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | send              |                               | Packet sent                                     |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+| route                 |                               | Field route                                     |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ase               |                               | External route calculation information          |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | ia                |                               | Inter-Area route calculation information        |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | install           |                               | Route installation information                  |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | spf               |                               | SPF calculation information                     |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
+|   | uuid              |                               | uuid of the object                              |
+|   |                   |                               |                                                 |
+|   |                   |                               |                                                 |
++---+-------------------+-------------------------------+-------------------------------------------------+
 
 
 

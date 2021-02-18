@@ -22,62 +22,67 @@ Specify a ip address mask network to announce via BGP
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  description (False, any, None)
-    Network specific description (Up to 80 characters describing this network)
-
-
-  network_ipv6 (True, any, None)
-    Specify a network to announce via BGP
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  route_map (False, any, None)
-    Route-map to modify the attributes (Name of the route map)
-
-
-  bgp_as_number (optional, any, None)
-    Key to identify parent object
-
-
-  comm_value (False, any, None)
-    community value in the format 1-4294967295|AA=NN|internet|local-AS|no- advertise|no-export
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  backdoor (False, any, None)
-    Specify a BGP backdoor route
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                                                    |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++=======================+===============================+============================================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                                         |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                                              |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                                          |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                                          |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                                              |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                                           |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                                            |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| bgp_as_number         |                               | Key to identify parent object                                                              |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| network_ipv6          |                               | Specify a network to announce via BGP                                                      |
+|                       |                               |                                                                                            |
+| /required             |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| route_map             |                               | Route-map to modify the attributes (Name of the route map)                                 |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| backdoor              |                               | Specify a BGP backdoor route                                                               |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| description           |                               | Network specific description (Up to 80 characters describing this network)                 |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| comm_value            |                               | community value in the format 1-4294967295|AA=NN|internet|local-AS|no- advertise|no-export |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                                         |
+|                       |                               |                                                                                            |
+|                       |                               |                                                                                            |
++-----------------------+-------------------------------+--------------------------------------------------------------------------------------------+
 
 
 

@@ -22,469 +22,463 @@ Enable SNMP traps
 Parameters
 ----------
 
-  all (False, any, None)
-    Enable all SNMP traps
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  lsn (False, any, None)
-    Field lsn
-
-
-    all (optional, any, None)
-      Enable all LSN group traps
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    per_ip_port_usage_threshold (optional, any, None)
-      Enable LSN trap when IP total port usage reaches the threshold (default 64512)
-
-
-    total_port_usage_threshold (optional, any, None)
-      Enable LSN trap when NAT total port usage reaches the threshold (default 655350000)
-
-
-    fixed_nat_port_mapping_file_change (optional, any, None)
-      Enable LSN trap when fixed nat port mapping file change
-
-
-    max_port_threshold (optional, any, None)
-      Maximum threshold
-
-
-    max_ipport_threshold (optional, any, None)
-      Maximum threshold
-
-
-    traffic_exceeded (optional, any, None)
-      Enable LSN trap when NAT pool reaches the threshold
-
-
-
-  slb_change (False, any, None)
-    Field slb_change
-
-
-    ssl_cert_expire (optional, any, None)
-      Enable SSL certificate expiring trap
-
-
-    all (optional, any, None)
-      Enable all system group traps
-
-
-    ssl_cert_change (optional, any, None)
-      Enable SSL certificate change trap
-
-
-    connection_resource_event (optional, any, None)
-      Enable system connection resource event trap
-
-
-    resource_usage_warning (optional, any, None)
-      Enable partition resource usage warning trap
-
-
-    server (optional, any, None)
-      Enable slb server create/delete trap
-
-
-    vip (optional, any, None)
-      Enable slb vip create/delete trap
-
-
-    server_port (optional, any, None)
-      Enable slb server port create/delete trap
-
-
-    system_threshold (optional, any, None)
-      Enable slb system threshold trap
-
-
-    vip_port (optional, any, None)
-      Enable slb vip-port create/delete trap
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  vrrp_a (False, any, None)
-    Field vrrp_a
-
-
-    active (optional, any, None)
-      Enable VRRP-A active trap
-
-
-    standby (optional, any, None)
-      Enable VRRP-A standby trap
-
-
-    all (optional, any, None)
-      Enable all VRRP-A group traps
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  ssl (False, any, None)
-    Field ssl
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    server_certificate_error (optional, any, None)
-      Enable SSL server certificate error trap
-
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  network (False, any, None)
-    Field network
-
-
-    trunk_port_threshold (optional, any, None)
-      Enable network trunk-port-threshold trap
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  lldp (False, any, None)
-    Enable lldp traps
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  gslb (False, any, None)
-    Field gslb
-
-
-    all (optional, any, None)
-      Enable all GSLB traps
-
-
-    group (optional, any, None)
-      Enable GSLB group related traps
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    zone (optional, any, None)
-      Enable GSLB zone related traps
-
-
-    site (optional, any, None)
-      Enable GSLB site related traps
-
-
-    service_ip (optional, any, None)
-      Enable GSLB service-ip related traps
-
-
-
-  snmp (False, any, None)
-    Field snmp
-
-
-    linkup (optional, any, None)
-      Enable SNMP link-up trap
-
-
-    all (optional, any, None)
-      Enable all SNMP group traps
-
-
-    linkdown (optional, any, None)
-      Enable SNMP link-down trap
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  system (False, any, None)
-    Field system
-
-
-    smp_resource_event (optional, any, None)
-      Enable system smp resource event trap
-
-
-    sec_disk (optional, any, None)
-      Enable system secondary hard disk trap
-
-
-    all (optional, any, None)
-      Enable all system group traps
-
-
-    low_temp (optional, any, None)
-      Enable system low temperature trap
-
-
-    high_memory_use (optional, any, None)
-      Enable system high memory usage trap
-
-
-    power (optional, any, None)
-      Enable system power supply trap
-
-
-    high_temp (optional, any, None)
-      Enable system high temperature trap
-
-
-    tacacs_server_up_down (optional, any, None)
-      Enable system TACACS monitor server up/down trap
-
-
-    file_sys_read_only (optional, any, None)
-      Enable file system read-only trap
-
-
-    fan (optional, any, None)
-      Enable system fan trap
-
-
-    shutdown (optional, any, None)
-      Enable system shutdown trap
-
-
-    control_cpu_high (optional, any, None)
-      Enable control CPU usage high trap
-
-
-    syslog_severity_one (optional, any, None)
-      Enable system syslog severity one messages trap
-
-
-    restart (optional, any, None)
-      Enable system restart trap
-
-
-    packet_drop (optional, any, None)
-      Enable system packet dropped trap
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    license_management (optional, any, None)
-      Enable system license management traps
-
-
-    high_disk_use (optional, any, None)
-      Enable system high disk usage trap
-
-
-    start (optional, any, None)
-      Enable system start trap
-
-
-    data_cpu_high (optional, any, None)
-      Enable data CPU usage high trap
-
-
-    pri_disk (optional, any, None)
-      Enable system primary hard disk trap
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  vcs (False, any, None)
-    Field vcs
-
-
-    state_change (optional, any, None)
-      Enable VCS state change trap
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  routing (False, any, None)
-    Field routing
-
-
-    bgp (optional, any, None)
-      Field bgp
-
-
-    isis (optional, any, None)
-      Field isis
-
-
-    ospf (optional, any, None)
-      Field ospf
-
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  slb (False, any, None)
-    Field slb
-
-
-    service_group_member_up (optional, any, None)
-      Enable SLB service-group-member-up trap
-
-
-    all (optional, any, None)
-      Enable all SLB traps
-
-
-    vip_port_connratelimit (optional, any, None)
-      Enable the virtual port reach conn-rate-limit trap
-
-
-    server_conn_resume (optional, any, None)
-      Enable SLB server connection resume trap
-
-
-    server_selection_failure (optional, any, None)
-      Enable SLB server selection failure trap
-
-
-    vip_connlimit (optional, any, None)
-      Enable the virtual server reach conn-limit trap
-
-
-    bw_rate_limit_exceed (optional, any, None)
-      Enable SLB server/port bandwidth rate limit exceed trap
-
-
-    server_down (optional, any, None)
-      Enable SLB server-down trap
-
-
-    service_group_up (optional, any, None)
-      Enable SLB service-group-up trap
-
-
-    vip_connratelimit (optional, any, None)
-      Enable the virtual server reach conn-rate-limit trap
-
-
-    vip_port_down (optional, any, None)
-      Enable SLB virtual port down trap
-
-
-    service_down (optional, any, None)
-      Enable SLB service-down trap
-
-
-    vip_port_connlimit (optional, any, None)
-      Enable the virtual port reach conn-limit trap
-
-
-    service_group_down (optional, any, None)
-      Enable SLB service-group-down trap
-
-
-    vip_up (optional, any, None)
-      Enable SLB virtual server up trap
-
-
-    vip_port_up (optional, any, None)
-      Enable SLB virtual port up trap
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-    gateway_up (optional, any, None)
-      Enable SLB server gateway up trap
-
-
-    service_conn_limit (optional, any, None)
-      Enable SLB service connection limit trap
-
-
-    gateway_down (optional, any, None)
-      Enable SLB server gateway down trap
-
-
-    service_group_member_down (optional, any, None)
-      Enable SLB service-group-member-down trap
-
-
-    vip_down (optional, any, None)
-      Enable SLB virtual server down trap
-
-
-    server_up (optional, any, None)
-      Enable slb server up trap
-
-
-    application_buffer_limit (optional, any, None)
-      Enable application buffer reach limit trap
-
-
-    bw_rate_limit_resume (optional, any, None)
-      Enable SLB server/port bandwidth rate limit resume trap
-
-
-    server_conn_limit (optional, any, None)
-      Enable SLB server connection limit trap
-
-
-    service_up (optional, any, None)
-      Enable SLB service-up trap
-
-
-    server_disabled (optional, any, None)
-      Enable SLB server-disabled trap
-
-
-    service_conn_resume (optional, any, None)
-      Enable SLB service connection resume trap
-
-
-
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| Parameters                             | Choices/Defaults              | Comment                                                                             |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++========================================+===============================+=====================================================================================+
+| state                                  | ['noop', 'present', 'absent'] | State of the object to be created.                                                  |
+|                                        |                               |                                                                                     |
+| /required                              |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_host                           |                               | Host for AXAPI authentication                                                       |
+|                                        |                               |                                                                                     |
+| /required                              |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_username                       |                               | Username for AXAPI authentication                                                   |
+|                                        |                               |                                                                                     |
+| /required                              |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_password                       |                               | Password for AXAPI authentication                                                   |
+|                                        |                               |                                                                                     |
+| /required                              |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ansible_port                           |                               | Port for AXAPI authentication                                                       |
+|                                        |                               |                                                                                     |
+| /required                              |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_device_context_id                  | ['1-8']                       | Device ID for aVCS configuration                                                    |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| a10_partition                          |                               | Destination/target partition for object/command                                     |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| all                                    |                               | Enable all SNMP traps                                                               |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| lldp                                   |                               | Enable lldp traps                                                                   |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| uuid                                   |                               | uuid of the object                                                                  |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++----------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| routing                                |                               | Field routing                                                                       |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | bgp                                |                               | Field bgp                                                                           |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | isis                               |                               | Field isis                                                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | ospf                               |                               | Field ospf                                                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| gslb                                   |                               | Field gslb                                                                          |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | all                                |                               | Enable all GSLB traps                                                               |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | zone                               |                               | Enable GSLB zone related traps                                                      |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | site                               |                               | Enable GSLB site related traps                                                      |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | group                              |                               | Enable GSLB group related traps                                                     |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_ip                         |                               | Enable GSLB service-ip related traps                                                |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| slb                                    |                               | Field slb                                                                           |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | all                                |                               | Enable all SLB traps                                                                |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | application_buffer_limit           |                               | Enable application buffer reach limit trap                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | gateway_up                         |                               | Enable SLB server gateway up trap                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | gateway_down                       |                               | Enable SLB server gateway down trap                                                 |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_conn_limit                  |                               | Enable SLB server connection limit trap                                             |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_conn_resume                 |                               | Enable SLB server connection resume trap                                            |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_up                          |                               | Enable slb server up trap                                                           |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_down                        |                               | Enable SLB server-down trap                                                         |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_disabled                    |                               | Enable SLB server-disabled trap                                                     |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_selection_failure           |                               | Enable SLB server selection failure trap                                            |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_conn_limit                 |                               | Enable SLB service connection limit trap                                            |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_conn_resume                |                               | Enable SLB service connection resume trap                                           |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_down                       |                               | Enable SLB service-down trap                                                        |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_up                         |                               | Enable SLB service-up trap                                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_group_up                   |                               | Enable SLB service-group-up trap                                                    |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_group_down                 |                               | Enable SLB service-group-down trap                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_group_member_up            |                               | Enable SLB service-group-member-up trap                                             |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | service_group_member_down          |                               | Enable SLB service-group-member-down trap                                           |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_connlimit                      |                               | Enable the virtual server reach conn-limit trap                                     |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_connratelimit                  |                               | Enable the virtual server reach conn-rate-limit trap                                |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_down                           |                               | Enable SLB virtual server down trap                                                 |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_port_connlimit                 |                               | Enable the virtual port reach conn-limit trap                                       |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_port_connratelimit             |                               | Enable the virtual port reach conn-rate-limit trap                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_port_down                      |                               | Enable SLB virtual port down trap                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_port_up                        |                               | Enable SLB virtual port up trap                                                     |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_up                             |                               | Enable SLB virtual server up trap                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | bw_rate_limit_exceed               |                               | Enable SLB server/port bandwidth rate limit exceed trap                             |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | bw_rate_limit_resume               |                               | Enable SLB server/port bandwidth rate limit resume trap                             |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| snmp                                   |                               | Field snmp                                                                          |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | all                                |                               | Enable all SNMP group traps                                                         |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | linkdown                           |                               | Enable SNMP link-down trap                                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | linkup                             |                               | Enable SNMP link-up trap                                                            |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| vrrp_a                                 |                               | Field vrrp_a                                                                        |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | all                                |                               | Enable all VRRP-A group traps                                                       |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | active                             |                               | Enable VRRP-A active trap                                                           |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | standby                            |                               | Enable VRRP-A standby trap                                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| vcs                                    |                               | Field vcs                                                                           |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | state_change                       |                               | Enable VCS state change trap                                                        |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| system                                 |                               | Field system                                                                        |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | all                                |                               | Enable all system group traps                                                       |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | control_cpu_high                   |                               | Enable control CPU usage high trap                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | data_cpu_high                      |                               | Enable data CPU usage high trap                                                     |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | fan                                |                               | Enable system fan trap                                                              |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | file_sys_read_only                 |                               | Enable file system read-only trap                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | high_disk_use                      |                               | Enable system high disk usage trap                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | high_memory_use                    |                               | Enable system high memory usage trap                                                |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | high_temp                          |                               | Enable system high temperature trap                                                 |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | low_temp                           |                               | Enable system low temperature trap                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | license_management                 |                               | Enable system license management traps                                              |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | packet_drop                        |                               | Enable system packet dropped trap                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | power                              |                               | Enable system power supply trap                                                     |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | pri_disk                           |                               | Enable system primary hard disk trap                                                |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | restart                            |                               | Enable system restart trap                                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | sec_disk                           |                               | Enable system secondary hard disk trap                                              |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | shutdown                           |                               | Enable system shutdown trap                                                         |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | smp_resource_event                 |                               | Enable system smp resource event trap                                               |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | syslog_severity_one                |                               | Enable system syslog severity one messages trap                                     |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | tacacs_server_up_down              |                               | Enable system TACACS monitor server up/down trap                                    |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | start                              |                               | Enable system start trap                                                            |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| slb_change                             |                               | Field slb_change                                                                    |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | all                                |                               | Enable all system group traps                                                       |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | resource_usage_warning             |                               | Enable partition resource usage warning trap                                        |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | connection_resource_event          |                               | Enable system connection resource event trap                                        |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server                             |                               | Enable slb server create/delete trap                                                |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_port                        |                               | Enable slb server port create/delete trap                                           |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | ssl_cert_change                    |                               | Enable SSL certificate change trap                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | ssl_cert_expire                    |                               | Enable SSL certificate expiring trap                                                |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip                                |                               | Enable slb vip create/delete trap                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | vip_port                           |                               | Enable slb vip-port create/delete trap                                              |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | system_threshold                   |                               | Enable slb system threshold trap                                                    |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| lsn                                    |                               | Field lsn                                                                           |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | all                                |                               | Enable all LSN group traps                                                          |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | total_port_usage_threshold         |                               | Enable LSN trap when NAT total port usage reaches the threshold (default 655350000) |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | per_ip_port_usage_threshold        |                               | Enable LSN trap when IP total port usage reaches the threshold (default 64512)      |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | max_port_threshold                 |                               | Maximum threshold                                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | max_ipport_threshold               |                               | Maximum threshold                                                                   |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | fixed_nat_port_mapping_file_change |                               | Enable LSN trap when fixed nat port mapping file change                             |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | traffic_exceeded                   |                               | Enable LSN trap when NAT pool reaches the threshold                                 |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| network                                |                               | Field network                                                                       |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | trunk_port_threshold               |                               | Enable network trunk-port-threshold trap                                            |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+| ssl                                    |                               | Field ssl                                                                           |
+|                                        |                               |                                                                                     |
+|                                        |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | server_certificate_error           |                               | Enable SSL server certificate error trap                                            |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
+|   | uuid                               |                               | uuid of the object                                                                  |
+|   |                                    |                               |                                                                                     |
+|   |                                    |                               |                                                                                     |
++---+------------------------------------+-------------------------------+-------------------------------------------------------------------------------------+
 
 
 

@@ -22,50 +22,55 @@ Delete cgnv6 related files
 Parameters
 ----------
 
-  lw_4o6_binding_table_validation_log (False, any, None)
-    LW-4O6 Binding Table validation log File
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  lw_filename (False, any, None)
-    LW-4O6 Binding Table Validation Log File Name
-
-
-  filename (False, any, None)
-    Specify the port-mapping-file to be deleted
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  fixed_nat (False, any, None)
-    Delete fixed-nat port-mapping-file
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                          | Choices/Defaults              | Comment                                         |
+|                                     |                               |                                                 |
+|                                     |                               |                                                 |
++=====================================+===============================+=================================================+
+| state                               | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                                     |                               |                                                 |
+| /required                           |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                        |                               | Host for AXAPI authentication                   |
+|                                     |                               |                                                 |
+| /required                           |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username                    |                               | Username for AXAPI authentication               |
+|                                     |                               |                                                 |
+| /required                           |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password                    |                               | Password for AXAPI authentication               |
+|                                     |                               |                                                 |
+| /required                           |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                        |                               | Port for AXAPI authentication                   |
+|                                     |                               |                                                 |
+| /required                           |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id               | ['1-8']                       | Device ID for aVCS configuration                |
+|                                     |                               |                                                 |
+|                                     |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition                       |                               | Destination/target partition for object/command |
+|                                     |                               |                                                 |
+|                                     |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| fixed_nat                           |                               | Delete fixed-nat port-mapping-file              |
+|                                     |                               |                                                 |
+|                                     |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| lw_4o6_binding_table_validation_log |                               | LW-4O6 Binding Table validation log File        |
+|                                     |                               |                                                 |
+|                                     |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| filename                            |                               | Specify the port-mapping-file to be deleted     |
+|                                     |                               |                                                 |
+|                                     |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
+| lw_filename                         |                               | LW-4O6 Binding Table Validation Log File Name   |
+|                                     |                               |                                                 |
+|                                     |                               |                                                 |
++-------------------------------------+-------------------------------+-------------------------------------------------+
 
 
 

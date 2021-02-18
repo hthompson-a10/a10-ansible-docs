@@ -22,66 +22,71 @@ VRRP-A interface ethernet
 Parameters
 ----------
 
-  both (False, any, None)
-    both a router and server interface
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  ethernet_val (True, any, None)
-    Ethernet Interface
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  vlan (False, any, None)
-    VLAN ID
-
-
-  no_heartbeat (False, any, None)
-    do not send out heartbeat packet from this interface
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  router_interface (False, any, None)
-    interface to upstream router
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  server_interface (False, any, None)
-    interface to real server
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                              |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++=======================+===============================+======================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                   |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                        |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                    |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                    |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                        |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                     |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command      |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| ethernet_val          |                               | Ethernet Interface                                   |
+|                       |                               |                                                      |
+| /required             |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| router_interface      |                               | interface to upstream router                         |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| server_interface      |                               | interface to real server                             |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| both                  |                               | both a router and server interface                   |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| vlan                  |                               | VLAN ID                                              |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| no_heartbeat          |                               | do not send out heartbeat packet from this interface |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                   |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
+| user_tag              |                               | Customized tag                                       |
+|                       |                               |                                                      |
+|                       |                               |                                                      |
++-----------------------+-------------------------------+------------------------------------------------------+
 
 
 

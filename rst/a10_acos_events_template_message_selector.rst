@@ -22,67 +22,71 @@ Specify the message selector
 Parameters
 ----------
 
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  name (True, any, None)
-    Specify the message selector name
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  user_tag (False, any, None)
-    Customized tag
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  collector_group_list (False, any, None)
-    Field collector_group_list
-
-
-    user_tag (optional, any, None)
-      Customized tag
-
-
-    name (optional, any, None)
-      Specify the log server group for receiving log messages
-
-
-    uuid (optional, any, None)
-      uuid of the object
-
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  template_name (optional, any, None)
-    Key to identify parent object
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
++-----------------------+-------------------------------+---------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                 |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++=======================+===============================+=========================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                      |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                           |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                       |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                       |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                           |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                        |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command         |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| template_name         |                               | Key to identify parent object                           |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| name                  |                               | Specify the message selector name                       |
+|                       |                               |                                                         |
+| /required             |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                      |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| user_tag              |                               | Customized tag                                          |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++-----------------------+-------------------------------+---------------------------------------------------------+
+| collector_group_list  |                               | Field collector_group_list                              |
+|                       |                               |                                                         |
+|                       |                               |                                                         |
++---+-------------------+-------------------------------+---------------------------------------------------------+
+|   | name              |                               | Specify the log server group for receiving log messages |
+|   |                   |                               |                                                         |
+|   |                   |                               |                                                         |
++---+-------------------+-------------------------------+---------------------------------------------------------+
+|   | uuid              |                               | uuid of the object                                      |
+|   |                   |                               |                                                         |
+|   |                   |                               |                                                         |
++---+-------------------+-------------------------------+---------------------------------------------------------+
+|   | user_tag          |                               | Customized tag                                          |
+|   |                   |                               |                                                         |
+|   |                   |                               |                                                         |
++---+-------------------+-------------------------------+---------------------------------------------------------+
 
 
 

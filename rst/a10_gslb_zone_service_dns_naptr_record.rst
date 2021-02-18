@@ -22,108 +22,111 @@ Specify DNS NAPTR Record
 Parameters
 ----------
 
-  service_proto (True, any, None)
-    Specify Service and Protocol
-
-
-  ansible_username (True, any, None)
-    Username for AXAPI authentication
-
-
-  service_name (optional, any, None)
-    Key to identify parent object
-
-
-  zone_name (optional, any, None)
-    Key to identify parent object
-
-
-  flag (True, any, None)
-    Specify the flag (e.g., a, s). Default is empty flag
-
-
-  preference (False, any, None)
-    Specify Preference
-
-
-  ttl (False, any, None)
-    Specify TTL
-
-
-  a10_device_context_id (False, any, None)
-    Device ID for aVCS configuration
-
-
-  regexp (False, any, None)
-    Return the regular expression
-
-
-  a10_partition (False, any, None)
-    Destination/target partition for object/command
-
-
-  ansible_host (True, any, None)
-    Host for AXAPI authentication
-
-
-  sampling_enable (False, any, None)
-    Field sampling_enable
-
-
-    counters1 (optional, any, None)
-      'all'= all; 'naptr-hits'= Number of times the NAPTR has been used;
-
-
-
-  ansible_port (True, any, None)
-    Port for AXAPI authentication
-
-
-  stats (False, any, None)
-    Field stats
-
-
-    naptr_target (optional, any, None)
-      Specify the replacement or regular expression
-
-
-    flag (optional, any, None)
-      Specify the flag (e.g., a, s). Default is empty flag
-
-
-    service_proto (optional, any, None)
-      Specify Service and Protocol
-
-
-    naptr_hits (optional, any, None)
-      Number of times the NAPTR has been used
-
-
-
-  uuid (False, any, None)
-    uuid of the object
-
-
-  naptr_target (True, any, None)
-    Specify the replacement or regular expression
-
-
-  state (True, any, None)
-    State of the object to be created.
-
-
-  service_port (optional, any, None)
-    Key to identify parent object
-
-
-  ansible_password (True, any, None)
-    Password for AXAPI authentication
-
-
-  order (False, any, None)
-    Specify Order
-
-
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                                            |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++=======================+===============================+====================================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.                                 |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                                      |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication                                  |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication                                  |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                                      |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                                   |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command                    |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| service_name          |                               | Key to identify parent object                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| service_port          |                               | Key to identify parent object                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| zone_name             |                               | Key to identify parent object                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| naptr_target          |                               | Specify the replacement or regular expression                      |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| service_proto         |                               | Specify Service and Protocol                                       |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| flag                  |                               | Specify the flag (e.g., a, s). Default is empty flag               |
+|                       |                               |                                                                    |
+| /required             |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| order                 |                               | Specify Order                                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| preference            |                               | Specify Preference                                                 |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| regexp                |                               | Return the regular expression                                      |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| ttl                   |                               | Specify TTL                                                        |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| uuid                  |                               | uuid of the object                                                 |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++-----------------------+-------------------------------+--------------------------------------------------------------------+
+| sampling_enable       |                               | Field sampling_enable                                              |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | counters1         |                               | 'all'= all; 'naptr-hits'= Number of times the NAPTR has been used; |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+| stats                 |                               | Field stats                                                        |
+|                       |                               |                                                                    |
+|                       |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | naptr_hits        |                               | Number of times the NAPTR has been used                            |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | naptr_target      |                               | Specify the replacement or regular expression                      |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | service_proto     |                               | Specify Service and Protocol                                       |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
+|   | flag              |                               | Specify the flag (e.g., a, s). Default is empty flag               |
+|   |                   |                               |                                                                    |
+|   |                   |                               |                                                                    |
++---+-------------------+-------------------------------+--------------------------------------------------------------------+
 
 
 
