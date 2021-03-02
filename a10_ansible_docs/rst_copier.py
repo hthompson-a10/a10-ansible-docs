@@ -4,6 +4,20 @@ import shutil
 import sys
 
 
+INTERMEDIATE_FILE = (
+"{filename} \n"
+"{title_bar} \n\n"
+"Actions:\n\n\n"
+".. toctree::\n"
+"   :maxdepth: 1\n"
+"   :glob:\n\n"
+"   *")
+
+
+def add_to_file(new_dir_name, new_dir_path, version_path);
+    pass 
+
+
 def main():
     args = sys.argv
     module_path = args[1]
@@ -25,8 +39,11 @@ def main():
             new_path = os.path.join(new_path, mod_filename)
             shutil.move(old_path, new_path)
         else:
-            #raise Exception()
-            print("No intermediates found")
+            # No intermediates found. Likely it's own vertical
+            new_dir = mod_filename[4:-4]
+            new_path = os.path.join(version_path, new_dir)
+            os.mkdir(new_path)
+            ver_dirnames.append(new_path)
 
 if __name__ == "__main__":
     main()
