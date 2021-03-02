@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_object_group_application – Configures A10 object-group.application &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_object_group_application – Configures A10 object-group.application</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_object_group_application – Configures A10 object-group.application</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-object-group-application-configures-a10-object-group-application">
+<span id="a10-object-group-application-module"></span><h1>a10_object_group_application – Configures A10 object-group.application<a class="headerlink" href="#a10-object-group-application-configures-a10-object-group-application" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Configure Application Object Group</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 99%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>app_name</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Application Object Group Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>app_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field app_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>protocol</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify application</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>protocol_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘aaa’= Protocol/application used for AAA (Authentification, Authorization and Accounting) purposes.; ‘adult-content’= Adult content.; ‘advertising’= Advertising networks and applications.; ‘analytics-and-statistics’= user- analytics and statistics.; ‘anonymizers-and-proxies’= Traffic-anonymization protocol/application.; ‘audio-chat’= Protocol/application used for Audio Chat.; ‘basic’= Protocols required for basic classification, e.g., ARP, HTTP; ‘blog’= Blogging platform.; ‘cdn’= Protocol/application used for Content-Delivery Networks.; ‘chat’= Protocol/application used for Text Chat.; ‘classified-ads’= Protocol/application used for Classified ads.; ‘cloud-based-services’= SaaS and/or PaaS cloud based services.; ‘crowdfunding’= Service for funding a project or venture by raising small amounts of money from a large number of people.; ‘cryptocurrency’= Cryptocurrency.; ‘database’= Database-specific protocols.; ‘disposable-email’= Disposable email accounts.; ‘ebook-reader’= Services for e-book readers.; ‘email’= Native email protocol.; ‘enterprise’= Protocol/application used in an enterprise network.; ‘file-management’= Protocol/application designed specifically for file management and exchange, e.g., Dropbox, SMB; ‘file-transfer’= Protocol that offers file transferring as a functionality as a secondary feature. e.g., Skype, Whatsapp; ‘forum’= Online forum.; ‘gaming’= Protocol/application used by games.; ‘instant-messaging-and- multimedia-conferencing’= Protocol/application used for Instant messaging or multiconferencing.; ‘internet-of-things’= Internet Of Things protocol/application.; ‘mobile’= Mobile-specific protocol/application.; ‘map- service’= Digital Maps service.; ‘multimedia-streaming’= Protocol/application used for multimedia streaming.; ‘networking’= Protocol used for (inter) networking purpose.; ‘news-portal’= Protocol/application used for News Portals.; ‘peer-to-peer’= Protocol/application used for Peer-to-peer purposes.; ‘remote-access’= Protocol/application used for remote access.; ‘scada’= SCADA (Supervisory control and data acquisition) protocols, all generations.; ‘social-networks’= Social networking application.; ‘software-update’= Auto- update protocol.; ‘standards-based’= Protocol issued from standardized bodies such as IETF, ITU, IEEE, ETSI, OIF.; ‘transportation’= Transportation.; ‘video- chat’= Protocol/application used for Video Chat.; ‘voip’= Application used for Voice over IP.; ‘vpn-tunnels’= Protocol/application used for VPN or tunneling purposes.; ‘web’= Application based on HTTP/HTTPS.; ‘web-e-commerce’= Protocol/application used for E-commerce websites.; ‘web-search-engines’= Protocol/application used for Web search portals.; ‘web-websites’= Protocol/application used for Company Websites.; ‘webmails’= Web email application.; ‘web-ext-adult’= Web Extension Adult; ‘web-ext-auctions’= Web Extension Auctions; ‘web-ext-blogs’= Web Extension Blogs; ‘web-ext-business- and-economy’= Web Extension Business and Economy; ‘web-ext-cdns’= Web Extension CDNs; ‘web-ext-collaboration’= Web Extension Collaboration; ‘web-ext-computer- and-internet-info’= Web Extension Computer and Internet Info; ‘web-ext- computer-and-internet-security’= Web Extension Computer and Internet Security; ‘web-ext-dating’= Web Extension Dating; ‘web-ext-educational-institutions’= Web Extension Educational Institutions; ‘web-ext-entertainment-and-arts’= Web Extension Entertainment and Arts; ‘web-ext-fashion-and-beauty’= Web Extension Fashion and Beauty; ‘web-ext-file-share’= Web Extension File Share; ‘web-ext- financial-services’= Web Extension Financial Services; ‘web-ext-gambling’= Web Extension Gambling; ‘web-ext-games’= Web Extension Games; ‘web-ext-government’= Web Extension Government; ‘web-ext-health-and-medicine’= Web Extension Health and Medicine; ‘web-ext-individual-stock-advice-and-tools’= Web Extension Individual Stock Advice and Tools; ‘web-ext-internet-portals’= Web Extension Internet Portals; ‘web-ext-job-search’= Web Extension Job Search; ‘web-ext- local-information’= Web Extension Local Information; ‘web-ext-malware’= Web Extension Malware; ‘web-ext-motor-vehicles’= Web Extension Motor Vehicles; ‘web-ext-music’= Web Extension Music; ‘web-ext-news’= Web Extension News; ‘web- ext-p2p’= Web Extension P2P; ‘web-ext-parked-sites’= Web Extension Parked Sites; ‘web-ext-proxy-avoid-and-anonymizers’= Web Extension Proxy Avoid and Anonymizers; ‘web-ext-real-estate’= Web Extension Real Estate; ‘web-ext- reference-and-research’= Web Extension Reference and Research; ‘web-ext-search- engines’= Web Extension Search Engines; ‘web-ext-shopping’= Web Extension Shopping; ‘web-ext-social-network’= Web Extension Social Network; ‘web-ext- society’= Web Extension Society; ‘web-ext-software’= Web Extension Software; ‘web-ext-sports’= Web Extension Sports; ‘web-ext-streaming-media’= Web Extension Streaming Media; ‘web-ext-training-and-tools’= Web Extension Training and Tools; ‘web-ext-translation’= Web Extension Translation; ‘web-ext-travel’= Web Extension Travel; ‘web-ext-web-advertisements’= Web Extension Web Advertisements; ‘web-ext-web-based-email’= Web Extension Web based Email; ‘web- ext-web-hosting’= Web Extension Web Hosting; ‘web-ext-web-service’= Web Extension Web Service;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>user_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Customized tag</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

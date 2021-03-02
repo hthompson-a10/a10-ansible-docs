@@ -1,0 +1,1027 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_snmp_server_enable_traps – Configures A10 snmp.server.enable.traps &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_snmp_server_enable_traps – Configures A10 snmp.server.enable.traps</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_snmp_server_enable_traps – Configures A10 snmp.server.enable.traps</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-snmp-server-enable-traps-configures-a10-snmp-server-enable-traps">
+<span id="a10-snmp-server-enable-traps-module"></span><h1>a10_snmp_server_enable_traps – Configures A10 snmp.server.enable.traps<a class="headerlink" href="#a10-snmp-server-enable-traps-configures-a10-snmp-server-enable-traps" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Enable SNMP traps</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 23%" />
+<col style="width: 20%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all SNMP traps</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>lldp</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable lldp traps</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>routing</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field routing</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bgp</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field bgp</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>isis</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field isis</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ospf</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field ospf</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>gslb</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field gslb</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all GSLB traps</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>zone</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable GSLB zone related traps</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>site</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable GSLB site related traps</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>group</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable GSLB group related traps</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>service_ip</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable GSLB service-ip related traps</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>slb</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field slb</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all SLB traps</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>application_buffer_limit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable application buffer reach limit trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>gateway_up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server gateway up trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>gateway_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server gateway down trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_conn_limit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server connection limit trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_conn_resume</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server connection resume trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable slb server up trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server-down trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_disabled</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server-disabled trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_selection_failure</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server selection failure trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>service_conn_limit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service connection limit trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>service_conn_resume</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service connection resume trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>service_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service-down trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>service_up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service-up trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>service_group_up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service-group-up trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>service_group_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service-group-down trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>service_group_member_up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service-group-member-up trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>service_group_member_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB service-group-member-down trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vip_connlimit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable the virtual server reach conn-limit trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vip_connratelimit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable the virtual server reach conn-rate-limit trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vip_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB virtual server down trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vip_port_connlimit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable the virtual port reach conn-limit trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vip_port_connratelimit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable the virtual port reach conn-rate-limit trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vip_port_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB virtual port down trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vip_port_up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB virtual port up trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vip_up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB virtual server up trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bw_rate_limit_exceed</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server/port bandwidth rate limit exceed trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bw_rate_limit_resume</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SLB server/port bandwidth rate limit resume trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>snmp</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field snmp</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all SNMP group traps</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>linkdown</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SNMP link-down trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>linkup</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SNMP link-up trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>vrrp_a</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field vrrp_a</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all VRRP-A group traps</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>active</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable VRRP-A active trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>standby</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable VRRP-A standby trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>vcs</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field vcs</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>state_change</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable VCS state change trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>system</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field system</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all system group traps</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>control_cpu_high</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable control CPU usage high trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>data_cpu_high</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable data CPU usage high trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fan</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system fan trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>file_sys_read_only</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable file system read-only trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>high_disk_use</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system high disk usage trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>high_memory_use</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system high memory usage trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>high_temp</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system high temperature trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>low_temp</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system low temperature trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>license_management</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system license management traps</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>packet_drop</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system packet dropped trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>power</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system power supply trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pri_disk</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system primary hard disk trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>restart</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system restart trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sec_disk</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system secondary hard disk trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>shutdown</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system shutdown trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>smp_resource_event</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system smp resource event trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>syslog_severity_one</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system syslog severity one messages trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>tacacs_server_up_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system TACACS monitor server up/down trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>start</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system start trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>slb_change</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field slb_change</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all system group traps</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>resource_usage_warning</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable partition resource usage warning trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>connection_resource_event</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable system connection resource event trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable slb server create/delete trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_port</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable slb server port create/delete trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ssl_cert_change</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SSL certificate change trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ssl_cert_expire</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SSL certificate expiring trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vip</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable slb vip create/delete trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vip_port</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable slb vip-port create/delete trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>system_threshold</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable slb system threshold trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>lsn</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field lsn</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>all</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable all LSN group traps</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_port_usage_threshold</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable LSN trap when NAT total port usage reaches the threshold (default 655350000)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>per_ip_port_usage_threshold</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable LSN trap when IP total port usage reaches the threshold (default 64512)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>max_port_threshold</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Maximum threshold</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>max_ipport_threshold</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Maximum threshold</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fixed_nat_port_mapping_file_change</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable LSN trap when fixed nat port mapping file change</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>traffic_exceeded</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable LSN trap when NAT pool reaches the threshold</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>network</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field network</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>trunk_port_threshold</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable network trunk-port-threshold trap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ssl</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field ssl</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_certificate_error</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SSL server certificate error trap</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

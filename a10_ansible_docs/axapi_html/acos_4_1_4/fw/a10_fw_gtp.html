@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_fw_gtp – Configures A10 fw.gtp &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_fw_gtp – Configures A10 fw.gtp</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_fw_gtp – Configures A10 fw.gtp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-fw-gtp-configures-a10-fw-gtp">
+<span id="a10-fw-gtp-module"></span><h1>a10_fw_gtp – Configures A10 fw.gtp<a class="headerlink" href="#a10-fw-gtp-configures-a10-fw-gtp" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Configure GTP</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>gtp_value</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘enable’= Enable GTP Inspection;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘create-session-request’= Create Session Request; ‘create-session- response’= Create Session Response; ‘path-management-message’= Path Management Message; ‘delete-session-request’= Delete Session Request; ‘delete-session- response’= Delete Session Response; ‘reserved-field-set-drop’= Reserved field set drop; ‘tunnel-id-flag-drop’= Tunnel ID Flag Incorrect; ‘message-filtering- drop’= Message Filtering Drop; ‘reserved-information-element-drop’= Resevered Information Element Field Drop; ‘mandatory-information-element-drop’= Mandatory Information Element Field Drop; ‘filter-list-drop’= APN IMSI Information Filtering Drop; ‘invalid-teid-drop’= Invalid TEID Drop; ‘out-of-state-drop’= Out Of State Drop; ‘message-length-drop’= Message Length Exceeded; ‘unsupported-message-type-v2’= GTP v2 message type is not supported; ‘fast- conn-setup’= Fast Conn Setup Attempt; ‘out-of-session-memory’= Out of Session Memory; ‘no-fwd-route’= No Forward Route; ‘no-rev-route’= NO Reverse Route; ‘invalid-key’= Invalid TEID Field; ‘create-session-request-retransmit’= Retransmitted Create Session Request; ‘delete-session-request-retransmit’= Retransmitted Delete Session Request; ‘response-cause-not-accepted’= Response Cause indicates Request not Accepted; ‘invalid-imsi-len-drop’= Invalid IMSI Length Drop; ‘invalid-apn-len-drop’= Invalid APN Length Drop; ‘create-pdp- context-request-v1’= GTP v1 Create PDP Context Request; ‘create-pdp-context- response-v1’= GTP v1 Create PDP Context Response; ‘path-management-message-v1’= GTP v1 Path Management Message; ‘reserved-field-set-drop-v1’= GTP v1 Reserved field set drop; ‘message-filtering-drop-v1’= GTP v1 Message Filtering Drop; ‘reserved-information-element-drop-v1’= GTP v1 Reserved Information Element Field Drop; ‘mandatory-information-element-drop-v1’= GTP v1 Mandatory Information Element Field Drop; ‘filter-list-drop-v1’= GTP v1 APN IMSI Information Filtering Drop; ‘invalid-teid-drop-v1’= GTP v1 Invalid TEID Drop; ‘message-length-drop-v1’= GTP v1 Message Length Exceeded; ‘version-not- supported’= GTP version is not supported; ‘unsupported-message-type-v1’= GTP v1 message type is not supported; ‘delete-pdp-context-request-v1’= GTP v1 Delete Context PDP Request; ‘delete-pdp-context-response-v1’= GTP v1 Delete Context PDP Response; ‘create-pdp-context-request-v0’= GTP v0 Create PDP Context Request; ‘create-pdp-context-response-v0’= GTP v0 Create PDP Context Response; ‘delete-pdp-context-request-v0’= GTP v0 Delete Context PDP Request; ‘delete- pdp-context-response-v0’= GTP v0 Delete Context PDP Response; ‘path-management- message-v0’= GTP v0 Path Management Message; ‘message-filtering-drop-v0’= GTP v0 Message Filtering Drop; ‘unsupported-message-type-v0’= GTP v0 message type is not supported; ‘invalid-flow-label-drop-v0’= GTP v0 Invalid flow label drop; ‘invalid-tid-drop-v0’= GTP v0 Invalid tid drop; ‘message-length-drop-v0’= GTP v0 Message Length Exceeded; ‘mandatory-information-element-drop-v0’= GTP v0 Mandatory Information Element Field Drop; ‘filter-list-drop-v0’= GTP v0 APN IMSI Information Filtering Drop; ‘gtp-in-gtp-drop’= GTP in GTP Filtering Drop;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>create_session_request</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Create Session Request</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>create_session_response</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Create Session Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>path_management_message</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Path Management Message</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>delete_session_request</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Delete Session Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>delete_session_response</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Delete Session Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>reserved_field_set_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Reserved field set drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tunnel_id_flag_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Tunnel ID Flag Incorrect</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>message_filtering_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Message Filtering Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>reserved_information_element_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Resevered Information Element Field Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>mandatory_information_element_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Mandatory Information Element Field Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>filter_list_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>APN IMSI Information Filtering Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_teid_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Invalid TEID Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>out_of_state_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Out Of State Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>message_length_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Message Length Exceeded</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unsupported_message_type_v2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v2 message type is not supported</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fast_conn_setup</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fast Conn Setup Attempt</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>out_of_session_memory</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Out of Session Memory</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>no_fwd_route</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>No Forward Route</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>no_rev_route</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NO Reverse Route</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_key</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Invalid TEID Field</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>create_session_request_retransmit</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Retransmitted Create Session Request</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>delete_session_request_retransmit</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Retransmitted Delete Session Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>response_cause_not_accepted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Response Cause indicates Request not Accepted</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_imsi_len_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Invalid IMSI Length Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>invalid_apn_len_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Invalid APN Length Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>create_pdp_context_request_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Create PDP Context Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>create_pdp_context_response_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Create PDP Context Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>path_management_message_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Path Management Message</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>reserved_field_set_drop_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Reserved field set drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>message_filtering_drop_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Message Filtering Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>reserved_information_element_drop_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Reserved Information Element Field Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>mandatory_information_element_drop_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Mandatory Information Element Field Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>filter_list_drop_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 APN IMSI Information Filtering Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_teid_drop_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Invalid TEID Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>message_length_drop_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Message Length Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>version_not_supported</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP version is not supported</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unsupported_message_type_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 message type is not supported</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>delete_pdp_context_request_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Delete Context PDP Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>delete_pdp_context_response_v1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v1 Delete Context PDP Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>create_pdp_context_request_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Create PDP Context Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>create_pdp_context_response_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Create PDP Context Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>delete_pdp_context_request_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Delete Context PDP Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>delete_pdp_context_response_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Delete Context PDP Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>path_management_message_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Path Management Message</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>message_filtering_drop_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Message Filtering Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>unsupported_message_type_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 message type is not supported</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>invalid_flow_label_drop_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Invalid flow label drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_tid_drop_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Invalid tid drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>message_length_drop_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Message Length Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>mandatory_information_element_drop_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 Mandatory Information Element Field Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>filter_list_drop_v0</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP v0 APN IMSI Information Filtering Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>gtp_in_gtp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GTP in GTP Filtering Drop</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

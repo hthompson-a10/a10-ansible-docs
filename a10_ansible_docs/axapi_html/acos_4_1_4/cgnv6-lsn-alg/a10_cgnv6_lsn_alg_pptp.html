@@ -1,0 +1,379 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_cgnv6_lsn_alg_pptp – Configures A10 cgnv6.lsn.alg.pptp &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_cgnv6_lsn_alg_pptp – Configures A10 cgnv6.lsn.alg.pptp</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_cgnv6_lsn_alg_pptp – Configures A10 cgnv6.lsn.alg.pptp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-cgnv6-lsn-alg-pptp-configures-a10-cgnv6-lsn-alg-pptp">
+<span id="a10-cgnv6-lsn-alg-pptp-module"></span><h1>a10_cgnv6_lsn_alg_pptp – Configures A10 cgnv6.lsn.alg.pptp<a class="headerlink" href="#a10-cgnv6-lsn-alg-pptp-configures-a10-cgnv6-lsn-alg-pptp" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Change LSN PPTP ALG Settings</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>pptp_value</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘enable’= Enable PPTP ALG for LSN;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘calls-established’= Calls Established; ‘mismatched-pns-call-id’= Mismatched PNS Call ID; ‘gre-sessions-created’= GRE Sessions Created; ‘gre- sessions-freed’= GRE Sessions Freed; ‘no-gre-session-match’= No Matching GRE Session; ‘smp-sessions-created’= SMP Sessions Created; ‘smp-sessions-freed’= SMP Sessions Freed; ‘smp-session-creation-failure’= SMP Session Creation Failures; ‘extension-creation-failure’= Extension Creation Failures; ‘ha-sent’= HA Info Sent; ‘ha-rcv’= HA Info Received; ‘ha-no-mem’= HA Memory Allocation Failure; ‘ha-conflict’= HA Call ID Conflicts; ‘ha-overwrite’= HA Call ID Overwrites; ‘ha-call-sent’= HA Call Sent; ‘ha-call-rcv’= HA Call Received; ‘ha- smp-conflict’= HA SMP Conflicts; ‘ha-smp-in-del-q’= HA SMP Deleted; ‘smp-app- type-mismatch’= SMP ALG App Type Mismatch; ‘quota-inc’= Quota Incremented; ‘quota-dec’= Quota Decremented; ‘quota-inc-not-found’= Quota Not Found on Increment; ‘quota-dec-not-found’= Quota Not Found on Decrement; ‘call-req-pns- call-id-mismatch’= Call ID Mismatch on Call Request; ‘call-reply-pns-call-id- mismatch’= Call ID Mismatch on Call Reply; ‘call-req-retransmit’= Call Request Retransmit; ‘call-req-new’= Call Request New; ‘call-req-ext-alloc-failure’= Call Request Ext Alloc Failure; ‘call-reply-call-id-unknown’= Call Reply Unknown Client Call ID; ‘call-reply-retransmit’= Call Reply Retransmit; ‘call- reply-retransmit-wrong-control’= Call Reply Retransmit Wrong Control; ‘call- reply-retransmit-acquired’= Call Reply Retransmit Acquired; ‘call-reply-ext- alloc-failure’= Call Request Ext Alloc Failure; ‘smp-client-call-id-mismatch’= SMP Client Call ID Mismatch; ‘smp-alloc-failure’= SMP Session Alloc Failure; ‘gre-conn-creation-failure’= GRE Conn Alloc Failure; ‘gre-conn-ext-creation- failure’= GRE Conn Ext Alloc Failure; ‘gre-no-fwd-route’= GRE No Fwd Route; ‘gre-no-rev-route’= GRE No Rev Route; ‘gre-no-control-conn’= GRE No Control Conn; ‘gre-conn-already-exists’= GRE Conn Already Exists; ‘gre-free-no-ext’= GRE Free No Ext; ‘gre-free-no-smp’= GRE Free No SMP; ‘gre-free-smp-app-type- mismatch’= GRE Free SMP App Type Mismatch; ‘control-freed’= Control Session Freed; ‘control-free-no-ext’= Control Free No Ext; ‘control-free-no-smp’= Control Free No SMP; ‘control-free-smp-app-type-mismatch’= Control Free SMP App Type Mismatch;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>calls_established</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Calls Established</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>mismatched_pns_call_id</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Mismatched PNS Call ID</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>gre_sessions_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GRE Sessions Created</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>gre_sessions_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>GRE Sessions Freed</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>no_gre_session_match</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>No Matching GRE Session</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>call_req_pns_call_id_mismatch</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Call ID Mismatch on Call Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>call_reply_pns_call_id_mismatch</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Call ID Mismatch on Call Reply</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

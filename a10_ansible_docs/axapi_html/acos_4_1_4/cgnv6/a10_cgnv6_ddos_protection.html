@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_cgnv6_ddos_protection – Configures A10 cgnv6.ddos-protection &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_cgnv6_ddos_protection – Configures A10 cgnv6.ddos-protection</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_cgnv6_ddos_protection – Configures A10 cgnv6.ddos-protection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-cgnv6-ddos-protection-configures-a10-cgnv6-ddos-protection">
+<span id="a10-cgnv6-ddos-protection-module"></span><h1>a10_cgnv6_ddos_protection – Configures A10 cgnv6.ddos-protection<a class="headerlink" href="#a10-cgnv6-ddos-protection-configures-a10-cgnv6-ddos-protection" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Configure CGNV6 DDoS Protection</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 96%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>toggle</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘enable’= Enable CGNV6 NAT pool DDoS protection (default); ‘disable’= Disable CGNV6 NAT pool DDoS protection;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>logging</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field logging</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>logging_toggle</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘enable’= Enable CGNV6 NAT pool DDoS protection logging (default); ‘disable’= Disable CGNV6 NAT pool DDoS protection logging;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>packets_per_second</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field packets_per_second</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Configure packets-per-second threshold per IP(default 3000000)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>action</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field action</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>tcp</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Configure packets-per-second threshold per TCP port (default= 3000)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>udp</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Configure packets-per-second threshold per UDP port (default= 3000)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>other</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Configure packets-per-second threshold for other L4 protocols(default 10000)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>include_existing_session</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Count traffic associated with existing session into the packets-per-second (Default= Disabled)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>max_hw_entries</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Configure maximum HW entries</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>zone</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Disable NAT IP based on DDoS zone name set in BGP</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘l3_entry_added’= L3 Entry Added; ‘l3_entry_deleted’= L3 Entry Deleted; ‘l3_entry_added_to_bgp’= L3 Entry added to BGP; ‘l3_entry_removed_from_bgp’= Entry removed from BGP; ‘l3_entry_added_to_hw’= L3 Entry added to HW; ‘l3_entry_removed_from_hw’= L3 Entry removed from HW; ‘l3_entry_too_many’= L3 Too many entries; ‘l3_entry_match_drop’= L3 Entry match drop; ‘l3_entry_match_drop_hw’= L3 HW entry match drop; ‘l3_entry_drop_max_hw_exceeded’= L3 Entry Drop due to HW Limit Exceeded; ‘l4_entry_added’= L4 Entry added; ‘l4_entry_deleted’= L4 Entry deleted; ‘l4_entry_added_to_hw’= L4 Entry added to HW; ‘l4_entry_removed_from_hw’= L4 Entry removed from HW; ‘l4_hw_out_of_entries’= HW out of L4 entries; ‘l4_entry_match_drop’= L4 Entry match drop; ‘l4_entry_match_drop_hw’= L4 HW Entry match drop; ‘l4_entry_drop_max_hw_exceeded’= L4 Entry Drop due to HW Limit Exceeded; ‘l4_entry_list_alloc’= L4 Entry list alloc; ‘l4_entry_list_free’= L4 Entry list free; ‘l4_entry_list_alloc_failure’= L4 Entry list alloc failures; ‘ip_node_alloc’= Node alloc; ‘ip_node_free’= Node free; ‘ip_node_alloc_failure’= Node alloc failures; ‘ip_port_block_alloc’= Port block alloc; ‘ip_port_block_free’= Port block free; ‘ip_port_block_alloc_failure’= Port block alloc failure; ‘ip_other_block_alloc’= Other block alloc; ‘ip_other_block_free’= Other block free; ‘ip_other_block_alloc_failure’= Other block alloc failure; ‘entry_added_shadow’= Entry added shadow; ‘entry_invalidated’= Entry invalidated; ‘l3_entry_add_to_bgp_failure’= L3 Entry BGP add failures; ‘l3_entry_remove_from_bgp_failure’= L3 entry BGP remove failures; ‘l3_entry_add_to_hw_failure’= L3 entry HW add failure;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>l4_entries</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field l4_entries</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ip_entries</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field ip_entries</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>disable_nat_ip_by_bgp</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field disable_nat_ip_by_bgp</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_entry_added</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry Added</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l3_entry_deleted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry Deleted</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_entry_added_to_bgp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry added to BGP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l3_entry_removed_from_bgp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Entry removed from BGP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_entry_added_to_hw</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry added to HW</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l3_entry_removed_from_hw</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry removed from HW</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_entry_too_many</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Too many entries</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l3_entry_match_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry match drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_entry_match_drop_hw</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 HW entry match drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l3_entry_drop_max_hw_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry Drop due to HW Limit Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_entry_added</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry added</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l4_entry_deleted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry deleted</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_entry_added_to_hw</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry added to HW</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l4_entry_removed_from_hw</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry removed from HW</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_hw_out_of_entries</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>HW out of L4 entries</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l4_entry_match_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry match drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_entry_match_drop_hw</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 HW Entry match drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l4_entry_drop_max_hw_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry Drop due to HW Limit Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_entry_list_alloc</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry list alloc</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l4_entry_list_free</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry list free</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_entry_list_alloc_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Entry list alloc failures</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_node_alloc</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Node alloc</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip_node_free</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Node free</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_node_alloc_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Node alloc failures</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip_port_block_alloc</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Port block alloc</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_port_block_free</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Port block free</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip_port_block_alloc_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Port block alloc failure</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_other_block_alloc</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Other block alloc</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip_other_block_free</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Other block free</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_other_block_alloc_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Other block alloc failure</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>entry_added_shadow</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Entry added shadow</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>entry_invalidated</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Entry invalidated</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_entry_add_to_bgp_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 Entry BGP add failures</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l3_entry_remove_from_bgp_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 entry BGP remove failures</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_entry_add_to_hw_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 entry HW add failure</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

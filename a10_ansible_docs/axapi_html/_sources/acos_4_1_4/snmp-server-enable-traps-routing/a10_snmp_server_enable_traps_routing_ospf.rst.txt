@@ -1,0 +1,161 @@
+.. _a10_snmp_server_enable_traps_routing_ospf_module:
+
+
+a10_snmp_server_enable_traps_routing_ospf -- Configures A10 snmp.server.enable.traps.routing.ospf
+=================================================================================================
+
+.. contents::
+   :local:
+   :depth: 1
+
+
+Synopsis
+--------
+
+Enable OSPFv2 traps
+
+
+
+
+
+
+Parameters
+----------
+
++-----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                         |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++=============================+===============================+=================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                   |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication               |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication               |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                   |
+|                             |                               |                                                 |
+| int/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                |
+|                             |                               |                                                 |
+| int                         |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command |
+|                             |                               |                                                 |
+| str                         |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfIfAuthFailure           |                               | Enable ospfIfAuthFailure traps                  |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfIfConfigError           |                               | Enable ospfIfConfigError traps                  |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfIfRxBadPacket           |                               | Enable ospfIfRxBadPacket traps                  |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfIfStateChange           |                               | Enable ospfIfStateChange traps                  |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfLsdbApproachingOverflow |                               | Enable ospfLsdbApproachingOverflow traps        |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfLsdbOverflow            |                               | Enable ospfLsdbOverflow traps                   |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfMaxAgeLsa               |                               | Enable ospfMaxAgeLsa traps                      |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfNbrStateChange          |                               | Enable ospfNbrStateChange traps                 |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfOriginateLsa            |                               | Enable ospfOriginateLsa traps                   |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfTxRetransmit            |                               | Enable ospfTxRetransmit traps                   |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfVirtIfAuthFailure       |                               | Enable ospfVirtIfAuthFailure traps              |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfVirtIfConfigError       |                               | Enable ospfVirtIfConfigError traps              |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfVirtIfRxBadPacket       |                               | Enable ospfVirtIfRxBadPacket traps              |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfVirtIfStateChange       |                               | Enable ospfVirtIfStateChange traps              |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfVirtIfTxRetransmit      |                               | Enable ospfVirtIfTxRetransmit traps             |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ospfVirtNbrStateChange      |                               | Enable ospfVirtNbrStateChange traps             |
+|                             |                               |                                                 |
+| bool                        |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                        |                               | uuid of the object                              |
+|                             |                               |                                                 |
+| str                         |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+
+
+
+
+
+
+
+Examples
+--------
+
+.. code-block:: yaml+jinja
+
+    
+
+
+
+
+
+Status
+------
+
+
+
+
+- This module is not guaranteed to have a backwards compatible interface. *[preview]*
+
+
+- This module is maintained by community.
+
+
+
+Authors
+~~~~~~~
+
+- A10 Networks 2018
+

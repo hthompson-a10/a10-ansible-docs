@@ -1,0 +1,703 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_router_bgp_neighbor_ipv4_neighbor – Configures A10 router.bgp.neighbor.ipv4-neighbor &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_router_bgp_neighbor_ipv4_neighbor – Configures A10 router.bgp.neighbor.ipv4-neighbor</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_router_bgp_neighbor_ipv4_neighbor – Configures A10 router.bgp.neighbor.ipv4-neighbor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-router-bgp-neighbor-ipv4-neighbor-configures-a10-router-bgp-neighbor-ipv4-neighbor">
+<span id="a10-router-bgp-neighbor-ipv4-neighbor-module"></span><h1>a10_router_bgp_neighbor_ipv4_neighbor – Configures A10 router.bgp.neighbor.ipv4-neighbor<a class="headerlink" href="#a10-router-bgp-neighbor-ipv4-neighbor-configures-a10-router-bgp-neighbor-ipv4-neighbor" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Specify a ipv4 neighbor router</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>bgp_as_number</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Key to identify parent object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>neighbor_ipv4</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Neighbor address</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>nbr_remote_as</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify AS number of BGP neighbor</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>peer_group_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Configure peer-group (peer-group name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>activate</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable the Address Family for this Neighbor</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>advertisement_interval</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Minimum interval between sending BGP routing updates (time in seconds)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>allowas_in</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Accept as-path with my AS present in it</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>allowas_in_count</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Number of occurrences of AS number</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>as_origination_interval</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Minimum interval between sending AS-origination routing updates (time in seconds)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>dynamic</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Advertise dynamic capability to this neighbor</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>prefix_list_direction</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘both’= both; ‘receive’= receive; ‘send’= send;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>route_refresh</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Advertise route-refresh capability to this neighbor</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>collide_established</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Include Neighbor in Established State for Collision Detection</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>default_originate</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Originate default route to this neighbor</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>route_map</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Route-map to specify criteria to originate default (route-map name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>description</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Neighbor specific description (Up to 80 characters describing this neighbor)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>disallow_infinite_holdtime</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>BGP per neighbor disallow-infinite-holdtime</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>distribute_lists</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field distribute_lists</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>distribute_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Filter updates to/from this neighbor (IP standard/extended/named access list)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>distribute_list_direction</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘in’= in; ‘out’= out;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>acos_application_only</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Send BGP update to ACOS application</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>dont_capability_negotiate</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Do not perform capability negotiation</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ebgp_multihop</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Allow EBGP neighbors not on directly connected networks</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ebgp_multihop_hop_count</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>maximum hop count</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>enforce_multihop</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enforce EBGP neighbors to perform multihop</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>bfd</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Bidirectional Forwarding Detection (BFD)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>multihop</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable multihop</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>key_id</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Key ID</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>key_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘md5’= md5; ‘meticulous-md5’= meticulous-md5; ‘meticulous-sha1’= meticulous- sha1; ‘sha1’= sha1; ‘simple’= simple;  (Keyed MD5/Meticulous Keyed MD5/Meticulous Keyed SHA1/Keyed SHA1/Simple Password)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>bfd_value</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Key String</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>bfd_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>neighbor_filter_lists</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field neighbor_filter_lists</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>filter_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Establish BGP filters (AS path access-list name)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>filter_list_direction</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘in’= in; ‘out’= out;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>maximum_prefix</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Maximum number of prefix accept from this peer (maximum no. of prefix limit (various depends on model))</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>maximum_prefix_thres</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>threshold-value, 1 to 100 percent</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>next_hop_self</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable the next hop calculation for this neighbor</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>override_capability</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Override capability negotiation result</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>pass_value</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Key String</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>pass_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field pass_encrypted</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>passive</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Don’t send open messages to this neighbor</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>neighbor_prefix_lists</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field neighbor_prefix_lists</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nbr_prefix_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Filter updates to/from this neighbor (Name of a prefix list)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nbr_prefix_list_direction</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘in’= in; ‘out’= out;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>remove_private_as</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Remove private AS number from outbound updates</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>neighbor_route_map_lists</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field neighbor_route_map_lists</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nbr_route_map</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Apply route map to neighbor (Name of route map)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nbr_rmap_direction</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘in’= in; ‘out’= out;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>send_community_val</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘both’= Send Standard and Extended Community attributes; ‘none’= Disable Sending Community attributes; ‘standard’= Send Standard Community attributes; ‘extended’= Send Extended Community attributes;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>inbound</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Allow inbound soft reconfiguration for this neighbor</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>shutdown</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Administratively shut down this neighbor</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>strict_capability_match</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Strict capability negotiation match</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>timers_keepalive</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Keepalive interval</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>timers_holdtime</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Holdtime</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>connect</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>BGP connect timer</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>unsuppress_map</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Route-map to selectively unsuppress suppressed routes (Name of route map)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>update_source_ip</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP address</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>update_source_ipv6</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 address</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ethernet</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Ethernet interface (Port number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>loopback</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Loopback interface (Port number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ve</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Virtual ethernet interface (Virtual ethernet interface number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>trunk</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Trunk interface (Trunk interface number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>lif</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Logical interface (Lif interface number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>tunnel</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Tunnel interface (Tunnel interface number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>weight</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Set default weight for routes from this neighbor</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

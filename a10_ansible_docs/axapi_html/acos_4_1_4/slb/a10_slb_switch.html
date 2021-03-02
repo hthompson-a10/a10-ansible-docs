@@ -1,0 +1,961 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_slb_switch – Configures A10 slb.switch &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_slb_switch – Configures A10 slb.switch</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_slb_switch – Configures A10 slb.switch</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-slb-switch-configures-a10-slb-switch">
+<span id="a10-slb-switch-module"></span><h1>a10_slb_switch – Configures A10 slb.switch<a class="headerlink" href="#a10-slb-switch-configures-a10-slb-switch" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Configure slb switch</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘fwlb’= FWLB; ‘licexpire_drop’= License Expire Drop; ‘bwl_drop’= BW Limit Drop; ‘rx_kernel’= Received kernel; ‘rx_arp_req’= ARP REQ Rcvd; ‘rx_arp_resp’= ARP RESP Rcvd; ‘vlan_flood’= VLAN Flood; ‘l2_def_vlan_drop’= L2 Default Vlan FWD Drop; ‘ipv4_noroute_drop’= IPv4 No Route Drop; ‘ipv6_noroute_drop’= IPv6 No Route Drop; ‘prot_down_drop’= Prot Down Drop; ‘l2_forward’= L2 Forward; ‘l3_forward_ip’= L3 IP Forward; ‘l3_forward_ipv6’= L3 IPv6 Forward; ‘l4_process’= L4 Process; ‘unknown_prot_drop’= Unknown Prot Drop; ‘ttl_exceeded_drop’= TTL Exceeded Drop; ‘linkdown_drop’= Link Down Drop; ‘sport_drop’= SPORT Drop; ‘incorrect_len_drop’= Incorrect Length Drop; ‘ip_defrag’= IP Defrag; ‘acl_deny’= ACL Denys; ‘ipfrag_tcp’= IP(TCP) Fragment Rcvd; ‘ipfrag_overlap’= IP Fragment Overlap; ‘ipfrag_timeout’= IP Fragment Timeout; ‘ipfrag_overload’= IP Frag Overload Drops; ‘ipfrag_reasmoks’= IP Fragment Reasm OKs; ‘ipfrag_reasmfails’= IP Fragment Reasm Fails; ‘land_drop’= Anomaly Land Attack Drop; ‘ipoptions_drop’= Anomaly IP OPT Drops; ‘badpkt_drop’= Bad Pkt Drop; ‘pingofdeath_drop’= Anomaly PingDeath Drop; ‘allfrag_drop’= Anomaly All Frag Drop; ‘tcpnoflag_drop’= Anomaly TCP noFlag Drop; ‘tcpsynfrag_drop’= Anomaly SYN Frag Drop; ‘tcpsynfin_drop’= Anomaly TCP SYNFIN Drop; ‘ipsec_drop’= IPSec Drop; ‘bpdu_rcvd’= BPDUs Received; ‘bpdu_sent’= BPDUs Sent; ‘ctrl_syn_rate_drop’= SYN rate exceeded Drop; ‘ip_defrag_invalid_len’= IP Invalid Length Frag; ‘ipv4_frag_6rd_ok’= IPv4 Frag 6RD OK; ‘ipv4_frag_6rd_drop’= IPv4 Frag 6RD Dropped; ‘no_ip_drop’= No IP Drop; ‘ipv6frag_udp’= IPv6 Frag UDP; ‘ipv6frag_udp_dropped’= IPv6 Frag UDP Dropped; ‘ipv6frag_tcp_dropped’= IPv6 Frag TCP Dropped; ‘ipv6frag_ipip_ok’= IPv6 Frag IPIP OKs; ‘ipv6frag_ipip_dropped’= IPv6 Frag IPIP Drop; ‘ip_frag_oversize’= IP Fragment oversize; ‘ip_frag_too_many’= IP Fragment too many; ‘ipv4_novlanfwd_drop’= IPv4 No L3 VLAN FWD Drop; ‘ipv6_novlanfwd_drop’= IPv6 No L3 VLAN FWD Drop; ‘fpga_error_pkt1’= FPGA Error PKT1; ‘fpga_error_pkt2’= FPGA Error PKT2; ‘max_arp_drop’= Max ARP Drop; ‘ipv6frag_tcp’= IPv6 Frag TCP; ‘ipv6frag_icmp’= IPv6 Frag ICMP; ‘ipv6frag_ospf’= IPv6 Frag OSPF; ‘ipv6frag_esp’= IPv6 Frag ESP; ‘l4_in_ctrl_cpu’= L4 In Ctrl CPU; ‘mgmt_svc_drop’= Management Service Drop; ‘jumbo_frag_drop’= Jumbo Frag Drop; ‘ipv6_jumbo_frag_drop’= IPv6 Jumbo Frag Drop; ‘ipipv6_jumbo_frag_drop’= IPIPv6 Jumbo Frag Drop; ‘ipv6_ndisc_dad_solicits’= IPv6 DAD on Solicits; ‘ipv6_ndisc_dad_adverts’= IPv6 DAD on Adverts; ‘ipv6_ndisc_mac_changes’= IPv6 DAD MAC Changed; ‘ipv6_ndisc_out_of_memory’= IPv6 DAD Out-of-memory; ‘sp_non_ctrl_pkt_drop’= Shared IP mode non ctrl packet to linux drop; ‘urpf_pkt_drop’= URPF check packet drop; ‘fw_smp_zone_mismatch’= FW SMP Zone Mismatch; ‘ipfrag_udp’= IP(UDP) Fragment Rcvd; ‘ipfrag_icmp’= IP(ICMP) Fragment Rcvd; ‘ipfrag_ospf’= IP(OSPF) Fragment Rcvd; ‘ipfrag_esp’= IP(ESP) Fragment Rcvd; ‘ipfrag_tcp_dropped’= IP Frag TCP Dropped; ‘ipfrag_udp_dropped’= IP Frag UDP Dropped; ‘ipfrag_ipip_dropped’= IP Frag IPIP Drop; ‘redirect_fwd_fail’= Redirect failed in the fwd direction; ‘redirect_fwd_sent’= Redirect succeeded in the fwd direction; ‘redirect_rev_fail’= Redirect failed in the rev direction; ‘redirect_rev_sent’= Redirect succeeded in the rev direction; ‘redirect_setup_fail’= Redirect connection setup failed; ‘ip_frag_sent’= IP frag sent; ‘invalid_rx_arp_pkt’= Invalid ARP PKT Rcvd; ‘invalid_sender_mac_arp_drop’= ARP PKT dropped due to invalid sender MAC; ‘dev_based_arp_drop’= ARP PKT dropped due to interface state checks; ‘scaleout_arp_drop’= ARP PKT dropped due to scaleout checks; ‘virtual_ip_not_found_arp_drop’= ARP PKT dropped due to virtual IP not found; ‘inactive_static_nat_pool_arp_drop’= ARP PKT dropped due to inactive static nat pool; ‘inactive_nat_pool_arp_drop’= ARP PKT dropped due to inactive nat pool; ‘scaleout_hairpin_arp_drop’= ARP PKT dropped due to scaleout hairpin checks; ‘self_grat_arp_drop’= Self generated grat ARP PKT dropped; ‘self_grat_nat_ip_arp_drop’= Self generated grat ARP PKT dropped for NAT IP; ‘ip_not_found_arp_drop’= ARP PKT dropped due to IP not found; ‘dev_link_down_arp_drop’= ARP PKT dropped due to interface is down; ‘lacp_tx_intf_err_drop’= LACP interface error corrected;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fwlb</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>FWLB</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>licexpire_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>License Expire Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bwl_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>BW Limit Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>rx_kernel</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Received kernel</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>rx_arp_req</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP REQ Rcvd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>rx_arp_resp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP RESP Rcvd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>vlan_flood</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>VLAN Flood</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l2_def_vlan_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L2 Default Vlan FWD Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv4_noroute_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv4 No Route Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6_noroute_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 No Route Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>prot_down_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Prot Down Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l2_forward</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L2 Forward</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l3_forward_ip</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 IP Forward</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l3_forward_ipv6</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3 IPv6 Forward</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_process</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 Process</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unknown_prot_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unknown Prot Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ttl_exceeded_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>TTL Exceeded Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>linkdown_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Link Down Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sport_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>SPORT Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>incorrect_len_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Incorrect Length Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip_defrag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Defrag</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>acl_deny</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ACL Denys</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipfrag_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP(TCP) Fragment Rcvd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipfrag_overlap</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Fragment Overlap</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipfrag_timeout</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Fragment Timeout</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipfrag_overload</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Frag Overload Drops</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipfrag_reasmoks</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Fragment Reasm OKs</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipfrag_reasmfails</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Fragment Reasm Fails</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>badpkt_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Bad Pkt Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipsec_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPSec Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bpdu_rcvd</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>BPDUs Received</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bpdu_sent</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>BPDUs Sent</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ctrl_syn_rate_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>SYN rate exceeded Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_defrag_invalid_len</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Invalid Length Frag</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv4_frag_6rd_ok</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv4 Frag 6RD OK</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv4_frag_6rd_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv4 Frag 6RD Dropped</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>no_ip_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>No IP Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6frag_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv6frag_udp_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag UDP Dropped</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6frag_tcp_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag TCP Dropped</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv6frag_ipip_ok</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag IPIP OKs</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6frag_ipip_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag IPIP Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip_frag_oversize</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Fragment oversize</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_frag_too_many</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Fragment too many</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv4_novlanfwd_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv4 No L3 VLAN FWD Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6_novlanfwd_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 No L3 VLAN FWD Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fpga_error_pkt1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>FPGA Error PKT1</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fpga_error_pkt2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>FPGA Error PKT2</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>max_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Max ARP Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6frag_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv6frag_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6frag_ospf</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag OSPF</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv6frag_esp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Frag ESP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l4_in_ctrl_cpu</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L4 In Ctrl CPU</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>mgmt_svc_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Management Service Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>jumbo_frag_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Jumbo Frag Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv6_jumbo_frag_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 Jumbo Frag Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipipv6_jumbo_frag_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPIPv6 Jumbo Frag Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv6_ndisc_dad_solicits</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 DAD on Solicits</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6_ndisc_dad_adverts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 DAD on Adverts</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv6_ndisc_mac_changes</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 DAD MAC Changed</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6_ndisc_out_of_memory</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPv6 DAD Out-of-memory</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sp_non_ctrl_pkt_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Shared IP mode non ctrl packet to linux drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>urpf_pkt_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>URPF check packet drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fw_smp_zone_mismatch</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>FW SMP Zone Mismatch</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipfrag_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP(UDP) Fragment Rcvd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipfrag_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP(ICMP) Fragment Rcvd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipfrag_ospf</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP(OSPF) Fragment Rcvd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipfrag_esp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP(ESP) Fragment Rcvd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipfrag_tcp_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Frag TCP Dropped</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipfrag_udp_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Frag UDP Dropped</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipfrag_ipip_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP Frag IPIP Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>redirect_fwd_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Redirect failed in the fwd direction</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>redirect_fwd_sent</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Redirect succeeded in the fwd direction</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>redirect_rev_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Redirect failed in the rev direction</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>redirect_rev_sent</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Redirect succeeded in the rev direction</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>redirect_setup_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Redirect connection setup failed</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ip_frag_sent</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP frag sent</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_rx_arp_pkt</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Invalid ARP PKT Rcvd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>invalid_sender_mac_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to invalid sender MAC</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dev_based_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to interface state checks</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>scaleout_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to scaleout checks</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>virtual_ip_not_found_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to virtual IP not found</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>inactive_static_nat_pool_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to inactive static nat pool</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>inactive_nat_pool_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to inactive nat pool</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>scaleout_hairpin_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to scaleout hairpin checks</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>self_grat_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Self generated grat ARP PKT dropped</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>self_grat_nat_ip_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Self generated grat ARP PKT dropped for NAT IP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ip_not_found_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to IP not found</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dev_link_down_arp_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ARP PKT dropped due to interface is down</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>lacp_tx_intf_err_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>LACP interface error corrected</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_aam_authentication_server_ocsp – Configures A10 aam.authentication.server.ocsp &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_aam_authentication_server_ocsp – Configures A10 aam.authentication.server.ocsp</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_aam_authentication_server_ocsp – Configures A10 aam.authentication.server.ocsp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-aam-authentication-server-ocsp-configures-a10-aam-authentication-server-ocsp">
+<span id="a10-aam-authentication-server-ocsp-module"></span><h1>a10_aam_authentication_server_ocsp – Configures A10 aam.authentication.server.ocsp<a class="headerlink" href="#a10-aam-authentication-server-ocsp-configures-a10-aam-authentication-server-ocsp" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>OCSP Authentication Server</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 2%" />
+<col style="width: 3%" />
+<col style="width: 95%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘stapling-certificate-good’= Total OCSP Stapling Good Certificate Response; ‘stapling-certificate-revoked’= Total OCSP Stapling Revoked Certificate Response; ‘stapling-certificate-unknown’= Total OCSP Stapling Unknown Certificate Response; ‘stapling-request-normal’= Total OSCP Stapling Normal Request; ‘stapling-request-dropped’= Total OCSP Stapling Dropped Request; ‘stapling-response-success’= Total OCSP Stapling Success Response; ‘stapling-response-failure’= Total OCSP Stapling Failure Response; ‘stapling- response-error’= Total OCSP Stapling Error Response; ‘stapling-response- timeout’= Total OCSP Stapling Timeout Response; ‘stapling-response-other’= Total OCSP Stapling Other Response; ‘request-normal’= Total OSCP Normal Request; ‘request-dropped’= Total OCSP Dropped Request; ‘response-success’= Total OCSP Success Response; ‘response-failure’= Total OCSP Failure Response; ‘response-error’= Total OCSP Error Response; ‘response-timeout’= Total OCSP Timeout Response; ‘response-other’= Total OCSP Other Response; ‘job-start- error’= Total OCSP Job Start Error; ‘polling-control-error’= Total OCSP Polling Control Error;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>instance_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field instance_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify OCSP authentication server name</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>url</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify the OCSP server’s address (Format= http=//host[=port]/) (The OCSP server’s address(Format= http=//host[=port]/))</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>responder_ca</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify the trusted OCSP responder’s CA cert filename</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>responder_cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify the trusted OCSP responder’s cert filename</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>health_check</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Check server’s health status</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>health_check_string</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Health monitor name</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>health_check_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable configured health check configuration</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>port_health_check</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Check port’s health status</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>port_health_check_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable configured port health check configuration</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>http_version</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Set HTTP version (default 1.0)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>version_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘1.1’= HTTP version 1.1;</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>stapling_certificate_good</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Good Certificate Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stapling_certificate_revoked</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Revoked Certificate Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>stapling_certificate_unknown</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Unknown Certificate Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stapling_request_normal</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OSCP Stapling Normal Request</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>stapling_request_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Dropped Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stapling_response_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Success Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>stapling_response_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Failure Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stapling_response_error</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Error Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>stapling_response_timeout</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Timeout Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stapling_response_other</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Stapling Other Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>request_normal</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OSCP Normal Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>request_dropped</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Dropped Request</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>response_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Success Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>response_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Failure Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>response_error</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Error Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>response_timeout</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Timeout Response</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>response_other</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Other Response</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>job_start_error</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Job Start Error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>polling_control_error</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total OCSP Polling Control Error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>instance_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field instance_list</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

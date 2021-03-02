@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_slb_template_tcp_proxy – Configures A10 slb.template.tcp-proxy &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_slb_template_tcp_proxy – Configures A10 slb.template.tcp-proxy</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_slb_template_tcp_proxy – Configures A10 slb.template.tcp-proxy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-slb-template-tcp-proxy-configures-a10-slb-template-tcp-proxy">
+<span id="a10-slb-template-tcp-proxy-module"></span><h1>a10_slb_template_tcp_proxy – Configures A10 slb.template.tcp-proxy<a class="headerlink" href="#a10-slb-template-tcp-proxy-configures-a10-slb-template-tcp-proxy" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>TCP Proxy</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 13%" />
+<col style="width: 17%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>name</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>TCP Proxy Template Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ack_aggressiveness</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘low’= Delayed ACK; ‘medium’= Delayed ACK, with ACK on each packet with PUSH flag; ‘high’= ACK on each packet;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>backend_wscale</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The TCP window scale used for the server side, default is off (number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>dynamic_buffer_allocation</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Optimally adjust the transmit and receive buffer sizes of TCP proxy while keeping their sum constant</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fin_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>FIN timeout (sec), default is disabled (number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>force_delete_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The maximum time that a session can stay in the system before being deleted, default is off (number (second))</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>force_delete_timeout_100ms</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The maximum time that a session can stay in the system before being deleted, default is off (number in 100ms)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>alive_if_active</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>keep connection alive if active traffic</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>idle_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Idle Timeout (Interval of 60 seconds), default is 600 (idle timeout in second, default 600)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>server_down_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘FIN’= FIN Connection; ‘RST’= Reset Connection;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>half_open_idle_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>TCP Half Open Idle Timeout (sec), default is off (number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>half_close_idle_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>TCP Half Close Idle Timeout (sec), default is off (cmd is deprecated, use fin- timeout instead) (number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>init_cwnd</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The initial congestion control window size (packets), default is 10 (init-cwnd in packets, default 10)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>initial_window_size</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Set the initial window size, default is off (number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>keepalive_interval</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Interval between keepalive probes (sec), default is off (number (seconds))</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>keepalive_probes</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Number of keepalive probes sent, default is off</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>mss</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Responding MSS to use if client MSS is large, default is off (number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>psh_flag_optimization</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable Optimized PSH Flag Use</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>nagle</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable Nagle Algorithm</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>qos</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>QOS level (number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>receive_buffer</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>TCP Receive Buffer (default 200k) (number default 200000 bytes)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>reno</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable Reno Congestion Control Algorithm</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>transmit_buffer</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>TCP Transmit Buffer (default 200k) (number default 200000 bytes)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>reset_fwd</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>send reset to server if error happens</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>reset_rev</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>send reset to client if error happens</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>send reset to client when server is disabled</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>send reset to client when server is down</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>del_session_on_server_down</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Delete session if the server/port goes down (either disabled/hm down)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>retransmit_retries</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Number of Retries for Retransmit, default is 5</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>insert_client_ip</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Insert client ip into TCP option</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>syn_retries</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>SYN Retry Numbers, default is 5</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>timewait</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Timewait Threshold (sec), default 5 (number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>disable_tcp_timestamps</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>disable TCP Timestamps Option</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>disable_window_scale</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>disable TCP Window-Scale Option</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>disable_sack</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>disable Selective Ack Option</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>invalid_rate_limit</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Invalid Packet Response Rate Limit (ms), default is 500 (number default 500 challenges)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>disable_abc</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Appropriate Byte Counting RFC 3465 Disabled, default is enabled (Appropriate Byte Counting (ABC) is enabled by default)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>reassembly_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The reassembly timeout, default is 30sec (number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>reassembly_limit</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The reassembly queuing limit, default is 25 segments (number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>min_rto</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The minmum retransmission timeout, default is 200ms (number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>limited_slowstart</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>RFC 3742 Limited Slow-Start for TCP with Large Congestion Windows (number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>early_retransmit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Configure the Early-Retransmit Algorithm (RFC 5827) (Early-Retransmit is disabled by default)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>maxburst</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The max packet count sent per transmission event (number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>proxy_header</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field proxy_header</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>proxy_header_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘insert’= Insert proxy header;</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>version</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘v1’= version 1; ‘v2’= version 2;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>user_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Customized tag</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

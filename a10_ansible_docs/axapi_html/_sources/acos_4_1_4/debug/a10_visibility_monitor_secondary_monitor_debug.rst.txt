@@ -1,0 +1,109 @@
+.. _a10_visibility_monitor_secondary_monitor_debug_module:
+
+
+a10_visibility_monitor_secondary_monitor_debug -- Configures A10 visibility.monitor.secondary.monitor.debug
+===========================================================================================================
+
+.. contents::
+   :local:
+   :depth: 1
+
+
+Synopsis
+--------
+
+Enable store and replay for the entitites
+
+
+
+
+
+
+Parameters
+----------
+
++-----------------------+-------------------------------+-------------------------------------------------+
+| Parameters            | Choices/Defaults              | Comment                                         |
+|                       |                               |                                                 |
+|                       |                               |                                                 |
++=======================+===============================+=================================================+
+| state                 | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                       |                               |                                                 |
+| str/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_host          |                               | Host for AXAPI authentication                   |
+|                       |                               |                                                 |
+| str/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_username      |                               | Username for AXAPI authentication               |
+|                       |                               |                                                 |
+| str/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_password      |                               | Password for AXAPI authentication               |
+|                       |                               |                                                 |
+| str/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| ansible_port          |                               | Port for AXAPI authentication                   |
+|                       |                               |                                                 |
+| int/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id | ['1-8']                       | Device ID for aVCS configuration                |
+|                       |                               |                                                 |
+| int                   |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| a10_partition         |                               | Destination/target partition for object/command |
+|                       |                               |                                                 |
+| str                   |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| debug_ip_addr         |                               | Specify source/dest ip addr                     |
+|                       |                               |                                                 |
+| str/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| debug_port            |                               | Specify port                                    |
+|                       |                               |                                                 |
+| int/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| debug_protocol        |                               | 'TCP'= TCP; 'UDP'= UDP; 'ICMP'= ICMP;           |
+|                       |                               |                                                 |
+| str/required          |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+| uuid                  |                               | uuid of the object                              |
+|                       |                               |                                                 |
+| str                   |                               |                                                 |
++-----------------------+-------------------------------+-------------------------------------------------+
+
+
+
+
+
+
+
+Examples
+--------
+
+.. code-block:: yaml+jinja
+
+    
+
+
+
+
+
+Status
+------
+
+
+
+
+- This module is not guaranteed to have a backwards compatible interface. *[preview]*
+
+
+- This module is maintained by community.
+
+
+
+Authors
+~~~~~~~
+
+- A10 Networks 2018
+

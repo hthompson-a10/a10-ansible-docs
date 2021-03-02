@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_cgnv6_dns64_virtualserver_port – Configures A10 cgnv6.dns64.virtualserver.port &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_cgnv6_dns64_virtualserver_port – Configures A10 cgnv6.dns64.virtualserver.port</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_cgnv6_dns64_virtualserver_port – Configures A10 cgnv6.dns64.virtualserver.port</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-cgnv6-dns64-virtualserver-port-configures-a10-cgnv6-dns64-virtualserver-port">
+<span id="a10-cgnv6-dns64-virtualserver-port-module"></span><h1>a10_cgnv6_dns64_virtualserver_port – Configures A10 cgnv6.dns64.virtualserver.port<a class="headerlink" href="#a10-cgnv6-dns64-virtualserver-port-configures-a10-cgnv6-dns64-virtualserver-port" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Virtual Port</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 3%" />
+<col style="width: 3%" />
+<col style="width: 94%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>dns64_virtualserver_name</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Key to identify parent object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>port_number</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>protocol</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>‘dns-udp’= DNS service over UDP;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘enable’= Enable; ‘disable’= Disable;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>pool</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify NAT pool or pool group</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>auto</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Configure auto NAT for the vport</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>precedence</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Set auto NAT pool as higher precedence for source NAT</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>service_group</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Bind a Service Group to this Virtual Server (Service Group Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>template_dns</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DNS template (DNS template name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>template_policy</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Policy Template (Policy template name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>acl_id_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field acl_id_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>acl_id</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>ACL id VPORT</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>acl_id_src_nat_pool</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Policy based Source NAT (NAT Pool or Pool Group)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>acl_id_seq_num</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify ACL precedence (sequence-number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>acl_name_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field acl_name_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>acl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Apply an access list name (Named Access List)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>acl_name_src_nat_pool</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Policy based Source NAT (NAT Pool or Pool Group)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>acl_name_seq_num</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify ACL precedence (sequence-number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>user_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Customized tag</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘curr_conn’= Current connection; ‘total_l4_conn’= Total L4 connections; ‘total_l7_conn’= Total L7 connections; ‘toatal_tcp_conn’= Total TCP connections; ‘total_conn’= Total connections; ‘total_fwd_bytes’= Total forward bytes; ‘total_fwd_pkts’= Total forward packets; ‘total_rev_bytes’= Total reverse bytes; ‘total_rev_pkts’= Total reverse packets; ‘total_dns_pkts’= Total DNS packets; ‘total_mf_dns_pkts’= Total MF DNS packets; ‘es_total_failure_actions’= Total failure actions; ‘compression_bytes_before’= Data into compression engine; ‘compression_bytes_after’= Data out of compression engine; ‘compression_hit’= Number of requests compressed; ‘compression_miss’= Number of requests NOT compressed; ‘compression_miss_no_client’= Compression miss no client; ‘compression_miss_template_exclusion’= Compression miss template exclusion; ‘curr_req’= Current requests; ‘total_req’= Total requests; ‘total_req_succ’= Total successful requests; ‘peak_conn’= Peak connections; ‘curr_conn_rate’= Current connection rate; ‘last_rsp_time’= Last response time; ‘fastest_rsp_time’= Fastest response time; ‘slowest_rsp_time’= Slowest response time;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>oper</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field oper</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>state</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field state</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>loc_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field loc_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>geo_location</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field geo_location</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>level_str</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field level_str</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>group_id</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field group_id</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>loc_max_depth</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field loc_max_depth</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>loc_success</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field loc_success</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>loc_error</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field loc_error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>loc_override</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field loc_override</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>loc_last</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field loc_last</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>http_hits_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field http_hits_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>http_vport_cpu_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field http_vport_cpu_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cpu_count</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field cpu_count</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>http_host_hits</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Field http_host_hits</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>http_url_hits</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Field http_url_hits</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>http_vport</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Field http_vport</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>real_curr_conn</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field real_curr_conn</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>port_number</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Port</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>protocol</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘dns-udp’= DNS service over UDP;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>curr_conn</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Current connection</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_l4_conn</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total L4 connections</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_l7_conn</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total L7 connections</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>toatal_tcp_conn</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total TCP connections</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_conn</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total connections</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_fwd_bytes</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total forward bytes</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_fwd_pkts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total forward packets</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_rev_bytes</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total reverse bytes</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_rev_pkts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total reverse packets</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_dns_pkts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total DNS packets</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_mf_dns_pkts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total MF DNS packets</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>es_total_failure_actions</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total failure actions</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>compression_bytes_before</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Data into compression engine</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>compression_bytes_after</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Data out of compression engine</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>compression_hit</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Number of requests compressed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>compression_miss</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Number of requests NOT compressed</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>compression_miss_no_client</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Compression miss no client</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>compression_miss_template_exclusion</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Compression miss template exclusion</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>curr_req</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Current requests</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_req</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total requests</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_req_succ</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total successful requests</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>peak_conn</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Peak connections</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>curr_conn_rate</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Current connection rate</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>last_rsp_time</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Last response time</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fastest_rsp_time</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fastest response time</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>slowest_rsp_time</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Slowest response time</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>port_number</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Port</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>protocol</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘dns-udp’= DNS service over UDP;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

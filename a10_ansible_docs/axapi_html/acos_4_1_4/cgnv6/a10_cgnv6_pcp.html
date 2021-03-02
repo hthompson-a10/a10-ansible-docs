@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_cgnv6_pcp – Configures A10 cgnv6.pcp &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_cgnv6_pcp – Configures A10 cgnv6.pcp</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_cgnv6_pcp – Configures A10 cgnv6.pcp</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-cgnv6-pcp-configures-a10-cgnv6-pcp">
+<span id="a10-cgnv6-pcp-module"></span><h1>a10_cgnv6_pcp – Configures A10 cgnv6.pcp<a class="headerlink" href="#a10-cgnv6-pcp-configures-a10-cgnv6-pcp" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Set Port Control Protocol parameters</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>default_template</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Bind the default template for PCP (Bind a PCP template)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘packets-rcv’= Packets Received; ‘lsn-map-process-success’= PCP MAP Request Processing Success (NAT44); ‘dslite-map-process-success’= PCP MAP Request Processing Success (DS-Lite); ‘nat64-map-process-success’= PCP MAP Request Processing Success (NAT64); ‘lsn-peer-process-success’= PCP PEER Request Processing Success (NAT44); ‘dslite-peer-process-success’= PCP PEER Request Processing Success (DS-Lite); ‘nat64-peer-process-success’= PCP PEER Request Processing Success (NAT64); ‘lsn-announce-process-success’= PCP ANNOUNCE Request Processing Success (NAT44); ‘dslite-announce-process-success’= PCP ANNOUNCE Request Processing Success (DS-Lite); ‘nat64-announce-process- success’= PCP ANNOUNCE Request Processing Success (NAT64); ‘pkt-not-request- drop’= Packet Not a PCP Request; ‘pkt-too-short-drop’= Packet Too Short; ‘noroute-drop’= Response No Route; ‘unsupported-version’= Unsupported PCP version; ‘not-authorized’= PCP Request Not Authorized; ‘malform-request’= PCP Request Malformed; ‘unsupp-opcode’= Unsupported PCP Opcode; ‘unsupp-option’= Unsupported PCP Option; ‘malform-option’= PCP Option Malformed; ‘no-resources’= No System or NAT Resources; ‘unsupp-protocol’= Unsupported Mapping Protocol; ‘user-quota-exceeded’= User Quota Exceeded; ‘cannot-provide-suggest’= Cannot Provide Suggested Port When PREFER_FAILURE; ‘address-mismatch’= PCP Client Address Mismatch; ‘excessive-remote-peers’= Excessive Remote Peers; ‘pkt-not- from-nat-inside’= Packet Dropped For Not Coming From NAT Inside; ‘l4-process- error’= L3/L4 Process Error; ‘internal-error-drop’= Internal Error; ‘unsol_ance_sent_succ’= Unsolicited Announce Sent; ‘unsol_ance_sent_fail’= Unsolicited Announce Send Failure; ‘ha_sync_epoch_sent’= HA Sync PCP Epoch Sent; ‘ha_sync_epoch_rcv’= HA Sync PCP Epoch Recv; ‘fullcone-ext-alloc’= PCP Fullcone Extension Alloc; ‘fullcone-ext-free’= PCP Fullcone Extension Free; ‘fullcone-ext-alloc-failure’= PCP Fullcone Extension Alloc Failure; ‘fullcone- ext-notfound’= PCP Fullcone Extension Not Found; ‘fullcone-ext-reuse’= PCP Fullcone Extension Reuse; ‘client-nonce-mismatch’= PCP Client Nonce Mismatch; ‘map-filter-set’= PCP MAP Filter Set; ‘map-filter-deny’= PCP MAP Filter Deny Inbound; ‘inter-board-pkts’= PCP Inter board packets;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>packets_rcv</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packets Received</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>lsn_map_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP MAP Request Processing Success (NAT44)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_map_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP MAP Request Processing Success (DS-Lite)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_map_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP MAP Request Processing Success (NAT64)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>lsn_peer_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP PEER Request Processing Success (NAT44)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dslite_peer_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP PEER Request Processing Success (DS-Lite)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat64_peer_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP PEER Request Processing Success (NAT64)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>lsn_announce_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP ANNOUNCE Request Processing Success (NAT44)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_announce_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP ANNOUNCE Request Processing Success (DS-Lite)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_announce_process_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP ANNOUNCE Request Processing Success (NAT64)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>pkt_not_request_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet Not a PCP Request</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pkt_too_short_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet Too Short</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>noroute_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Response No Route</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>unsupported_version</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported PCP version</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>not_authorized</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP Request Not Authorized</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>malform_request</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP Request Malformed</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unsupp_opcode</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported PCP Opcode</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>unsupp_option</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported PCP Option</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>malform_option</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP Option Malformed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>no_resources</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>No System or NAT Resources</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unsupp_protocol</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported Mapping Protocol</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>user_quota_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>User Quota Exceeded</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cannot_provide_suggest</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Cannot Provide Suggested Port When PREFER_FAILURE</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>address_mismatch</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>PCP Client Address Mismatch</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>excessive_remote_peers</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Excessive Remote Peers</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pkt_not_from_nat_inside</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet Dropped For Not Coming From NAT Inside</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>l4_process_error</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>L3/L4 Process Error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>internal_error_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Internal Error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unsol_ance_sent_succ</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsolicited Announce Sent</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>unsol_ance_sent_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsolicited Announce Send Failure</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ha_sync_epoch_sent</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>HA Sync PCP Epoch Sent</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ha_sync_epoch_rcv</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>HA Sync PCP Epoch Recv</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

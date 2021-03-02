@@ -1,0 +1,1862 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_cgnv6_fixed_nat_global – Configures A10 cgnv6.fixed.nat.global &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_cgnv6_fixed_nat_global – Configures A10 cgnv6.fixed.nat.global</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_cgnv6_fixed_nat_global – Configures A10 cgnv6.fixed.nat.global</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-cgnv6-fixed-nat-global-configures-a10-cgnv6-fixed-nat-global">
+<span id="a10-cgnv6-fixed-nat-global-module"></span><h1>a10_cgnv6_fixed_nat_global – Configures A10 cgnv6.fixed.nat.global<a class="headerlink" href="#a10-cgnv6-fixed-nat-global-configures-a10-cgnv6-fixed-nat-global" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Fixed NAT Global configuration and Stats</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 0%" />
+<col style="width: 99%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>create_port_mapping_file</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Create Port Mapping File</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>port_mapping_files_count</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Number of old fixed_nat files to store</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘total-nat-in-use’= Total NAT Addresses in-use; ‘total-tcp- allocated’= Total TCP Ports Allocated; ‘total-tcp-freed’= Total TCP Ports Freed; ‘total-udp-allocated’= Total UDP Ports Allocated; ‘total-udp-freed’= Total UDP Ports Freed; ‘total-icmp-allocated’= Total ICMP Ports Allocated; ‘total-icmp-freed’= Total ICMP Ports Freed; ‘nat44-data-session-created’= NAT44 Data Sessions Created; ‘nat44-data-session-freed’= NAT44 Data Sessions Freed; ‘nat64-data-session-created’= NAT64 Data Sessions Created; ‘nat64-data-session- freed’= NAT64 Data Sessions Freed; ‘dslite-data-session-created’= DS-Lite Data Sessions Created; ‘dslite-data-session-freed’= DS-Lite Data Sessions Freed; ‘nat-port-unavailable-tcp’= TCP NAT Port Unavailable; ‘nat-port-unavailable- udp’= UDP NAT Port Unavailable; ‘nat-port-unavailable-icmp’= ICMP NAT Port Unavailable; ‘session-user-quota-exceeded’= Sessions User Quota Exceeded; ‘nat44-tcp-fullcone-created’= NAT44 TCP Full-Cone Created; ‘nat44-tcp-fullcone- freed’= NAT44 TCP Full-Cone Freed; ‘nat44-udp-fullcone-created’= NAT44 UDP Full-Cone Created; ‘nat44-udp-fullcone-freed’= NAT44 UDP Full-Cone Freed; ‘nat44-udp-alg-fullcone-created’= NAT44 UDP ALG Full-Cone Created; ‘nat44-udp- alg-fullcone-freed’= NAT44 UDP ALG Full-Cone Freed; ‘nat64-tcp-fullcone- created’= NAT64 TCP Full-Cone Created; ‘nat64-tcp-fullcone-freed’= NAT64 TCP Full-Cone Freed; ‘nat64-udp-fullcone-created’= NAT64 UDP Full-Cone Created; ‘nat64-udp-fullcone-freed’= NAT64 UDP Full-Cone Freed; ‘nat64-udp-alg-fullcone- created’= NAT64 UDP ALG Full-Cone Created; ‘nat64-udp-alg-fullcone-freed’= NAT64 UDP ALG Full-Cone Freed; ‘dslite-tcp-fullcone-created’= DS-Lite TCP Full- Cone Created; ‘dslite-tcp-fullcone-freed’= DS-Lite TCP Full-Cone Freed; ‘dslite-udp-fullcone-created’= DS-Lite UDP Full-Cone Created; ‘dslite-udp- fullcone-freed’= DS-Lite UDP Full-Cone Freed; ‘dslite-udp-alg-fullcone- created’= DS-Lite UDP ALG Full-Cone Created; ‘dslite-udp-alg-fullcone-freed’= DS-Lite UDP ALG Full-Cone Freed; ‘fullcone-failure’= Full-Cone Session Creation Failed; ‘nat44-eim-match’= NAT44 Endpoint-Independent-Mapping Matched; ‘nat64-eim-match’= NAT64 Endpoint-Independent-Mapping Matched; ‘dslite-eim- match’= DS-Lite Endpoint-Independent-Mapping Matched; ‘nat44-eif-match’= NAT44 Endpoint-Independent-Filtering Matched; ‘nat64-eif-match’= NAT64 Endpoint- Independent-Filtering Matched; ‘dslite-eif-match’= DS-Lite Endpoint- Independent-Filtering Matched; ‘nat44-inbound-filtered’= NAT44 Endpoint- Dependent Filtering Drop; ‘nat64-inbound-filtered’= NAT64 Endpoint-Dependent Filtering Drop; ‘dslite-inbound-filtered’= DS-Lite Endpoint-Dependent Filtering Drop; ‘nat44-eif-limit-exceeded’= NAT44 Endpoint-Independent-Filtering Limit Exceeded; ‘nat64-eif-limit-exceeded’= NAT64 Endpoint-Independent-Filtering Limit Exceeded; ‘dslite-eif-limit-exceeded’= DS-Lite Endpoint-Independent- Filtering Limit Exceeded; ‘nat44-hairpin’= NAT44 Hairpin Session Created; ‘nat64-hairpin’= NAT64 Hairpin Session Created; ‘dslite-hairpin’= DS-Lite Hairpin Session Created; ‘standby-drop’= Fixed NAT LID Standby Drop; ‘fixed- nat-fullcone-self-hairpinning-drop’= Self-Hairpinning Drop; ‘sixrd-drop’= Fixed NAT IPv6 in IPv4 Packet Drop; ‘dest-rlist-drop’= Fixed NAT Dest Rule List Drop; ‘dest-rlist-pass-through’= Fixed NAT Dest Rule List Pass-Through; ‘dest-rlist- snat-drop’= Fixed NAT Dest Rules List Source NAT Drop; ‘cross-cpu-helper- created’= Cross CPU Helper Session Created; ‘cross-cpu-helper-free-retry- lookup’= Cross CPU Helper Session Free Retry Lookup; ‘cross-cpu-helper-free- not-found’= Cross CPU Helper Session Free not Found; ‘cross-cpu-helper-free’= Cross CPU Helper Session Freed; ‘cross-cpu-rcv’= Cross CPU Helper Packets Received; ‘cross-cpu-bad-l3’= Cross CPU Unsupported L3; ‘cross-cpu-bad-l4’= Cross CPU Unsupported L4; ‘cross-cpu-no-session’= Cross CPU no Session Found; ‘cross-cpu-helper-deleted’= Cross CPU Helper Session Deleted; ‘cross-cpu- helper-fixed-nat-lid-standby’= Cross CPU Helper Fixed NAT LID Standby; ‘cross- cpu-helper-cpu-mismatch’= Cross CPU Helper CPU Mismatch; ‘cross-cpu-sent’= Cross CPU Helper Packets Sent; ‘config-not-found’= Fixed NAT Config not Found; ‘fullcone-in-del-q’= Full-Cone Session in Delete Queue; ‘fullcone-overflow’= Full-Cone Session Conn-Count Overflow; ‘fullcone-inbound-idx-mismatch’= Full- Cone Session Fixed NAT LID mismatch; ‘fullcone-retry-lookup’= Full-cone session retry look-up; ‘fullcone-not-found’= Full-cone session not found; ‘fullcone- overflow-eim’= Full-cone EIM Overflow; ‘fullcone-overflow-eif’= Full-cone EIF Overflow; ‘ha-config-mismatch’= HA Fixed NAT Config Mismatch; ‘ha-user-quota- exceeded’= HA User Quota Exceeded; ‘ha-fullcone-mismatch’= HA Full-Cone Mismatch; ‘ha-dnat-mismatch’= HA Destination NAT Config Mismatch; ‘ha-nat-port- unavailable’= HA NAT Port Unavailable; ‘ha-fullcone-failure’= HA Full-Cone Failure; ‘ha-endpoint-indep-map-match’= HA Endpoint-Independent-Mapping Match; ‘udp-alg-eim-mismatch’= UDP ALG Endpoint-Independent Mapping Mismatch; ‘udp- alg-no-nat-ip’= UDP ALG User-Quota Unknown NAT IP; ‘udp-alg-alloc-failure’= UDP ALG Port Allocation Failure; ‘mtu-exceeded’= Packet Exceeded MTU; ‘frag’= Fragmented Packets; ‘frag-icmp’= ICMP Packet Too Big Sent; ‘periodic-log-msg- alloc’= Fixed NAT Periodic Log Msg Allocated; ‘periodic-log-msg-free’= Fixed NAT Periodic Log Msg Freed; ‘disable-log-msg-alloc’= Fixed NAT Disable Log Msg Allocated; ‘disable-log-msg-free’= Fixed NAT Disable Log Msg Freed; ‘sip-alg- reuse-contact-fullcone’= SIP ALG Reuse Contact Full-cone Session; ‘sip-alg- contact-fullcone-mismatch’= SIP ALG Contact Full-cone Session Mismatch; ‘sip- alg-create-contact-fullcone-failure’= SIP ALG Create Contact Full-cone Session Failure; ‘sip-alg-single-rtp-fullcone’= SIP ALG Single RTP Full-cone Found; ‘sip-alg-rtcp-fullcone-mismatch’= SIP ALG RTCP Full-cone NAT Port Mismatch; ‘sip-alg-reuse-rtp-rtcp-fullcone’= SIP ALG Reuse RTP/RTCP Full-cone Session; ‘sip-alg-single-rtcp-fullcone’= SIP ALG Single RTCP Full-cone Found; ‘sip-alg- create-rtp-fullcone-failure’= SIP ALG Create RTP Full-cone Session Failure; ‘sip-alg-create-rtcp-fullcone-failure’= SIP ALG Create RTCP Full-cone Session Failure; ‘icmp-out-of-state-uqe-admin-filtered-sent’= Total User Quota Exceeded ICMP admin filtered sent; ‘icmp-out-of-state-uqe-host-unreachable-sent’= Total User Quota Exceeded ICMP host unreachable sent; ‘icmp-out-of-state-uqe- dropped’= Total User Queue Exceeded ICMP notification dropped; ‘nat-esp-ip- conflicts’= Fixed NAT ESP IP Conflicts; ‘total-tcp-allocated-shadow’= Total TCP Ports Allocated; ‘total-tcp-freed-shadow’= Total TCP Ports Freed; ‘total-udp- allocated-shadow’= Total UDP Ports Allocated; ‘total-udp-freed-shadow’= Total UDP Ports Freed; ‘total-icmp-allocated-shadow’= Total ICMP Ports Allocated; ‘total-icmp-freed-shadow’= Total ICMP Ports Freed; ‘nat44-data-session-created- shadow’= NAT44 Data Sessions Created; ‘nat44-data-session-freed-shadow’= NAT44 Data Sessions Freed; ‘nat64-data-session-created-shadow’= NAT64 Data Sessions Created; ‘nat64-data-session-freed-shadow’= NAT64 Data Sessions Freed; ‘dslite- data-session-created-shadow’= DS-Lite Data Sessions Created; ‘dslite-data- session-freed-shadow’= DS-Lite Data Sessions Freed; ‘nat44-tcp-fullcone- created-shadow’= NAT44 TCP Full-Cone Created; ‘nat44-tcp-fullcone-freed- shadow’= NAT44 TCP Full-Cone Freed; ‘nat44-udp-fullcone-created-shadow’= NAT44 UDP Full-Cone Created; ‘nat44-udp-fullcone-freed-shadow’= NAT44 UDP Full-Cone Freed; ‘nat44-udp-alg-fullcone-created-shadow’= NAT44 UDP ALG Full-Cone Created;</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘nat44-udp-alg-fullcone-freed-shadow’= NAT44 UDP ALG Full-Cone Freed; ‘nat64-tcp-fullcone-created-shadow’= NAT64 TCP Full-Cone Created; ‘nat64-tcp- fullcone-freed-shadow’= NAT64 TCP Full-Cone Freed; ‘nat64-udp-fullcone-created- shadow’= NAT64 UDP Full-Cone Created; ‘nat64-udp-fullcone-freed-shadow’= NAT64 UDP Full-Cone Freed; ‘nat64-udp-alg-fullcone-created-shadow’= NAT64 UDP ALG Full-Cone Created; ‘nat64-udp-alg-fullcone-freed-shadow’= NAT64 UDP ALG Full- Cone Freed; ‘dslite-tcp-fullcone-created-shadow’= DS-Lite TCP Full-Cone Created; ‘dslite-tcp-fullcone-freed-shadow’= DS-Lite TCP Full-Cone Freed; ‘dslite-udp-fullcone-created-shadow’= DS-Lite UDP Full-Cone Created; ‘dslite- udp-fullcone-freed-shadow’= DS-Lite UDP Full-Cone Freed; ‘dslite-udp-alg- fullcone-created-shadow’= DS-Lite UDP ALG Full-Cone Created; ‘dslite-udp-alg- fullcone-freed-shadow’= DS-Lite UDP ALG Full-Cone Freed; ‘h323-alg-reuse- fullcone’= H323 ALG Reuse Full-cone Session; ‘h323-alg-fullcone-mismatch’= H323 ALG Full-cone Session Mismatch; ‘h323-alg-create-fullcone-failure’= H323 ALG Create Full-cone Session Failure; ‘h323-alg-single-rtp-fullcone’= H323 ALG Single RTP Full-cone Found; ‘h323-alg-rtcp-fullcone-mismatch’= H323 ALG RTCP Full-cone NAT Port Mismatch; ‘h323-alg-reuse-rtp-rtcp-fullcone’= H323 ALG Reuse RTP/RTCP Full-cone Session; ‘h323-alg-single-rtcp-fullcone’= H323 ALG Single RTCP Full-cone Found; ‘h323-alg-create-rtp-fullcone-failure’= H323 ALG Create RTP Full-cone Session Failure; ‘h323-alg-create-rtcp-fullcone-failure’= H323 ALG Create RTCP Full-cone Session Failure; ‘mgcp-alg-reuse-fullcone’= MGCP ALG Reuse Full-cone Session; ‘mgcp-alg-fullcone-mismatch’= MGCP ALG Full-cone Session Mismatch; ‘mgcp-alg-create-fullcone-failure’= MGCP ALG Create Full-cone Session Failure; ‘mgcp-alg-single-rtp-fullcone’= MGCP ALG Single RTP Full-cone Found; ‘mgcp-alg-rtcp-fullcone-mismatch’= MGCP ALG RTCP Full-cone NAT Port Mismatch; ‘mgcp-alg-reuse-rtp-rtcp-fullcone’= MGCP ALG Reuse RTP/RTCP Full-cone Session; ‘mgcp-alg-single-rtcp-fullcone’= MGCP ALG Single RTCP Full-cone Found; ‘mgcp-alg-create-rtp-fullcone-failure’= MGCP ALG Create RTP Full-cone Session Failure; ‘mgcp-alg-create-rtcp-fullcone-failure’= MGCP ALG Create RTCP Full- cone Session Failure; ‘user-unusable-drop’= Fixed NAT User Unusable Drop; ‘ipv4-user-unusable’= Fixed NAT IPv4 User Marked Unusable; ‘ipv6-user- unusable’= Fixed NAT IPv6 User Marked Unusable; ‘ipd-disabled’= Fixed NAT IPD disabled; ‘dslite_tunnel_frag’= IPv4 Fragment DS-Lite Packet; ‘total-tcp- overload-acquired’= Total TCP ports acquired for port overloading; ‘total-udp- overload-acquired’= Total UDP ports acquired for port overloading; ‘total-tcp- overload-released’= Total TCP ports released from port overloading; ‘total-udp- overload-released’= Total UDP ports released from port overloading; ‘total-tcp- alloc-overload’= Total TCP ports allocated via overload; ‘total-udp-alloc- overload’= Total UDP ports allocated via overload; ‘total-tcp-free-overload’= Total TCP ports freed via overload; ‘total-udp-free-overload’= Total UDP ports freed via overload; ‘port-overload-smp-delete-scheduled’= Port overload SMP conn delete scheduled; ‘port-overload-smp-mem-allocated’= Port overload SMP mem allocated; ‘port-overload-out-of-memory’= Port overload out of memory; ‘port- overload-smp-free’= Port overload SMP conn free; ‘port-overload-smp-free-no- lid’= Port overload SMP conn free no lid; ‘port-overload-free-smp-not-found’= Port overload free SMP conn not found; ‘port-overload-failed’= Port overload failed; ‘total-tcp-overload-acquired-shadow’= Total TCP ports acquired for port overloading shadow; ‘total-udp-overload-acquired-shadow’= Total UDP ports acquired for port overloading shadow; ‘total-tcp-overload-released-shadow’= Total TCP ports released from port overloading shadow; ‘total-udp-overload- released-shadow’= Total UDP ports released from port overloading shadow; ‘total-tcp-alloc-overload-shadow’= Total TCP allocated via overload shadow; ‘total-udp-alloc-overload-shadow’= Total UDP allocated via overload shadow; ‘total-tcp-free-overload-shadow’= Total TCP freed via overload shadow; ‘total- udp-free-overload-shadow’= Total UDP freed via overload shadow; ‘ha-session- user-quota-exceeded’= HA Sessions User Quota Exceeded; ‘tcp-user-quota- exceeded’= TCP User Quota Exceeded; ‘udp-user-quota-exceeded’= UDP User Quota Exceeded; ‘icmp-user-quota-exceeded’= ICMP User Quota Exceeded; ‘ha-tcp-user- quota-exceeded’= HA TCP User Quota Exceeded; ‘ha-udp-user-quota-exceeded’= HA UDP User Quota Exceeded; ‘ha-icmp-user-quota-exceeded’= HA ICMP User Quota Exceeded; ‘ha-nat-port-unavailable-tcp’= HA TCP NAT Port Unavailable; ‘ha-nat- port-unavailable-udp’= HA UDP NAT Port Unavailable; ‘ha-nat-port-unavailable- icmp’= HA ICMP NAT Port Unavailable; ‘fnat44_fwd_ingress_packets_tcp’= Fixed NAT44 Forward Ingress Packets TCP; ‘fnat44_fwd_egress_packets_tcp’= Fixed NAT44 Forward Egress Packets TCP; ‘fnat44_rev_ingress_packets_tcp’= Fixed NAT44 Reverse Ingress Packets TCP; ‘fnat44_rev_egress_packets_tcp’= Fixed NAT44 Reverse Egress Packets TCP; ‘fnat44_fwd_ingress_bytes_tcp’= Fixed NAT44 Forward Ingress Bytes TCP; ‘fnat44_fwd_egress_bytes_tcp’= Fixed NAT44 Forward Egress Bytes TCP; ‘fnat44_rev_ingress_bytes_tcp’= Fixed NAT44 Reverse Ingress Bytes TCP; ‘fnat44_rev_egress_bytes_tcp’= Fixed NAT44 Reverse Egress Bytes TCP; ‘fnat44_fwd_ingress_packets_udp’= Fixed NAT44 Forward Ingress Packets UDP; ‘fnat44_fwd_egress_packets_udp’= Fixed NAT44 Forward Egress Packets UDP; ‘fnat44_rev_ingress_packets_udp’= Fixed NAT44 Reverse Ingress Packets UDP; ‘fnat44_rev_egress_packets_udp’= Fixed NAT44 Reverse Egress Packets UDP; ‘fnat44_fwd_ingress_bytes_udp’= Fixed NAT44 Forward Ingress Bytes UDP; ‘fnat44_fwd_egress_bytes_udp’= Fixed NAT44 Forward Egress Bytes UDP; ‘fnat44_rev_ingress_bytes_udp’= Fixed NAT44 Reverse Ingress Bytes UDP; ‘fnat44_rev_egress_bytes_udp’= Fixed NAT44 Reverse Egress Bytes UDP; ‘fnat44_fwd_ingress_packets_icmp’= Fixed NAT44 Forward Ingress Packets ICMP; ‘fnat44_fwd_egress_packets_icmp’= Fixed NAT44 Forward Egress Packets ICMP; ‘fnat44_rev_ingress_packets_icmp’= Fixed NAT44 Reverse Ingress Packets ICMP; ‘fnat44_rev_egress_packets_icmp’= Fixed NAT44 Reverse Egress Packets ICMP; ‘fnat44_fwd_ingress_bytes_icmp’= Fixed NAT44 Forward Ingress Bytes ICMP; ‘fnat44_fwd_egress_bytes_icmp’= Fixed NAT44 Forward Egress Bytes ICMP; ‘fnat44_rev_ingress_bytes_icmp’= Fixed NAT44 Reverse Ingress Bytes ICMP; ‘fnat44_rev_egress_bytes_icmp’= Fixed NAT44 Reverse Egress Bytes ICMP; ‘fnat44_fwd_ingress_packets_others’= Fixed NAT44 Forward Ingress Packets OTHERS; ‘fnat44_fwd_egress_packets_others’= Fixed NAT44 Forward Egress Packets OTHERS; ‘fnat44_rev_ingress_packets_others’= Fixed NAT44 Reverse Ingress Packets OTHERS; ‘fnat44_rev_egress_packets_others’= Fixed NAT44 Reverse Egress Packets OTHERS; ‘fnat44_fwd_ingress_bytes_others’= Fixed NAT44 Forward Ingress Bytes OTHERS; ‘fnat44_fwd_egress_bytes_others’= Fixed NAT44 Forward Egress Bytes OTHERS; ‘fnat44_rev_ingress_bytes_others’= Fixed NAT44 Reverse Ingress Bytes OTHERS; ‘fnat44_rev_egress_bytes_others’= Fixed NAT44 Reverse Egress Bytes OTHERS; ‘fnat44_fwd_ingress_pkt_size_range1’= Fixed NAT44 Forward Ingress Packet size between 0 and 200; ‘fnat44_fwd_ingress_pkt_size_range2’= Fixed NAT44 Forward Ingress Packet size between 201 and 800; ‘fnat44_fwd_ingress_pkt_size_range3’= Fixed NAT44 Forward Ingress Packet size between 801 and 1550; ‘fnat44_fwd_ingress_pkt_size_range4’= Fixed NAT44 Forward Ingress Packet size between 1551 and 9000; ‘fnat44_fwd_egress_pkt_size_range1’= Fixed NAT44 Forward Egress Packet size between 0 and 200;</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>counters3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘fnat44_fwd_egress_pkt_size_range2’= Fixed NAT44 Forward Egress Packet size between 201 and 800; ‘fnat44_fwd_egress_pkt_size_range3’= Fixed NAT44 Forward Egress Packet size between 801 and 1550; ‘fnat44_fwd_egress_pkt_size_range4’= Fixed NAT44 Forward Egress Packet size between 1551 and 9000; ‘fnat44_rev_ingress_pkt_size_range1’= Fixed NAT44 Reverse Ingress Packet size between 0 and 200; ‘fnat44_rev_ingress_pkt_size_range2’= Fixed NAT44 Reverse Ingress Packet size between 201 and 800; ‘fnat44_rev_ingress_pkt_size_range3’= Fixed NAT44 Reverse Ingress Packet size between 801 and 1550; ‘fnat44_rev_ingress_pkt_size_range4’= Fixed NAT44 Reverse Ingress Packet size between 1551 and 9000; ‘fnat44_rev_egress_pkt_size_range1’= Fixed NAT44 Reverse Egress Packet size between 0 and 200; ‘fnat44_rev_egress_pkt_size_range2’= Fixed NAT44 Reverse Egress Packet size between 201 and 800; ‘fnat44_rev_egress_pkt_size_range3’= Fixed NAT44 Reverse Egress Packet size between 801 and 1550; ‘fnat44_rev_egress_pkt_size_range4’= Fixed NAT44 Reverse Egress Packet size between 1551 and 9000; ‘fnat64_fwd_ingress_packets_tcp’= Fixed NAT64 Forward Ingress Packets TCP; ‘fnat64_fwd_egress_packets_tcp’= Fixed NAT64 Forward Egress Packets TCP; ‘fnat64_rev_ingress_packets_tcp’= Fixed NAT64 Reverse Ingress Packets TCP; ‘fnat64_rev_egress_packets_tcp’= Fixed NAT64 Reverse Egress Packets TCP; ‘fnat64_fwd_ingress_bytes_tcp’= Fixed NAT64 Forward Ingress Bytes TCP; ‘fnat64_fwd_egress_bytes_tcp’= Fixed NAT64 Forward Egress Bytes TCP; ‘fnat64_rev_ingress_bytes_tcp’= Fixed NAT64 Reverse Ingress Bytes TCP; ‘fnat64_rev_egress_bytes_tcp’= Fixed NAT64 Reverse Egress Bytes TCP; ‘fnat64_fwd_ingress_packets_udp’= Fixed NAT64 Forward Ingress Packets UDP; ‘fnat64_fwd_egress_packets_udp’= Fixed NAT64 Forward Egress Packets UDP; ‘fnat64_rev_ingress_packets_udp’= Fixed NAT64 Reverse Ingress Packets UDP; ‘fnat64_rev_egress_packets_udp’= Fixed NAT64 Reverse Egress Packets UDP; ‘fnat64_fwd_ingress_bytes_udp’= Fixed NAT64 Forward Ingress Bytes UDP; ‘fnat64_fwd_egress_bytes_udp’= Fixed NAT64 Forward Egress Bytes UDP; ‘fnat64_rev_ingress_bytes_udp’= Fixed NAT64 Reverse Ingress Bytes UDP; ‘fnat64_rev_egress_bytes_udp’= Fixed NAT64 Reverse Egress Bytes UDP; ‘fnat64_fwd_ingress_packets_icmp’= Fixed NAT64 Forward Ingress Packets ICMP; ‘fnat64_fwd_egress_packets_icmp’= Fixed NAT64 Forward Egress Packets ICMP; ‘fnat64_rev_ingress_packets_icmp’= Fixed NAT64 Reverse Ingress Packets ICMP; ‘fnat64_rev_egress_packets_icmp’= Fixed NAT64 Reverse Egress Packets ICMP; ‘fnat64_fwd_ingress_bytes_icmp’= Fixed NAT64 Forward Ingress Bytes ICMP; ‘fnat64_fwd_egress_bytes_icmp’= Fixed NAT64 Forward Egress Bytes ICMP; ‘fnat64_rev_ingress_bytes_icmp’= Fixed NAT64 Reverse Ingress Bytes ICMP; ‘fnat64_rev_egress_bytes_icmp’= Fixed NAT64 Reverse Egress Bytes ICMP; ‘fnat64_fwd_ingress_packets_others’= Fixed NAT64 Forward Ingress Packets OTHERS; ‘fnat64_fwd_egress_packets_others’= Fixed NAT64 Forward Egress Packets OTHERS; ‘fnat64_rev_ingress_packets_others’= Fixed NAT64 Reverse Ingress Packets OTHERS; ‘fnat64_rev_egress_packets_others’= Fixed NAT64 Reverse Egress Packets OTHERS; ‘fnat64_fwd_ingress_bytes_others’= Fixed NAT64 Forward Ingress Bytes OTHERS; ‘fnat64_fwd_egress_bytes_others’= Fixed NAT64 Forward Egress Bytes OTHERS; ‘fnat64_rev_ingress_bytes_others’= Fixed NAT64 Reverse Ingress Bytes OTHERS; ‘fnat64_rev_egress_bytes_others’= Fixed NAT64 Reverse Egress Bytes OTHERS; ‘fnat64_fwd_ingress_pkt_size_range1’= Fixed NAT64 Forward Ingress Packet size between 0 and 200; ‘fnat64_fwd_ingress_pkt_size_range2’= Fixed NAT64 Forward Ingress Packet size between 201 and 800; ‘fnat64_fwd_ingress_pkt_size_range3’= Fixed NAT64 Forward Ingress Packet size between 801 and 1550; ‘fnat64_fwd_ingress_pkt_size_range4’= Fixed NAT64 Forward Ingress Packet size between 1551 and 9000; ‘fnat64_fwd_egress_pkt_size_range1’= Fixed NAT64 Forward Egress Packet size between 0 and 200; ‘fnat64_fwd_egress_pkt_size_range2’= Fixed NAT64 Forward Egress Packet size between 201 and 800; ‘fnat64_fwd_egress_pkt_size_range3’= Fixed NAT64 Forward Egress Packet size between 801 and 1550; ‘fnat64_fwd_egress_pkt_size_range4’= Fixed NAT64 Forward Egress Packet size between 1551 and 9000; ‘fnat64_rev_ingress_pkt_size_range1’= Fixed NAT64 Reverse Ingress Packet size between 0 and 200; ‘fnat64_rev_ingress_pkt_size_range2’= Fixed NAT64 Reverse Ingress Packet size between 201 and 800; ‘fnat64_rev_ingress_pkt_size_range3’= Fixed NAT64 Reverse Ingress Packet size between 801 and 1550; ‘fnat64_rev_ingress_pkt_size_range4’= Fixed NAT64 Reverse Ingress Packet size between 1551 and 9000; ‘fnat64_rev_egress_pkt_size_range1’= Fixed NAT64 Reverse Egress Packet size between 0 and 200; ‘fnat64_rev_egress_pkt_size_range2’= Fixed NAT64 Reverse Egress Packet size between 201 and 800; ‘fnat64_rev_egress_pkt_size_range3’= Fixed NAT64 Reverse Egress Packet size between 801 and 1550; ‘fnat64_rev_egress_pkt_size_range4’= Fixed NAT64 Reverse Egress Packet size between 1551 and 9000; ‘fnatdslite_fwd_ingress_packets_tcp’= Fixed DS-Lite Forward Ingress Packets TCP; ‘fnatdslite_fwd_egress_packets_tcp’= Fixed DS-Lite Forward Egress Packets TCP; ‘fnatdslite_rev_ingress_packets_tcp’= Fixed DS-Lite Reverse Ingress Packets TCP; ‘fnatdslite_rev_egress_packets_tcp’= Fixed DS-Lite Reverse Egress Packets TCP; ‘fnatdslite_fwd_ingress_bytes_tcp’= Fixed DS-Lite Forward Ingress Bytes TCP; ‘fnatdslite_fwd_egress_bytes_tcp’= Fixed DS-Lite Forward Egress Bytes TCP; ‘fnatdslite_rev_ingress_bytes_tcp’= Fixed DS-Lite Reverse Ingress Bytes TCP; ‘fnatdslite_rev_egress_bytes_tcp’= Fixed DS-Lite Reverse Egress Bytes TCP; ‘fnatdslite_fwd_ingress_packets_udp’= Fixed DS-Lite Forward Ingress Packets UDP; ‘fnatdslite_fwd_egress_packets_udp’= Fixed DS-Lite Forward Egress Packets UDP; ‘fnatdslite_rev_ingress_packets_udp’= Fixed DS-Lite Reverse Ingress Packets UDP; ‘fnatdslite_rev_egress_packets_udp’= Fixed DS-Lite Reverse Egress Packets UDP; ‘fnatdslite_fwd_ingress_bytes_udp’= Fixed DS-Lite Forward Ingress Bytes UDP; ‘fnatdslite_fwd_egress_bytes_udp’= Fixed DS-Lite Forward Egress Bytes UDP; ‘fnatdslite_rev_ingress_bytes_udp’= Fixed DS-Lite Reverse Ingress Bytes UDP; ‘fnatdslite_rev_egress_bytes_udp’= Fixed DS-Lite Reverse Egress Bytes UDP; ‘fnatdslite_fwd_ingress_packets_icmp’= Fixed DS-Lite Forward Ingress Packets ICMP; ‘fnatdslite_fwd_egress_packets_icmp’= Fixed DS-Lite Forward Egress Packets ICMP; ‘fnatdslite_rev_ingress_packets_icmp’= Fixed DS-Lite Reverse Ingress Packets ICMP; ‘fnatdslite_rev_egress_packets_icmp’= Fixed DS-Lite Reverse Egress Packets ICMP; ‘fnatdslite_fwd_ingress_bytes_icmp’= Fixed DS-Lite Forward Ingress Bytes ICMP; ‘fnatdslite_fwd_egress_bytes_icmp’= Fixed DS-Lite Forward Egress Bytes ICMP; ‘fnatdslite_rev_ingress_bytes_icmp’= Fixed DS-Lite Reverse Ingress Bytes ICMP; ‘fnatdslite_rev_egress_bytes_icmp’= Fixed DS-Lite Reverse Egress Bytes ICMP; ‘fnatdslite_fwd_ingress_packets_others’= Fixed DS-Lite Forward Ingress Packets OTHERS; ‘fnatdslite_fwd_egress_packets_others’= Fixed DS-Lite Forward Egress Packets OTHERS; ‘fnatdslite_rev_ingress_packets_others’= Fixed DS-Lite Reverse Ingress Packets OTHERS; ‘fnatdslite_rev_egress_packets_others’= Fixed DS-Lite Reverse Egress Packets OTHERS; ‘fnatdslite_fwd_ingress_bytes_others’= Fixed DS-Lite Forward Ingress Bytes OTHERS; ‘fnatdslite_fwd_egress_bytes_others’= Fixed DS-Lite Forward Egress Bytes OTHERS; ‘fnatdslite_rev_ingress_bytes_others’= Fixed DS-Lite Reverse Ingress Bytes OTHERS; ‘fnatdslite_rev_egress_bytes_others’= Fixed DS- Lite Reverse Egress Bytes OTHERS; ‘fnatdslite_fwd_ingress_pkt_size_range1’= Fixed DS-Lite Forward Ingress Packet size between 0 and 200;</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘fnatdslite_fwd_ingress_pkt_size_range2’= Fixed DS-Lite Forward Ingress Packet size between 201 and 800; ‘fnatdslite_fwd_ingress_pkt_size_range3’= Fixed DS- Lite Forward Ingress Packet size between 801 and 1550; ‘fnatdslite_fwd_ingress_pkt_size_range4’= Fixed DS-Lite Forward Ingress Packet size between 1551 and 9000; ‘fnatdslite_fwd_egress_pkt_size_range1’= Fixed DS- Lite Forward Egress Packet size between 0 and 200; ‘fnatdslite_fwd_egress_pkt_size_range2’= Fixed DS-Lite Forward Egress Packet size between 201 and 800; ‘fnatdslite_fwd_egress_pkt_size_range3’= Fixed DS- Lite Forward Egress Packet size between 801 and 1550; ‘fnatdslite_fwd_egress_pkt_size_range4’= Fixed DS-Lite Forward Egress Packet size between 1551 and 9000; ‘fnatdslite_rev_ingress_pkt_size_range1’= Fixed DS- Lite Reverse Ingress Packet size between 0 and 200; ‘fnatdslite_rev_ingress_pkt_size_range2’= Fixed DS-Lite Reverse Ingress Packet size between 201 and 800; ‘fnatdslite_rev_ingress_pkt_size_range3’= Fixed DS- Lite Reverse Ingress Packet size between 801 and 1550; ‘fnatdslite_rev_ingress_pkt_size_range4’= Fixed DS-Lite Reverse Ingress Packet size between 1551 and 9000; ‘fnatdslite_rev_egress_pkt_size_range1’= Fixed DS- Lite Reverse Egress Packet size between 0 and 200; ‘fnatdslite_rev_egress_pkt_size_range2’= Fixed DS-Lite Reverse Egress Packet size between 201 and 800; ‘fnatdslite_rev_egress_pkt_size_range3’= Fixed DS- Lite Reverse Egress Packet size between 801 and 1550; ‘fnatdslite_rev_egress_pkt_size_range4’= Fixed DS-Lite Reverse Egress Packet size between 1551 and 9000;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_nat_in_use</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total NAT Addresses in-use</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_tcp_allocated</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total TCP Ports Allocated</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_tcp_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total TCP Ports Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_udp_allocated</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total UDP Ports Allocated</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_udp_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total UDP Ports Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_icmp_allocated</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total ICMP Ports Allocated</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_icmp_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total ICMP Ports Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat44_data_session_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 Data Sessions Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat44_data_session_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 Data Sessions Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_data_session_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 Data Sessions Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat64_data_session_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 Data Sessions Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dslite_data_session_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite Data Sessions Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_data_session_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite Data Sessions Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat_port_unavailable_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>TCP NAT Port Unavailable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat_port_unavailable_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>UDP NAT Port Unavailable</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat_port_unavailable_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ICMP NAT Port Unavailable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>session_user_quota_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Sessions User Quota Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat44_tcp_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 TCP Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat44_tcp_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 TCP Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat44_udp_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 UDP Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat44_udp_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 UDP Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat44_udp_alg_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 UDP ALG Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat44_udp_alg_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 UDP ALG Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_tcp_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 TCP Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat64_tcp_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 TCP Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_udp_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 UDP Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat64_udp_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 UDP Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_udp_alg_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 UDP ALG Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat64_udp_alg_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 UDP ALG Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dslite_tcp_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite TCP Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_tcp_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite TCP Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dslite_udp_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite UDP Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_udp_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite UDP Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dslite_udp_alg_fullcone_created</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite UDP ALG Full-Cone Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_udp_alg_fullcone_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite UDP ALG Full-Cone Freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fullcone_failure</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Full-Cone Session Creation Failed</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat44_eim_match</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 Endpoint-Independent-Mapping Matched</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_eim_match</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 Endpoint-Independent-Mapping Matched</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_eim_match</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite Endpoint-Independent-Mapping Matched</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat44_eif_match</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 Endpoint-Independent-Filtering Matched</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat64_eif_match</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 Endpoint-Independent-Filtering Matched</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dslite_eif_match</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite Endpoint-Independent-Filtering Matched</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat44_inbound_filtered</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 Endpoint-Dependent Filtering Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_inbound_filtered</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 Endpoint-Dependent Filtering Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_inbound_filtered</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite Endpoint-Dependent Filtering Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat44_eif_limit_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 Endpoint-Independent-Filtering Limit Exceeded</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat64_eif_limit_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 Endpoint-Independent-Filtering Limit Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dslite_eif_limit_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite Endpoint-Independent-Filtering Limit Exceeded</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nat44_hairpin</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT44 Hairpin Session Created</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>nat64_hairpin</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>NAT64 Hairpin Session Created</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dslite_hairpin</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>DS-Lite Hairpin Session Created</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>standby_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT LID Standby Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fixed_nat_fullcone_self_hairpinning_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Self-Hairpinning Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sixrd_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT IPv6 in IPv4 Packet Drop</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dest_rlist_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT Dest Rule List Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dest_rlist_pass_through</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT Dest Rule List Pass-Through</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dest_rlist_snat_drop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT Dest Rules List Source NAT Drop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>config_not_found</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT Config not Found</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_tcp_overload_acquired</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total TCP ports acquired for port overloading</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_udp_overload_acquired</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total UDP ports acquired for port overloading</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_tcp_overload_released</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total TCP ports released from port overloading</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_udp_overload_released</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total UDP ports released from port overloading</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_tcp_alloc_overload</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total TCP ports allocated via overload</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_udp_alloc_overload</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total UDP ports allocated via overload</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total_tcp_free_overload</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total TCP ports freed via overload</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>total_udp_free_overload</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total UDP ports freed via overload</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>port_overload_failed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Port overload failed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ha_session_user_quota_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>HA Sessions User Quota Exceeded</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tcp_user_quota_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>TCP User Quota Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>udp_user_quota_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>UDP User Quota Exceeded</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>icmp_user_quota_exceeded</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ICMP User Quota Exceeded</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packets TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packets TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packets TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packets TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Bytes TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Bytes TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Bytes TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Bytes TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packets UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packets UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packets UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packets UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Bytes UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Bytes UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Bytes UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Bytes UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packets ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packets ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packets ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packets ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Bytes ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Bytes ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Bytes ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Bytes ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packets OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packets OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packets OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packets OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_ingress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_ingress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_ingress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Ingress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_egress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_fwd_egress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_fwd_egress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Forward Egress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_ingress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_ingress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_ingress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Ingress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_egress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat44_rev_egress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat44_rev_egress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT44 Reverse Egress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packets TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packets TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packets TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packets TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Bytes TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Bytes TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Bytes TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Bytes TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packets UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packets UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packets UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packets UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Bytes UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Bytes UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Bytes UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Bytes UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packets ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packets ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packets ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packets ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Bytes ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Bytes ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Bytes ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Bytes ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packets OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packets OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packets OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packets OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_ingress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_ingress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_ingress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Ingress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_egress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_fwd_egress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_fwd_egress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Forward Egress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_ingress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_ingress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_ingress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Ingress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_egress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnat64_rev_egress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnat64_rev_egress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed NAT64 Reverse Egress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packets TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packets TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packets TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_packets_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packets TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Bytes TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Bytes TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Bytes TCP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_bytes_tcp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Bytes TCP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packets UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packets UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packets UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_packets_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packets UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Bytes UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Bytes UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Bytes UDP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_bytes_udp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Bytes UDP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packets ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packets ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packets ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_packets_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packets ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Bytes ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Bytes ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Bytes ICMP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_bytes_icmp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Bytes ICMP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packets OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packets OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packets OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_packets_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packets OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_bytes_others</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Bytes OTHERS</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_ingress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_ingress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_ingress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Ingress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_egress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_fwd_egress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_fwd_egress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Forward Egress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_ingress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_ingress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_ingress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Ingress Packet size between 1551 and 9000</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_egress_pkt_size_range1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packet size between 0 and 200</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_pkt_size_range2</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packet size between 201 and 800</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fnatdslite_rev_egress_pkt_size_range3</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packet size between 801 and 1550</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fnatdslite_rev_egress_pkt_size_range4</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fixed DS-Lite Reverse Egress Packet size between 1551 and 9000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

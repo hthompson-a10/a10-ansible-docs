@@ -1,0 +1,109 @@
+.. _a10_cgnv6_stateful_firewall_tcp_stun_timeout_module:
+
+
+a10_cgnv6_stateful_firewall_tcp_stun_timeout -- Configures A10 cgnv6.stateful.firewall.tcp.stun-timeout
+=======================================================================================================
+
+.. contents::
+   :local:
+   :depth: 1
+
+
+Synopsis
+--------
+
+Set STUN timeout for endpoint-independent filtering
+
+
+
+
+
+
+Parameters
+----------
+
++-----------------------------+-------------------------------+-------------------------------------------------+
+| Parameters                  | Choices/Defaults              | Comment                                         |
+|                             |                               |                                                 |
+|                             |                               |                                                 |
++=============================+===============================+=================================================+
+| state                       | ['noop', 'present', 'absent'] | State of the object to be created.              |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_host                |                               | Host for AXAPI authentication                   |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_username            |                               | Username for AXAPI authentication               |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_password            |                               | Password for AXAPI authentication               |
+|                             |                               |                                                 |
+| str/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| ansible_port                |                               | Port for AXAPI authentication                   |
+|                             |                               |                                                 |
+| int/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_device_context_id       | ['1-8']                       | Device ID for aVCS configuration                |
+|                             |                               |                                                 |
+| int                         |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| a10_partition               |                               | Destination/target partition for object/command |
+|                             |                               |                                                 |
+| str                         |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| port                        |                               | Single Destination Port or Port Range Start     |
+|                             |                               |                                                 |
+| int/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| port_end                    |                               | Port Range End                                  |
+|                             |                               |                                                 |
+| int/required                |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| stun_timeout_val_port_range |                               | STUN timeout (default= 2minutes)                |
+|                             |                               |                                                 |
+| int                         |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+| uuid                        |                               | uuid of the object                              |
+|                             |                               |                                                 |
+| str                         |                               |                                                 |
++-----------------------------+-------------------------------+-------------------------------------------------+
+
+
+
+
+
+
+
+Examples
+--------
+
+.. code-block:: yaml+jinja
+
+    
+
+
+
+
+
+Status
+------
+
+
+
+
+- This module is not guaranteed to have a backwards compatible interface. *[preview]*
+
+
+- This module is maintained by community.
+
+
+
+Authors
+~~~~~~~
+
+- A10 Networks 2018
+

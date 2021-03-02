@@ -1,0 +1,2961 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_slb_template_client_ssl – Configures A10 slb.template.client-ssl &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_slb_template_client_ssl – Configures A10 slb.template.client-ssl</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_slb_template_client_ssl – Configures A10 slb.template.client-ssl</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-slb-template-client-ssl-configures-a10-slb-template-client-ssl">
+<span id="a10-slb-template-client-ssl-module"></span><h1>a10_slb_template_client_ssl – Configures A10 slb.template.client-ssl<a class="headerlink" href="#a10-slb-template-client-ssl-configures-a10-slb-template-client-ssl" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Client SSL Template</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 1%" />
+<col style="width: 98%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>name</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Client SSL Template Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>auth_username</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify the Username Field in the Client Certificate(If multi-fields are specificed, prior one has higher priority)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ca_certs</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field ca_certs</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ca_cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CA Certificate (CA Certificate Name)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ca_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>CA Certificate Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>client_ocsp</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Specify ocsp authentication server(s) for client certificate verification</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>client_ocsp_srvr</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify authentication server</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>client_ocsp_sg</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify service-group (Service group name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>chain_cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Chain Certificate Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>chain_cert_shared_str</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Chain Certificate Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Certificate Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>cert_shared_str</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Certificate Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>cert_alternate</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify the second certificate (Certificate Name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>cert_alt_partition_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Certificate Partition Shared</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>dh_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘1024’= 1024; ‘1024-dsa’= 1024-dsa; ‘2048’= 2048;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ec_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field ec_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ec</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘secp256r1’= X9_62_prime256v1; ‘secp384r1’= secp384r1;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>local_logging</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable local logging</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ocsp_stapling</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Config OCSP stapling support</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ocspst_ca_cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CA certificate</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ocspst_ocsp</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Specify OCSP Authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ocspst_srvr</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify OCSP authentication server</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ocspst_srvr_days</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify update period, in days</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ocspst_srvr_hours</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify update period, in hours</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ocspst_srvr_minutes</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify update period, in minutes</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ocspst_srvr_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify retry timeout (Default is 30 mins)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ocspst_sg</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify authentication service group</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ocspst_sg_days</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify update period, in days</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ocspst_sg_hours</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify update period, in hours</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ocspst_sg_minutes</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify update period, in minutes</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ocspst_sg_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Specify retry timeout (Default is 30 mins)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ssli_logging</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>SSLi logging level, default is error logging only</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sslilogging</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘disable’= Disable all logging; ‘all’= enable all logging(error, info);</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>client_certificate</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘Ignore’= Don’t request client certificate; ‘Require’= Require client certificate; ‘Request’= Request client certificate;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>req_ca_lists</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field req_ca_lists</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>client_certificate_Request_CA</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Send CA lists in certificate request (CA Certificate Name)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>client_cert_req_ca_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>CA Certificate Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>close_notify</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Send close notification when terminate connection</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>crl_certs</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field crl_certs</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>crl</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Certificate Revocation Lists (Certificate Revocation Lists file name)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>crl_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Certificate Revocation Lists Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_ca_cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CA Certificate for forward proxy (SSL forward proxy CA Certificate Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_ca_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>CA Certificate Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_ca_key</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CA Private Key for forward proxy (SSL forward proxy CA Key Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_passphrase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Password Phrase</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_ca_key_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>CA Private Key Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_alt_sign</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Forward proxy alternate signing cert and key</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_alt_cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CA Certificate for forward proxy alternate signing (Certificate name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>fp_alt_key</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CA Private Key for forward proxy alternate signing (Key name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_alt_passphrase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Password Phrase</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>fp_alt_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_alt_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Alternate CA Certificate and Private Key Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_trusted_ca_lists</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field forward_proxy_trusted_ca_lists</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>forward_proxy_trusted_ca</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy trusted CA file (CA file name)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>fp_trusted_ca_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Trusted CA Certificate Partition Shared</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_decrypted_dscp</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Apply a DSCP to decrypted and bypassed traffic (DSCP to apply to decrypted traffic)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_decrypted_dscp_bypass</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>DSCP to apply to bypassed traffic</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>enable_tls_alert_logging</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable TLS alert logging</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>alert_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘fatal’= Log fatal alerts;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_verify_cert_fail_action</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Action taken if certificate verification fails, close the connection by default</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>verify_cert_fail_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘bypass’= bypass SSLi processing; ‘continue’= continue the connection; ‘drop’= close the connection; ‘block’= block the connection with a warning page;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_cert_revoke_action</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Action taken if a certificate is irreversibly revoked, bypass SSLi processing by default</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>cert_revoke_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘bypass’= bypass SSLi processing; ‘continue’= continue the connection; ‘drop’= close the connection; ‘block’= block the connection with a warning page;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_no_shared_cipher_action</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Action taken if handshake fails due to no shared ciper, close the connection by default</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>no_shared_cipher_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘bypass’= bypass SSLi processing; ‘drop’= close the connection;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_cert_unknown_action</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Action taken if a certificate revocation status is unknown, bypass SSLi processing by default</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>cert_unknown_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘bypass’= bypass SSLi processing; ‘continue’= continue the connection; ‘drop’= close the connection; ‘block’= block the connection with a warning page;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_block_message</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Message to be included on the block page (Message, enclose in quotes if spaces are present)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>cache_persistence_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_cert_ext_crldp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CRL Distribution Point (CRL Distribution Point URI)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>fp_cert_ext_aia_ocsp</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>OCSP (Authority Information Access URI)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_cert_ext_aia_ca_issuers</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CA Issuers (Authority Information Access URI)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>notbefore</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>notBefore date</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>notbeforeday</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Day</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>notbeforemonth</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Month</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>notbeforeyear</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Year</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>notafter</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>notAfter date</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>notafterday</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Day</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>notaftermonth</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Month</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>notafteryear</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Year</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_ssl_version</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>TLS/SSL version, default is TLS1.2 (TLS/SSL version= 31-TLSv1.0, 32-TLSv1.1 and 33-TLSv1.2)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_ocsp_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable ocsp-stapling for forward proxy</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_crl_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable Certificate Revocation List checking for forward proxy</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_cert_cache_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Certificate cache timeout, default is 1 hour (seconds, set to 0 for never timeout)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_cert_cache_limit</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Certificate cache size limit, default is 524288 (set to 0 for unlimited size)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_cert_expiry</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Adjust certificate expiry relative to the time when it is created on the device</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>expire_hours</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Certificate lifetime in hours</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_enable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SSL forward proxy</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>handshake_logging_enable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable SSL handshake logging</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_selfsign_redir</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Redirect connections to pages with self signed certs to a warning page</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_failsafe_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable Failsafe for SSL forward proxy</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_log_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable SSL forward proxy logging</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>fp_cert_fetch_natpool_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify NAT pool or pool group</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>shared_partition_pool</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Reference a NAT pool or pool group from shared partition</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>fp_cert_fetch_natpool_name_shared</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify NAT pool or pool group</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_cert_fetch_natpool_precedence</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Set this NAT pool as higher precedence than other source NAT like configued under template policy</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>fp_cert_fetch_autonat</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘auto’= Configure auto NAT for server certificate fetching;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>fp_cert_fetch_autonat_precedence</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Set this NAT pool as higher precedence than other source NAT like configued under template policy</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_no_sni_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘intercept’= intercept in no SNI case; ‘bypass’= bypass in no SNI case; ‘reset’= reset in no SNI case;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>case_insensitive</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Case insensitive forward proxy bypass</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>class_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>multi_class_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field multi_class_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>multi_clist_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>user_name_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if user-name matches class-list</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ad_group_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if ad-group matches class-list</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>exception_user_name_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Exceptions to forward proxy bypass if user-name matches class-list</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>exception_ad_group_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Exceptions to forward proxy bypass if ad-group matches class-list</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>exception_sni_cl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Exceptions to forward-proxy-bypass</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>inspect_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>inspect_certificate_subject_cl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy Inspect if Certificate Subject matches class-list</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>inspect_certificate_issuer_cl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy Inspect if Certificate issuer matches class-list</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>inspect_certificate_san_cl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy Inspect if Certificate Subject Alternative Name matches class- list</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>contains_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field contains_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>contains</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string contains another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ends_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field ends_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ends_with</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string ends with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>equals_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field equals_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>equals</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string equals another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>starts_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field starts_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>starts_with</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string starts with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_subject_contains_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_subject_contains_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_subject_contains</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate Subject contains another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>bypass_cert_subject_class_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>bypass_cert_subject_multi_class_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field bypass_cert_subject_multi_class_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bypass_cert_subject_multi_class_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>exception_certificate_subject_cl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Exceptions to forward-proxy-bypass</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_subject_ends_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_subject_ends_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_subject_ends_with</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate Subject ends with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_subject_equals_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_subject_equals_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_subject_equals</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate Subject equals another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_subject_starts_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_subject_starts_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_subject_starts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate Subject starts with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_issuer_contains_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_issuer_contains_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_issuer_contains</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate  issuer contains another string (Certificate issuer)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>bypass_cert_issuer_class_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>bypass_cert_issuer_multi_class_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field bypass_cert_issuer_multi_class_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bypass_cert_issuer_multi_class_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>exception_certificate_issuer_cl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Exceptions to forward-proxy-bypass</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_issuer_ends_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_issuer_ends_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_issuer_ends_with</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate issuer ends with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_issuer_equals_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_issuer_equals_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_issuer_equals</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate issuer equals another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_issuer_starts_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_issuer_starts_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_issuer_starts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate issuer starts with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_san_contains_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_san_contains_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_san_contains</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate SAN contains another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>bypass_cert_san_class_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>bypass_cert_san_multi_class_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field bypass_cert_san_multi_class_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bypass_cert_san_multi_class_list_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Class List Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>exception_certificate_san_cl_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Exceptions to forward-proxy-bypass</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_san_ends_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_san_ends_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_san_ends_with</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate SAN ends with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_san_equals_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_san_equals_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_san_equals</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate SAN equals another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>certificate_san_starts_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field certificate_san_starts_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>certificate_san_starts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if Certificate SAN starts with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>client_auth_case_insensitive</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Case insensitive forward proxy client auth bypass</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>client_auth_class_list</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy client auth bypass if SNI string matches class-list (Class List Name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>client_auth_contains_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field client_auth_contains_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>client_auth_contains</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string contains another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>client_auth_ends_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field client_auth_ends_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>client_auth_ends_with</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string ends with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>client_auth_equals_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field client_auth_equals_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>client_auth_equals</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string equals another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>client_auth_starts_with_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field client_auth_starts_with_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>client_auth_starts_with</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Forward proxy bypass if SNI string starts with another string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>forward_proxy_cert_not_ready_action</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘bypass’= bypass the connection; ‘reset’= reset the connection; ‘intercept’= wait for cert and then inspect the connection;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>web_category</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field web_category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uncategorized</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Uncategorized URLs</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>real_estate</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Real Estate</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>computer_and_internet_security</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Computer and Internet Security</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>financial_services</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Financial Services</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>business_and_economy</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Business and Economy</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>computer_and_internet_info</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Computer and Internet Info</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>auctions</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Auctions</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>shopping</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Shopping</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cult_and_occult</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Cult and Occult</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>travel</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Travel</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>drugs</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Abused Drugs</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>adult_and_pornography</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Adult and Pornography</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>home_and_garden</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Home and Garden</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>military</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Military</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>social_network</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Social Network</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dead_sites</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Dead Sites (db Ops only)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stock_advice_and_tools</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Stock Advice and Tools</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>training_and_tools</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Training and Tools</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dating</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Dating</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sex_education</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Sex Education</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>religion</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Religion</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>entertainment_and_arts</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Entertainment and Arts</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>personal_sites_and_blogs</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Personal sites and Blogs</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>legal</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Legal</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>local_information</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Local Information</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>streaming_media</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Streaming Media</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>job_search</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Job Search</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>gambling</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Gambling</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>translation</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Translation</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>reference_and_research</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Reference and Research</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>shareware_and_freeware</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Shareware and Freeware</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>peer_to_peer</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Peer to Peer</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>marijuana</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Marijuana</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>hacking</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Hacking</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>games</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Games</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>philosophy_and_politics</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Philosophy and Political Advocacy</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>weapons</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Weapons</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pay_to_surf</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Pay to Surf</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>hunting_and_fishing</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Hunting and Fishing</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>society</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Society</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>educational_institutions</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Educational Institutions</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>online_greeting_cards</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Online Greeting cards</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>sports</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Sports</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>swimsuits_and_intimate_apparel</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Swimsuits and Intimate Apparel</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>questionable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Questionable</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>kids</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Kids</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>hate_and_racism</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Hate and Racism</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>personal_storage</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Personal Storage</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>violence</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Violence</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>keyloggers_and_monitoring</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Keyloggers and Monitoring</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>search_engines</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Search Engines</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>internet_portals</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Internet Portals</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>web_advertisements</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Web Advertisements</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cheating</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Cheating</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>gross</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Gross</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>web_based_email</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Web based email</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>malware_sites</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Malware Sites</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>phishing_and_other_fraud</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Phishing and Other Frauds</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>proxy_avoid_and_anonymizers</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Proxy Avoid and Anonymizers</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>spyware_and_adware</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Spyware and Adware</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>music</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Music</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>government</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Government</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nudity</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Nudity</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>news_and_media</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category News and Media</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>illegal</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Illegal</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cdns</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category CDNs</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>internet_communications</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Internet Communications</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bot_nets</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Bot Nets</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>abortion</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Abortion</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>health_and_medicine</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Health and Medicine</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>confirmed_spam_sources</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Confirmed SPAM Sources</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>spam_urls</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category SPAM URLs</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unconfirmed_spam_sources</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Unconfirmed SPAM Sources</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>open_http_proxies</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Open HTTP Proxies</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dynamic_comment</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Dynamic Comment</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>parked_domains</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Parked Domains</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>alcohol_and_tobacco</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Alcohol and Tobacco</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>private_ip_addresses</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Private IP Addresses</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>image_and_video_search</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Image and Video Search</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fashion_and_beauty</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Fashion and Beauty</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>recreation_and_hobbies</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Recreation and Hobbies</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>motor_vehicles</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Motor Vehicles</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>web_hosting_sites</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Web Hosting Sites</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>food_and_dining</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Category Food and Dining</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>require_web_category</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Wait for web category to be resolved before taking bypass decision</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>forward_proxy_require_sni_cert_matched</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘no-match-action-inspect’= Inspected if not matched; ‘no-match-action-drop’= Dropped if not matched;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>key</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Key Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>key_passphrase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Password Phrase</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>key_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>key_shared_str</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Key Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>key_shared_passphrase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Password Phrase</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>key_shared_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>key_alternate</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify the second private key (Key Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>key_alt_passphrase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Password Phrase</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>key_alt_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>key_alt_partition_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Key Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>template_cipher</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Cipher Template Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>shared_partition_cipher_template</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Reference a cipher template from shared partition</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>template_cipher_shared</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Cipher Template Name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>template_hsm</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>HSM Template (HSM Template Name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>hsm_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘thales-embed’= Thales embed key; ‘thales-hwcrhk’= Thales hwcrhk Key;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>cipher_without_prio_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field cipher_without_prio_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cipher_wo_prio</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘SSL3_RSA_DES_192_CBC3_SHA’= SSL3_RSA_DES_192_CBC3_SHA; ‘SSL3_RSA_RC4_128_MD5’= SSL3_RSA_RC4_128_MD5; ‘SSL3_RSA_RC4_128_SHA’= SSL3_RSA_RC4_128_SHA; ‘TLS1_RSA_AES_128_SHA’= TLS1_RSA_AES_128_SHA; ‘TLS1_RSA_AES_256_SHA’= TLS1_RSA_AES_256_SHA; ‘TLS1_RSA_AES_128_SHA256’= TLS1_RSA_AES_128_SHA256; ‘TLS1_RSA_AES_256_SHA256’= TLS1_RSA_AES_256_SHA256; ‘TLS1_DHE_RSA_AES_128_GCM_SHA256’= TLS1_DHE_RSA_AES_128_GCM_SHA256; ‘TLS1_DHE_RSA_AES_128_SHA’= TLS1_DHE_RSA_AES_128_SHA; ‘TLS1_DHE_RSA_AES_128_SHA256’= TLS1_DHE_RSA_AES_128_SHA256; ‘TLS1_DHE_RSA_AES_256_GCM_SHA384’= TLS1_DHE_RSA_AES_256_GCM_SHA384; ‘TLS1_DHE_RSA_AES_256_SHA’= TLS1_DHE_RSA_AES_256_SHA; ‘TLS1_DHE_RSA_AES_256_SHA256’= TLS1_DHE_RSA_AES_256_SHA256; ‘TLS1_ECDHE_ECDSA_AES_128_GCM_SHA256’= TLS1_ECDHE_ECDSA_AES_128_GCM_SHA256; ‘TLS1_ECDHE_ECDSA_AES_128_SHA’= TLS1_ECDHE_ECDSA_AES_128_SHA; ‘TLS1_ECDHE_ECDSA_AES_128_SHA256’= TLS1_ECDHE_ECDSA_AES_128_SHA256; ‘TLS1_ECDHE_ECDSA_AES_256_GCM_SHA384’= TLS1_ECDHE_ECDSA_AES_256_GCM_SHA384; ‘TLS1_ECDHE_ECDSA_AES_256_SHA’= TLS1_ECDHE_ECDSA_AES_256_SHA; ‘TLS1_ECDHE_RSA_AES_128_GCM_SHA256’= TLS1_ECDHE_RSA_AES_128_GCM_SHA256; ‘TLS1_ECDHE_RSA_AES_128_SHA’= TLS1_ECDHE_RSA_AES_128_SHA; ‘TLS1_ECDHE_RSA_AES_128_SHA256’= TLS1_ECDHE_RSA_AES_128_SHA256; ‘TLS1_ECDHE_RSA_AES_256_GCM_SHA384’= TLS1_ECDHE_RSA_AES_256_GCM_SHA384; ‘TLS1_ECDHE_RSA_AES_256_SHA’= TLS1_ECDHE_RSA_AES_256_SHA; ‘TLS1_RSA_AES_128_GCM_SHA256’= TLS1_RSA_AES_128_GCM_SHA256; ‘TLS1_RSA_AES_256_GCM_SHA384’= TLS1_RSA_AES_256_GCM_SHA384; ‘TLS1_ECDHE_RSA_AES_256_SHA384’= TLS1_ECDHE_RSA_AES_256_SHA384; ‘TLS1_ECDHE_ECDSA_AES_256_SHA384’= TLS1_ECDHE_ECDSA_AES_256_SHA384; ‘TLS1_ECDHE_RSA_CHACHA20_POLY1305_SHA256’= TLS1_ECDHE_RSA_CHACHA20_POLY1305_SHA256; ‘TLS1_ECDHE_ECDSA_CHACHA20_POLY1305_SHA256’= TLS1_ECDHE_ECDSA_CHACHA20_POLY1305_SHA256; ‘TLS1_DHE_RSA_CHACHA20_POLY1305_SHA256’= TLS1_DHE_RSA_CHACHA20_POLY1305_SHA256;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>server_name_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field server_name_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server name indication in Client hello extension (Server name String)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_cert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server Certificate associated to SNI (Server Certificate Name)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_chain</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server Certificate Chain associated to SNI (Server Certificate Chain Name)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_key</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server Private Key associated to SNI (Server Private Key Name)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_passphrase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>help Password Phrase</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_name_alternate</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Specific the second certifcate</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_shared</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Server Name Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_name_regex</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server name indication in Client hello extension with regular expression (Server name String with regex)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_cert_regex</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server Certificate associated to SNI regex (Server Certificate Name)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_chain_regex</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server Certificate Chain associated to SNI regex (Server Certificate Chain Name)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_key_regex</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server Private Key associated to SNI regex (Server Private Key Name)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_passphrase_regex</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>help Password Phrase</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_encrypted_regex</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Do NOT use this option manually. (This is an A10 reserved keyword.) (The ENCRYPTED password string)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_name_regex_alternate</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Specific the second certifcate</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>server_shared_regex</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Server Name Partition Shared</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>server_name_auto_map</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable automatic mapping of server name indication in Client hello extension</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sni_enable_log</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable logging of sni-auto-map failures. Disable by default</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>direct_client_server_auth</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Let backend server does SSL client authentication directly</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>session_cache_size</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Session Cache Size (Maximum cache size. Default value 0 (Session ID reuse disabled))</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>session_cache_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Session Cache Timeout (Timeout value, in seconds. Default value 0 (Session cache timeout disabled))</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>session_ticket_lifetime</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Session ticket lifetime in seconds from stateless session resumption (Lifetime value in seconds. Default value 0 (Session ticket lifetime limit disabled))</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ssl_false_start_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>disable SSL False Start</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>disable_sslv3</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Reject Client requests for SSL version 3</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>version</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>TLS/SSL version, default is the highest number supported (TLS/SSL version= 30-SSLv3.0, 31-TLSv1.0, 32-TLSv1.1 and 33-TLSv1.2)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>dgversion</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Lower TLS/SSL version can be downgraded</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>renegotiation_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Disable SSL renegotiation</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sslv2_bypass_service_group</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Service Group for Bypass SSLV2 (Service Group Name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>authorization</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Specify LDAP server for client SSL authorizaiton</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>authen_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify authorization LDAP server name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ldap_base_dn_from_cert</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Use Subject DN as LDAP search base DN</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ldap_search_filter</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify LDAP search filter</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>auth_sg</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify authorization LDAP service group</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>auth_sg_dn</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Use Subject DN as LDAP search base DN</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>auth_sg_filter</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify LDAP search filter</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>auth_username_attribute</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Specify attribute name of username for client SSL authorization</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>non_ssl_bypass_service_group</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Service Group for Bypass non-ssl traffic (Service Group Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>non_ssl_bypass_l4session</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Handle the non-ssl session as L4 for performance optimization</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>enable_ssli_ftp_alg</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Enable SSLi FTP over TLS support at which port</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>user_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Customized tag</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘real-estate’= real estate category; ‘computer-and-internet- security’= computer and internet security category; ‘financial-services’= financial services category; ‘business-and-economy’= business and economy category; ‘computer-and-internet-info’= computer and internet info category; ‘auctions’= auctions category; ‘shopping’= shopping category; ‘cult-and- occult’= cult and occult category; ‘travel’= travel category; ‘drugs’= drugs category; ‘adult-and-pornography’= adult and pornography category; ‘home-and- garden’= home and garden category; ‘military’= military category; ‘social- network’= social network category; ‘dead-sites’= dead sites category; ‘stock- advice-and-tools’= stock advice and tools category; ‘training-and-tools’= training and tools category; ‘dating’= dating category; ‘sex-education’= sex education category; ‘religion’= religion category; ‘entertainment-and-arts’= entertainment and arts category; ‘personal-sites-and-blogs’= personal sites and blogs category; ‘legal’= legal category; ‘local-information’= local information category; ‘streaming-media’= streaming media category; ‘job-search’= job search category; ‘gambling’= gambling category; ‘translation’= translation category; ‘reference-and-research’= reference and research category; ‘shareware-and- freeware’= shareware and freeware category; ‘peer-to-peer’= peer to peer category; ‘marijuana’= marijuana category; ‘hacking’= hacking category; ‘games’= games category; ‘philosophy-and-politics’= philosophy and politics category; ‘weapons’= weapons category; ‘pay-to-surf’= pay to surf category; ‘hunting-and-fishing’= hunting and fishing category; ‘society’= society category; ‘educational-institutions’= educational institutions category; ‘online-greeting-cards’= online greeting cards category; ‘sports’= sports category; ‘swimsuits-and-intimate-apparel’= swimsuits and intimate apparel category; ‘questionable’= questionable category; ‘kids’= kids category; ‘hate- and-racism’= hate and racism category; ‘personal-storage’= personal storage category; ‘violence’= violence category; ‘keyloggers-and-monitoring’= keyloggers and monitoring category; ‘search-engines’= search engines category; ‘internet-portals’= internet portals category; ‘web-advertisements’= web advertisements category; ‘cheating’= cheating category; ‘gross’= gross category; ‘web-based-email’= web based email category; ‘malware-sites’= malware sites category; ‘phishing-and-other-fraud’= phishing and other fraud category; ‘proxy-avoid-and-anonymizers’= proxy avoid and anonymizers category; ‘spyware- and-adware’= spyware and adware category; ‘music’= music category; ‘government’= government category; ‘nudity’= nudity category; ‘news-and-media’= news and media category; ‘illegal’= illegal category; ‘CDNs’= content delivery networks category; ‘internet-communications’= internet communications category; ‘bot-nets’= bot nets category; ‘abortion’= abortion category; ‘health-and- medicine’= health and medicine category; ‘confirmed-SPAM-sources’= confirmed SPAM sources category; ‘SPAM-URLs’= SPAM URLs category; ‘unconfirmed-SPAM- sources’= unconfirmed SPAM sources category; ‘open-HTTP-proxies’= open HTTP proxies category; ‘dynamic-comment’= dynamic comment category; ‘parked- domains’= parked domains category; ‘alcohol-and-tobacco’= alcohol and tobacco category; ‘private-IP-addresses’= private IP addresses category; ‘image-and- video-search’= image and video search category; ‘fashion-and-beauty’= fashion and beauty category; ‘recreation-and-hobbies’= recreation and hobbies category; ‘motor-vehicles’= motor vehicles category; ‘web-hosting-sites’= web hosting sites category; ‘food-and-dining’= food and dining category; ‘uncategorised’= uncategorised; ‘other-category’= other category;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>oper</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field oper</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cert_status_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field cert_status_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Client SSL Template Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>real_estate</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>real estate category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>computer_and_internet_security</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>computer and internet security category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>financial_services</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>financial services category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>business_and_economy</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>business and economy category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>computer_and_internet_info</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>computer and internet info category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>auctions</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>auctions category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>shopping</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>shopping category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cult_and_occult</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>cult and occult category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>travel</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>travel category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>drugs</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>drugs category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>adult_and_pornography</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>adult and pornography category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>home_and_garden</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>home and garden category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>military</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>military category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>social_network</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>social network category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>dead_sites</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>dead sites category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>stock_advice_and_tools</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>stock advice and tools category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>training_and_tools</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>training and tools category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dating</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>dating category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sex_education</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>sex education category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>religion</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>religion category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>entertainment_and_arts</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>entertainment and arts category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>personal_sites_and_blogs</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>personal sites and blogs category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>legal</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>legal category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>local_information</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>local information category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>streaming_media</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>streaming media category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>job_search</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>job search category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>gambling</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>gambling category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>translation</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>translation category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>reference_and_research</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>reference and research category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>shareware_and_freeware</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>shareware and freeware category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>peer_to_peer</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>peer to peer category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>marijuana</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>marijuana category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>hacking</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>hacking category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>games</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>games category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>philosophy_and_politics</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>philosophy and politics category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>weapons</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>weapons category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pay_to_surf</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>pay to surf category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>hunting_and_fishing</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>hunting and fishing category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>society</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>society category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>educational_institutions</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>educational institutions category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>online_greeting_cards</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>online greeting cards category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>sports</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>sports category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>swimsuits_and_intimate_apparel</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>swimsuits and intimate apparel category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>questionable</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>questionable category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>kids</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>kids category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>hate_and_racism</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>hate and racism category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>personal_storage</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>personal storage category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>violence</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>violence category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>keyloggers_and_monitoring</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>keyloggers and monitoring category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>search_engines</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>search engines category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>internet_portals</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>internet portals category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>web_advertisements</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>web advertisements category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cheating</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>cheating category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>gross</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>gross category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>web_based_email</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>web based email category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>malware_sites</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>malware sites category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>phishing_and_other_fraud</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>phishing and other fraud category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>proxy_avoid_and_anonymizers</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>proxy avoid and anonymizers category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>spyware_and_adware</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>spyware and adware category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>music</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>music category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>government</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>government category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>nudity</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>nudity category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>news_and_media</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>news and media category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>illegal</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>illegal category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>CDNs</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>content delivery networks category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>internet_communications</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>internet communications category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bot_nets</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>bot nets category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>abortion</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>abortion category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>health_and_medicine</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>health and medicine category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>confirmed_SPAM_sources</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>confirmed SPAM sources category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>SPAM_URLs</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>SPAM URLs category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unconfirmed_SPAM_sources</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>unconfirmed SPAM sources category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>open_HTTP_proxies</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>open HTTP proxies category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>dynamic_comment</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>dynamic comment category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>parked_domains</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>parked domains category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>alcohol_and_tobacco</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>alcohol and tobacco category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>private_IP_addresses</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>private IP addresses category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>image_and_video_search</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>image and video search category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>fashion_and_beauty</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>fashion and beauty category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>recreation_and_hobbies</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>recreation and hobbies category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>motor_vehicles</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>motor vehicles category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>web_hosting_sites</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>web hosting sites category</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>food_and_dining</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>food and dining category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uncategorised</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uncategorised</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>other_category</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>other category</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Client SSL Template Name</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

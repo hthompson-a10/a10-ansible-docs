@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_slb_template_http – Configures A10 slb.template.http &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_slb_template_http – Configures A10 slb.template.http</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_slb_template_http – Configures A10 slb.template.http</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-slb-template-http-configures-a10-slb-template-http">
+<span id="a10-slb-template-http-module"></span><h1>a10_slb_template_http – Configures A10 slb.template.http<a class="headerlink" href="#a10-slb-template-http-configures-a10-slb-template-http" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>HTTP</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>name</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>HTTP Template Name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>compression_auto_disable_on_high_cpu</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Auto-disable software compression on high cpu usage (Disable compression if cpu usage is above threshold. Default is off.)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>compression_content_type</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field compression_content_type</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>content_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Compression content-type</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>compression_enable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable Compression</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>compression_exclude_content_type</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field compression_exclude_content_type</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>exclude_content_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Compression exclude content-type (Compression exclude content type)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>compression_exclude_uri</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field compression_exclude_uri</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>exclude_uri</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Compression exclude uri</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>compression_keep_accept_encoding</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Keep accept encoding</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>compression_keep_accept_encoding_enable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Enable Server Accept Encoding</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>compression_level</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>compression level, default 1 (compression level value, default is 1)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>compression_minimum_content_length</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Minimum Content Length (Minimum content length for compression in bytes. Default is 120.)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>max_concurrent_streams</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>(http2 only) Max concurrent streams, default 100</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>frame_limit</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Limit the number of CONTINUATION, PING, PRIORITY, RESET, SETTINGS and empty frames in one HTTP2 connection, default 10000</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>failover_url</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Failover to this URL (Failover URL Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>host_switching</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field host_switching</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>host_switching_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘contains’= Select service group if hostname contains another string; ‘ends- with’= Select service group if hostname ends with another string; ‘equals’= Select service group if hostname equals another string; ‘starts-with’= Select service group if hostname starts with another string; ‘regex-match’= Select service group if URL string matches with regular expression; ‘host-hits- enable’= Enables Host Hits counters;</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>host_match_string</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Hostname String</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>host_service_group</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Create a Service Group comprising Servers (Service Group Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>insert_client_ip</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Insert Client IP address into HTTP header</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>insert_client_ip_header_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>HTTP Header Name for inserting Client IP</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>client_ip_hdr_replace</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Replace the existing header</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>insert_client_port</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Insert Client Port address into HTTP header</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>insert_client_port_header_name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>HTTP Header Name for inserting Client Port</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>client_port_hdr_replace</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Replace the existing header</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>log_retry</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>log when HTTP request retry</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>non_http_bypass</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Bypass non-http traffic instead of dropping</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>bypass_sg</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Select service group for non-http traffic (Service Group Name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>redirect</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Automatically send a redirect response</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>rd_simple_loc</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Redirect location tag absolute URI string</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>rd_secure</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Use HTTPS</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>rd_port</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Port (Port Number)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>rd_resp_code</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘301’= Moved Permanently; ‘302’= Found; ‘303’= See Other; ‘307’= Temporary Redirect;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>redirect_rewrite</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field redirect_rewrite</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>match_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field match_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>redirect_secure</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Use HTTPS</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>redirect_secure_port</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Port (Port Number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>request_header_erase_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field request_header_erase_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>request_header_erase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Erase a header from HTTP request (Header Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>request_header_insert_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field request_header_insert_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>request_header_insert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Insert a header into HTTP request (Header Content (Format= ‘[name]=[value]’))</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>request_header_insert_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘insert-if-not-exist’= Only insert the header when it does not exist; ‘insert- always’= Always insert the header even when there is a header with the same name;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>response_content_replace_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field response_content_replace_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>response_content_replace</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>replace the data from HTTP response content (String in the http content need to be replaced)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>response_new_string</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>String will be in the http content</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>response_header_erase_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field response_header_erase_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>response_header_erase</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Erase a header from HTTP response (Header Name)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>response_header_insert_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field response_header_insert_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>response_header_insert</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Insert a header into HTTP response (Header Content (Format= ‘[name]=[value]’))</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>response_header_insert_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘insert-if-not-exist’= Only insert the header when it does not exist; ‘insert- always’= Always insert the header even when there is a header with the same name;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>request_timeout</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Request timeout if response not received (timeout in seconds)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>retry_on_5xx</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Retry http request on HTTP 5xx code and request timeout</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>retry_on_5xx_val</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Number of times to retry (default is 3)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>retry_on_5xx_per_req</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Retry http request on HTTP 5xx code for each request</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>retry_on_5xx_per_req_val</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Number of times to retry (default is 3)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>strict_transaction_switch</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Force server selection on every HTTP request</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>template</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field template</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>logging</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Logging template (Logging Config name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>term_11client_hdr_conn_close</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Terminate HTTP 1.1 client when req has Connection= close</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>persist_on_401</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Persist to the same server if the response code is 401</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>http_100_cont_wait_for_req_complete</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>When REQ has Expect 100 and response is not 100, then wait for whole request to be sent</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>url_hash_persist</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Use URL’s hash value to select server</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>url_hash_offset</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Skip part of URL to calculate hash value (Offset of the URL string)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>url_hash_first</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Use the begining part of URL to calculate hash value (URL string length to calculate hash value)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>url_hash_last</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Use the end part of URL to calculate hash value (URL string length to calculate hash value)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>use_server_status</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Use Server-Status header to do URL hashing</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>url_switching</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field url_switching</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>url_switching_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘contains’= Select service group if URL string contains another string; ‘ends- with’= Select service group if URL string ends with another string; ‘equals’= Select service group if URL string equals another string; ‘starts-with’= Select service group if URL string starts with another string; ‘regex-match’= Select service group if URL string matches with regular expression; ‘url-case- insensitive’= Case insensitive URL switching; ‘url-hits-enable’= Enables URL Hits;</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>url_match_string</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>URL String</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>url_service_group</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Create a Service Group comprising Servers (Service Group Name)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>req_hdr_wait_time</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>HTTP request header wait time before abort connection</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>req_hdr_wait_time_val</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Number of seconds wait for client request header (default is 7)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>request_line_case_insensitive</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Parse http request line as case insensitive</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>keep_client_alive</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Keep client alive</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>cookie_format</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘rfc6265’= Follow rfc6265;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>prefix</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘host’= the cookie will have been set with a Secure attribute, a Path attribute with a value of /, and no Domain attribute; ‘secure’= the cookie will have been set with a Secure attribute; ‘check’= check server prefix and enforce prefix format;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>cookie_samesite</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘none’= none; ‘lax’= lax; ‘strict’= strict;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>user_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Customized tag</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

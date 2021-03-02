@@ -1,0 +1,701 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_slb_imap_proxy – Configures A10 slb.imap-proxy &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_slb_imap_proxy – Configures A10 slb.imap-proxy</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_slb_imap_proxy – Configures A10 slb.imap-proxy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-slb-imap-proxy-configures-a10-slb-imap-proxy">
+<span id="a10-slb-imap-proxy-module"></span><h1>a10_slb_imap_proxy – Configures A10 slb.imap-proxy<a class="headerlink" href="#a10-slb-imap-proxy-configures-a10-slb-imap-proxy" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Configure IMAP Proxy global</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 1%" />
+<col style="width: 2%" />
+<col style="width: 97%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘num’= Num; ‘curr’= Current proxy conns; ‘total’= Total proxy conns; ‘svrsel_fail’= Server selection failure; ‘no_route’= no route failure; ‘snat_fail’= source nat failure; ‘feat’= feat packet; ‘cc’= clear ctrl port packet; ‘data_ssl’= data ssl force; ‘line_too_long’= line too long; ‘line_mem_freed’= request line freed; ‘invalid_start_line’= invalid start line; ‘auth_tls’= auth tls cmd; ‘prot’= prot cmd; ‘pbsz’= pbsz cmd; ‘pasv’= pasv cmd; ‘port’= port cmd; ‘request_dont_care’= other cmd; ‘client_auth_tls’= client auth tls; ‘cant_find_pasv’= cant find pasv; ‘pasv_addr_ne_server’= psv addr not equal to svr; ‘smp_create_fail’= smp create fail; ‘data_server_conn_fail’= data svr conn fail; ‘data_send_fail’= data send fail; ‘epsv’= epsv command; ‘cant_find_epsv’= cant find epsv; ‘data_curr’= Current Data Proxy; ‘data_total’= Total Data Proxy; ‘auth_unsupported’= Unsupported auth; ‘adat’= adat cmd; ‘unsupported_pbsz_value’= Unsupported PBSZ; ‘unsupported_prot_value’= Unsupported PROT; ‘unsupported_command’= Unsupported cmd; ‘control_to_clear’= Control chn clear txt; ‘control_to_ssl’= Control chn ssl; ‘bad_sequence’= Bad Sequence; ‘rsv_persist_conn_fail’= Serv Sel Persist fail; ‘smp_v6_fail’= Serv Sel SMPv6 fail; ‘smp_v4_fail’= Serv Sel SMPv4 fail; ‘insert_tuple_fail’= Serv Sel insert tuple fail; ‘cl_est_err’= Client EST state erro; ‘ser_connecting_err’= Serv CTNG state error; ‘server_response_err’= Serv RESP state error; ‘cl_request_err’= Client RQ state error; ‘data_conn_start_err’= Data Start state error; ‘data_serv_connecting_err’= Data Serv CTNG error; ‘data_serv_connected_err’= Data Serv CTED error; ‘request’= Total FTP Request; ‘capability’= Capability cmd; ‘start_tls’= Total Start TLS cmd; ‘login’= Total Login cmd;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>oper</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field oper</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>l4_cpu_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field l4_cpu_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cpu_count</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field cpu_count</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>num</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Num</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>curr</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Current proxy conns</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>total</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total proxy conns</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>svrsel_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Server selection failure</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>no_route</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>no route failure</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>snat_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>source nat failure</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>feat</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>feat packet</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cc</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>clear ctrl port packet</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>data_ssl</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>data ssl force</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>line_too_long</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>line too long</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>line_mem_freed</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>request line freed</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_start_line</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>invalid start line</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>auth_tls</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>auth tls cmd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>prot</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>prot cmd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>pbsz</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>pbsz cmd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pasv</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>pasv cmd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>port</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>port cmd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>request_dont_care</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>other cmd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>client_auth_tls</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>client auth tls</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cant_find_pasv</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>cant find pasv</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>pasv_addr_ne_server</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>psv addr not equal to svr</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>smp_create_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>smp create fail</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>data_server_conn_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>data svr conn fail</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>data_send_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>data send fail</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>epsv</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>epsv command</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cant_find_epsv</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>cant find epsv</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>data_curr</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Current Data Proxy</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>data_total</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total Data Proxy</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>auth_unsupported</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported auth</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>adat</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>adat cmd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unsupported_pbsz_value</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported PBSZ</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>unsupported_prot_value</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported PROT</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>unsupported_command</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Unsupported cmd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>control_to_clear</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Control chn clear txt</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>control_to_ssl</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Control chn ssl</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bad_sequence</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Bad Sequence</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>rsv_persist_conn_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Serv Sel Persist fail</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>smp_v6_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Serv Sel SMPv6 fail</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>smp_v4_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Serv Sel SMPv4 fail</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>insert_tuple_fail</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Serv Sel insert tuple fail</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cl_est_err</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Client EST state erro</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ser_connecting_err</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Serv CTNG state error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>server_response_err</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Serv RESP state error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cl_request_err</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Client RQ state error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>data_conn_start_err</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Data Start state error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>data_serv_connecting_err</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Data Serv CTNG error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>data_serv_connected_err</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Data Serv CTED error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>request</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total FTP Request</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>capability</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Capability cmd</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>start_tls</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total Start TLS cmd</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>login</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Total Login cmd</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

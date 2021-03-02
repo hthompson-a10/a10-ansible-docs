@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_vpn_ipsec – Configures A10 vpn.ipsec &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_vpn_ipsec – Configures A10 vpn.ipsec</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_vpn_ipsec – Configures A10 vpn.ipsec</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-vpn-ipsec-configures-a10-vpn-ipsec">
+<span id="a10-vpn-ipsec-module"></span><h1>a10_vpn_ipsec – Configures A10 vpn.ipsec<a class="headerlink" href="#a10-vpn-ipsec-configures-a10-vpn-ipsec" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>IPsec settings</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 0%" />
+<col style="width: 2%" />
+<col style="width: 2%" />
+<col style="width: 95%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>name</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>IPsec name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ike_gateway</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Gateway to use for IPsec SA</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>mode</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘tunnel’= Encapsulating the packet in IPsec tunnel mode (Default);</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>proto</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘esp’= Encapsulating security protocol (Default);</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>dh_group</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘0’= Diffie-Hellman group 0 (Default); ‘1’= Diffie-Hellman group 1 - 768-bits; ‘2’= Diffie-Hellman group 2 - 1024-bits; ‘5’= Diffie-Hellman group 5 - 1536-bits; ‘14’= Diffie-Hellman group 14 - 2048-bits; ‘15’= Diffie-Hellman group 15 - 3072-bits; ‘16’= Diffie-Hellman group 16 - 4096-bits; ‘18’= Diffie- Hellman group 18 - 8192-bits; ‘19’= Diffie-Hellman group 19 - 256-bit Elliptic Curve; ‘20’= Diffie-Hellman group 20 - 384-bit Elliptic Curve;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>enc_cfg</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field enc_cfg</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>encryption</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘des’= Data Encryption Standard algorithm; ‘3des’= Triple Data Encryption Standard algorithm; ‘aes-128’= Advanced Encryption Standard algorithm CBC Mode(key size= 128 bits); ‘aes-192’= Advanced Encryption Standard algorithm CBC Mode(key size= 192 bits); ‘aes-256’= Advanced Encryption Standard algorithm CBC Mode(key size= 256 bits); ‘aes-gcm-128’= Advanced Encryption Standard algorithm Galois/Counter Mode(key size= 128 bits, ICV size= 16 bytes); ‘aes-gcm-192’= Advanced Encryption Standard algorithm Galois/Counter Mode(key size= 192 bits, ICV size= 16 bytes); ‘aes-gcm-256’= Advanced Encryption Standard algorithm Galois/Counter Mode(key size= 256 bits, ICV size= 16 bytes); ‘null’= No encryption algorithm;</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>hash</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘md5’= MD5 Dessage-Digest Algorithm; ‘sha1’= Secure Hash Algorithm 1; ‘sha256’= Secure Hash Algorithm 256; ‘sha384’= Secure Hash Algorithm 384; ‘sha512’= Secure Hash Algorithm 512; ‘null’= No hash algorithm;</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>priority</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Prioritizes (1-10) security protocol, least value has highest priority</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>gcm_priority</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Prioritizes (1-10) security protocol, least value has highest priority</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>lifetime</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>IPsec SA age in seconds</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>lifebytes</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>IPsec SA age in megabytes (0 indicates unlimited bytes)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>anti_replay_window</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘0’= Disable Anti-Replay Window Check; ‘32’= Window size of 32; ‘64’= Window size of 64; ‘128’= Window size of 128; ‘256’= Window size of 256; ‘512’= Window size of 512; ‘1024’= Window size of 1024;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>up</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Initiates SA negotiation to bring the IPsec connection up</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sequence_number_disable</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Do not use incremental sequence number in the ESP header</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>traffic_selector</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field traffic_selector</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ipv4</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field ipv4</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field ipv6</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>user_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Customized tag</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>sampling_enable</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field sampling_enable</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>counters1</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all’= all; ‘packets-encrypted’= Encrypted Packets; ‘packets-decrypted’= Decrypted Packets; ‘anti-replay-num’= Anti-Replay Failure; ‘rekey-num’= Rekey Times; ‘packets-err-inactive’= Inactive Error; ‘packets-err-encryption’= Encryption Error; ‘packets-err-pad-check’= Pad Check Error; ‘packets-err-pkt- sanity’= Packets Sanity Error; ‘packets-err-icv-check’= ICV Check Error; ‘packets-err-lifetime-lifebytes’= Lifetime Lifebytes Error; ‘bytes-encrypted’= Encrypted Bytes; ‘bytes-decrypted’= Decrypted Bytes; ‘prefrag-success’= Pre- frag Success; ‘prefrag-error’= Pre-frag Error; ‘cavium-bytes-encrypted’= CAVIUM Encrypted Bytes; ‘cavium-bytes-decrypted’= CAVIUM Decrypted Bytes; ‘cavium- packets-encrypted’= CAVIUM Encrypted Packets; ‘cavium-packets-decrypted’= CAVIUM Decrypted Packets; ‘tunnel-intf-down’= Packet dropped= Tunnel Interface Down; ‘pkt-fail-prep-to-send’= Packet dropped= Failed in prepare to send; ‘no- next-hop’= Packet dropped= No next hop; ‘invalid-tunnel-id’= Packet dropped= Invalid tunnel ID; ‘no-tunnel-found’= Packet dropped= No tunnel found; ‘pkt- fail-to-send’= Packet dropped= Failed to send; ‘frag-after-encap-frag-packets’= Frag-after-encap Fragment Generated; ‘frag-received’= Fragment Received; ‘sequence-num’= Sequence Number; ‘sequence-num-rollover’= Sequence Number Rollover; ‘packets-err-nh-check’= Next Header Check Error;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>bind_tunnel</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field bind_tunnel</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tunnel</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Tunnel interface index</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>next_hop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPsec Next Hop IP Address</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>next_hop_v6</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPsec Next Hop IPv6 Address</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>oper</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field oper</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Status</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Status</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>SA_Index</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field SA_Index</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Local_IP</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Local_IP</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Peer_IP</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Peer_IP</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Local_SPI</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Local_SPI</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Remote_SPI</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Remote_SPI</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Protocol</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Protocol</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Mode</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Mode</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Encryption_Algorithm</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Encryption_Algorithm</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Hash_Algorithm</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Hash_Algorithm</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>DH_Group</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field DH_Group</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>NAT_Traversal</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field NAT_Traversal</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Anti_Replay</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Anti_Replay</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>Lifetime</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Field Lifetime</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>Lifebytes</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Field Lifebytes</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPsec name</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>stats</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field stats</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>packets_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Encrypted Packets</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>packets_decrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Decrypted Packets</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>anti_replay_num</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Anti-Replay Failure</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>rekey_num</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Rekey Times</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>packets_err_inactive</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Inactive Error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>packets_err_encryption</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Encryption Error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>packets_err_pad_check</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Pad Check Error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>packets_err_pkt_sanity</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packets Sanity Error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>packets_err_icv_check</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>ICV Check Error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>packets_err_lifetime_lifebytes</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Lifetime Lifebytes Error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>bytes_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Encrypted Bytes</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>bytes_decrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Decrypted Bytes</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>prefrag_success</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Pre-frag Success</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>prefrag_error</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Pre-frag Error</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cavium_bytes_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CAVIUM Encrypted Bytes</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cavium_bytes_decrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CAVIUM Decrypted Bytes</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>cavium_packets_encrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CAVIUM Encrypted Packets</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>cavium_packets_decrypted</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>CAVIUM Decrypted Packets</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tunnel_intf_down</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet dropped= Tunnel Interface Down</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pkt_fail_prep_to_send</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet dropped= Failed in prepare to send</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>no_next_hop</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet dropped= No next hop</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>invalid_tunnel_id</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet dropped= Invalid tunnel ID</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>no_tunnel_found</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet dropped= No tunnel found</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>pkt_fail_to_send</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Packet dropped= Failed to send</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>frag_after_encap_frag_packets</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Frag-after-encap Fragment Generated</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>frag_received</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Fragment Received</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>sequence_num</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Sequence Number</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>sequence_num_rollover</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Sequence Number Rollover</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>packets_err_nh_check</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Next Header Check Error</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>name</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IPsec name</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,721 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>a10_router_isis – Configures A10 router.isis &mdash; A10 Networks Ansible Documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> A10 Ansible Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">a10_router_isis – Configures A10 router.isis</a><ul>
+<li><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+<li><a class="reference internal" href="#status">Status</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">A10 Ansible Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>a10_router_isis – Configures A10 router.isis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a10-router-isis-configures-a10-router-isis">
+<span id="a10-router-isis-module"></span><h1>a10_router_isis – Configures A10 router.isis<a class="headerlink" href="#a10-router-isis-configures-a10-router-isis" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#synopsis" id="id1">Synopsis</a></p></li>
+<li><p><a class="reference internal" href="#parameters" id="id2">Parameters</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id3">Examples</a></p></li>
+<li><p><a class="reference internal" href="#status" id="id4">Status</a></p></li>
+</ul>
+</div>
+<div class="section" id="synopsis">
+<h2><a class="toc-backref" href="#id1">Synopsis</a><a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
+<p>Intermediate System - Intermediate System (IS-IS)</p>
+</div>
+<div class="section" id="parameters">
+<h2><a class="toc-backref" href="#id2">Parameters</a><a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1%" />
+<col style="width: 5%" />
+<col style="width: 7%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Parameters</p></th>
+<th class="head"><p>Choices/Defaults</p></th>
+<th class="head"><p>Comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td colspan="2"><p>state</p>
+<p>str/required</p>
+</td>
+<td><p>[‘noop’, ‘present’, ‘absent’]</p></td>
+<td><p>State of the object to be created.</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_host</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Host for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_username</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Username for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ansible_password</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>Password for AXAPI authentication</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ansible_port</p>
+<p>int/required</p>
+</td>
+<td></td>
+<td><p>Port for AXAPI authentication</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>a10_device_context_id</p>
+<p>int</p>
+</td>
+<td><p>[‘1-8’]</p></td>
+<td><p>Device ID for aVCS configuration</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>a10_partition</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Destination/target partition for object/command</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>tag</p>
+<p>str/required</p>
+</td>
+<td></td>
+<td><p>ISO routing area tag</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>adjacency_check</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Check ISIS neighbor protocol support</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>area_password_cfg</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field area_password_cfg</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>password</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Configure the authentication password for an area (Area password)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>authenticate</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field authenticate</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>authentication</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field authentication</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>send_only_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field send_only_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>mode_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field mode_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>key_chain_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field key_chain_list</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>bfd</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘all-interfaces’= Enable BFD on all interfaces;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>default_information</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘originate’= Distribute a default route;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>distance_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field distance_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>distance</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>ISIS Administrative Distance (Distance value)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>System_ID</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>System-ID in XXXX.XXXX.XXXX</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>acl</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Access list name</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>domain_password_cfg</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field domain_password_cfg</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>password</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Set the authentication password for a routing domain (Routing domain password)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>authenticate</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field authenticate</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>ha_standby_extra_cost</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field ha_standby_extra_cost</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>extra_cost</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>The extra cost value</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>group</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Group (Group ID)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>ignore_lsp_errors</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Ignore LSPs with bad checksums</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>is_type</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘level-1’= Act as a station router only; ‘level-1-2’= Act as both a station router and an area router; ‘level-2-only’= Act as an area router only;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>log_adjacency_changes_cfg</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field log_adjacency_changes_cfg</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>state</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘detail’= Log changes in adjacency state; ‘disable’= Disable logging;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>lsp_gen_interval_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field lsp_gen_interval_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>interval</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Minimum interval in seconds</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>level</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘level-1’= Set interval for level 1 only; ‘level-2’= Set interval for level 2 only;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>lsp_refresh_interval</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Set LSP refresh interval (LSP refresh time in seconds)</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>max_lsp_lifetime</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Set maximum LSP lifetime (Maximum LSP lifetime in seconds)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>metric_style_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field metric_style_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ntype</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘narrow’= Use old style of TLVs with narrow metric; ‘wide’= Use new style of TLVs to carry wider metric; ‘transition’= Send and accept both styles of TLVs during transition; ‘narrow-transition’= Send old style of TLVs with narrow metric with accepting both styles of TLVs; ‘wide-transition’= Send new style of TLVs to carry wider metric with accepting both styles of TLVs;</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>level</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘level-1’= Level-1 only; ‘level-1-2’= Level-1-2; ‘level-2’= Level-2 only;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>passive_interface_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field passive_interface_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ethernet</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Ethernet interface (Port number)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>loopback</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Loopback interface (Port number)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>trunk</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Trunk interface (Trunk interface number)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>lif</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Logical interface (Lif interface number)</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>ve</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Virtual ethernet interface (Virtual ethernet interface number)</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>tunnel</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Tunnel interface (Tunnel interface number)</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>protocol_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field protocol_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>protocol_topology</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Protocol Topology</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>set_overload_bit_cfg</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field set_overload_bit_cfg</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>set_overload_bit</p>
+<p>bool</p>
+</td>
+<td></td>
+<td><p>Signal other touers not to use us in SPF</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>on_startup</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field on_startup</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>suppress_cfg</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field suppress_cfg</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>spf_interval_exp_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field spf_interval_exp_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>min</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Minimum Delay between receiving a change to SPF calculation in milliseconds</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>max</p>
+<p>int</p>
+</td>
+<td></td>
+<td><p>Maximum Delay between receiving a change to SPF calculation in milliseconds</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>level</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘level-1’= Set interval for level 1 only; ‘level-2’= Set interval for level 2 only;</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>summary_address_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field summary_address_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>prefix</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>IP network prefix</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>level</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>‘level-1’= Summarize into level-1 area; ‘level-1-2’= Summarize into both area and sub-domain; ‘level-2’= Summarize into level-2 sub-domain;</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>net_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field net_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>net</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>A Network Entity Title for this process (XX.XXXX. … .XXXX.XX  Network entity title (NET))</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>user_tag</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>Customized tag</p></td>
+</tr>
+<tr class="row-even"><td colspan="2"><p>redistribute</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field redistribute</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>redist_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field redist_list</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>vip_list</p>
+<p>list</p>
+</td>
+<td></td>
+<td><p>Field vip_list</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>isis</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field isis</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>uuid</p>
+<p>str</p>
+</td>
+<td></td>
+<td><p>uuid of the object</p></td>
+</tr>
+<tr class="row-odd"><td colspan="2"><p>address_family</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field address_family</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>ipv6</p>
+<p>dict</p>
+</td>
+<td></td>
+<td><p>Field ipv6</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2><a class="toc-backref" href="#id3">Examples</a><a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml+jinja notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="status">
+<h2><a class="toc-backref" href="#id4">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This module is not guaranteed to have a backwards compatible interface. <em>[preview]</em></p></li>
+<li><p>This module is maintained by community.</p></li>
+</ul>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>A10 Networks 2018</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020-2021 A10 Networks Inc, All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
