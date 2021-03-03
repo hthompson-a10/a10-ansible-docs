@@ -1,9 +1,0 @@
-|AAD|
-=====
-
-Contents:
-
-.. toctree::
-   :glob:
-
-   *
