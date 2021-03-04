@@ -1,3 +1,9 @@
+# Ignore HTML class
+acos_4_1_4/
+acos_5_1_0/
+acos_5_2_1/
+axapi_html/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
